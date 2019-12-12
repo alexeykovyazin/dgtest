@@ -1,0 +1,136 @@
+* {
+	line-height: 1.2;
+	margin: 0;
+}
+
+html {
+	color: #888;
+	display: table;
+	font-family: sans-serif;
+	height: 100%;
+	width: 100%;
+	background: #eee;
+}
+
+.fileheader {
+	color: #333;
+	font-size: 2em;
+	font-weight: 400;
+	font-variant: small-caps;
+}
+
+.partheader {
+	color: #333;
+	font-variant: small-caps;
+}
+
+.middlelinks {
+	font-size:80%;
+}
+
+.dflink{
+	font-size:small;
+}
+
+.toplinks {
+	font-size:80%;
+}
+
+.startline {
+}
+
+.recorditem {
+	margin-top: 5px;
+	margin-bottom: 10px;
+	padding-top: 5px; padding-bottom: 15px;
+	background: #fff; 
+}
+
+.rankinfo {
+	color: #fff;
+	background: #666; 
+	font-size: 1em;
+	font-weight: 700;
+	padding-top: 5px; padding-bottom: 5px;
+}
+
+.statementbody {
+	color: #000;
+	font-family: monospace;
+	white-space: pre-wrap;
+	display: block;
+	font-stretch:ultra-condensed;
+	letter-spacing: 0.5px;
+}
+
+.statementtext {
+	color: #550000;
+	background: #fffdfd;
+	font-family: monospace;
+	font-style: italic;
+	white-space: pre-wrap;
+	display: block;
+}
+
+pre {
+  font-family: monospace;
+  white-space: pre-wrap;
+  display: block;
+}
+
+.endline {
+}
+
+.bottominfo {
+	color: #000;
+	font-family: monospace;
+	text-align: left; font-size: 11px;
+	padding: 8px;
+}
+
+.reflinks {
+    font-variant: small-caps;
+    font-size: 80%;
+	font-weight: 100;    
+}
+
+
+.sorteditems {
+    color: #bebeff;
+}
+
+.proctable {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    border-spacing: 0;
+    color: #333;
+    background-color: transparent;
+    padding: 8px;
+    vertical-align: top;
+    border: 1px solid #ddd;    
+    width: 90vw;
+}
+
+.proctable tbody tr:nth-child(even) {background: #ffffff}
+.proctable tbody tr:nth-child(odd) {background: #f9f9f9}
+
+.proctable tr {
+    vertical-align: top;
+    border: 1px solid #ddd;
+}
+
+.proctable td {
+    padding: 8px;    
+    text-align:right;
+}
+
+.proctable th {
+    padding: 8px;    
+    cursor:pointer;
+    text-align:right;
+}
+
+
+tbody tr:hover {
+    background-color: #ecf3f8 !important; 
+}

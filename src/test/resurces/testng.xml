@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="TestOne"  parallel="false">
+	<listeners>
+        <listener class-name="Listener" />
+        <listener class-name="SuiteListener" />
+    </listeners>
+    <!-- ХРОМ   -->
+    <parameter name="browsername" value="chrome"/>
+    <parameter name="pathdriver" value="src/test/resurces/chromedriver.exe"/>  
+<!--    <parameter name="pathdriver" value="src/test/resurces/chromedriver"/>-->
+
+     <parameter name="url" value="http://localhost:8082/"/>
+
+    <parameter name="username" value="admin"/>
+    <parameter name="password" value="strong password"/>
+
+
+    <test name="Common" group-by-instances="true">
+        <classes >
+            <class name = "TestPage.TestCommon.TestDashboard"/>
+        </classes>
+    </test>
+
+ </suite>

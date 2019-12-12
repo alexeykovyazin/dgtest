@@ -1,0 +1,43 @@
+# firebird replication.log messages classification.
+
+# Each mapping contains key=pattern pair.
+
+# Key has form ROOT_TYPE.subtype1.subtype2.(...).(message | database)
+
+# ROOT_TYPE have to be one of CRITICAL, IMPORTANT, VALIDATION, NETWORK, MISC, INTERNAL,
+# and subtypeN may be (generally) any string you want -- expected to be used for
+# clarify meaning of log message current pattern recognized.
+#
+# pattern is java RegExp pattern, which will be matched against full log message
+# (if key ends with ".message"), or "Database: ..." only part of message (if key ends with
+# ".database")
+#
+# Pattern matching will be done with .find(), not .match() -- so you do not need
+# to specify pattern for full message -- it's enough to specify pattern for most
+# meaningfull part of it.
+#
+# Patterns applying in order they appear in this file, so if message matches more then
+# one pattern, first pattern win.
+#
+# mapping ( Classification type -> Severity type ) 
+# CRITICAL      -> Severity.CRITICAL
+# IMPORTANT     -> Severity.IMPORTANT
+# VALIDATION    -> Severity.IMPORTANT
+# NETWORK       -> Severity.MINOR
+# MISC          -> Severity.MINOR
+# INTERNAL      -> Severity.OK
+
+CRITICAL.has_no_unique_key.message          =has no unique key
+CRITICAL.transaction_already_exists.message =Transaction \\d+ already exists
+CRITICAL.segment_is_missing.message         =segment \\d+ is missing
+
+CRITICAL.error.message    =ERROR
+
+MISC.notawarning.message  =does not exist, inserting instead
+MISC.notawarning.message  =already exists, updating instead
+
+IMPORTANT.warinng.message =WARNING
+INTERNAL.verbose.message  =VERBOSE
+INTERNAL.debug.message    =DEBUG
+
+IMPORTANT.other.message = .*
