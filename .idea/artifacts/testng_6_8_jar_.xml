@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="testng-6_8_jar_">
+    <output-path>$PROJECT_DIR$/out/artifacts/testng_6_8_jar_</output-path>
+    <root id="archive" name="testng-6_8_jar_.jar">
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/testng/testng/6.8/testng-6.8.jar" path-in-jar="/" />
+      <element id="library" level="project" name="Maven: org.testng:testng:6.8" />
+    </root>
+  </artifact>
+</component>

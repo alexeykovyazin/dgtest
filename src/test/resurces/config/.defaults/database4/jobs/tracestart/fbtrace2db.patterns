@@ -1,0 +1,88 @@
+#enabled = false == for text purposes this field will always be overwritted
+enabled = false
+
+export_data_type=0
+write_cache_size=1024
+
+#will be overwrietten
+time_threshold = 100
+
+#critical values
+print_plan = true
+print_perf = true
+max_sql_length = 65000
+max_arg_length = 500
+max_arg_count = 500
+
+
+
+#if empty string then will be skipped
+#include_filter =
+#exclude_filter =
+
+#log_sweep = true
+log_connections = true
+log_transactions = true
+
+#log_statement_prepare = true
+#log_statement_free = true
+#log_statement_start = true
+log_statement_finish = true
+
+#max_log_size = 9999999999
+max_log_size = 0
+
+#log_procedure_start = true
+#log_procedure_finish = true
+
+#log_function_start = true
+#log_function_finish = true
+
+#log_trigger_start = true
+#log_trigger_finish = true
+
+#log_context = false
+#log_errors = true - not supported 2.5
+#log_warnings = true - not supported 2.5
+
+# Filters for errors and warnings GDS codes.
+# Comma separated list of GDS codes values and\or names.
+# For example: deadlock, req_sync, 335544321
+
+# Include filter. If empty, trace all errors\warnings events.
+# Else trace event if any code from list is found in status-vector.
+#include_gds_codes=
+
+# Exclude filter. If empty, trace all errors\warnings events.
+# Else trace event if no code from list is found in status-vector.
+#exclude_gds_codes=
+
+# Put trace session init and finish messages
+#log_initfini = true
+
+
+
+# Use legacy (false) or explained (true) plan format
+#explain_plan = false
+
+# Put blr requests compile/execute records 
+#log_blr_requests = false
+
+# Print blr requests or not
+#print_blr = false
+
+# Put dyn requests execute records 
+#log_dyn_requests = false
+
+# Print dyn requests or not
+#print_dyn = false
+
+
+
+
+
+# Maximum length of blr request logged 
+#max_blr_length = 500
+
+# Maximum length of dyn request logged 
+#max_dyn_length = 500

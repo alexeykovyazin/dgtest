@@ -1,0 +1,119 @@
+# firebird.log messages classification.
+
+# Each mapping contains key=pattern pair.
+
+# Key has form ROOT_TYPE.subtype1.subtype2.(...).(message | database)
+
+# ROOT_TYPE have to be one of CRITICAL, IMPORTANT, VALIDATION, NETWORK, MISC, INTERNAL,
+# and subtypeN may be (generally) any string you want -- expected to be used for
+# clarify meaning of log message current pattern recognized.
+#
+# pattern is java RegExp pattern, which will be matched against full log message
+# (if key ends with ".message"), or "Database: ..." only part of message (if key ends with
+# ".database")
+#
+# Pattern matching will be done with .find(), not .match() -- so you do not need
+# to specify pattern for full message -- it's enough to specify pattern for most
+# meaningfull part of it.
+#
+# Patterns applying in order they appear in this file, so if message matches more then
+# one pattern, first pattern win.
+#
+# mapping ( Classification type -> Severity type ) 
+# CRITICAL      -> Severity.CRITICAL
+# IMPORTANT     -> Severity.IMPORTANT
+# VALIDATION    -> Severity.IMPORTANT
+# NETWORK       -> Severity.MINOR
+# MISC          -> Severity.MINOR
+# INTERNAL      -> Severity.OK
+
+INTERNAL.disableallINET.message=INET/inet_error:
+INTERNAL.inetok10054.message   =INET/inet_error: read errno = 10054
+INTERNAL.inetok10054v2.message =INET/inet_error: read errno = 10054, 
+INTERNAL.inetok10061.message   =INET/inet_error: connect errno = 10061
+INTERNAL.inetok101.message     =INET/inet_error: read errno = 101
+INTERNAL.inetok104.message     =INET/inet_error: read errno = 104
+INTERNAL.inetok110.message     =INET/inet_error: read errno = 110
+INTERNAL.connect110.message    =INET/inet_error: connect errno = 110
+INTERNAL.connect111.message    =INET/inet_error: connect errno = 111
+INTERNAL.send104.message       =INET/inet_error: send errno = 104
+INTERNAL.send110.message       =INET/inet_error: send errno = 110
+INTERNAL.connection-rejected.2.message = SERVER/process_packet: broken port, server exiting
+INTERNAL.gds_detach.message    =REMOTE INTERFACE/gds__detach: Unsuccesful detach from database
+INTERNAL.unable-to-request-host.message = Unable to complete network request to host
+INTERNAL.zeroerrord.message    =: 0 errors,
+INTERNAL.valstarted.message    =Validation started
+
+CRITICAL.NoSpaceLeft.message        =No space left on device
+CRITICAL.gds-consistensy.message    =internal gds software consistency check
+CRITICAL.abnormal-termination.1.message=abnormal(ly)? terminat(e|ed|ion)
+CRITICAL.abnormal-termination.2.message=terminat(e|ed|ion) abnormal(ly)?
+CRITICAL.bugcheck.message           =bugcheck
+CRITICAL.file-corruption.message    =database file appears corrupt
+CRITICAL.gds-compile.message        =gds_\\$compile_request failed
+CRITICAL.invalid-BLR.message        =invalid request BLR
+CRITICAL.error-open-file.message    =Error while trying to open file
+CRITICAL.io-error.message           =I/O error for file
+CRITICAL.sweepfailed.message        =Sweep failed
+CRITICAL.sweepisfailed.message      =sweep is failed
+CRITICAL.Operating-system-call.message =Operating system call
+CRITICAL.NoPermission.message       =no permission for read-write access to database
+CRITICAL.ENOMEMfailures.message     =ENOMEM failures
+CRITICAL.unable2allocate.message    =unable to allocate
+CRITICAL.errors.message             =\\d+ errors
+
+
+IMPORTANT.semaphores-exhausted.message = Fatal lock manager error: semaphores are exhausted
+IMPORTANT.cache-buffer-invalid.message = cache buffer for page \\d+ invalid
+IMPORTANT.lock-conversion.message = page type .+ lock conversion denied
+IMPORTANT.in-use.message = which is currently in use by active user requests
+IMPORTANT.handle-invalid.message = The handle is invalid
+IMPORTANT.retrive-more-segments.message = attempted retrieval of more segments than exist
+IMPORTANT.unsupported-structure.message = unsupported .+ structure
+IMPORTANT.returned-error-on-call.message =returned error on call
+IMPORTANT.Error-code.message =Error code
+IMPORTANT.lockmanagererror.message = lock manager error
+
+NETWORK.connection-rejected.1.message = SERVER/process_packet: connection rejected for
+NETWORK.inet.message = INET/
+NETWORK.xnet.message = XNET
+NETWORK.wnet.message = WNET/
+
+INTERNAL.guardian.message  = Guardian starting
+INTERNAL.shutdown.message  = normal shutdown
+INTERNAL.sweepstarted.message  = Sweep is started
+INTERNAL.sweepfinished.message  = Sweep is finished
+
+VALIDATION.page-orphan.database = .*\\w+.*
+VALIDATION.page-orphan.message = Page \\d+ is an orphan
+VALIDATION.page-wrong-type.database = .*\\w+.*
+VALIDATION.page-wrong-type.message =Page .+ wrong type
+VALIDATION.page-doubly-allocated.database = .*\\w+.*
+VALIDATION.page-doubly-allocated.message =Page .+ doubly allocated
+VALIDATION.page-confused.database = .*\\w+.*
+VALIDATION.page-confused.message =Data page .+ (sequence .+) is confused in table
+VALIDATION.tip-page-confused.database = .*\\w+.*
+VALIDATION.tip-page-confused.message =Transaction inventory pages confused
+VALIDATION.tip-page-lost.database= .*\\w+.*
+VALIDATION.tip-page-lost.message =Transaction inventory page lost
+VALIDATION.relation-orphan.database = .*\\w+.*
+VALIDATION.relation-orphan.message =Relation has .+ orphan backversions
+VALIDATION.chain-record-broken.database = .*\\w+.*
+VALIDATION.chain-record-broken.message =Chain for record .+ is broken in table
+VALIDATION.record-length-wrong.database = .*\\w+.*
+VALIDATION.record-length-wrong.message =Record .+ is wrong length in table
+VALIDATION.damaged-record.database = .*\\w+.*
+VALIDATION.damaged-record.message =Record .+ is marked as damaged in table
+VALIDATION.blob-corrupt.database = .*\\w+.*
+VALIDATION.blob-corrupt.message =Blob .+ is corrupt in table
+VALIDATION.blob-inconsistent.database = .*\\w+.*
+VALIDATION.blob-inconsistent.message =Warning: blob .+ appears inconsistent in table
+VALIDATION.index-corrupt.database= .*\\w+.*
+VALIDATION.index-corrupt.message =Index .+ is corrupt
+VALIDATION.index-page-orphan.database = .*\\w+.*
+VALIDATION.index-page-orphan.message = Index .+ has orphan child page at page
+
+MISC.empty-db.database = \\s*
+MISC.empty-db.message = .*
+
+MISC.other.message = .*
