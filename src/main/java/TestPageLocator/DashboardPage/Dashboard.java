@@ -1,18 +1,15 @@
-package TestPageLocator.Common;
+package TestPageLocator.DashboardPage;
 
 import Helpers.Helper;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import java.util.List;
-
-public class DashboardLocators {
+public class Dashboard {
     private Helper ctx;
     WebDriver _driver;
 
-    public DashboardLocators(WebDriver driver) {
+    public Dashboard(WebDriver driver) {
 
         this._driver = driver;
         ctx = new Helper(_driver);
@@ -46,6 +43,8 @@ public class DashboardLocators {
     public WebElement OutputFolderField;
     @FindBy(id = "form-server-trusted-auth")
     public WebElement UseTrustedAuthCheckbox;
+    @FindBy(xpath = "(//*[@class='modal-content']//*[contains(@class,'btn-dialog-ok')])[2]")
+    public WebElement SaveButton;
 
     /**
      * Databases

@@ -16,18 +16,18 @@ public class Listener extends TestListenerAdapter
     
     @Override
     public void onTestSuccess(ITestResult iTestResult) {
-        log("Success");
+        log(iTestResult.getName()+" - Success\n");
     }
 
     @Override
     public void onTestFailure(ITestResult iTestResult) {
-        log("Failure");
+        log(iTestResult.getName()+" - Failure\n");
         SuiteListener.Failed += 1;
     }
 
     @Override
     public void onTestSkipped(ITestResult iTestResult) {
-        log("Skipped");
+        log(iTestResult.getName()+" - Skipped\n");
     }
 
     @Override

@@ -32,7 +32,7 @@ public class SuiteListener implements  ISuiteListener {
             log("\nFailed " + Failed + " of " + arg0.getAllMethods().size() + "\n\n\n");
         }
         else {
-            log("OK\n\n");
+            log(" OK\n\n");
         }
         System.out.println("");
         // Reporter.log("About to end executing Suite " + arg0.getName(), true);

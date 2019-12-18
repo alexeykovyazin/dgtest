@@ -1,0 +1,7 @@
+TestPageLocator\DashboardPage\Backup.class
+TestPageLocator\DashboardPage\Database.class
+TestPageLocator\DashboardPage\Dashboard.class
+Constants\InitData.class
+TestPageLocator\RegistrationLocators.class
+TestPageLocator\GeneralLocators.class
+Helpers\Helper.class

@@ -1,12 +1,10 @@
-package TestPage.TestCommon;
+package TestPage.TestDashboard;
 
 import Helpers.Helper;
 import TestPage.EnvContainer;
-import TestPageLocator.Common.GeneralLocators;
+import TestPageLocator.GeneralLocators;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -41,7 +39,7 @@ public class TestDashboard extends EnvContainer {
      */
     @Test( enabled = true, priority = 1)
     public void testHome()  {
-
+        Helper.waitSetup(_driver, 5000);
     }
 
 
