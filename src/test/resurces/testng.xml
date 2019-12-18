@@ -11,7 +11,8 @@
     <parameter name="pathdriver" value="src/test/resurces/chromedriver.exe"/>  
 <!--    <parameter name="pathdriver" value="src/test/resurces/chromedriver"/>-->
 
-     <parameter name="url" value="http://localhost:8082/"/>
+     <parameter name="url" value="http://admin:strong password@localhost:8082/"/>
+<!--     <parameter name="url" value="http://localhost:8082/"/>-->
 
     <parameter name="username" value="admin"/>
     <parameter name="password" value="strong password"/>
@@ -19,7 +20,8 @@
 
     <test name="Common" group-by-instances="true">
         <classes >
-            <class name = "TestPage.TestCommon.TestDashboard"/>
+            <class name = "TestPage.TestDashboard.TestDatabase"/>
+            <class name = "TestPage.TestDashboard.TestBackup"/>
         </classes>
     </test>
 

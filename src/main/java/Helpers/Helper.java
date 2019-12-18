@@ -1,6 +1,6 @@
 package Helpers;
 
-import java.io.UnsupportedEncodingException;
+import java.io.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLDecoder;
@@ -10,7 +10,6 @@ import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 
-import TestPageLocator.Common.GeneralLocators;
 import org.openqa.selenium.*;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.interactions.Action;
@@ -23,6 +22,8 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+
+import static org.openqa.selenium.io.FileHandler.delete;
 
 public class Helper {
 
@@ -61,7 +62,8 @@ public class Helper {
 
 
     public Helper setValue(String value) {
-        clear();
+        //clear();
+        _current.clear();
         _current.sendKeys(value);
         return this;
     }
@@ -324,7 +326,7 @@ public class Helper {
             _driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
             element.isDisplayed();
             return true;
-        } catch (NoSuchElementException ex) {
+        } catch (NoSuchElementException e) {
             return false;
         }
     }
@@ -334,7 +336,7 @@ public class Helper {
      */
     public  boolean implicitlyWaitElement() {
         try {
-            _driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+            _driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
             return true;
         } catch (TimeoutException ex) {
             return false;
@@ -344,16 +346,17 @@ public class Helper {
     /**
      *
      * the method waits for the element to appear
+     * @return
      */
-    public static boolean waitUntilConditions(WebElement locator, int time, WebDriver driver) {
-        try {
-            WebDriverWait wait = new WebDriverWait(driver, time);
+    public boolean waitelementToBeClickable() {
+            try {
+            WebDriverWait wait = new WebDriverWait(_driver, 10);
             //clickable
-            wait.until(ExpectedConditions.elementToBeClickable(locator));
-            return true;
+            wait.until(ExpectedConditions.elementToBeClickable(_current));
+                return false;
         } catch (TimeoutException ex) {
-            return false;
         }
+        return false;
     }
     /**
      *
@@ -482,4 +485,68 @@ public class Helper {
         }
         return null;
     }
+
+
+    /**
+     * Function Deleting Folder
+     */
+    public void deleteFolder(final File file) {
+        System.out.println("Удаляем файл: " + file.getAbsolutePath());
+        if(file.isDirectory()) {
+            String[] files = file.list();
+            if((null == files) || (files.length == 0)) {
+                file.delete();
+            } else {
+                for(final String filename: files) {
+                    delete(new File(file.getAbsolutePath() + File.separator + filename));
+                }
+                file.delete();
+            }
+        } else {
+            file.delete();
+        }
+    }
+    public static void copyDirectory(File src, File dst) throws IOException {
+        try {
+
+            if (src.isDirectory()) {
+
+                // Если директория отсутствует, то ее нужно создать ("скопировать" имя директории)
+                if (!dst.exists()) {
+                    dst.mkdir();
+                    //System.out.println("Директория скопирована из " + src + "  в " + dst);
+                }
+                // Определяем массив по содержанию директории-источника
+                String files[] = src.list();
+
+                for (String file : files) {
+                    // создаем структуру директории-приемника по аналогии с директорией источником
+                    File srcFile = new File(src, file);
+                    File dstFile = new File(dst, file);
+                    // рекурсивное копирование
+                    copyDirectory(srcFile, dstFile);
+                }
+            } else {
+                // если переданный в процедуру объект, то он копируется через потоки по-байтно
+
+                InputStream in = new FileInputStream(src);
+                OutputStream out = new FileOutputStream(dst);
+
+                byte[] buffer = new byte[1024];
+
+                int length;
+                //копирование содержимого файла согласно размеру buffer
+                while ((length = in.read(buffer)) > 0) {
+                    out.write(buffer, 0, length);
+                }
+                in.close();
+                out.close();
+
+                //System.out.println("Файл скопирован из " + src + " в " + dst);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }

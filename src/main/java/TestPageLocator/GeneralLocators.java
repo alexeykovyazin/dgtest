@@ -1,4 +1,4 @@
-package TestPageLocator.Common;
+package TestPageLocator;
 
 import Helpers.Helper;
 import org.openqa.selenium.By;
@@ -20,5 +20,15 @@ public class GeneralLocators {
         ctx = new Helper(_driver);
     }
 
+    @FindBy(id = "servers")
+    public WebElement DashboardMenuBtn;
+    @FindBy(id = "notifications")
+    public WebElement AlertsMenuBtn;
+    @FindBy(id = "registration")
+    public WebElement RegistrationMenuBtn;
+    @FindBy(id = "graphs")
+    public WebElement GraphsGalleryMenuBtn;
+    @FindBy(id = "performance")
+    public WebElement PerformanceMenuBtn;
 
 }
