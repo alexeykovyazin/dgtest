@@ -16,7 +16,7 @@ max_log_size = 0
 log_sweep = false
 log_connections = false
 log_transactions = false
-#log_initfini = false
+log_initfini = false
 
 #this is must be true value:
 log_statement_finish = true

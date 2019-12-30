@@ -25,36 +25,81 @@ public class Backup {
     @FindBy(xpath = "(//*[@class='alert alert-info']//span)[2]")
     public WebElement BackupAllertnfo;
 
+    /**
+     * General locators
+     */
 
+    @FindBy(xpath = "//*[@id='formform-maxDuration_sec-job-enabled']//ancestor::div[@class='checkbox']")
+    public WebElement EnabledCheckbox;
+    @FindBy(id = "form-cron-expression")
+    public WebElement ScheduleField;
+    @FindBy(id = "form-max-backups")
+    public WebElement MaxNumbFilesField;
+    @FindBy(id = "form-backup-name")
+    public WebElement NamePatternField;
+    @FindBy(id = "form-journal-name")
+    public WebElement JournalNameField;
+    @FindBy(id = "form-backup-extension")
+    public WebElement ExtensionField;
+    @FindBy(id = "form-min-dstfreespace-toalert")
+    public WebElement MinFreeSpaceField;
+    @FindBy(id = "form-maxDuration_sec")
+    public WebElement MaxDurationField;
+    @FindBy(id = "form-backup-directory")
+    public WebElement DirectoryField;
+    @FindBy(id = "schcedulle-simple")
+    public WebElement ScheduleSimpleBtn;
+    @FindBy(id = "schcedulle-crone")
+    public WebElement ScheduleAdvencedField;
+    @FindBy(id = "form-max_misfire_delay_min")
+    public WebElement PerformBackupDelayField;
+
+
+    @FindBy(xpath = "(//*[contains(@class,'btn-dialog-ok')])[2]")
+    public WebElement DbSaveBtn;
 
     /**
      * verified-backup settings
      */
-    @FindBy(xpath = "//*[contains(@class,'panel panel-default tooltip-verified-backup')]//*[@class='control']")
+    public WebElement VerifiedBackupSettingsBtn(String text) {return _driver.findElement(By.xpath("//*[@class='head-name panel-heading']//*[text()='"+text+"']" +
+            "//ancestor::div[2]//*[contains(@class,'panel panel-default tooltip-verified-backup')]//*[@class='control']")); }
+
     public WebElement VerifiedBackupSettingsBtn;
-    @FindBy(xpath = "//*[@id='form-job-enabled']//ancestor::div[@class='checkbox']")
-    public WebElement EnabledCheckboxSeting;
-    @FindBy(id = "form-cron-expression")
-    public WebElement ScheduleFieldSeting;
-    @FindBy(id = "form-max-backups")
-    public WebElement MaxNumbFilesFieldSeting;
-    @FindBy(id = "form-backup-name")
-    public WebElement NamePatternFieldSeting;
-    @FindBy(id = "form-backup-extension")
-    public WebElement ExtensionFieldSeting;
-    @FindBy(xpath = "(//*[contains(@class,'btn-dialog-ok')])[2]")
-    public WebElement DbSaveBtn;
 
     /**
      *
      * verified panel
      */
 
-    @FindBy(xpath = "//*[contains(@class,'panel panel-default tooltip-verified-backup')]//strong")
-    public WebElement VerifiedBakupPanelOk;
-    @FindBy(xpath = "//*[contains(@class,'panel panel-default tooltip-verified-backup')]//font")
-    public WebElement VerifiedBakupPanelSchedule;
-    @FindBy(xpath = "//*[contains(@class,'panel panel-default tooltip-verified-backup')]//tr[3]/td")
-    public WebElement VerifiedBakupPanelTotal;
+    public WebElement VerifiedBackupPanelOk(String text) {return _driver.findElement(By.xpath("//*[@class='head-name panel-heading']//*[text()='"+text+"']" +
+            "//ancestor::div[2]//*[contains(@class,'panel panel-default tooltip-verified-backup')]//strong")); }
+    public WebElement VerifiedBackupPanelSchedule(String text) {return _driver.findElement(By.xpath("//*[@class='head-name panel-heading']//*[text()='"+text+"']" +
+            "//ancestor::div[2]//*[contains(@class,'panel panel-default tooltip-verified-backup')]//font")); }
+    public WebElement VerifiedBackupPanelTotal(String text) {return _driver.findElement(By.xpath("//*[@class='head-name panel-heading']//*[text()='"+text+"']" +
+            "//ancestor::div[2]//*[contains(@class,'panel panel-default tooltip-verified-backup')]//tr[3]/td")); }
+
     public WebElement NameBDText(String text) {return _driver.findElement(By.xpath("//*[@class='db-item-tab']//span[text()='"+text+"']")); }
+
+    /**
+     * dump-backup panel
+     */
+    public WebElement DumpBackupSettingsBtn(String text) {return _driver.findElement(By.xpath("//*[@class='head-name panel-heading']//*[text()='"+text+"']" +
+            "//ancestor::div[2]//*[contains(@class,'panel panel-default tooltip-dump-backup')]//*[@class='control']")); }
+
+    public WebElement DumpBackupPanelOk(String text) {return _driver.findElement(By.xpath("//*[@class='head-name panel-heading']//*[text()='"+text+"']" +
+            "//ancestor::div[2]//*[contains(@class,'panel panel-default tooltip-dump-backup')]//strong")); }
+    public WebElement DumpBackupPanelSchedule(String text) {return _driver.findElement(By.xpath("//*[@class='head-name panel-heading']//*[text()='"+text+"']" +
+            "//ancestor::div[2]//*[contains(@class,'panel panel-default tooltip-dump-backup')]//font")); }
+
+    /**
+     * incremental-backup panel
+     */
+    public WebElement IncrementalBackupSettingsBtn(String text) {return _driver.findElement(By.xpath("//*[@class='head-name panel-heading']//*[text()='"+text+"']" +
+            "//ancestor::div[2]//*[contains(@class,'panel panel-default tooltip-incremental-backup')]//*[@class='control']")); }
+
+    public WebElement IncrementalBackupPanelOk(String text) {return _driver.findElement(By.xpath("//*[@class='head-name panel-heading']//*[text()='"+text+"']" +
+            "//ancestor::div[2]//*[contains(@class,'panel panel-default tooltip-incremental-backup')]//strong")); }
+    public WebElement IncrementalBackupPanelSchedule(String text) {return _driver.findElement(By.xpath("//*[@class='head-name panel-heading']//*[text()='"+text+"']" +
+            "//ancestor::div[2]//*[contains(@class,'panel panel-default tooltip-incremental-backup')]//font")); }
+
 }

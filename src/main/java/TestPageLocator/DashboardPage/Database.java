@@ -1,9 +1,13 @@
 package TestPageLocator.DashboardPage;
 
 import Helpers.Helper;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import java.util.NoSuchElementException;
+import java.util.concurrent.TimeUnit;
 
 public class Database {
     private Helper ctx;
@@ -46,9 +50,7 @@ public class Database {
     /**
      * Databases active
      */
-    @FindBy(xpath = "//*[@class='db-item-tab']//span")
-    public WebElement NameBD;
-
+    public WebElement NameBD(String text) {return _driver.findElement(By.xpath("//*[@class='db-item-tab']//*[text()='"+text+"']")); }
 
 
 }
