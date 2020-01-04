@@ -305,13 +305,13 @@ public class Helper {
      *
      * The method checks the presence of an element on the page
      */
-    public static boolean isDisplayedElement(WebElement element) {
-        try {
-            return element.isDisplayed();
-        } catch (NoSuchElementException ex) {
-            return false;
-        }
-    }
+//    public static boolean isDisplayedElement(WebElement element) {
+//        try {
+//            return element.isDisplayed();
+//        } catch (NoSuchElementException ex) {
+//            return false;
+//        }
+//    }
 
     public boolean displayedElement() {
         try {
@@ -321,7 +321,7 @@ public class Helper {
             return false;
         }
     }
-    public boolean displayedElement11(WebElement element) {
+    public boolean isdisplayedElement(WebElement element) {
         try {
             _driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
             element.isDisplayed();

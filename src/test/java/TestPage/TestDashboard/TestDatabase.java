@@ -26,11 +26,13 @@ public class TestDatabase extends EnvContainer {
         _ctx = new Helper(_driver);
         _page = PageFactory.initElements(_driver, Database.class);
         openUrl();
+
+        _ctx.hoverAndClick(_page.DatabaseSettingsBtn);
+        _ctx.current(_page.DbNameField).waitelementToBeClickable();
     }
     @AfterMethod
     public void tearDown() {
-        openUrl();
-        //ctx.current(_page.HomeItemMenu).click();
+        Helper.interceptionJSonPage(_driver);
     }
     private void openUrl() {
         _url = EnvContainer.URL + _standarturl;
@@ -45,8 +47,6 @@ public class TestDatabase extends EnvContainer {
     public void testAddDbEmptyPath()  {
 
         //actions
-        _ctx.hoverAndClick(_page.DatabaseSettingsBtn);
-        _ctx.current(_page.DbNameField).waitelementToBeClickable();
         _ctx.current(_page.DbNameField).setValue("").
                 current(_page.DbPathField).setValue("").
                 current(_page.DbSaveBtn).click().waitUpdate();
@@ -62,14 +62,12 @@ public class TestDatabase extends EnvContainer {
     public void testAddDbEmptyName()  {
 
         //actions
-        _ctx.hoverAndClick(_page.DatabaseSettingsBtn);
-        _ctx.current(_page.DbNameField).waitelementToBeClickable();
         _ctx.current(_page.DbNameField).setValue("").
                 current(_page.DbPathField).setValue(DB_TestA_FDB).
                 current(_page.DbSaveBtn).click().waitUpdate();
 
         // verification
-        Assert.assertEquals(_page.DbAllertDanger.getText(),"\"\" should not be null nor empty",
+        Assert.assertEquals(_page.DbAllertDanger.getText(),"\"\" should not be null or empty",
                 "Database name must be filled");
     }
 
@@ -80,8 +78,6 @@ public class TestDatabase extends EnvContainer {
         String path = "testpath";
 
         //actions
-        _ctx.hoverAndClick(_page.DatabaseSettingsBtn);
-        _ctx.current(_page.DbNameField).waitelementToBeClickable();
         _ctx.current(_page.DbNameField).setValue("TestName").
                 current(_page.DbPathField).setValue(path).
                 current(_page.DbSaveBtn).click().waitUpdate();
@@ -91,18 +87,15 @@ public class TestDatabase extends EnvContainer {
                 "Path not found");
     }
 
-    // When we add a database with an incorrect aliase to the database THEN the error "Database alias is unknown ..." is displayed
+    // When we add a database with an incorrect alias to the database THEN the error "Database alias is unknown ..." is displayed
     @Test( enabled = true, priority = 4)
     public void testAddDbIncorrectAlias()  {
 
         String path1 = "testpathaliase";
 
         //actions
-        _ctx.hoverAndClick(_page.DatabaseSettingsBtn);
-        _ctx.current(_page.DbNameField).waitelementToBeClickable();
         _ctx.current(_page.DbNameField).setValue("TestName").
                 current(_page.DbAliasRadioBtn).click().waitUpdate();
-        _ctx.waitSetup(_driver,2000);
         _ctx.current(_page.DbAliasField).waitelementToBeClickable();
         _ctx.current(_page.DbAliasField).setValue(path1).
                 current(_page.DbSaveBtn).click().waitUpdate();
@@ -118,35 +111,32 @@ public class TestDatabase extends EnvContainer {
     public void testAddDbCorrect()  {
 
         //actions
+        _ctx.current(_page.DbNameField).setValue(NameBDA).
+                current(_page.DbPathRadioBtn).click().
+                current(_page.DbPathField).setValue(DB_TestC_FDB).
+                current(_page.DbSaveBtn).click().waitUpdate();
+        _ctx.implicitlyWaitElement();
+
+        // verification
+        Assert.assertTrue(_ctx.isdisplayedElement(_page.NameBD(NameBDA)),"database is not successfully add");
+    }
+
+    // WHEN we add the database with the correct values THEN the database is successfully added
+    @Test( enabled = true, priority = 6)
+    public void testAddDbAlreadyExist()  {
+        // prepare
+        openUrl();
+
+        // actions
         _ctx.hoverAndClick(_page.DatabaseSettingsBtn);
         _ctx.current(_page.DbNameField).waitelementToBeClickable();
         _ctx.current(_page.DbNameField).setValue(NameBDA).
                 current(_page.DbPathField).setValue(DB_TestC_FDB).
                 current(_page.DbSaveBtn).click().waitUpdate();
         _ctx.implicitlyWaitElement();
-        // verification
-        Assert.assertEquals(_page.NameBD.getText(), NameBDA,"database is not successfully add");
-    }
 
-    // WHEN we add the database with the correct values THEN the database is successfully added
-    @Test( enabled = true, priority = 6)
-    public void testAddDbAlreadyExist()  {
-
-        //actions
-        _ctx.hoverAndClick(_page.DatabaseSettingsBtn);
-        _ctx.current(_page.DbNameField).waitelementToBeClickable();
-        _ctx.current(_page.DbNameField).setValue(NameBDA).
-                current(_page.DbPathField).setValue(DB_TestD_FDB).
-                current(_page.DbSaveBtn).click().waitUpdate();
-        _ctx.implicitlyWaitElement();
-        _ctx.hoverAndClick(_page.DatabaseSettingsBtn);
-        _ctx.current(_page.DbNameField).waitelementToBeClickable();
-        _ctx.current(_page.DbNameField).setValue(NameBDA).
-                current(_page.DbPathField).setValue(DB_TestD_FDB).
-                current(_page.DbSaveBtn).click().waitUpdate();
-        _ctx.implicitlyWaitElement();
-        String s = _page.DbAllertDanger.getText();
         // verification
-        Assert.assertEquals(s, s.contains("Database [DB_TestD_FDB] is already registered:"),"database is not successfully add");
+        Assert.assertTrue( _page.DbAllertDanger.getText().contains("Database ["+DB_TestC_FDB+"] is already registered:"),
+                "database is not successfully add");
     }
 }

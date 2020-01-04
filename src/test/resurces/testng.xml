@@ -18,11 +18,20 @@
     <parameter name="password" value="strong password"/>
 
 
-    <test name="Common" group-by-instances="true">
+    <test name="Database" group-by-instances="true">
         <classes >
             <class name = "TestPage.TestDashboard.TestDatabase"/>
-            <class name = "TestPage.TestDashboard.TestBackup"/>
+
         </classes>
     </test>
 
+    <test name="Backup" group-by-instances="true">
+        <classes >
+            <class name = "TestPage.TestDashboard.Backup.TestVerifiedBackup"/>
+            <class name = "TestPage.TestDashboard.Backup.TestIncrementalBackup"/>
+            <class name = "TestPage.TestDashboard.Backup.TestDumpBackup"/>
+            <!--            <class name = "TestPage.TestDashboard.Backup.TestCloudBackup"/>-->
+
+        </classes>
+    </test>
  </suite>

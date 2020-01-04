@@ -16,13 +16,28 @@
         <methods>
           <include name="suiteSetUp"/>
           <include name="testCreateVBCorrect"/>
+          <include name="testCreateVBMaxNumbNotNumbers"/>
+          <include name="testCreateVBScheduleIncorrect"/>
           <include name="tearDown"/>
+          <include name="testCreateVBMaxNumbNegative"/>
           <include name="testTearDown"/>
           <include name="suiteSetUp"/>
           <include name="suiteTearDown"/>
           <include name="testTearDownTests"/>
         </methods>
       </class> <!-- TestPage.TestDashboard.TestBackup -->
+      <class name="TestPage.TestDashboard.TestDatabase">
+        <methods>
+          <include name="testTearDown"/>
+          <include name="testAddDbAlreadyExist"/>
+          <include name="suiteSetUp"/>
+          <include name="suiteTearDown"/>
+          <include name="testAddDbCorrect"/>
+          <include name="testTearDownTests"/>
+          <include name="tearDown"/>
+          <include name="suiteSetUp"/>
+        </methods>
+      </class> <!-- TestPage.TestDashboard.TestDatabase -->
     </classes>
   </test> <!-- Common(failed) -->
 </suite> <!-- Failed suite [TestOne] -->

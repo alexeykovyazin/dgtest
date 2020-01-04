@@ -50,13 +50,13 @@ public class EnvContainer
         registerpage = PageFactory.initElements(Driver, RegistrationLocators.class);
         dashboardpage = PageFactory.initElements(Driver, Dashboard.class);
 
-        InitData();
+      //  InitData();
         Driver.navigate().to(url);
         Driver.manage().window().setSize(new Dimension(1920, 1080));
         Helper.waitSetup(Driver,2000);
 
         Registration();
-        AddServer();
+       AddServer();
 
     }
 
@@ -99,7 +99,7 @@ public class EnvContainer
                 current(registerpage.PasswordField).setValue("2019QAZ2019QAZ").
                 current(registerpage.ActiveButton).click();
         Helper.waitSetup(Driver,2000);
-        Assert.assertFalse(_helper.displayedElement11(registerpage.AllertRegistr), "Alert not displayed");
+        Assert.assertFalse(_helper.isdisplayedElement(registerpage.AllertRegistr), "Alert not displayed");
     }
 
     private void AddServer(){
@@ -129,14 +129,28 @@ public class EnvContainer
     }
     //TODO: Add check
     private void InitData() throws IOException {
-        _helper.deleteFolder(new File("C:\\HQBirdData\\config"));
-        DirectoryCopy();
-        Runtime.getRuntime().exec("powershell.exe  Start-Process C:\\dgtest\\src\\test\\resurces\\restartservice.bat -Verb runAs");
+
+        //_helper.implicitlyWaitElement();
+        Process process = Runtime.getRuntime().exec("powershell.exe  Start-Process C:\\dgtest\\src\\test\\resurces\\BatFiles\\stopservice.bat -Verb runAs");
+         String s;
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+         while((s = bufferedReader.readLine()) != null) {
+
+
+             System.out.println(s);
+         }
+        Helper.waitSetup(Driver, 10000);
+
+        _helper.deleteFolder(new File("C:\\HQBirdData\\config\\agent\\servers\\hqbirdsrv"));
+        _helper.deleteFolder(new File("C:\\HQBirdData\\output\\logs\\agent\\servers\\hqbirdsrv"));
+        _helper.deleteFolder(new File("C:\\HQBirdData\\config\\installid.bin"));
+        _helper.deleteFolder(new File("C:\\HQBirdData\\config\\unlock"));
+
+       // DirectoryCopy();
+        Runtime.getRuntime().exec("powershell.exe  Start-Process C:\\dgtest\\src\\test\\resurces\\BatFiles\\restartservice.bat -Verb runAs");
         _helper.implicitlyWaitElement();
-        Helper.waitSetup(Driver, 6000);
-        //BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-        // String s;
-        // while((s = bufferedReader.readLine()) != null) System.out.println(s);
+        Helper.waitSetup(Driver, 3000);
+
     }
     /**
      * Init Driver
