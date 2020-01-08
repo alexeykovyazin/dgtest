@@ -10,10 +10,18 @@ SC queryex %ServiceName%|Find "STATE"|Find "RUNNING">Nul&&(
             rem Убиваем процесс вместе с дочерними, используя полученный PID
             TaskKill /F /T /PID %%A>nul
             rem Задержка, чтобы обновился статус службы после убийства процесса
-            Ping -n 4 127.0.0.1>nul
+            Ping -n 4 localhost>nul
         )
         rem На всякий случай
         Net stop %ServiceName% 2>nul
     )
 )
+
+:loop
+sc query %ServiceName% | find "STOPPED"
+if errorlevel 1 (
+  timeout 1
+  goto loop
+)
+
 Exit
