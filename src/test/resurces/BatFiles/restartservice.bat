@@ -2,20 +2,20 @@
 Set ServiceName=FBDataGuardAgent
 
 :: Получаем состояние службы, проверяем запущена ли она
-SC queryex %ServiceName%|Find "STATE"|Find "RUNNING">Nul&&(
-    rem Пробуем остановить
-    Net stop %ServiceName%>nul||(
-        rem Если остановить через net stop не вышло, запрашиваем PID
-        For /F "tokens=3" %%A In ('SC queryex %ServiceName%^|Find "PID"') Do (
-            rem Убиваем процесс вместе с дочерними, используя полученный PID
-            TaskKill /F /T /PID %%A>nul
-            rem Задержка, чтобы обновился статус службы после убийства процесса
-            Ping -n 4 127.0.0.1>nul
-        )
-        rem На всякий случай
-        Net stop %ServiceName% 2>nul
+:loop
+SC queryex %ServiceName%|Find "STOPPED"&&(
+    Net start %ServiceName%
+    :loop
+    sc query %ServiceName% | find "STATE"| find "RUNNING"
+    if errorlevel 1 (
+      timeout 1
+      goto loop
     )
 )
-rem Если служба не была запущена, или уже убита к тому времени - запускаем её
-Net start %ServiceName%
+
+if errorlevel 1 (
+  timeout 1
+  goto loop
+)
+
 Exit

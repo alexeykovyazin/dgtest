@@ -3,6 +3,7 @@ package TestPage;
 import Helpers.Helper;
 
 import TestPageLocator.DashboardPage.Dashboard;
+import TestPageLocator.DashboardPage.Database;
 import TestPageLocator.GeneralLocators;
 import TestPageLocator.RegistrationLocators;
 import org.openqa.selenium.Dimension;
@@ -21,6 +22,8 @@ import java.io.InputStreamReader;
 import java.lang.reflect.Method;
 import java.util.logging.Level;
 
+import static Constants.InitData.*;
+
 public class EnvContainer
 {
     public static String URL,Pass, Login;
@@ -29,11 +32,12 @@ public class EnvContainer
     public static GeneralLocators generalpage;
     public static RegistrationLocators registerpage;
     public static Dashboard dashboardpage;
+    private Database _pagedatabase;
 
 
     @BeforeSuite
     @Parameters({ "browsername", "pathdriver", "url", "username", "password" })
-    public void suiteSetUp(String browserType, String pathDriver, String url, String username, String password) throws IOException {
+    public void suiteSetUp(String browserType, String pathDriver, String url, String username, String password) throws IOException, InterruptedException {
 
         if (System.getProperty("url") != null) {
             url = System.getProperty("url");
@@ -49,14 +53,16 @@ public class EnvContainer
         generalpage = PageFactory.initElements(Driver, GeneralLocators.class);
         registerpage = PageFactory.initElements(Driver, RegistrationLocators.class);
         dashboardpage = PageFactory.initElements(Driver, Dashboard.class);
+        _pagedatabase = PageFactory.initElements(Driver, Database.class);
 
-      //  InitData();
+        InitData();
         Driver.navigate().to(url);
         Driver.manage().window().setSize(new Dimension(1920, 1080));
-        Helper.waitSetup(Driver,2000);
+        Helper.waitSetup(Driver,3000);
 
         Registration();
-       AddServer();
+        AddServer();
+        AddDatabase();
 
     }
 
@@ -127,19 +133,12 @@ public class EnvContainer
 
         }
     }
-    //TODO: Add check
-    private void InitData() throws IOException {
+
+    private void InitData() throws IOException, InterruptedException {
 
         //_helper.implicitlyWaitElement();
-        Process process = Runtime.getRuntime().exec("powershell.exe  Start-Process C:\\dgtest\\src\\test\\resurces\\BatFiles\\stopservice.bat -Verb runAs");
-         String s;
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-         while((s = bufferedReader.readLine()) != null) {
-
-
-             System.out.println(s);
-         }
-        Helper.waitSetup(Driver, 10000);
+        Runtime.getRuntime().exec("powershell.exe  Start-Process C:\\dgtest\\src\\test\\resurces\\BatFiles\\stopservice.bat -Verb runAs").waitFor();
+        Helper.waitSetup(Driver, 60000);
 
         _helper.deleteFolder(new File("C:\\HQBirdData\\config\\agent\\servers\\hqbirdsrv"));
         _helper.deleteFolder(new File("C:\\HQBirdData\\output\\logs\\agent\\servers\\hqbirdsrv"));
@@ -147,11 +146,24 @@ public class EnvContainer
         _helper.deleteFolder(new File("C:\\HQBirdData\\config\\unlock"));
 
        // DirectoryCopy();
-        Runtime.getRuntime().exec("powershell.exe  Start-Process C:\\dgtest\\src\\test\\resurces\\BatFiles\\restartservice.bat -Verb runAs");
+        Runtime.getRuntime().exec("powershell.exe  Start-Process C:\\dgtest\\src\\test\\resurces\\BatFiles\\restartservice.bat -Verb runAs").waitFor();
         _helper.implicitlyWaitElement();
-        Helper.waitSetup(Driver, 3000);
+        Helper.waitSetup(Driver, 5000);
 
     }
+
+    private void AddDatabase(){
+        //actions
+        _helper.current(_pagedatabase.DatabaseSettingsBtn).click();
+        _helper.current(_pagedatabase.DbNameField).waitelementToBeClickable();
+        _helper.current(_pagedatabase.DbNameField).setValue(BackupBD).
+                current(_pagedatabase.DbPathField).setValue(Backup_DB_Path).
+                current(_pagedatabase.DbSaveBtn).click().waitUpdate();
+        Assert.assertTrue(_helper.isdisplayedElement(_pagedatabase.NameBD(BackupBD)), "database is not successfully add");
+
+
+    }
+
     /**
      * Init Driver
      */

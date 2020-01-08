@@ -30,8 +30,8 @@ public class TestDumpBackup extends EnvContainer {
         _pagedatabase = PageFactory.initElements(_driver, Database.class);
         openUrl();
         Helper.waitSetup(_driver, 1000);
-        _ctx.current(_page.NameBDText(VerifiedBD)).click();
-        _ctx.current(_page.DumpBackupSettingsBtn(VerifiedBD)).click();
+        _ctx.current(_page.NameBDText(BackupBD)).click();
+        _ctx.current(_page.DumpBackupSettingsBtn(BackupBD)).click();
         _ctx.current(_page.ScheduleField).waitelementToBeClickable();
 
     }
@@ -124,11 +124,11 @@ public class TestDumpBackup extends EnvContainer {
         Helper.waitSetup(_driver,10000);
         openUrl();
         _ctx.implicitlyWaitElement();
-        _ctx.current(_page.NameBDText(VerifiedBD)).click();
+        _ctx.current(_page.NameBDText(BackupBD)).click();
         // verification
-        Assert.assertEquals(_page.DumpBackupPanelOk(VerifiedBD).getText(),"OK",
+        Assert.assertEquals(_page.DumpBackupPanelOk(BackupBD).getText(),"OK",
                 "Status verified backup not OK");
-        Assert.assertEquals(_page.DumpBackupPanelSchedule(VerifiedBD).getText(),"[scheduled "+cron+"]" ,
+        Assert.assertEquals(_page.DumpBackupPanelSchedule(BackupBD).getText(),"[scheduled "+cron+"]" ,
                 "cron schedule must be displayed");
 
     }

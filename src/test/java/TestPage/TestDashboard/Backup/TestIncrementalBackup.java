@@ -30,8 +30,8 @@ public class TestIncrementalBackup extends EnvContainer {
         _pagedatabase = PageFactory.initElements(_driver, Database.class);
         openUrl();
         Helper.waitSetup(_driver, 1000);
-        _ctx.current(_page.NameBDText(VerifiedBD)).click();
-        _ctx.current(_page.IncrementalBackupSettingsBtn(VerifiedBD)).click();
+        _ctx.current(_page.NameBDText(BackupBD)).click();
+        _ctx.current(_page.IncrementalBackupSettingsBtn(BackupBD)).click();
     }
     @AfterMethod
     public void tearDown() {
@@ -66,13 +66,13 @@ public class TestIncrementalBackup extends EnvContainer {
     public void testCreateIncrementalBackupMinFreeSpaceEmpty ()  {
         // prepare
         InitBackup();
-
+        String value = "a>?$%^^";
         //actions
-        _ctx.current(_page.MinFreeSpaceField).setValue("a>?$%^^").
+        _ctx.current(_page.MinFreeSpaceField).setValue(value).
                 current(_page.DbSaveBtn).click().waitUpdate();
 
         // verification
-        Assert.assertEquals(_page.BackupAllertDanger.getText(),"\"\" is not an integer number",
+        Assert.assertEquals(_page.BackupAllertDanger.getText(),"\""+value+"\" is not an integer number",
                 "Value is not an integer number");
 
     }
@@ -114,7 +114,7 @@ public class TestIncrementalBackup extends EnvContainer {
         InitBackup();
 
         //actions
-        _ctx.current(_page.MaxNumbFilesField).setValue("").
+        _ctx.current(_page.PerformBackupDelayField).setValue("").
                 current(_page.DbSaveBtn).click().waitUpdate();
 
         // verification
@@ -123,7 +123,7 @@ public class TestIncrementalBackup extends EnvContainer {
 
 
     }
-    // WHEN we fill in the settings Dump Backup with the correct data THEN the backup is successfully created
+    // WHEN we fill in the settings Incremental Backup with the correct data THEN the backup is successfully created
     @Test( enabled = true, priority = 6)
     public void testCreateIncrementalBackupCorrect ()  {
         // prepare
@@ -132,17 +132,18 @@ public class TestIncrementalBackup extends EnvContainer {
 
         //actions
         _ctx.current(_page.EnabledCheckbox).click().
+                current(_page.ScheduleAdvencedField).click().
                 current(_page.ScheduleField).setValue(cron).
                 current(_page.DbSaveBtn).click().waitUpdate();
         Helper.waitSetup(_driver,10000);
         openUrl();
         _ctx.implicitlyWaitElement();
-        _ctx.current(_page.NameBDText(VerifiedBD)).click();
+        _ctx.current(_page.NameBDText(BackupBD)).click();
         // verification
-        Assert.assertEquals(_page.DumpBackupPanelOk(VerifiedBD).getText(),"OK",
-                "Status verified backup not OK");
-        Assert.assertEquals(_page.DumpBackupPanelSchedule(VerifiedBD).getText(),"[scheduled "+cron+"]" ,
-                "cron schedule must be displayed");
+        Assert.assertEquals(_page.IncrementalBackupPanel(BackupBD).getText(),"Advanced schedule",
+                "Scheme backup not Advanced schedule");
+        Assert.assertEquals(_page.IncrementalBackupPanelOk(BackupBD).getText(),"OK" ,
+                "Status incremental backup not OK");
 
     }
 
