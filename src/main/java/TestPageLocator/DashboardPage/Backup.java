@@ -57,6 +57,8 @@ public class Backup {
     public WebElement CheckPeriodField;
     @FindBy(id = "form-monitor_directory")
     public WebElement MonitorFolderField;
+    @FindBy(id = "form-unpack_directory")
+    public WebElement UnpackDirectoryField;
     @FindBy(id = "form-archive_file_template")
     public WebElement FilenameTemplateField;
     @FindBy(id = "form-attempts_to_fail")
@@ -73,8 +75,20 @@ public class Backup {
     public WebElement AlertFileAgeField;
     @FindBy(id = "form-shutdown-timeout")
     public WebElement ShutdownTimeoutField;
+    @FindBy(id = "form-deleay_limit_to_alert_ms")
+    public WebElement LimitMsField;
     @FindBy(id = "form-sqltext")
     public WebElement SqlQueryField;
+    @FindBy(id = "form-max_fileage_torestore_h")
+    public WebElement MaxFileageTorestoreHField;
+    @FindBy(id = "form-restore_dir")
+    public WebElement RestoreDirField;
+    @FindBy(id = "form-restore_dbname")
+    public WebElement RestoreDbNameField;
+    @FindBy(id = "form-addname_to_backup_extisting_db")
+    public WebElement AppendSuffixFileNameField;
+    @FindBy(id = "form-max-duration")
+    public WebElement LimitRestoreProcTimeField;
 
      /**
      *  FTP settings
@@ -89,10 +103,16 @@ public class Backup {
     public WebElement FtpPortField;
     @FindBy(xpath = "//*[@id='form-section-FTPUser']//*[@id='form-FTPUser']")
     public WebElement FtpUserField;
+    @FindBy(xpath = "//*[@id='form-section-FTPpass']//*[@id='form-FTPpass']")
+    public WebElement FtpPasswordField;
+    @FindBy(xpath = "//*[@id='form-section-FTPStoreFolder']//*[@id='form-FTPStoreFolder']")
+    public WebElement FtpStoreFolderField;
     @FindBy(xpath = "(//*[contains(@class,'btn-dialog-ok')])[3]")
     public WebElement FtpSaveBtn;
-    @FindBy(xpath = "//*[@class='alert alert-danger']//span")
+    @FindBy(xpath = "(//*[@class='alert alert-danger']//span)[last()]")
     public WebElement BackupAllertDangerFtp;
+    @FindBy(xpath = "//*[@class='dq-grid-ftp']//*[@id='col-status']//img")
+    public WebElement StatusFtp;
 
     @FindBy(xpath = "(//*[contains(@class,'btn-dialog-ok')])[2]")
     public WebElement DbSaveBtn;
@@ -144,10 +164,10 @@ public class Backup {
      */
     public WebElement CloudBackupSettingsBtn(String text) {return _driver.findElement(By.xpath("//*[@class='head-name panel-heading']//*[text()='"+text+"']" +
             "//ancestor::div[2]//*[contains(@class,'panel panel-default tooltip-cloud-backup')]//*[@class='control']")); }
-    public WebElement CloudBackupPanelOk(String text) {return _driver.findElement(By.xpath("//*[@class='head-name panel-heading']//*[text()='"+text+"']" +
-            "//ancestor::div[2]//*[contains(@class,'panel panel-default tooltip-cloud-backup')]//tr[3]/td/b[1]")); }
-    public WebElement CloudBackupPanel(String text) {return _driver.findElement(By.xpath("//*[@class='head-name panel-heading']//*[text()='"+text+"']" +
-            "//ancestor::div[2]//*[contains(@class,'panel panel-default tooltip-cloud-backup')]//tr[2]/td/b")); }
+    public WebElement CloudBackupPanelOk(String text) {return _driver.findElement(By.xpath("(//*[@class='head-name panel-heading']//*[text()='"+text+"']" +
+            "//ancestor::div[2]//*[contains(@class,'panel panel-default tooltip-cloud-backup')]//tr//strong)[1]")); }
+    public WebElement CloudBackupPanelLastSendFile (String dbName) {return _driver.findElement(By.xpath("(//*[@class='head-name panel-heading']//*[text()='"+dbName+"']" +
+            "//ancestor::div[2]//*[contains(@class,'panel panel-default tooltip-cloud-backup')]//tr[3]//b)[1]")); }
 
     /**
      * cloud-backup-receiver panel
@@ -155,7 +175,7 @@ public class Backup {
     public WebElement CloudBackupReceiverSettingsBtn(String text) {return _driver.findElement(By.xpath("//*[@class='head-name panel-heading']//*[text()='"+text+"']" +
             "//ancestor::div[2]//*[contains(@class,'panel panel-default tooltip-cloud-backup-receiver')]//*[@class='control']")); }
     public WebElement CloudBackupReceiverPanelOk(String text) {return _driver.findElement(By.xpath("//*[@class='head-name panel-heading']//*[text()='"+text+"']" +
-            "//ancestor::div[2]//*[contains(@class,'panel panel-default tooltip-cloud-backup-receiver')]//tr[3]/td/b[1]")); }
+            "//ancestor::div[2]//*[contains(@class,'panel panel-default tooltip-cloud-backup-receiver')]//tr//strong")); }
     public WebElement CloudBackupReceiverPanel(String text) {return _driver.findElement(By.xpath("//*[@class='head-name panel-heading']//*[text()='"+text+"']" +
             "//ancestor::div[2]//*[contains(@class,'panel panel-default tooltip-cloud-backup-receiver')]//tr[2]/td/b")); }
 
@@ -165,11 +185,9 @@ public class Backup {
     public WebElement ValidateDbSettingsBtn(String text) {return _driver.findElement(By.xpath("//*[@class='head-name panel-heading']//*[text()='"+text+"']" +
             "//ancestor::div[2]//*[contains(@class,'panel panel-default tooltip-validate-db')]//*[@class='control']")); }
     public WebElement ValidateDbPanelOk(String text) {return _driver.findElement(By.xpath("//*[@class='head-name panel-heading']//*[text()='"+text+"']" +
-            "//ancestor::div[2]//*[contains(@class,'panel panel-default tooltip-validate-db')]//tr[3]/td/b[1]")); }
+            "//ancestor::div[2]//*[contains(@class,'panel panel-default tooltip-validate-db')]//tr//strong")); }
     public WebElement ValidateDbPanelSchedule(String text) {return _driver.findElement(By.xpath("//*[@class='head-name panel-heading']//*[text()='"+text+"']" +
             "//ancestor::div[2]//*[contains(@class,'panel panel-default tooltip-validate-db')]//font")); }
-    public WebElement ValidateDbPanel(String text) {return _driver.findElement(By.xpath("//*[@class='head-name panel-heading']//*[text()='"+text+"']" +
-            "//ancestor::div[2]//*[contains(@class,'panel panel-default tooltip-validate-db')]//tr[2]/td/b")); }
 
      /**
      * restoredb panel
@@ -177,9 +195,9 @@ public class Backup {
     public WebElement RestoreDbSettingsBtn(String text) {return _driver.findElement(By.xpath("//*[@class='head-name panel-heading']//*[text()='"+text+"']" +
             "//ancestor::div[2]//*[contains(@class,'panel panel-default tooltip-restoredb')]//*[@class='control']")); }
     public WebElement RestoreDbPanelOk(String text) {return _driver.findElement(By.xpath("//*[@class='head-name panel-heading']//*[text()='"+text+"']" +
-            "//ancestor::div[2]//*[contains(@class,'panel panel-default tooltip-restoredb')]//tr[3]/td/b[1]")); }
-    public WebElement RestoreDbPanel(String text) {return _driver.findElement(By.xpath("//*[@class='head-name panel-heading']//*[text()='"+text+"']" +
-            "//ancestor::div[2]//*[contains(@class,'panel panel-default tooltip-restoredb')]//tr[2]/td/b")); }
+            "//ancestor::div[2]//*[contains(@class,'panel panel-default tooltip-restoredb')]//tr[1]//strong")); }
+    public WebElement RestoreDbSchedule(String text) {return _driver.findElement(By.xpath("//*[@class='head-name panel-heading']//*[text()='"+text+"']" +
+            "//ancestor::div[2]//*[contains(@class,'panel panel-default tooltip-restoredb')]//tr[1]//font")); }
 
     /**
      * sql-ping panel

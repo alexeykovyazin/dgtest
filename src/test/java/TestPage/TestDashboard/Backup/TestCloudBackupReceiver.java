@@ -11,7 +11,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import static Constants.InitData.BackupBD;
+import static Constants.InitData.*;
 
 public class TestCloudBackupReceiver extends EnvContainer {
     private WebDriver _driver;
@@ -30,8 +30,8 @@ public class TestCloudBackupReceiver extends EnvContainer {
         _pagedatabase = PageFactory.initElements(_driver, Database.class);
         openUrl();
         Helper.waitSetup(_driver, 1000);
-        _ctx.current(_page.NameBDText(BackupBD)).click();
-        _ctx.current(_page.CloudBackupReceiverSettingsBtn(BackupBD)).click();
+        _ctx.current(_page.NameBDText(ReplicaBD)).click();
+        _ctx.current(_page.CloudBackupReceiverSettingsBtn(ReplicaBD)).click();
         _ctx.current(_page.CheckPeriodField).waitelementToBeClickable();
     }
     @AfterMethod
@@ -49,7 +49,7 @@ public class TestCloudBackupReceiver extends EnvContainer {
     // WHEN we set the wrong schedule in the backup settings THEN, the error "Cron expression or period must be set properly"
     @Test( enabled = true, priority = 1)
     public void testCheckPeriodEmptyField()  {
-
+        InitTestCloudBackupReceiver();
         //actions
         _ctx.current(_page.CheckPeriodField).setValue("").waitUpdate();
         Helper.waitSetup(_driver,1000);
@@ -136,7 +136,7 @@ public class TestCloudBackupReceiver extends EnvContainer {
                 current(_page.DbSaveBtn).click().waitUpdate();
 
         // verification
-        Assert.assertEquals(_page.BackupAllertDanger.getText(),"\""+value+"\" is not an integer number",
+        Assert.assertEquals(_page.BackupAllertDanger.getText(),"\"1"+value+"\" is not an integer number",
                 "value must be a number");
 
     }
@@ -168,17 +168,18 @@ public class TestCloudBackupReceiver extends EnvContainer {
         Helper.waitSetup(_driver,10000);
         openUrl();
         _ctx.implicitlyWaitElement();
-        _ctx.current(_page.NameBDText(BackupBD)).click();
+        _ctx.current(_page.NameBDText(ReplicaBD)).click();
 
         // verification
-        Assert.assertEquals(_page.CloudBackupReceiverPanelOk(BackupBD).getText(),"OK" ,
+        Assert.assertEquals(_page.CloudBackupReceiverPanelOk(ReplicaBD).getText(),"OK" ,
                 "Status cloud backup receiver not OK");
     }
 
 
     private void InitTestCloudBackupReceiver() {
         _ctx.current(_page.CheckPeriodField).setValue("10").
-                current(_page.MonitorFolderField).setValue("${db.repparam_log_archive_directory}").
+                current(_page.MonitorFolderField).setValue("C:\\dgtest\\src\\test\\resurces\\Ftp\\WorkCloudDB").
+                current(_page.UnpackDirectoryField).setValue("C:\\dgtest\\src\\test\\resurces\\Ftp\\WorkCloudReceiverDB").
                 current(_page.FilenameTemplateField).setValue("*.arch*").
                 current(_page.ArchiveExtentionField).setValue(".replpacked").
                 current(_page.DecryptPasswordField).setValue("123").

@@ -1,4 +1,4 @@
-package TestPage.TestDashboard.Backup;
+package TestPage.TestDashboard.Replica;
 
 import Helpers.Helper;
 import TestPage.EnvContainer;
@@ -11,9 +11,9 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import static Constants.InitData.*;
+import static Constants.InitData.BackupBD;
 
-public class TestCloudBackup extends EnvContainer {
+public class TestReplica extends EnvContainer {
     private WebDriver _driver;
 
     public String _url,_standarturl = "http://localhost:8082/static/dashboard.html";
@@ -30,8 +30,8 @@ public class TestCloudBackup extends EnvContainer {
         _pagedatabase = PageFactory.initElements(_driver, Database.class);
         openUrl();
         Helper.waitSetup(_driver, 1000);
-        _ctx.current(_page.NameBDText(ReplicaBD)).click();
-        _ctx.current(_page.CloudBackupSettingsBtn(ReplicaBD)).click();
+        _ctx.current(_page.NameBDText(BackupBD)).click();
+        _ctx.current(_page.CloudBackupSettingsBtn(BackupBD)).click();
         _ctx.current(_page.CheckPeriodField).waitelementToBeClickable();
     }
     @AfterMethod
@@ -163,45 +163,37 @@ public class TestCloudBackup extends EnvContainer {
     }
 
     // WHEN we fill in the settings FTP with the correct data THEN the FTP is successfully created
+    //TODO:: ADD Check
     @Test( enabled = true, priority = 8)
     public void testAddFtpCorrect()  {
         //prepare
-        _ctx.current(_page.FtpServerField).setValue("localhost").
-                current(_page.FtpPortField).setValue("8721").
-                current(_page.FtpUserField).setValue("admin2").
-                current(_page.FtpPasswordField).setValue("strong password2").
-                current(_page.FtpStoreFolderField).setValue("WorkCloudDB").
+        _ctx.current(_page.FtpServerField).setValue("www.myserver.com").
+                current(_page.FtpPortField).setValue("21").
+                current(_page.FtpUserField).setValue("UserName").
                 current(_page.FtpSaveBtn).click().waitUpdate();
 
         // verification
-        Assert.assertEquals(_page.StatusFtp.getAttribute("title"),"Active",
-                "Status ftp must be Active");
+       // Assert.assertEquals(_page.BackupAllertDanger.getText(),"FTP Server parameter is empty",
+                //"-------");
 
     }
 
     // WHEN we fill in the settings Cloud Backup with the correct data THEN the backup is successfully created
+    //TODO:: ADD Check
     @Test( enabled = true, priority = 9)
     public void testAddCloudBackupCorrect()  {
         // prepare
         InitTestCloudBackup();
         _ctx.current(_page.EnabledCheckbox).click().
                 current(_page.CheckPeriodField).setValue("10").
-                current(_page.MonitorFolderField).setValue("C:\\dgtest\\src\\test\\resurces\\WorkDB").
+                current(_page.MonitorFolderField).setValue("${db.repparam_log_archive_directory}").
                 current(_page.FilenameTemplateField).setValue("*.arch*").
                 current(_page.FiledConnectionFtpField).setValue("3").
                 current(_page.KeepNsourceFilesField).setValue("33");
         //actions
         _ctx.current(_page.DbSaveBtn).click().waitUpdate();
-        Helper.waitSetup(_driver,10000);
-        openUrl();
-        _ctx.implicitlyWaitElement();
-        _ctx.current(_page.NameBDText(ReplicaBD)).click();
-        Helper.waitSetup(_driver,1000);
+
         // verification
-        Assert.assertEquals(_page.CloudBackupPanelOk(ReplicaBD).getText(),"OK",
-                "Status verified backup not OK");
-        Assert.assertEquals(_page.CloudBackupPanelLastSendFile(ReplicaBD).getText(),CloudFileArch ,
-                "cron schedule must be displayed");
 
 
     }

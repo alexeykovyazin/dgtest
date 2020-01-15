@@ -68,7 +68,7 @@ public class TestSqlPing extends EnvContainer {
 
         //actions
         _ctx.current(_page.ScheduleField).setValue("0 0 23 ? * MON-FRI").
-                current(_page.ShutdownTimeoutField).setValue("");
+                current(_page.SqlQueryField).setValue("");
         Helper.waitSetup(_driver,1000);
         _ctx.current(_page.DbSaveBtn).click().waitUpdate();
 
