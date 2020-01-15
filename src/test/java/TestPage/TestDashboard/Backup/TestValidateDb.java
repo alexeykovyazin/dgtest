@@ -11,7 +11,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import static Constants.InitData.BackupBD;
+import static Constants.InitData.*;
 
 public class TestValidateDb extends EnvContainer {
     private WebDriver _driver;
@@ -30,8 +30,8 @@ public class TestValidateDb extends EnvContainer {
         _pagedatabase = PageFactory.initElements(_driver, Database.class);
         openUrl();
         Helper.waitSetup(_driver, 1000);
-        _ctx.current(_page.NameBDText(BackupBD)).click();
-        _ctx.current(_page.ValidateDbSettingsBtn(BackupBD)).click();
+        _ctx.current(_page.NameBDText(ReplicaBD)).click();
+        _ctx.current(_page.ValidateDbSettingsBtn(ReplicaBD)).click();
         _ctx.current(_page.ScheduleField).waitelementToBeClickable();
     }
     @AfterMethod
@@ -91,13 +91,13 @@ public class TestValidateDb extends EnvContainer {
         Helper.waitSetup(_driver,10000);
         openUrl();
         _ctx.implicitlyWaitElement();
-        _ctx.current(_page.NameBDText(BackupBD)).click();
+        _ctx.current(_page.NameBDText(ReplicaBD)).click();
         Helper.waitSetup(_driver,1000);
 
         // verification
-        Assert.assertEquals(_page.ValidateDbPanelSchedule(BackupBD).getText(),"[scheduled "+cron+"]" ,
+        Assert.assertEquals(_page.ValidateDbPanelSchedule(ReplicaBD).getText(),"[scheduled "+cron+"]" ,
                 "cron schedule must be displayed");
-        Assert.assertEquals(_page.VerifiedBackupPanelOk(BackupBD).getText(),"OK",
+        Assert.assertEquals(_page.ValidateDbPanelOk(ReplicaBD).getText(),"OK",
                 "Status verified backup not OK");
 
 

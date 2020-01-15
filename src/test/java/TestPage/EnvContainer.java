@@ -60,19 +60,19 @@ public class EnvContainer
         Driver.manage().window().setSize(new Dimension(1920, 1080));
         Helper.waitSetup(Driver,3000);
 
+        // Registration enterprise version
         Registration();
+        //Add default server
         AddServer();
-        AddDatabase();
+        StopRefreshPage();
+
+        // Create DB Backup, Replica, Master
+        AddDatabaseInit();
 
     }
 
     @AfterSuite
     public void suiteTearDown() {
-        // int testStatus = result.getStatus();
-        /*
-         * if (ITestResult.FAILURE == result.getStatus()) {
-         * captureScreenshot(result.getName() + browserType); }
-         */
         Driver.quit();
     }
 
@@ -118,9 +118,60 @@ public class EnvContainer
         Helper.waitSetup(Driver,3000);
     }
 
-    private void DirectoryCopy() throws IOException {
-        File srcFolder = new File("C:\\dgtest\\src\\test\\resurces\\config");
-        File destFolder = new File("C:\\HQBirdData\\config");
+
+    // Func for initialization data: Stop server, delete and copy files, start service
+    private void InitData() throws IOException, InterruptedException {
+
+        // stop service dg and wait 30s
+        Runtime.getRuntime().exec("powershell.exe  Start-Process C:\\dgtest\\src\\test\\resurces\\BatFiles\\stopservice.bat -Verb runAs").waitFor();
+        Helper.waitSetup(Driver, 30000);
+
+        // delete some folders and files in the config
+        _helper.deleteFolder(new File("C:\\HQBirdData\\config\\agent\\servers\\hqbirdsrv"));
+        _helper.deleteFolder(new File("C:\\HQBirdData\\output\\logs\\agent\\servers\\hqbirdsrv"));
+        _helper.deleteFolder(new File("C:\\HQBirdData\\output\\output\\output\\hqbirdsrv"));
+        _helper.deleteFolder(new File("C:\\HQBirdData\\config\\installid.bin"));
+        _helper.deleteFolder(new File("C:\\HQBirdData\\config\\unlock"));
+
+        // we delete some spent backups and copy the reference backups to this folder
+        _helper.deleteFolder(new File("C:\\dgtest\\src\\test\\resurces\\WorkDB"));
+        _helper.deleteFolder(new File("C:\\dgtest\\src\\test\\resurces\\Ftp\\WorkCloudDB"));
+        _helper.deleteFolder(new File("C:\\dgtest\\src\\test\\resurces\\Ftp\\WorkCloudReceiverDB"));
+
+        DirectoryCopy("C:\\dgtest\\src\\test\\resurces\\StandartDB", "C:\\dgtest\\src\\test\\resurces\\WorkDB");
+
+        // start service dg and wait 5s
+        Runtime.getRuntime().exec("powershell.exe  Start-Process C:\\dgtest\\src\\test\\resurces\\BatFiles\\restartservice.bat -Verb runAs").waitFor();
+        _helper.implicitlyWaitElement();
+        Helper.waitSetup(Driver, 5000);
+
+    }
+    private void AddDatabaseInit(){
+        AddDatabase(BackupBD,Backup_DB_Path);
+        AddDatabase(ReplicaBD,Replica_DB_Path);
+        AddDatabase(MasterBD,Master_DB_Path);
+    }
+
+    private void StopRefreshPage(){
+        _helper.current(generalpage.PanelPageRefrtshBtn).click().
+                current(generalpage.StopRefreshBtn).click().waitUpdate();
+    }
+    private void AddDatabase(String dbName, String dbPath){
+        //actions
+        Helper.waitSetup(Driver, 1000);
+        _helper.current(_pagedatabase.DatabaseSettingsBtn).click();
+        _helper.current(_pagedatabase.DbNameField).waitelementToBeClickable();
+        _helper.current(_pagedatabase.DbNameField).setValue(dbName).
+                current(_pagedatabase.DbPathField).setValue(dbPath).
+                current(_pagedatabase.DbSaveBtn).click().waitUpdate();
+        Assert.assertTrue(_helper.isdisplayedElement(_pagedatabase.NameBD(dbName)), "database is not successfully add");
+
+
+    }
+
+    private void DirectoryCopy(String copyFolder, String replacement) throws IOException {
+        File srcFolder = new File(copyFolder);
+        File destFolder = new File(replacement);
 
         //проверка наличия директории источника
         if (!srcFolder.exists()) {
@@ -132,36 +183,6 @@ public class EnvContainer
             _helper.copyDirectory(srcFolder, destFolder);
 
         }
-    }
-
-    private void InitData() throws IOException, InterruptedException {
-
-        //_helper.implicitlyWaitElement();
-        Runtime.getRuntime().exec("powershell.exe  Start-Process C:\\dgtest\\src\\test\\resurces\\BatFiles\\stopservice.bat -Verb runAs").waitFor();
-        Helper.waitSetup(Driver, 60000);
-
-        _helper.deleteFolder(new File("C:\\HQBirdData\\config\\agent\\servers\\hqbirdsrv"));
-        _helper.deleteFolder(new File("C:\\HQBirdData\\output\\logs\\agent\\servers\\hqbirdsrv"));
-        _helper.deleteFolder(new File("C:\\HQBirdData\\config\\installid.bin"));
-        _helper.deleteFolder(new File("C:\\HQBirdData\\config\\unlock"));
-
-       // DirectoryCopy();
-        Runtime.getRuntime().exec("powershell.exe  Start-Process C:\\dgtest\\src\\test\\resurces\\BatFiles\\restartservice.bat -Verb runAs").waitFor();
-        _helper.implicitlyWaitElement();
-        Helper.waitSetup(Driver, 5000);
-
-    }
-
-    private void AddDatabase(){
-        //actions
-        _helper.current(_pagedatabase.DatabaseSettingsBtn).click();
-        _helper.current(_pagedatabase.DbNameField).waitelementToBeClickable();
-        _helper.current(_pagedatabase.DbNameField).setValue(BackupBD).
-                current(_pagedatabase.DbPathField).setValue(Backup_DB_Path).
-                current(_pagedatabase.DbSaveBtn).click().waitUpdate();
-        Assert.assertTrue(_helper.isdisplayedElement(_pagedatabase.NameBD(BackupBD)), "database is not successfully add");
-
-
     }
 
     /**
