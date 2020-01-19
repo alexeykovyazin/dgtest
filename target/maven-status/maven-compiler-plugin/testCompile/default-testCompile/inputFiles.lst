@@ -1,6 +1,14 @@
-C:\dgtest\src\test\java\SuiteListener.java
 C:\dgtest\src\test\java\TestPage\EnvContainer.java
+C:\dgtest\src\test\java\TestPage\TestDashboard\Backup\TestDumpBackup.java
 C:\dgtest\src\test\java\TestPage\TestDashboard\TestDashboard.java
+C:\dgtest\src\test\java\TestPage\TestDashboard\Backup\TestIncrementalBackup.java
 C:\dgtest\src\test\java\Listener.java
-C:\dgtest\src\test\java\TestPage\TestDashboard\Backup.java
+C:\dgtest\src\test\java\TestPage\TestDashboard\Backup\TestRestoreDb.java
+C:\dgtest\src\test\java\TestPage\TestDashboard\Backup\TestCloudBackup.java
 C:\dgtest\src\test\java\TestPage\TestDashboard\TestDatabase.java
+C:\dgtest\src\test\java\TestPage\TestDashboard\Replica\TestReplica.java
+C:\dgtest\src\test\java\TestPage\TestDashboard\Backup\TestValidateDb.java
+C:\dgtest\src\test\java\SuiteListener.java
+C:\dgtest\src\test\java\TestPage\TestDashboard\Backup\TestSqlPing.java
+C:\dgtest\src\test\java\TestPage\TestDashboard\Backup\TestCloudBackupReceiver.java
+C:\dgtest\src\test\java\TestPage\TestDashboard\Backup\TestVerifiedBackup.java

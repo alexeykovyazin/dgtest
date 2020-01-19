@@ -4,6 +4,7 @@ import Helpers.Helper;
 import TestPage.EnvContainer;
 import TestPageLocator.DashboardPage.Database;
 import TestPageLocator.DashboardPage.Backup;
+import io.qameta.allure.Description;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
@@ -20,7 +21,7 @@ public class TestVerifiedBackup extends EnvContainer {
     private Helper _ctx;
 
     @BeforeClass
-    public void suiteSetUp()
+    public void classSetUp()
     {
         _driver = EnvContainer.Driver;
         _ctx = new Helper(_driver);
@@ -36,12 +37,12 @@ public class TestVerifiedBackup extends EnvContainer {
 
 
     }
-    @AfterMethod
-    public void tearDown() {
-       // openUrl();
-        Helper.interceptionJSonPage(_driver);
-
-    }
+//    @AfterMethod
+//    public void methodTearDown() {
+//       // openUrl();
+//        Helper.interceptionJSonPage(_driver);
+//
+//    }
     private void openUrl() {
         _url = EnvContainer.URL + _standarturl;
         _driver.navigate().to(_url);
@@ -50,8 +51,8 @@ public class TestVerifiedBackup extends EnvContainer {
     }
 
 
-    // WHEN we set the wrong schedule in the backup settings THEN, the error "Cron expression or period must be set properly"
     @Test( enabled = true, priority = 1)
+    @Description(value = "WHEN we set the wrong schedule in the backup settings THEN, the error \"Cron expression or period must be set properly\"")
     public void testCreateVerifiedBackupScheduleIncorrect()  {
 
         //actions
@@ -64,8 +65,9 @@ public class TestVerifiedBackup extends EnvContainer {
 
 
     }
-    // WHEN we set a negative number in the "maximum number of backups" field THEN the error " "" should be >= 0"
+
     @Test( enabled = true, priority = 2)
+    @Description(value = "WHEN we set a negative number in the \"maximum number of backups\" field THEN the error \" \"\" should be >= 0\"")
     public void testCreateVerifiedBackupMaxNumbNegative ()  {
         // prepare
         String negativeNumb = "-8";
@@ -80,8 +82,9 @@ public class TestVerifiedBackup extends EnvContainer {
 
 
     }
-    // WHEN we set other symbols in the "maximum number of backups" field THEN the error " "" is not an integer number"
+
     @Test( enabled = true, priority = 3)
+    @Description(value = "WHEN we set other symbols in the \"maximum number of backups\" field THEN the error \" \"\" is not an integer number\"")
     public void testCreateVerifiedBackupMaxNumbNotNumbers ()  {
         // prepare
         String notNumb = "dfdfdfdf";
@@ -96,8 +99,9 @@ public class TestVerifiedBackup extends EnvContainer {
 
 
     }
-    // WHEN we fill in the settings Verified Backup with the correct data THEN the backup is successfully created
+
     @Test( enabled = true, priority = 4)
+    @Description(value = "WHEN we fill in the settings Verified Backup with the correct data THEN the backup is successfully created")
     public void testCreateVerifiedBackupCorrect ()  {
         // prepare
         String cron = "0/10 * * * * ?";

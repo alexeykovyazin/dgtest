@@ -4,6 +4,7 @@ import Helpers.Helper;
 import TestPage.EnvContainer;
 import TestPageLocator.DashboardPage.Backup;
 import TestPageLocator.DashboardPage.Database;
+import io.qameta.allure.Description;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
@@ -22,7 +23,7 @@ public class TestIncrementalBackup extends EnvContainer {
     private Helper _ctx;
 
     @BeforeClass
-    public void suiteSetUp()
+    public void classSetUp()
     {
         _driver = EnvContainer.Driver;
         _ctx = new Helper(_driver);
@@ -33,11 +34,11 @@ public class TestIncrementalBackup extends EnvContainer {
         _ctx.current(_page.NameBDText(BackupBD)).click();
         _ctx.current(_page.IncrementalBackupSettingsBtn(BackupBD)).click();
     }
-    @AfterMethod
-    public void tearDown() {
-       // openUrl();
-        Helper.interceptionJSonPage(_driver);
-    }
+//    @AfterMethod
+//    public void methodTearDown() {
+//       // openUrl();
+//        Helper.interceptionJSonPage(_driver);
+//    }
     private void openUrl() {
         _url = EnvContainer.URL + _standarturl;
         _driver.navigate().to(_url);
@@ -45,8 +46,8 @@ public class TestIncrementalBackup extends EnvContainer {
         Helper.waitUpdate(_driver);
     }
 
-    // WHEN we leave the field empty "Max Duration"  THEN the error "The server encountered an unexpected condition which prevented it from fulfilling the request"
     @Test( enabled = true, priority = 1)
+    @Description(value = "WHEN we leave the field empty \"Max Duration\"  THEN the error \"The server encountered an unexpected condition which prevented it from fulfilling the request\"")
     public void testCreateIncrementalBackupMaxDurationEmpty()  {
         // prepare
         InitBackup();
@@ -61,8 +62,9 @@ public class TestIncrementalBackup extends EnvContainer {
 
 
     }
-    // WHEN we leave the field empty "Min Free Space"  THEN the error " "" is not an integer number"
+
     @Test( enabled = true, priority = 2)
+    @Description(value = "WHEN we leave the field empty \"Min Free Space\"  THEN the error \" \"\" is not an integer number\"")
     public void testCreateIncrementalBackupMinFreeSpaceEmpty ()  {
         // prepare
         InitBackup();
@@ -77,8 +79,8 @@ public class TestIncrementalBackup extends EnvContainer {
 
     }
 
-    // WHEN we leave the field empty "Path Folder"  THEN the error " "" should not be null or empty"
     @Test( enabled = true, priority = 3)
+    @Description(value = "WHEN we leave the field empty \"Path Folder\"  THEN the error \" \"\" should not be null or empty\"")
     public void testCreateIncrementalBackupPathFolderEmpty ()  {
         // prepare
         InitBackup();
@@ -92,8 +94,8 @@ public class TestIncrementalBackup extends EnvContainer {
                 "The server encountered an unexpected condition which prevented it from fulfilling the request");
     }
 
-    // WHEN we leave the field empty "Journal Folder"  THEN the error " "" should not be null or empty"
     @Test( enabled = true, priority = 4)
+    @Description(value = "WHEN we leave the field empty \"Journal Folder\"  THEN the error \" \"\" should not be null or empty\"")
     public void testCreateIncrementalBackupJournalFolderEmpty ()  {
         // prepare
         InitBackup();
@@ -107,8 +109,8 @@ public class TestIncrementalBackup extends EnvContainer {
                 "The server encountered an unexpected condition which prevented it from fulfilling the request");
     }
 
-    // WHEN we leave the field empty "Perform Backup" field THEN the error "The server encountered an unexpected condition which prevented it from fulfilling the request"
     @Test( enabled = true, priority = 5)
+    @Description(value = "WHEN we leave the field empty \"Perform Backup\" field THEN the error \"The server encountered an unexpected condition which prevented it from fulfilling the request\"")
     public void testCreateIncrementalBackupPerformBackupEmpty ()  {
         // prepare
         InitBackup();
@@ -123,8 +125,9 @@ public class TestIncrementalBackup extends EnvContainer {
 
 
     }
-    // WHEN we fill in the settings Incremental Backup with the correct data THEN the backup is successfully created
+
     @Test( enabled = true, priority = 6)
+    @Description(value = "WHEN we fill in the settings Incremental Backup with the correct data THEN the backup is successfully created")
     public void testCreateIncrementalBackupCorrect ()  {
         // prepare
         InitBackup();

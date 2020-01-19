@@ -9,7 +9,11 @@
     <version>1</version>
 
     <properties>
+        <maven-surefire-plugin.version>3.0.0-M4</maven-surefire-plugin.version>
+        <aspectj.version>1.9.5</aspectj.version>
         <allure.version>2.13.1</allure.version>
+        <allure.results.directory>C:/dgtest/src/test/reports/allure-results</allure.results.directory>
+        <allure.reports.directory>C:/dgtest/src/test/reports/allure-reports</allure.reports.directory>
     </properties>
 
     <dependencies>
@@ -26,34 +30,62 @@
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.1.0</version>
+            <version>7.0.0</version>
         </dependency>
-
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>${allure.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.7.30</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
     <build>
-        <pluginManagement>
             <plugins>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-surefire-plugin</artifactId>
-                    <version>3.0.0-M3</version>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.8.1</version>
                     <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                        <debug>false</debug>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${maven-surefire-plugin.version}</version>
+                    <configuration>
+                        <argLine>-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"</argLine>
+                        <systemPropertyVariables>
+                            <allure.results.directory>${allure.results.directory}</allure.results.directory>
+                        </systemPropertyVariables>
                         <suiteXmlFiles>
                             <suiteXmlFile>src/test/resurces/testng.xml</suiteXmlFile>
                         </suiteXmlFiles>
                     </configuration>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.aspectj</groupId>
+                            <artifactId>aspectjweaver</artifactId>
+                            <version>${aspectj.version}</version>
+                        </dependency>
+                    </dependencies>
                 </plugin>
-            </plugins>
-        </pluginManagement>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>8</source>
-                    <target>8</target>
-                </configuration>
-            </plugin>
+                <plugin>
+                 <groupId>io.qameta.allure</groupId>
+                    <artifactId>allure-maven</artifactId>
+                 <version>2.10.0</version>
+                 <configuration>
+                        <resultsDirectory>${allure.results.directory}</resultsDirectory>
+                       <reportDirectory>${allure.reports.directory}</reportDirectory>
+                 </configuration>
+                </plugin>
         </plugins>
     </build>
 

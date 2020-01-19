@@ -16,7 +16,7 @@ public class TestDashboard extends EnvContainer {
     private Helper ctx;
 
     @BeforeClass
-    public void suiteSetUp()
+    public void classSetUp()
     {
         _driver = EnvContainer.Driver;
         ctx = new Helper(_driver);

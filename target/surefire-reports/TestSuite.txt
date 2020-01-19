@@ -1,4 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.787 s - in TestSuite
+Tests run: 63, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 294.944 s <<< FAILURE! - in TestSuite
+TestPage.TestDashboard.Backup.TestRestoreDb.testCreateRestoreDbCorrect  Time elapsed: 13.348 s  <<< FAILURE!
+java.lang.AssertionError: Status verified backup not OK expected [OK] but found [MINOR]
+	at TestPage.TestDashboard.Backup.TestRestoreDb.testCreateRestoreDbCorrect(TestRestoreDb.java:204)
+
+TestPage.TestDashboard.Backup.TestCloudBackupReceiver.testAddCloudBackupReceiverCorrect  Time elapsed: 12.831 s  <<< FAILURE!
+java.lang.AssertionError: Status cloud backup receiver not OK expected [OK] but found [UNKNOWN]
+	at TestPage.TestDashboard.Backup.TestCloudBackupReceiver.testAddCloudBackupReceiverCorrect(TestCloudBackupReceiver.java:175)
+

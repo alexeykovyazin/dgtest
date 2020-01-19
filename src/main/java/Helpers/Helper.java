@@ -491,7 +491,7 @@ public class Helper {
      * Function Deleting Folder
      */
     public void deleteFolder(final File file) {
-        System.out.println("Удаляем файл: " + file.getAbsolutePath());
+        System.out.println("Delete file: " + file.getAbsolutePath());
         if(file.isDirectory()) {
             String[] files = file.list();
             if((null == files) || (files.length == 0)) {
@@ -511,23 +511,23 @@ public class Helper {
 
             if (src.isDirectory()) {
 
-                // Если директория отсутствует, то ее нужно создать ("скопировать" имя директории)
+                // If there is no directory, then you need to create it ("copy" the name of the directory)
                 if (!dst.exists()) {
                     dst.mkdir();
-                    //System.out.println("Директория скопирована из " + src + "  в " + dst);
+                    //System.out.println("Directory copied from " + src + "  in" + dst);
                 }
-                // Определяем массив по содержанию директории-источника
+                // We determine the array by the contents of the source directory
                 String files[] = src.list();
 
                 for (String file : files) {
-                    // создаем структуру директории-приемника по аналогии с директорией источником
+                    // create the structure of the destination directory by analogy with the source directory
                     File srcFile = new File(src, file);
                     File dstFile = new File(dst, file);
-                    // рекурсивное копирование
+                    // recursive copying
                     copyDirectory(srcFile, dstFile);
                 }
             } else {
-                // если переданный в процедуру объект, то он копируется через потоки по-байтно
+                // if the object passed to the procedure, then it is copied through the streams byte by byte
 
                 InputStream in = new FileInputStream(src);
                 OutputStream out = new FileOutputStream(dst);
@@ -535,14 +535,14 @@ public class Helper {
                 byte[] buffer = new byte[1024];
 
                 int length;
-                //копирование содержимого файла согласно размеру buffer
+                //copy file contents according to buffer size
                 while ((length = in.read(buffer)) > 0) {
                     out.write(buffer, 0, length);
                 }
                 in.close();
                 out.close();
 
-                //System.out.println("Файл скопирован из " + src + " в " + dst);
+                //System.out.println("File copied from " + src + " in " + dst);
             }
         } catch (Exception e) {
             e.printStackTrace();
