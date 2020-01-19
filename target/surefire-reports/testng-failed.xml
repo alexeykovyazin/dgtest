@@ -6,38 +6,30 @@
   <parameter name="browsername" value="chrome"/>
   <parameter name="url" value="http://admin:strong password@localhost:8082/"/>
   <parameter name="username" value="admin"/>
-  <listeners>
-    <listener class-name="Listener"/>
-    <listener class-name="SuiteListener"/>
-  </listeners>
-  <test thread-count="5" name="Common(failed)" verbose="0">
+  <test thread-count="5" name="Backup(failed)" verbose="0">
     <classes>
-      <class name="TestPage.TestDashboard.TestBackup">
+      <class name="TestPage.TestDashboard.Backup.TestRestoreDb">
         <methods>
-          <include name="suiteSetUp"/>
-          <include name="testCreateVBCorrect"/>
-          <include name="testCreateVBMaxNumbNotNumbers"/>
-          <include name="testCreateVBScheduleIncorrect"/>
-          <include name="tearDown"/>
-          <include name="testCreateVBMaxNumbNegative"/>
-          <include name="testTearDown"/>
+          <include name="classSetUp"/>
+          <include name="methodTearDown"/>
           <include name="suiteSetUp"/>
           <include name="suiteTearDown"/>
-          <include name="testTearDownTests"/>
+          <include name="testCreateRestoreDbCorrect"/>
         </methods>
-      </class> <!-- TestPage.TestDashboard.TestBackup -->
-      <class name="TestPage.TestDashboard.TestDatabase">
-        <methods>
-          <include name="testTearDown"/>
-          <include name="testAddDbAlreadyExist"/>
-          <include name="suiteSetUp"/>
-          <include name="suiteTearDown"/>
-          <include name="testAddDbCorrect"/>
-          <include name="testTearDownTests"/>
-          <include name="tearDown"/>
-          <include name="suiteSetUp"/>
-        </methods>
-      </class> <!-- TestPage.TestDashboard.TestDatabase -->
+      </class> <!-- TestPage.TestDashboard.Backup.TestRestoreDb -->
     </classes>
-  </test> <!-- Common(failed) -->
+  </test> <!-- Backup(failed) -->
+  <test thread-count="5" name="Replica(failed)" verbose="0">
+    <classes>
+      <class name="TestPage.TestDashboard.Backup.TestCloudBackupReceiver">
+        <methods>
+          <include name="methodTearDown"/>
+          <include name="classSetUp"/>
+          <include name="testAddCloudBackupReceiverCorrect"/>
+          <include name="suiteSetUp"/>
+          <include name="suiteTearDown"/>
+        </methods>
+      </class> <!-- TestPage.TestDashboard.Backup.TestCloudBackupReceiver -->
+    </classes>
+  </test> <!-- Replica(failed) -->
 </suite> <!-- Failed suite [TestOne] -->

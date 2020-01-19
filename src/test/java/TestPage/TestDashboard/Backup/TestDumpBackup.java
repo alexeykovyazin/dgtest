@@ -4,6 +4,7 @@ import Helpers.Helper;
 import TestPage.EnvContainer;
 import TestPageLocator.DashboardPage.Backup;
 import TestPageLocator.DashboardPage.Database;
+import io.qameta.allure.Description;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
@@ -22,7 +23,7 @@ public class TestDumpBackup extends EnvContainer {
     private Helper _ctx;
 
     @BeforeClass
-    public void suiteSetUp()
+    public void classSetUp()
     {
         _driver = EnvContainer.Driver;
         _ctx = new Helper(_driver);
@@ -35,11 +36,11 @@ public class TestDumpBackup extends EnvContainer {
         _ctx.current(_page.ScheduleField).waitelementToBeClickable();
 
     }
-    @AfterMethod
-    public void tearDown() {
-       // openUrl();
-        Helper.interceptionJSonPage(_driver);
-    }
+//    @AfterMethod
+//    public void methodTearDown() {
+//       // openUrl();
+//        Helper.interceptionJSonPage(_driver);
+//    }
     private void openUrl() {
         _url = EnvContainer.URL + _standarturl;
         _driver.navigate().to(_url);
@@ -47,8 +48,8 @@ public class TestDumpBackup extends EnvContainer {
         Helper.waitUpdate(_driver);
     }
 
-    // WHEN we set the wrong schedule in the backup settings THEN, the error "Cron expression or period must be set properly"
     @Test( enabled = true, priority = 1)
+    @Description(value = "WHEN we set the wrong schedule in the backup settings THEN, the error \"Cron expression or period must be set properly\"")
     public void testCreateDumpBackupScheduleIncorrect()  {
         // prepare
         InitBackup();
@@ -63,8 +64,9 @@ public class TestDumpBackup extends EnvContainer {
 
 
     }
-    // WHEN we leave the field empty "Min Free Space"  THEN the error " "" is not an integer number"
+
     @Test( enabled = true, priority = 2)
+    @Description(value = "WHEN we leave the field empty \"Min Free Space\"  THEN the error \" \"\" is not an integer number\"")
     public void testCreateDumpBackupMinFreeSpaceEmpty ()  {
         // prepare
         InitBackup();
@@ -79,8 +81,8 @@ public class TestDumpBackup extends EnvContainer {
 
     }
 
-    // WHEN we leave the field empty "Path Folder"  THEN the error " "" should not be null or empty"
     @Test( enabled = true, priority = 3)
+    @Description(value = "WHEN we leave the field empty \"Path Folder\"  THEN the error \" \"\" should not be null or empty\"")
     public void testCreateDumpBackupPathFolderEmpty ()  {
         // prepare
         InitBackup();
@@ -94,8 +96,8 @@ public class TestDumpBackup extends EnvContainer {
                 "");
     }
 
-    // WHEN we leave the field empty "maximum number Files" field THEN the error " "" is not an integer number"
     @Test( enabled = true, priority = 4)
+    @Description(value = "WHEN we leave the field empty \"maximum number Files\" field THEN the error \" \"\" is not an integer number\"")
     public void testCreateDumpBackupMaxNumbFilesEmpty ()  {
         // prepare
         InitBackup();
@@ -110,8 +112,9 @@ public class TestDumpBackup extends EnvContainer {
 
 
     }
-    // WHEN we fill in the settings Dump Backup with the correct data THEN the backup is successfully created
+
     @Test( enabled = true, priority = 5)
+    @Description(value = "WHEN we fill in the settings Dump Backup with the correct data THEN the backup is successfully created")
     public void testCreateDumpBackupCorrect ()  {
         // prepare
         InitBackup();

@@ -6,13 +6,17 @@ import TestPageLocator.DashboardPage.Dashboard;
 import TestPageLocator.DashboardPage.Database;
 import TestPageLocator.GeneralLocators;
 import TestPageLocator.RegistrationLocators;
+import io.qameta.allure.Attachment;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.annotations.*;
 
 import java.io.BufferedReader;
@@ -20,6 +24,8 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.lang.reflect.Method;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.logging.Level;
 
 import static Constants.InitData.*;
@@ -77,20 +83,23 @@ public class EnvContainer
     }
 
     @AfterMethod
-    public void testTearDown( Method method) {
+    public void methodTearDown( Method method, ITestResult result) {
+
+        if (! result.isSuccess()) {
+            makeScreenshot(result.getName());
+        }
         try {
             Helper.interceptionJSonPage(Driver);
         }catch (Exception ex){
 
         }
-
     }
 
-    @AfterTest
-    public void testTearDownTests() {
 
+    @Attachment(value = "{0}", type = "image/png")
+    public byte[] makeScreenshot(String nametest) {
+        return ((TakesScreenshot) Driver).getScreenshotAs(OutputType.BYTES);
     }
-
     /**
      * Main Func
      */
@@ -127,16 +136,20 @@ public class EnvContainer
         Helper.waitSetup(Driver, 30000);
 
         // delete some folders and files in the config
-        _helper.deleteFolder(new File("C:\\HQBirdData\\config\\agent\\servers\\hqbirdsrv"));
-        _helper.deleteFolder(new File("C:\\HQBirdData\\output\\logs\\agent\\servers\\hqbirdsrv"));
-        _helper.deleteFolder(new File("C:\\HQBirdData\\output\\output\\output\\hqbirdsrv"));
-        _helper.deleteFolder(new File("C:\\HQBirdData\\config\\installid.bin"));
-        _helper.deleteFolder(new File("C:\\HQBirdData\\config\\unlock"));
+        _helper.deleteFolder(new File("C:\\HQbird\\config\\agent\\servers\\hqbirdsrv"));
+        _helper.deleteFolder(new File("C:\\HQbird\\output\\logs\\agent\\servers\\hqbirdsrv"));
+        _helper.deleteFolder(new File("C:\\HQbird\\output\\output\\output\\hqbirdsrv"));
+        _helper.deleteFolder(new File("C:\\HQbird\\config\\installid.bin"));
+        _helper.deleteFolder(new File("C:\\HQbird\\config\\unlock"));
 
         // we delete some spent backups and copy the reference backups to this folder
         _helper.deleteFolder(new File("C:\\dgtest\\src\\test\\resurces\\WorkDB"));
         _helper.deleteFolder(new File("C:\\dgtest\\src\\test\\resurces\\Ftp\\WorkCloudDB"));
         _helper.deleteFolder(new File("C:\\dgtest\\src\\test\\resurces\\Ftp\\WorkCloudReceiverDB"));
+
+        // we delete folders allure :resuult and reports
+        _helper.deleteFolder(new File("C:\\dgtest\\src\\test\\reports\\allure-results"));
+        _helper.deleteFolder(new File("C:\\dgtest\\src\\test\\reports\\allure-reports"));
 
         DirectoryCopy("C:\\dgtest\\src\\test\\resurces\\StandartDB", "C:\\dgtest\\src\\test\\resurces\\WorkDB");
 
@@ -173,10 +186,10 @@ public class EnvContainer
         File srcFolder = new File(copyFolder);
         File destFolder = new File(replacement);
 
-        //проверка наличия директории источника
+        //checking for a source directory
         if (!srcFolder.exists()) {
 
-            System.err.println("Такой директории не существует!");
+            System.err.println("This directory does not exist!");
 
         } else {
 

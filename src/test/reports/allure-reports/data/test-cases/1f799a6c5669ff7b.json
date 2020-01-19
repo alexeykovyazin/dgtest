@@ -1,0 +1,142 @@
+{
+  "uid" : "1f799a6c5669ff7b",
+  "name" : "testCreateIncrementalBackupMinFreeSpaceEmpty",
+  "fullName" : "TestPage.TestDashboard.Backup.TestIncrementalBackup.testCreateIncrementalBackupMinFreeSpaceEmpty",
+  "historyId" : "dca3499206cbfce1db92cb37dc13c0be",
+  "time" : {
+    "start" : 1579443122653,
+    "stop" : 1579443125537,
+    "duration" : 2884
+  },
+  "description" : "WHEN we leave the field empty \"Min Free Space\"  THEN the error \" \"\" is not an integer number\"",
+  "descriptionHtml" : "<p>WHEN we leave the field empty &quot;Min Free Space&quot;  THEN the error &quot; &quot;&quot; is not an integer number&quot;</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "classSetUp",
+    "time" : {
+      "start" : 1579443116675,
+      "stop" : 1579443119303,
+      "duration" : 2628
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "suiteSetUp",
+    "time" : {
+      "start" : 1579443004639,
+      "stop" : 1579443086948,
+      "duration" : 82309
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "methodTearDown",
+    "time" : {
+      "start" : 1579443125550,
+      "stop" : 1579443125553,
+      "duration" : 3
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "suiteTearDown",
+    "time" : {
+      "start" : 1579443296967,
+      "stop" : 1579443297688,
+      "duration" : 721
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "TestPage.TestDashboard.Backup.TestIncrementalBackup"
+  }, {
+    "name" : "testClass",
+    "value" : "TestPage.TestDashboard.Backup.TestIncrementalBackup"
+  }, {
+    "name" : "testMethod",
+    "value" : "testCreateIncrementalBackupMinFreeSpaceEmpty"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestOne"
+  }, {
+    "name" : "suite",
+    "value" : "Backup"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestPage.TestDashboard.Backup.TestIncrementalBackup"
+  }, {
+    "name" : "host",
+    "value" : "MSI"
+  }, {
+    "name" : "thread",
+    "value" : "376@MSI.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "browsername",
+    "value" : "chrome"
+  }, {
+    "name" : "password",
+    "value" : "strong password"
+  }, {
+    "name" : "pathdriver",
+    "value" : "src/test/resurces/chromedriver.exe"
+  }, {
+    "name" : "url",
+    "value" : "http://admin:strong password@localhost:8082/"
+  }, {
+    "name" : "username",
+    "value" : "admin"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "1f799a6c5669ff7b.json",
+  "parameterValues" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+}

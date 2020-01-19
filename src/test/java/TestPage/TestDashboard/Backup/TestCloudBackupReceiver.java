@@ -4,6 +4,7 @@ import Helpers.Helper;
 import TestPage.EnvContainer;
 import TestPageLocator.DashboardPage.Backup;
 import TestPageLocator.DashboardPage.Database;
+import io.qameta.allure.Description;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
@@ -22,7 +23,7 @@ public class TestCloudBackupReceiver extends EnvContainer {
     private Helper _ctx;
 
     @BeforeClass
-    public void suiteSetUp()
+    public void classSetUp()
     {
         _driver = EnvContainer.Driver;
         _ctx = new Helper(_driver);
@@ -34,11 +35,11 @@ public class TestCloudBackupReceiver extends EnvContainer {
         _ctx.current(_page.CloudBackupReceiverSettingsBtn(ReplicaBD)).click();
         _ctx.current(_page.CheckPeriodField).waitelementToBeClickable();
     }
-    @AfterMethod
-    public void tearDown() {
-       // openUrl();
-        Helper.interceptionJSonPage(_driver);
-    }
+//    @AfterMethod
+//    public void methodTearDown() {
+//       // openUrl();
+//        Helper.interceptionJSonPage(_driver);
+//    }
     private void openUrl() {
         _url = EnvContainer.URL + _standarturl;
         _driver.navigate().to(_url);
@@ -46,8 +47,8 @@ public class TestCloudBackupReceiver extends EnvContainer {
         Helper.waitUpdate(_driver);
     }
 
-    // WHEN we set the wrong schedule in the backup settings THEN, the error "Cron expression or period must be set properly"
     @Test( enabled = true, priority = 1)
+    @Description(value = "WHEN we set the wrong schedule in the backup settings THEN, the error \"Cron expression or period must be set properly\"")
     public void testCheckPeriodEmptyField()  {
         InitTestCloudBackupReceiver();
         //actions
@@ -61,8 +62,8 @@ public class TestCloudBackupReceiver extends EnvContainer {
 
     }
 
-    // WHEN we leave the field empty "Watch Incoming Files" field THEN, the error "Monitored folder is empty - please specify it"
     @Test( enabled = true, priority = 2)
+    @Description(value = "WHEN we leave the field empty \"Watch Incoming Files\" field THEN, the error \"Monitored folder is empty - please specify it\"")
     public void testCheckWatchIncomingFilesEmptyField()  {
         // prepare
         InitTestCloudBackupReceiver();
@@ -77,8 +78,8 @@ public class TestCloudBackupReceiver extends EnvContainer {
 
     }
 
-    // WHEN we leave the field empty "Filename Template" field THEN, the error "Template for monitored file names is empty"
     @Test( enabled = true, priority = 3)
+    @Description(value = "WHEN we leave the field empty \"Filename Template\" field THEN, the error \"Template for monitored file names is empty\"")
     public void testCheckFilenameTemplateEmptyField()  {
         // prepare
         InitTestCloudBackupReceiver();
@@ -93,8 +94,8 @@ public class TestCloudBackupReceiver extends EnvContainer {
 
     }
 
-    // WHEN we leave the field empty "Extension Packed Files" field THEN, the error "Extension for packed files is empty"
     @Test( enabled = true, priority = 4)
+    @Description(value = "WHEN we leave the field empty \"Extension Packed Files\" field THEN, the error \"Extension for packed files is empty\"")
     public void testCheckExtensionPackedFilesEmptyField()  {
         // prepare
         InitTestCloudBackupReceiver();
@@ -109,8 +110,8 @@ public class TestCloudBackupReceiver extends EnvContainer {
 
     }
 
-    // WHEN we leave the field empty "Decrypt Password" field THEN, the error "Decrypt password is empty"
     @Test( enabled = true, priority = 5)
+    @Description(value = "WHEN we leave the field empty \"Decrypt Password\" field THEN, the error \"Decrypt password is empty\"")
     public void testCheckDecryptPasswordEmptyField()  {
         // prepare
         InitTestCloudBackupReceiver();
@@ -125,8 +126,8 @@ public class TestCloudBackupReceiver extends EnvContainer {
 
     }
 
-    // WHEN we fill the "Alert File Count" field with an incorrect value THEN an error "is not an integer number"
     @Test( enabled = true, priority = 6)
+    @Description(value = "WHEN we fill the \"Alert File Count\" field with an incorrect value THEN an error \"is not an integer number\"")
     public void testCheckAlertFileCountIncorrectValue()  {
         // prepare
         InitTestCloudBackupReceiver();
@@ -141,8 +142,8 @@ public class TestCloudBackupReceiver extends EnvContainer {
 
     }
 
-    // WHEN we fill the "Alert File Age" field with an incorrect value THEN an error "The server encountered an unexpected condition which prevented it from fulfilling the request"
     @Test( enabled = true, priority = 7)
+    @Description(value = "WHEN we fill the \"Alert File Age\" field with an incorrect value THEN an error \"The server encountered an unexpected condition which prevented it from fulfilling the request\"")
     public void testCheckAlertFileAgeEmptyField()  {
         // prepare
         InitTestCloudBackupReceiver();
@@ -157,8 +158,8 @@ public class TestCloudBackupReceiver extends EnvContainer {
 
     }
 
-    // WHEN we fill in the settings Cloud Backup Receiver with the correct data THEN the backup is successfully created
     @Test( enabled = true, priority = 8)
+    @Description(value = "WHEN we fill in the settings Cloud Backup Receiver with the correct data THEN the backup is successfully created")
     public void testAddCloudBackupReceiverCorrect()  {
         //actions
         _ctx.current(_page.EnabledCheckbox).click();

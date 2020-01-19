@@ -3,6 +3,7 @@ package TestPage.TestDashboard;
 import Helpers.Helper;
 import TestPage.EnvContainer;
 import TestPageLocator.DashboardPage.Database;
+import io.qameta.allure.Description;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
@@ -20,7 +21,7 @@ public class TestDatabase extends EnvContainer {
     private Helper _ctx;
 
     @BeforeClass
-    public void suiteSetUp()
+    public void classSetUp()
     {
         _driver = EnvContainer.Driver;
         _ctx = new Helper(_driver);
@@ -30,10 +31,10 @@ public class TestDatabase extends EnvContainer {
         _ctx.hoverAndClick(_page.DatabaseSettingsBtn);
         _ctx.current(_page.DbNameField).waitelementToBeClickable();
     }
-    @AfterMethod
-    public void tearDown() {
-        Helper.interceptionJSonPage(_driver);
-    }
+//    @AfterMethod
+//    public void methodTearDown() {
+//        Helper.interceptionJSonPage(_driver);
+//    }
     private void openUrl() {
         _url = EnvContainer.URL + _standarturl;
         _driver.navigate().to(_url);
@@ -42,8 +43,8 @@ public class TestDatabase extends EnvContainer {
         _ctx.current(_page.DatabaseSettingsBtn).waitelementToBeClickable();
     }
 
-    // WHEN we add a database with empty fields THEN the error "DB path or DB alias values must be defined"
     @Test( enabled = true, priority = 1)
+    @Description(value = "WHEN we add a database with empty fields THEN the error \"DB path or DB alias values must be defined\"")
     public void testAddDbEmptyPath()  {
 
         //actions
@@ -57,8 +58,8 @@ public class TestDatabase extends EnvContainer {
     }
 
 
-    // WHEN we add a database without a name THEN we get the error "Database name must not be empty"
     @Test( enabled = true, priority = 2)
+    @Description(value = "WHEN we add a database without a name THEN we get the error \"Database name must not be empty\"")
     public void testAddDbEmptyName()  {
 
         //actions
@@ -71,8 +72,8 @@ public class TestDatabase extends EnvContainer {
                 "Database name must be filled");
     }
 
-    // When we add a database with an incorrect path to the database THEN the error "Path not found" is displayed
     @Test( enabled = true, priority = 3)
+    @Description(value = "WHEN we add a database with an incorrect path to the database THEN the error \"Path not found\" is displayed")
     public void testAddDbIncorrectPath()  {
 
         String path = "testpath";
@@ -87,8 +88,8 @@ public class TestDatabase extends EnvContainer {
                 "Path not found");
     }
 
-    // When we add a database with an incorrect alias to the database THEN the error "Database alias is unknown ..." is displayed
     @Test( enabled = true, priority = 4)
+    @Description(value = "WHEN we add a database with an incorrect alias to the database THEN the error \"Database alias is unknown ...\" is displayed")
     public void testAddDbIncorrectAlias()  {
 
         String path1 = "testpathaliase";
@@ -106,8 +107,8 @@ public class TestDatabase extends EnvContainer {
                 "Database alias incorrect");
     }
 
-    // WHEN we add the database with the correct values THEN the database is successfully added
     @Test( enabled = true, priority = 5)
+    @Description(value = "WHEN we add the database with the correct values THEN the database is successfully added")
     public void testAddDbCorrect()  {
 
         //actions
@@ -121,8 +122,8 @@ public class TestDatabase extends EnvContainer {
         Assert.assertTrue(_ctx.isdisplayedElement(_page.NameBD(NameBDA)),"database is not successfully add");
     }
 
-    // WHEN we add the database with the correct values THEN the database is successfully added
     @Test( enabled = true, priority = 6)
+    @Description(value = "WHEN we add the database with the correct values THEN the database is successfully added")
     public void testAddDbAlreadyExist()  {
         // prepare
         openUrl();

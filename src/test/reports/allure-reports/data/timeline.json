@@ -1,0 +1,769 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "children" : [ {
+    "name" : "MSI",
+    "children" : [ {
+      "name" : "376@MSI.main(1)",
+      "children" : [ {
+        "name" : "testCheckMonitorFolderEmptyField",
+        "uid" : "d284023fca6a279d",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443232319,
+          "stop" : 1579443233077,
+          "duration" : 758
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCreateRestoreDbLimitProcessTimeEmptyField",
+        "uid" : "2cd2d4178d609a66",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443178984,
+          "stop" : 1579443180683,
+          "duration" : 1699
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testAddCloudBackupCorrect",
+        "uid" : "765d16b0431f199f",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443241062,
+          "stop" : 1579443255401,
+          "duration" : 14339
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCreateVerifiedBackupMaxNumbNotNumbers",
+        "uid" : "cc306b5d20caa891",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443102477,
+          "stop" : 1579443102937,
+          "duration" : 460
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCreateRestoreTimeTakeBackupEmptyField",
+        "uid" : "bdad3d385b46b2ab",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443173196,
+          "stop" : 1579443174889,
+          "duration" : 1693
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCheckKeepNSourceFilesFieldEmptyField",
+        "uid" : "23f1e45f957c78f0",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443220727,
+          "stop" : 1579443221527,
+          "duration" : 800
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCreateIncrementalBackupPathFolderEmpty",
+        "uid" : "c45779a1fd0c0e2",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443125558,
+          "stop" : 1579443128356,
+          "duration" : 2798
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCreateRestoreDbCorrect",
+        "uid" : "26690a3ce549da54",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "failed",
+        "time" : {
+          "start" : 1579443181945,
+          "stop" : 1579443195291,
+          "duration" : 13346
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCreateDumpBackupMinFreeSpaceEmpty",
+        "uid" : "5c067ba4a9d796c1",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443151854,
+          "stop" : 1579443152446,
+          "duration" : 592
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testAddDbIncorrectAlias",
+        "uid" : "2de39d5a591b1bba",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443089832,
+          "stop" : 1579443090349,
+          "duration" : 517
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCreateDumpBackupPathFolderEmpty",
+        "uid" : "1bcc86b3075ac063",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443152466,
+          "stop" : 1579443153026,
+          "duration" : 560
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCreateDumpBackupMaxNumbFilesEmpty",
+        "uid" : "c6bd1a94bcc907f3",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443153046,
+          "stop" : 1579443153646,
+          "duration" : 600
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCreateSqlPingCorrect",
+        "uid" : "b5cce840adc16776",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443201120,
+          "stop" : 1579443214970,
+          "duration" : 13850
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCreateRestoreDbMinFreeSpaceEmptyField",
+        "uid" : "5403b55b3d3ce2c3",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443180695,
+          "stop" : 1579443181925,
+          "duration" : 1230
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCheckFiledConnectionFtpEmptyField",
+        "uid" : "20a3d145902cab0e",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443233805,
+          "stop" : 1579443234535,
+          "duration" : 730
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCreateIncrementalBackupCorrect",
+        "uid" : "86fab6d657543c64",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443134012,
+          "stop" : 1579443148797,
+          "duration" : 14785
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testAddDbEmptyPath",
+        "uid" : "e816d054a82d47b5",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443088695,
+          "stop" : 1579443089042,
+          "duration" : 347
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCheckAlertFileCountIncorrectValue",
+        "uid" : "b8f2a2b66148dcfa",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443263800,
+          "stop" : 1579443264667,
+          "duration" : 867
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCheckScheduleIncorrect",
+        "uid" : "ae200b70fc3911b9",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443198046,
+          "stop" : 1579443199780,
+          "duration" : 1734
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCheckExtensionPackedFilesEmptyField",
+        "uid" : "a900c51d6727af0f",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443262084,
+          "stop" : 1579443262935,
+          "duration" : 851
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testAddDbAlreadyExist",
+        "uid" : "86e57f3cb437e730",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443096218,
+          "stop" : 1579443098697,
+          "duration" : 2479
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCreateRestoreDbSuffixFileNameEmptyField",
+        "uid" : "3a27d8efbdc56322",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443177787,
+          "stop" : 1579443178959,
+          "duration" : 1172
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCreateRestoreDbRestoreFileNameEmptyField",
+        "uid" : "b60672a5de2c9ba8",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443176086,
+          "stop" : 1579443177773,
+          "duration" : 1687
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCheckFilenameTemplateEmptyField",
+        "uid" : "45a55789a395841f",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443261232,
+          "stop" : 1579443262071,
+          "duration" : 839
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCreateRestoreDbPathRestoreFolderEmptyField",
+        "uid" : "2a0a4976e8794384",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443174905,
+          "stop" : 1579443176060,
+          "duration" : 1155
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testAddDbCorrect",
+        "uid" : "64f22506b6909060",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443090365,
+          "stop" : 1579443096200,
+          "duration" : 5835
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCreateIncrementalBackupMaxDurationEmpty",
+        "uid" : "34e2c889ff46246f",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443119306,
+          "stop" : 1579443122639,
+          "duration" : 3333
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCheckFtpPortEmptyField",
+        "uid" : "6b727fe53bcb10b4",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443238977,
+          "stop" : 1579443240340,
+          "duration" : 1363
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCheckFilenameTemplateEmptyField",
+        "uid" : "8271faee97d2217f",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443233090,
+          "stop" : 1579443233785,
+          "duration" : 695
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCheckFtpPortEmptyField",
+        "uid" : "3a28dde09797c96c",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443225250,
+          "stop" : 1579443226626,
+          "duration" : 1376
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCheckPeriodEmptyField",
+        "uid" : "cb05f4f3d4bf7380",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443218027,
+          "stop" : 1579443218279,
+          "duration" : 252
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCheckMonitorFolderEmptyField",
+        "uid" : "2cd00616b374cae2",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443218292,
+          "stop" : 1579443219078,
+          "duration" : 786
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testAddDbEmptyName",
+        "uid" : "6c68c40defe50d6b",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443089151,
+          "stop" : 1579443089519,
+          "duration" : 368
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testAddFtpCorrect",
+        "uid" : "98a2a351771e49e8",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443240401,
+          "stop" : 1579443241042,
+          "duration" : 641
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCheckAlertFileAgeEmptyField",
+        "uid" : "ea69631be9e9da46",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443264686,
+          "stop" : 1579443266080,
+          "duration" : 1394
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCheckShutdownTimeoutEmptyField",
+        "uid" : "522e7e6fb89c99f3",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443283084,
+          "stop" : 1579443283474,
+          "duration" : 390
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCreateDumpBackupCorrect",
+        "uid" : "12f35f1c13cd8e95",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443153666,
+          "stop" : 1579443166407,
+          "duration" : 12741
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCheckFiledConnectionFtpEmptyField",
+        "uid" : "18069ac390492c57",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443219809,
+          "stop" : 1579443220706,
+          "duration" : 897
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testAddDbIncorrectPath",
+        "uid" : "3e276ff688a4833f",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443089534,
+          "stop" : 1579443089815,
+          "duration" : 281
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCreateVerifiedBackupMaxNumbNegative",
+        "uid" : "774d1d2417ac9997",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443102037,
+          "stop" : 1579443102454,
+          "duration" : 417
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCreateRestoreDbBackupFolderEmptyField",
+        "uid" : "9154080bf166993b",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443170715,
+          "stop" : 1579443171963,
+          "duration" : 1248
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testAddCloudBackupReceiverCorrect",
+        "uid" : "944eefe7df2974e1",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "failed",
+        "time" : {
+          "start" : 1579443266094,
+          "stop" : 1579443278925,
+          "duration" : 12831
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCheckPeriodEmptyField",
+        "uid" : "5ef707210558361d",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443257664,
+          "stop" : 1579443260243,
+          "duration" : 2579
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCreateValidateBDCorrect",
+        "uid" : "9fc551fdfca26cc3",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443283492,
+          "stop" : 1579443296912,
+          "duration" : 13420
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCreateIncrementalBackupPerformBackupEmpty",
+        "uid" : "939f874b7c09c4f7",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443131209,
+          "stop" : 1579443133998,
+          "duration" : 2789
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCheckScheduleIncorrectField",
+        "uid" : "23ae9bab7ab9d05f",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443281802,
+          "stop" : 1579443283068,
+          "duration" : 1266
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testAddFtpCorrect",
+        "uid" : "1021b97ffefc0db6",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443226641,
+          "stop" : 1579443227035,
+          "duration" : 394
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCreateDumpBackupScheduleIncorrect",
+        "uid" : "d18d2db4c6d9f810",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443151182,
+          "stop" : 1579443151837,
+          "duration" : 655
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCheckFtpServerEmptyField",
+        "uid" : "17b30b731cd41a48",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443221545,
+          "stop" : 1579443225236,
+          "duration" : 3691
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCheckKeepNSourceFilesFieldEmptyField",
+        "uid" : "1f40d187b4364716",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443234555,
+          "stop" : 1579443235276,
+          "duration" : 721
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCheckFtpServerEmptyField",
+        "uid" : "de20daffd30f16ac",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443235294,
+          "stop" : 1579443238963,
+          "duration" : 3669
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCheckSqlQueryEmptyField",
+        "uid" : "fe5ff556adb5e612",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443199793,
+          "stop" : 1579443201105,
+          "duration" : 1312
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCreateVerifiedBackupCorrect",
+        "uid" : "748ddd710ed44494",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443102957,
+          "stop" : 1579443116646,
+          "duration" : 13689
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCheckFilenameTemplateEmptyField",
+        "uid" : "5e680dda12f58951",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443219093,
+          "stop" : 1579443219791,
+          "duration" : 698
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCreateIncrementalBackupJournalFolderEmpty",
+        "uid" : "dac27e836c8a3f5e",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443128375,
+          "stop" : 1579443131194,
+          "duration" : 2819
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testAddCloudBackupCorrect",
+        "uid" : "5824e25a8d30d082",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443227055,
+          "stop" : 1579443229074,
+          "duration" : 2019
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCreateIncrementalBackupMinFreeSpaceEmpty",
+        "uid" : "1f799a6c5669ff7b",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443122653,
+          "stop" : 1579443125537,
+          "duration" : 2884
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCreateRestoreDbScheduleIncorrect",
+        "uid" : "8161c3f95246827b",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443168885,
+          "stop" : 1579443170690,
+          "duration" : 1805
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCheckWatchIncomingFilesEmptyField",
+        "uid" : "c2fede6da1ae69c8",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443260260,
+          "stop" : 1579443261219,
+          "duration" : 959
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCheckPeriodEmptyField",
+        "uid" : "bf2bd3e769f57236",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443232027,
+          "stop" : 1579443232302,
+          "duration" : 275
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCheckDecryptPasswordEmptyField",
+        "uid" : "7c7551855f228dfb",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443262948,
+          "stop" : 1579443263785,
+          "duration" : 837
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCreateRestoreDbPathTemplateBackupFolderEmptyField",
+        "uid" : "a439820a0d6a3284",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443171981,
+          "stop" : 1579443173176,
+          "duration" : 1195
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      }, {
+        "name" : "testCreateVerifiedBackupScheduleIncorrect",
+        "uid" : "e4b573780372ad43",
+        "parentUid" : "6292a5ec886b3f553e0044f1cef499d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1579443101762,
+          "stop" : 1579443102020,
+          "duration" : 258
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome", "strong password", "src/test/resurces/chromedriver.exe", "http://admin:strong password@localhost:8082/", "admin" ]
+      } ],
+      "uid" : "6292a5ec886b3f553e0044f1cef499d2"
+    } ],
+    "uid" : "4e235fbd4c199973bc00f3dda2ae852d"
+  } ],
+  "name" : "timeline"
+}

@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-TestOne" class="navigator-link">
-              <span class="suite-name border-passed">TestOne</span>
+              <span class="suite-name border-failed">TestOne</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -54,7 +54,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-TestOne" class="navigator-link ">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">3 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">63 methods, 2 failed,   61 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-TestOne" class="hide-methods failed suite-TestOne"> (hide)</a> <!-- hide-methods failed suite-TestOne -->
+                      <a href="#" panel-name="suite-TestOne" class="show-methods failed suite-TestOne"> (show)</a> <!-- show-methods failed suite-TestOne -->
+                    </span>
+                    <div class="method-list-content failed suite-TestOne">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestCloudBackupReceiver" class="method navigator-link" hash-for-method="testAddCloudBackupReceiverCorrect">testAddCloudBackupReceiverCorrect</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestRestoreDb" class="method navigator-link" hash-for-method="testCreateRestoreDbCorrect">testCreateRestoreDbCorrect</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-TestOne -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,7 +121,307 @@
                     <div class="method-list-content passed suite-TestOne">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestCloudBackup" class="method navigator-link" hash-for-method="testCreateVBScheduleIncorrect">testCreateVBScheduleIncorrect</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestCloudBackup" class="method navigator-link" hash-for-method="testAddCloudBackupCorrect">testAddCloudBackupCorrect</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Replica.TestReplica" class="method navigator-link" hash-for-method="testAddCloudBackupCorrect">testAddCloudBackupCorrect</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.TestDatabase" class="method navigator-link" hash-for-method="testAddDbAlreadyExist">testAddDbAlreadyExist</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.TestDatabase" class="method navigator-link" hash-for-method="testAddDbCorrect">testAddDbCorrect</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.TestDatabase" class="method navigator-link" hash-for-method="testAddDbEmptyName">testAddDbEmptyName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.TestDatabase" class="method navigator-link" hash-for-method="testAddDbEmptyPath">testAddDbEmptyPath</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.TestDatabase" class="method navigator-link" hash-for-method="testAddDbIncorrectAlias">testAddDbIncorrectAlias</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.TestDatabase" class="method navigator-link" hash-for-method="testAddDbIncorrectPath">testAddDbIncorrectPath</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Replica.TestReplica" class="method navigator-link" hash-for-method="testAddFtpCorrect">testAddFtpCorrect</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestCloudBackup" class="method navigator-link" hash-for-method="testAddFtpCorrect">testAddFtpCorrect</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestCloudBackupReceiver" class="method navigator-link" hash-for-method="testCheckAlertFileAgeEmptyField">testCheckAlertFileAgeEmptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestCloudBackupReceiver" class="method navigator-link" hash-for-method="testCheckAlertFileCountIncorrectValue">testCheckAlertFileCountIncorrectValue</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestCloudBackupReceiver" class="method navigator-link" hash-for-method="testCheckDecryptPasswordEmptyField">testCheckDecryptPasswordEmptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestCloudBackupReceiver" class="method navigator-link" hash-for-method="testCheckExtensionPackedFilesEmptyField">testCheckExtensionPackedFilesEmptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestCloudBackup" class="method navigator-link" hash-for-method="testCheckFiledConnectionFtpEmptyField">testCheckFiledConnectionFtpEmptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Replica.TestReplica" class="method navigator-link" hash-for-method="testCheckFiledConnectionFtpEmptyField">testCheckFiledConnectionFtpEmptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestCloudBackupReceiver" class="method navigator-link" hash-for-method="testCheckFilenameTemplateEmptyField">testCheckFilenameTemplateEmptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestCloudBackup" class="method navigator-link" hash-for-method="testCheckFilenameTemplateEmptyField">testCheckFilenameTemplateEmptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Replica.TestReplica" class="method navigator-link" hash-for-method="testCheckFilenameTemplateEmptyField">testCheckFilenameTemplateEmptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestCloudBackup" class="method navigator-link" hash-for-method="testCheckFtpPortEmptyField">testCheckFtpPortEmptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Replica.TestReplica" class="method navigator-link" hash-for-method="testCheckFtpPortEmptyField">testCheckFtpPortEmptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Replica.TestReplica" class="method navigator-link" hash-for-method="testCheckFtpServerEmptyField">testCheckFtpServerEmptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestCloudBackup" class="method navigator-link" hash-for-method="testCheckFtpServerEmptyField">testCheckFtpServerEmptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestCloudBackup" class="method navigator-link" hash-for-method="testCheckKeepNSourceFilesFieldEmptyField">testCheckKeepNSourceFilesFieldEmptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Replica.TestReplica" class="method navigator-link" hash-for-method="testCheckKeepNSourceFilesFieldEmptyField">testCheckKeepNSourceFilesFieldEmptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Replica.TestReplica" class="method navigator-link" hash-for-method="testCheckMonitorFolderEmptyField">testCheckMonitorFolderEmptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestCloudBackup" class="method navigator-link" hash-for-method="testCheckMonitorFolderEmptyField">testCheckMonitorFolderEmptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestCloudBackupReceiver" class="method navigator-link" hash-for-method="testCheckPeriodEmptyField">testCheckPeriodEmptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Replica.TestReplica" class="method navigator-link" hash-for-method="testCheckPeriodEmptyField">testCheckPeriodEmptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestCloudBackup" class="method navigator-link" hash-for-method="testCheckPeriodEmptyField">testCheckPeriodEmptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestSqlPing" class="method navigator-link" hash-for-method="testCheckScheduleIncorrect">testCheckScheduleIncorrect</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestValidateDb" class="method navigator-link" hash-for-method="testCheckScheduleIncorrectField">testCheckScheduleIncorrectField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestValidateDb" class="method navigator-link" hash-for-method="testCheckShutdownTimeoutEmptyField">testCheckShutdownTimeoutEmptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestSqlPing" class="method navigator-link" hash-for-method="testCheckSqlQueryEmptyField">testCheckSqlQueryEmptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestCloudBackupReceiver" class="method navigator-link" hash-for-method="testCheckWatchIncomingFilesEmptyField">testCheckWatchIncomingFilesEmptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestDumpBackup" class="method navigator-link" hash-for-method="testCreateDumpBackupCorrect">testCreateDumpBackupCorrect</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestDumpBackup" class="method navigator-link" hash-for-method="testCreateDumpBackupMaxNumbFilesEmpty">testCreateDumpBackupMaxNumbFilesEmpty</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestDumpBackup" class="method navigator-link" hash-for-method="testCreateDumpBackupMinFreeSpaceEmpty">testCreateDumpBackupMinFreeSpaceEmpty</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestDumpBackup" class="method navigator-link" hash-for-method="testCreateDumpBackupPathFolderEmpty">testCreateDumpBackupPathFolderEmpty</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestDumpBackup" class="method navigator-link" hash-for-method="testCreateDumpBackupScheduleIncorrect">testCreateDumpBackupScheduleIncorrect</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestIncrementalBackup" class="method navigator-link" hash-for-method="testCreateIncrementalBackupCorrect">testCreateIncrementalBackupCorrect</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestIncrementalBackup" class="method navigator-link" hash-for-method="testCreateIncrementalBackupJournalFolderEmpty">testCreateIncrementalBackupJournalFolderEmpty</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestIncrementalBackup" class="method navigator-link" hash-for-method="testCreateIncrementalBackupMaxDurationEmpty">testCreateIncrementalBackupMaxDurationEmpty</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestIncrementalBackup" class="method navigator-link" hash-for-method="testCreateIncrementalBackupMinFreeSpaceEmpty">testCreateIncrementalBackupMinFreeSpaceEmpty</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestIncrementalBackup" class="method navigator-link" hash-for-method="testCreateIncrementalBackupPathFolderEmpty">testCreateIncrementalBackupPathFolderEmpty</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestIncrementalBackup" class="method navigator-link" hash-for-method="testCreateIncrementalBackupPerformBackupEmpty">testCreateIncrementalBackupPerformBackupEmpty</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestRestoreDb" class="method navigator-link" hash-for-method="testCreateRestoreDbBackupFolderEmptyField">testCreateRestoreDbBackupFolderEmptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestRestoreDb" class="method navigator-link" hash-for-method="testCreateRestoreDbLimitProcessTimeEmptyField">testCreateRestoreDbLimitProcessTimeEmptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestRestoreDb" class="method navigator-link" hash-for-method="testCreateRestoreDbMinFreeSpaceEmptyField">testCreateRestoreDbMinFreeSpaceEmptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestRestoreDb" class="method navigator-link" hash-for-method="testCreateRestoreDbPathRestoreFolderEmptyField">testCreateRestoreDbPathRestoreFolderEmptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestRestoreDb" class="method navigator-link" hash-for-method="testCreateRestoreDbPathTemplateBackupFolderEmptyField">testCreateRestoreDbPathTemplateBackupFolderEmptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestRestoreDb" class="method navigator-link" hash-for-method="testCreateRestoreDbRestoreFileNameEmptyField">testCreateRestoreDbRestoreFileNameEmptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestRestoreDb" class="method navigator-link" hash-for-method="testCreateRestoreDbScheduleIncorrect">testCreateRestoreDbScheduleIncorrect</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestRestoreDb" class="method navigator-link" hash-for-method="testCreateRestoreDbSuffixFileNameEmptyField">testCreateRestoreDbSuffixFileNameEmptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestRestoreDb" class="method navigator-link" hash-for-method="testCreateRestoreTimeTakeBackupEmptyField">testCreateRestoreTimeTakeBackupEmptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestSqlPing" class="method navigator-link" hash-for-method="testCreateSqlPingCorrect">testCreateSqlPingCorrect</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestValidateDb" class="method navigator-link" hash-for-method="testCreateValidateBDCorrect">testCreateValidateBDCorrect</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestVerifiedBackup" class="method navigator-link" hash-for-method="testCreateVerifiedBackupCorrect">testCreateVerifiedBackupCorrect</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestVerifiedBackup" class="method navigator-link" hash-for-method="testCreateVerifiedBackupMaxNumbNegative">testCreateVerifiedBackupMaxNumbNegative</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestVerifiedBackup" class="method navigator-link" hash-for-method="testCreateVerifiedBackupMaxNumbNotNumbers">testCreateVerifiedBackupMaxNumbNotNumbers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestOne" title="TestPage.TestDashboard.Backup.TestVerifiedBackup" class="method navigator-link" hash-for-method="testCreateVerifiedBackupScheduleIncorrect">testCreateVerifiedBackupScheduleIncorrect</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-TestOne -->
@@ -117,6 +436,96 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-TestOne" class="panel TestOne">
+          <div class="suite-TestOne-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">TestPage.TestDashboard.Backup.TestCloudBackupReceiver</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddCloudBackupReceiverCorrect">
+                  </a> <!-- testAddCloudBackupReceiverCorrect -->
+                  <span class="method-name">testAddCloudBackupReceiverCorrect</span>
+                  <div class="stack-trace">java.lang.AssertionError: Status cloud backup receiver not OK expected [OK] but found [UNKNOWN]
+	at TestPage.TestDashboard.Backup.TestCloudBackupReceiver.testAddCloudBackupReceiverCorrect(TestCloudBackupReceiver.java:175)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-TestOne-class-failed -->
+          <div class="suite-TestOne-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">TestPage.TestDashboard.Backup.TestRestoreDb</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateRestoreDbCorrect">
+                  </a> <!-- testCreateRestoreDbCorrect -->
+                  <span class="method-name">testCreateRestoreDbCorrect</span>
+                  <div class="stack-trace">java.lang.AssertionError: Status verified backup not OK expected [OK] but found [MINOR]
+	at TestPage.TestDashboard.Backup.TestRestoreDb.testCreateRestoreDbCorrect(TestRestoreDb.java:204)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-TestOne-class-failed -->
+          <div class="suite-TestOne-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">TestPage.TestDashboard.Backup.TestIncrementalBackup</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateIncrementalBackupCorrect">
+                  </a> <!-- testCreateIncrementalBackupCorrect -->
+                  <span class="method-name">testCreateIncrementalBackupCorrect</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateIncrementalBackupJournalFolderEmpty">
+                  </a> <!-- testCreateIncrementalBackupJournalFolderEmpty -->
+                  <span class="method-name">testCreateIncrementalBackupJournalFolderEmpty</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateIncrementalBackupMaxDurationEmpty">
+                  </a> <!-- testCreateIncrementalBackupMaxDurationEmpty -->
+                  <span class="method-name">testCreateIncrementalBackupMaxDurationEmpty</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateIncrementalBackupMinFreeSpaceEmpty">
+                  </a> <!-- testCreateIncrementalBackupMinFreeSpaceEmpty -->
+                  <span class="method-name">testCreateIncrementalBackupMinFreeSpaceEmpty</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateIncrementalBackupPathFolderEmpty">
+                  </a> <!-- testCreateIncrementalBackupPathFolderEmpty -->
+                  <span class="method-name">testCreateIncrementalBackupPathFolderEmpty</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateIncrementalBackupPerformBackupEmpty">
+                  </a> <!-- testCreateIncrementalBackupPerformBackupEmpty -->
+                  <span class="method-name">testCreateIncrementalBackupPerformBackupEmpty</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-TestOne-class-passed -->
           <div class="suite-TestOne-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -125,9 +534,451 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testCreateVBScheduleIncorrect">
-                  </a> <!-- testCreateVBScheduleIncorrect -->
-                  <span class="method-name">testCreateVBScheduleIncorrect</span>
+                  <a name="testAddCloudBackupCorrect">
+                  </a> <!-- testAddCloudBackupCorrect -->
+                  <span class="method-name">testAddCloudBackupCorrect</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddFtpCorrect">
+                  </a> <!-- testAddFtpCorrect -->
+                  <span class="method-name">testAddFtpCorrect</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCheckFiledConnectionFtpEmptyField">
+                  </a> <!-- testCheckFiledConnectionFtpEmptyField -->
+                  <span class="method-name">testCheckFiledConnectionFtpEmptyField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCheckFilenameTemplateEmptyField">
+                  </a> <!-- testCheckFilenameTemplateEmptyField -->
+                  <span class="method-name">testCheckFilenameTemplateEmptyField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCheckFtpPortEmptyField">
+                  </a> <!-- testCheckFtpPortEmptyField -->
+                  <span class="method-name">testCheckFtpPortEmptyField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCheckFtpServerEmptyField">
+                  </a> <!-- testCheckFtpServerEmptyField -->
+                  <span class="method-name">testCheckFtpServerEmptyField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCheckKeepNSourceFilesFieldEmptyField">
+                  </a> <!-- testCheckKeepNSourceFilesFieldEmptyField -->
+                  <span class="method-name">testCheckKeepNSourceFilesFieldEmptyField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCheckMonitorFolderEmptyField">
+                  </a> <!-- testCheckMonitorFolderEmptyField -->
+                  <span class="method-name">testCheckMonitorFolderEmptyField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCheckPeriodEmptyField">
+                  </a> <!-- testCheckPeriodEmptyField -->
+                  <span class="method-name">testCheckPeriodEmptyField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-TestOne-class-passed -->
+          <div class="suite-TestOne-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">TestPage.TestDashboard.TestDatabase</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddDbAlreadyExist">
+                  </a> <!-- testAddDbAlreadyExist -->
+                  <span class="method-name">testAddDbAlreadyExist</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddDbCorrect">
+                  </a> <!-- testAddDbCorrect -->
+                  <span class="method-name">testAddDbCorrect</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddDbEmptyName">
+                  </a> <!-- testAddDbEmptyName -->
+                  <span class="method-name">testAddDbEmptyName</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddDbEmptyPath">
+                  </a> <!-- testAddDbEmptyPath -->
+                  <span class="method-name">testAddDbEmptyPath</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddDbIncorrectAlias">
+                  </a> <!-- testAddDbIncorrectAlias -->
+                  <span class="method-name">testAddDbIncorrectAlias</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddDbIncorrectPath">
+                  </a> <!-- testAddDbIncorrectPath -->
+                  <span class="method-name">testAddDbIncorrectPath</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-TestOne-class-passed -->
+          <div class="suite-TestOne-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">TestPage.TestDashboard.Backup.TestCloudBackupReceiver</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCheckAlertFileAgeEmptyField">
+                  </a> <!-- testCheckAlertFileAgeEmptyField -->
+                  <span class="method-name">testCheckAlertFileAgeEmptyField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCheckAlertFileCountIncorrectValue">
+                  </a> <!-- testCheckAlertFileCountIncorrectValue -->
+                  <span class="method-name">testCheckAlertFileCountIncorrectValue</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCheckDecryptPasswordEmptyField">
+                  </a> <!-- testCheckDecryptPasswordEmptyField -->
+                  <span class="method-name">testCheckDecryptPasswordEmptyField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCheckExtensionPackedFilesEmptyField">
+                  </a> <!-- testCheckExtensionPackedFilesEmptyField -->
+                  <span class="method-name">testCheckExtensionPackedFilesEmptyField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCheckFilenameTemplateEmptyField">
+                  </a> <!-- testCheckFilenameTemplateEmptyField -->
+                  <span class="method-name">testCheckFilenameTemplateEmptyField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCheckPeriodEmptyField">
+                  </a> <!-- testCheckPeriodEmptyField -->
+                  <span class="method-name">testCheckPeriodEmptyField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCheckWatchIncomingFilesEmptyField">
+                  </a> <!-- testCheckWatchIncomingFilesEmptyField -->
+                  <span class="method-name">testCheckWatchIncomingFilesEmptyField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-TestOne-class-passed -->
+          <div class="suite-TestOne-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">TestPage.TestDashboard.Backup.TestDumpBackup</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateDumpBackupCorrect">
+                  </a> <!-- testCreateDumpBackupCorrect -->
+                  <span class="method-name">testCreateDumpBackupCorrect</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateDumpBackupMaxNumbFilesEmpty">
+                  </a> <!-- testCreateDumpBackupMaxNumbFilesEmpty -->
+                  <span class="method-name">testCreateDumpBackupMaxNumbFilesEmpty</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateDumpBackupMinFreeSpaceEmpty">
+                  </a> <!-- testCreateDumpBackupMinFreeSpaceEmpty -->
+                  <span class="method-name">testCreateDumpBackupMinFreeSpaceEmpty</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateDumpBackupPathFolderEmpty">
+                  </a> <!-- testCreateDumpBackupPathFolderEmpty -->
+                  <span class="method-name">testCreateDumpBackupPathFolderEmpty</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateDumpBackupScheduleIncorrect">
+                  </a> <!-- testCreateDumpBackupScheduleIncorrect -->
+                  <span class="method-name">testCreateDumpBackupScheduleIncorrect</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-TestOne-class-passed -->
+          <div class="suite-TestOne-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">TestPage.TestDashboard.Replica.TestReplica</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddCloudBackupCorrect">
+                  </a> <!-- testAddCloudBackupCorrect -->
+                  <span class="method-name">testAddCloudBackupCorrect</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddFtpCorrect">
+                  </a> <!-- testAddFtpCorrect -->
+                  <span class="method-name">testAddFtpCorrect</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCheckFiledConnectionFtpEmptyField">
+                  </a> <!-- testCheckFiledConnectionFtpEmptyField -->
+                  <span class="method-name">testCheckFiledConnectionFtpEmptyField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCheckFilenameTemplateEmptyField">
+                  </a> <!-- testCheckFilenameTemplateEmptyField -->
+                  <span class="method-name">testCheckFilenameTemplateEmptyField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCheckFtpPortEmptyField">
+                  </a> <!-- testCheckFtpPortEmptyField -->
+                  <span class="method-name">testCheckFtpPortEmptyField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCheckFtpServerEmptyField">
+                  </a> <!-- testCheckFtpServerEmptyField -->
+                  <span class="method-name">testCheckFtpServerEmptyField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCheckKeepNSourceFilesFieldEmptyField">
+                  </a> <!-- testCheckKeepNSourceFilesFieldEmptyField -->
+                  <span class="method-name">testCheckKeepNSourceFilesFieldEmptyField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCheckMonitorFolderEmptyField">
+                  </a> <!-- testCheckMonitorFolderEmptyField -->
+                  <span class="method-name">testCheckMonitorFolderEmptyField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCheckPeriodEmptyField">
+                  </a> <!-- testCheckPeriodEmptyField -->
+                  <span class="method-name">testCheckPeriodEmptyField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-TestOne-class-passed -->
+          <div class="suite-TestOne-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">TestPage.TestDashboard.Backup.TestValidateDb</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCheckScheduleIncorrectField">
+                  </a> <!-- testCheckScheduleIncorrectField -->
+                  <span class="method-name">testCheckScheduleIncorrectField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCheckShutdownTimeoutEmptyField">
+                  </a> <!-- testCheckShutdownTimeoutEmptyField -->
+                  <span class="method-name">testCheckShutdownTimeoutEmptyField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateValidateBDCorrect">
+                  </a> <!-- testCreateValidateBDCorrect -->
+                  <span class="method-name">testCreateValidateBDCorrect</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-TestOne-class-passed -->
+          <div class="suite-TestOne-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">TestPage.TestDashboard.Backup.TestSqlPing</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCheckScheduleIncorrect">
+                  </a> <!-- testCheckScheduleIncorrect -->
+                  <span class="method-name">testCheckScheduleIncorrect</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCheckSqlQueryEmptyField">
+                  </a> <!-- testCheckSqlQueryEmptyField -->
+                  <span class="method-name">testCheckSqlQueryEmptyField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateSqlPingCorrect">
+                  </a> <!-- testCreateSqlPingCorrect -->
+                  <span class="method-name">testCreateSqlPingCorrect</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-TestOne-class-passed -->
+          <div class="suite-TestOne-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">TestPage.TestDashboard.Backup.TestVerifiedBackup</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateVerifiedBackupCorrect">
+                  </a> <!-- testCreateVerifiedBackupCorrect -->
+                  <span class="method-name">testCreateVerifiedBackupCorrect</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateVerifiedBackupMaxNumbNegative">
+                  </a> <!-- testCreateVerifiedBackupMaxNumbNegative -->
+                  <span class="method-name">testCreateVerifiedBackupMaxNumbNegative</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateVerifiedBackupMaxNumbNotNumbers">
+                  </a> <!-- testCreateVerifiedBackupMaxNumbNotNumbers -->
+                  <span class="method-name">testCreateVerifiedBackupMaxNumbNotNumbers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateVerifiedBackupScheduleIncorrect">
+                  </a> <!-- testCreateVerifiedBackupScheduleIncorrect -->
+                  <span class="method-name">testCreateVerifiedBackupScheduleIncorrect</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-TestOne-class-passed -->
+          <div class="suite-TestOne-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">TestPage.TestDashboard.Backup.TestRestoreDb</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateRestoreDbBackupFolderEmptyField">
+                  </a> <!-- testCreateRestoreDbBackupFolderEmptyField -->
+                  <span class="method-name">testCreateRestoreDbBackupFolderEmptyField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateRestoreDbLimitProcessTimeEmptyField">
+                  </a> <!-- testCreateRestoreDbLimitProcessTimeEmptyField -->
+                  <span class="method-name">testCreateRestoreDbLimitProcessTimeEmptyField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateRestoreDbMinFreeSpaceEmptyField">
+                  </a> <!-- testCreateRestoreDbMinFreeSpaceEmptyField -->
+                  <span class="method-name">testCreateRestoreDbMinFreeSpaceEmptyField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateRestoreDbPathRestoreFolderEmptyField">
+                  </a> <!-- testCreateRestoreDbPathRestoreFolderEmptyField -->
+                  <span class="method-name">testCreateRestoreDbPathRestoreFolderEmptyField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateRestoreDbPathTemplateBackupFolderEmptyField">
+                  </a> <!-- testCreateRestoreDbPathTemplateBackupFolderEmptyField -->
+                  <span class="method-name">testCreateRestoreDbPathTemplateBackupFolderEmptyField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateRestoreDbRestoreFileNameEmptyField">
+                  </a> <!-- testCreateRestoreDbRestoreFileNameEmptyField -->
+                  <span class="method-name">testCreateRestoreDbRestoreFileNameEmptyField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateRestoreDbScheduleIncorrect">
+                  </a> <!-- testCreateRestoreDbScheduleIncorrect -->
+                  <span class="method-name">testCreateRestoreDbScheduleIncorrect</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateRestoreDbSuffixFileNameEmptyField">
+                  </a> <!-- testCreateRestoreDbSuffixFileNameEmptyField -->
+                  <span class="method-name">testCreateRestoreDbSuffixFileNameEmptyField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateRestoreTimeTakeBackupEmptyField">
+                  </a> <!-- testCreateRestoreTimeTakeBackupEmptyField -->
+                  <span class="method-name">testCreateRestoreTimeTakeBackupEmptyField</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -147,15 +998,28 @@
   &lt;parameter name=&quot;browsername&quot; value=&quot;chrome&quot;/&gt;
   &lt;parameter name=&quot;url&quot; value=&quot;http://admin:strong password@localhost:8082/&quot;/&gt;
   &lt;parameter name=&quot;username&quot; value=&quot;admin&quot;/&gt;
-  &lt;listeners&gt;
-    &lt;listener class-name=&quot;Listener&quot;/&gt;
-    &lt;listener class-name=&quot;SuiteListener&quot;/&gt;
-  &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Common&quot; group-by-instances=&quot;true&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Database&quot; group-by-instances=&quot;true&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;TestPage.TestDashboard.Backup.TestCloudBackup&quot;/&gt;
+      &lt;class name=&quot;TestPage.TestDashboard.TestDatabase&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Common --&gt;
+  &lt;/test&gt; &lt;!-- Database --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Backup&quot; group-by-instances=&quot;true&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;TestPage.TestDashboard.Backup.TestVerifiedBackup&quot;/&gt;
+      &lt;class name=&quot;TestPage.TestDashboard.Backup.TestIncrementalBackup&quot;/&gt;
+      &lt;class name=&quot;TestPage.TestDashboard.Backup.TestDumpBackup&quot;/&gt;
+      &lt;class name=&quot;TestPage.TestDashboard.Backup.TestRestoreDb&quot;/&gt;
+      &lt;class name=&quot;TestPage.TestDashboard.Backup.TestSqlPing&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Backup --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Replica&quot; group-by-instances=&quot;true&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;TestPage.TestDashboard.Replica.TestReplica&quot;/&gt;
+      &lt;class name=&quot;TestPage.TestDashboard.Backup.TestCloudBackup&quot;/&gt;
+      &lt;class name=&quot;TestPage.TestDashboard.Backup.TestCloudBackupReceiver&quot;/&gt;
+      &lt;class name=&quot;TestPage.TestDashboard.Backup.TestValidateDb&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Replica --&gt;
 &lt;/suite&gt; &lt;!-- TestOne --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -167,7 +1031,13 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Common (1 class)</span>
+                <span class="test-name">Database (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Backup (5 classes)</span>
+              </li>
+              <li>
+                <span class="test-name">Replica (4 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -193,16 +1063,264 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(63);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testCreateVBScheduleIncorrect')
-data.setCell(0, 2, 'TestPage.TestDashboard.Backup.TestCloudBackup')
-data.setCell(0, 3, 1);
+data.setCell(0, 1, 'testCreateIncrementalBackupCorrect')
+data.setCell(0, 2, 'TestPage.TestDashboard.Backup.TestIncrementalBackup')
+data.setCell(0, 3, 14786);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testAddCloudBackupCorrect')
+data.setCell(1, 2, 'TestPage.TestDashboard.Backup.TestCloudBackup')
+data.setCell(1, 3, 14341);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testCreateSqlPingCorrect')
+data.setCell(2, 2, 'TestPage.TestDashboard.Backup.TestSqlPing')
+data.setCell(2, 3, 13850);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testCreateVerifiedBackupCorrect')
+data.setCell(3, 2, 'TestPage.TestDashboard.Backup.TestVerifiedBackup')
+data.setCell(3, 3, 13690);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'testCreateValidateBDCorrect')
+data.setCell(4, 2, 'TestPage.TestDashboard.Backup.TestValidateDb')
+data.setCell(4, 3, 13422);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'testCreateRestoreDbCorrect')
+data.setCell(5, 2, 'TestPage.TestDashboard.Backup.TestRestoreDb')
+data.setCell(5, 3, 13341);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'testAddCloudBackupReceiverCorrect')
+data.setCell(6, 2, 'TestPage.TestDashboard.Backup.TestCloudBackupReceiver')
+data.setCell(6, 3, 12832);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'testCreateDumpBackupCorrect')
+data.setCell(7, 2, 'TestPage.TestDashboard.Backup.TestDumpBackup')
+data.setCell(7, 3, 12742);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'testAddDbCorrect')
+data.setCell(8, 2, 'TestPage.TestDashboard.TestDatabase')
+data.setCell(8, 3, 5835);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'testCheckFtpServerEmptyField')
+data.setCell(9, 2, 'TestPage.TestDashboard.Replica.TestReplica')
+data.setCell(9, 3, 3692);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'testCheckFtpServerEmptyField')
+data.setCell(10, 2, 'TestPage.TestDashboard.Backup.TestCloudBackup')
+data.setCell(10, 3, 3669);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'testCreateIncrementalBackupMaxDurationEmpty')
+data.setCell(11, 2, 'TestPage.TestDashboard.Backup.TestIncrementalBackup')
+data.setCell(11, 3, 3335);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'testCreateIncrementalBackupMinFreeSpaceEmpty')
+data.setCell(12, 2, 'TestPage.TestDashboard.Backup.TestIncrementalBackup')
+data.setCell(12, 3, 2885);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'testCreateIncrementalBackupJournalFolderEmpty')
+data.setCell(13, 2, 'TestPage.TestDashboard.Backup.TestIncrementalBackup')
+data.setCell(13, 3, 2825);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'testCreateIncrementalBackupPathFolderEmpty')
+data.setCell(14, 2, 'TestPage.TestDashboard.Backup.TestIncrementalBackup')
+data.setCell(14, 3, 2799);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'testCreateIncrementalBackupPerformBackupEmpty')
+data.setCell(15, 2, 'TestPage.TestDashboard.Backup.TestIncrementalBackup')
+data.setCell(15, 3, 2790);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'testCheckPeriodEmptyField')
+data.setCell(16, 2, 'TestPage.TestDashboard.Backup.TestCloudBackupReceiver')
+data.setCell(16, 3, 2580);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'testAddDbAlreadyExist')
+data.setCell(17, 2, 'TestPage.TestDashboard.TestDatabase')
+data.setCell(17, 3, 2481);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'testAddCloudBackupCorrect')
+data.setCell(18, 2, 'TestPage.TestDashboard.Replica.TestReplica')
+data.setCell(18, 3, 2019);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'testCreateRestoreDbScheduleIncorrect')
+data.setCell(19, 2, 'TestPage.TestDashboard.Backup.TestRestoreDb')
+data.setCell(19, 3, 1807);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'testCheckScheduleIncorrect')
+data.setCell(20, 2, 'TestPage.TestDashboard.Backup.TestSqlPing')
+data.setCell(20, 3, 1735);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'testCreateRestoreDbLimitProcessTimeEmptyField')
+data.setCell(21, 2, 'TestPage.TestDashboard.Backup.TestRestoreDb')
+data.setCell(21, 3, 1700);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'testCreateRestoreTimeTakeBackupEmptyField')
+data.setCell(22, 2, 'TestPage.TestDashboard.Backup.TestRestoreDb')
+data.setCell(22, 3, 1694);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'testCreateRestoreDbRestoreFileNameEmptyField')
+data.setCell(23, 2, 'TestPage.TestDashboard.Backup.TestRestoreDb')
+data.setCell(23, 3, 1688);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'testCheckAlertFileAgeEmptyField')
+data.setCell(24, 2, 'TestPage.TestDashboard.Backup.TestCloudBackupReceiver')
+data.setCell(24, 3, 1394);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'testCheckFtpPortEmptyField')
+data.setCell(25, 2, 'TestPage.TestDashboard.Replica.TestReplica')
+data.setCell(25, 3, 1377);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'testCheckFtpPortEmptyField')
+data.setCell(26, 2, 'TestPage.TestDashboard.Backup.TestCloudBackup')
+data.setCell(26, 3, 1364);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'testCheckSqlQueryEmptyField')
+data.setCell(27, 2, 'TestPage.TestDashboard.Backup.TestSqlPing')
+data.setCell(27, 3, 1313);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'testCheckScheduleIncorrectField')
+data.setCell(28, 2, 'TestPage.TestDashboard.Backup.TestValidateDb')
+data.setCell(28, 3, 1268);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'testCreateRestoreDbBackupFolderEmptyField')
+data.setCell(29, 2, 'TestPage.TestDashboard.Backup.TestRestoreDb')
+data.setCell(29, 3, 1249);
+data.setCell(30, 0, 30)
+data.setCell(30, 1, 'testCreateRestoreDbMinFreeSpaceEmptyField')
+data.setCell(30, 2, 'TestPage.TestDashboard.Backup.TestRestoreDb')
+data.setCell(30, 3, 1231);
+data.setCell(31, 0, 31)
+data.setCell(31, 1, 'testCreateRestoreDbPathTemplateBackupFolderEmptyField')
+data.setCell(31, 2, 'TestPage.TestDashboard.Backup.TestRestoreDb')
+data.setCell(31, 3, 1196);
+data.setCell(32, 0, 32)
+data.setCell(32, 1, 'testCreateRestoreDbSuffixFileNameEmptyField')
+data.setCell(32, 2, 'TestPage.TestDashboard.Backup.TestRestoreDb')
+data.setCell(32, 3, 1173);
+data.setCell(33, 0, 33)
+data.setCell(33, 1, 'testCreateRestoreDbPathRestoreFolderEmptyField')
+data.setCell(33, 2, 'TestPage.TestDashboard.Backup.TestRestoreDb')
+data.setCell(33, 3, 1155);
+data.setCell(34, 0, 34)
+data.setCell(34, 1, 'testCheckWatchIncomingFilesEmptyField')
+data.setCell(34, 2, 'TestPage.TestDashboard.Backup.TestCloudBackupReceiver')
+data.setCell(34, 3, 960);
+data.setCell(35, 0, 35)
+data.setCell(35, 1, 'testCheckFiledConnectionFtpEmptyField')
+data.setCell(35, 2, 'TestPage.TestDashboard.Replica.TestReplica')
+data.setCell(35, 3, 896);
+data.setCell(36, 0, 36)
+data.setCell(36, 1, 'testCheckAlertFileCountIncorrectValue')
+data.setCell(36, 2, 'TestPage.TestDashboard.Backup.TestCloudBackupReceiver')
+data.setCell(36, 3, 868);
+data.setCell(37, 0, 37)
+data.setCell(37, 1, 'testCheckExtensionPackedFilesEmptyField')
+data.setCell(37, 2, 'TestPage.TestDashboard.Backup.TestCloudBackupReceiver')
+data.setCell(37, 3, 851);
+data.setCell(38, 0, 38)
+data.setCell(38, 1, 'testCheckFilenameTemplateEmptyField')
+data.setCell(38, 2, 'TestPage.TestDashboard.Backup.TestCloudBackupReceiver')
+data.setCell(38, 3, 838);
+data.setCell(39, 0, 39)
+data.setCell(39, 1, 'testCheckDecryptPasswordEmptyField')
+data.setCell(39, 2, 'TestPage.TestDashboard.Backup.TestCloudBackupReceiver')
+data.setCell(39, 3, 838);
+data.setCell(40, 0, 40)
+data.setCell(40, 1, 'testCheckKeepNSourceFilesFieldEmptyField')
+data.setCell(40, 2, 'TestPage.TestDashboard.Replica.TestReplica')
+data.setCell(40, 3, 801);
+data.setCell(41, 0, 41)
+data.setCell(41, 1, 'testCheckMonitorFolderEmptyField')
+data.setCell(41, 2, 'TestPage.TestDashboard.Replica.TestReplica')
+data.setCell(41, 3, 787);
+data.setCell(42, 0, 42)
+data.setCell(42, 1, 'testCheckMonitorFolderEmptyField')
+data.setCell(42, 2, 'TestPage.TestDashboard.Backup.TestCloudBackup')
+data.setCell(42, 3, 759);
+data.setCell(43, 0, 43)
+data.setCell(43, 1, 'testCheckFiledConnectionFtpEmptyField')
+data.setCell(43, 2, 'TestPage.TestDashboard.Backup.TestCloudBackup')
+data.setCell(43, 3, 730);
+data.setCell(44, 0, 44)
+data.setCell(44, 1, 'testCheckKeepNSourceFilesFieldEmptyField')
+data.setCell(44, 2, 'TestPage.TestDashboard.Backup.TestCloudBackup')
+data.setCell(44, 3, 720);
+data.setCell(45, 0, 45)
+data.setCell(45, 1, 'testCheckFilenameTemplateEmptyField')
+data.setCell(45, 2, 'TestPage.TestDashboard.Replica.TestReplica')
+data.setCell(45, 3, 697);
+data.setCell(46, 0, 46)
+data.setCell(46, 1, 'testCheckFilenameTemplateEmptyField')
+data.setCell(46, 2, 'TestPage.TestDashboard.Backup.TestCloudBackup')
+data.setCell(46, 3, 696);
+data.setCell(47, 0, 47)
+data.setCell(47, 1, 'testCreateDumpBackupScheduleIncorrect')
+data.setCell(47, 2, 'TestPage.TestDashboard.Backup.TestDumpBackup')
+data.setCell(47, 3, 657);
+data.setCell(48, 0, 48)
+data.setCell(48, 1, 'testAddFtpCorrect')
+data.setCell(48, 2, 'TestPage.TestDashboard.Backup.TestCloudBackup')
+data.setCell(48, 3, 642);
+data.setCell(49, 0, 49)
+data.setCell(49, 1, 'testCreateDumpBackupMaxNumbFilesEmpty')
+data.setCell(49, 2, 'TestPage.TestDashboard.Backup.TestDumpBackup')
+data.setCell(49, 3, 600);
+data.setCell(50, 0, 50)
+data.setCell(50, 1, 'testCreateDumpBackupMinFreeSpaceEmpty')
+data.setCell(50, 2, 'TestPage.TestDashboard.Backup.TestDumpBackup')
+data.setCell(50, 3, 592);
+data.setCell(51, 0, 51)
+data.setCell(51, 1, 'testCreateDumpBackupPathFolderEmpty')
+data.setCell(51, 2, 'TestPage.TestDashboard.Backup.TestDumpBackup')
+data.setCell(51, 3, 561);
+data.setCell(52, 0, 52)
+data.setCell(52, 1, 'testAddDbIncorrectAlias')
+data.setCell(52, 2, 'TestPage.TestDashboard.TestDatabase')
+data.setCell(52, 3, 517);
+data.setCell(53, 0, 53)
+data.setCell(53, 1, 'testCreateVerifiedBackupMaxNumbNotNumbers')
+data.setCell(53, 2, 'TestPage.TestDashboard.Backup.TestVerifiedBackup')
+data.setCell(53, 3, 461);
+data.setCell(54, 0, 54)
+data.setCell(54, 1, 'testCreateVerifiedBackupMaxNumbNegative')
+data.setCell(54, 2, 'TestPage.TestDashboard.Backup.TestVerifiedBackup')
+data.setCell(54, 3, 419);
+data.setCell(55, 0, 55)
+data.setCell(55, 1, 'testAddFtpCorrect')
+data.setCell(55, 2, 'TestPage.TestDashboard.Replica.TestReplica')
+data.setCell(55, 3, 395);
+data.setCell(56, 0, 56)
+data.setCell(56, 1, 'testAddDbEmptyPath')
+data.setCell(56, 2, 'TestPage.TestDashboard.TestDatabase')
+data.setCell(56, 3, 391);
+data.setCell(57, 0, 57)
+data.setCell(57, 1, 'testCheckShutdownTimeoutEmptyField')
+data.setCell(57, 2, 'TestPage.TestDashboard.Backup.TestValidateDb')
+data.setCell(57, 3, 390);
+data.setCell(58, 0, 58)
+data.setCell(58, 1, 'testAddDbEmptyName')
+data.setCell(58, 2, 'TestPage.TestDashboard.TestDatabase')
+data.setCell(58, 3, 369);
+data.setCell(59, 0, 59)
+data.setCell(59, 1, 'testAddDbIncorrectPath')
+data.setCell(59, 2, 'TestPage.TestDashboard.TestDatabase')
+data.setCell(59, 3, 282);
+data.setCell(60, 0, 60)
+data.setCell(60, 1, 'testCheckPeriodEmptyField')
+data.setCell(60, 2, 'TestPage.TestDashboard.Backup.TestCloudBackup')
+data.setCell(60, 3, 276);
+data.setCell(61, 0, 61)
+data.setCell(61, 1, 'testCreateVerifiedBackupScheduleIncorrect')
+data.setCell(61, 2, 'TestPage.TestDashboard.Backup.TestVerifiedBackup')
+data.setCell(61, 3, 259);
+data.setCell(62, 0, 62)
+data.setCell(62, 1, 'testCheckPeriodEmptyField')
+data.setCell(62, 2, 'TestPage.TestDashboard.Replica.TestReplica')
+data.setCell(62, 3, 253);
 window.suiteTableData['TestOne']= { tableData: data, tableDiv: 'times-div-TestOne'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 ms</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-TestOne">
               </div> <!-- times-div-TestOne -->
             </div> <!-- times-div -->
@@ -217,9 +1335,72 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-TestOne" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">14 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">TestPage.TestDashboard.Backup.TestIncrementalBackup</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">suiteSetUp</span>
+                <br/>
+                <span class="ignored-method-name">suiteTearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">TestPage.TestDashboard.Backup.TestCloudBackup</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">suiteSetUp</span>
+                <br/>
+                <span class="ignored-method-name">suiteTearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">TestPage.TestDashboard.Backup.TestCloudBackupReceiver</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">suiteSetUp</span>
+                <br/>
+                <span class="ignored-method-name">suiteTearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">TestPage.TestDashboard.Backup.TestDumpBackup</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">suiteSetUp</span>
+                <br/>
+                <span class="ignored-method-name">suiteTearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">TestPage.TestDashboard.Backup.TestValidateDb</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">suiteSetUp</span>
+                <br/>
+                <span class="ignored-method-name">suiteTearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">TestPage.TestDashboard.Backup.TestSqlPing</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">suiteSetUp</span>
+                <br/>
+                <span class="ignored-method-name">suiteTearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">TestPage.TestDashboard.Backup.TestRestoreDb</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">suiteSetUp</span>
+                <br/>
+                <span class="ignored-method-name">suiteTearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-TestOne" class="panel">
@@ -228,34 +1409,595 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">TestPage.TestDashboard.Backup.TestCloudBackup</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">TestPage.TestDashboard.Replica.TestReplica</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">suiteSetUp(chrome, src/test/resurces/chromedriver.exe, http://admin:strong password@localhost:8082/, admin, str...)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestPage.TestDashboard.TestDatabase</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">suiteSetUp</span>
-                <span class="method-start">12731 ms</span>
+                <span class="method-name">classSetUp</span>
+                <span class="method-start">82369 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">testCreateVBScheduleIncorrect</span>
-                <span class="method-start">13770 ms</span>
+                <span class="method-name">testAddDbEmptyPath</span>
+                <span class="method-start">84038 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">13772 ms</span>
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.TestDatabase.testAddDbEmptyPath(), [TestResult name=testAddDbEmpt...)</span>
+                <span class="method-start">84521 ms</span>
               </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testAddDbEmptyName</span>
+                <span class="method-start">84539 ms</span>
+              </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">testTearDown(public void TestPage.TestDashboard.Backup.TestCloudBackup.testCreateVBScheduleIncorrect())</span>
-                <span class="method-start">13787 ms</span>
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.TestDatabase.testAddDbEmptyName(), [TestResult name=testAddDbEmpt...)</span>
+                <span class="method-start">84915 ms</span>
               </div> <!-- configuration-method after -->
-              <div class="configuration-test after">
-                <span class="method-name">testTearDownTests</span>
-                <span class="method-start">13796 ms</span>
-              </div> <!-- configuration-test after -->
+              <div class="test-method">
+                <span class="method-name">testAddDbIncorrectPath</span>
+                <span class="method-start">84923 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.TestDatabase.testAddDbIncorrectPath(), [TestResult name=testAddDb...)</span>
+                <span class="method-start">85212 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testAddDbIncorrectAlias</span>
+                <span class="method-start">85222 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.TestDatabase.testAddDbIncorrectAlias(), [TestResult name=testAddD...)</span>
+                <span class="method-start">85745 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testAddDbCorrect</span>
+                <span class="method-start">85754 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.TestDatabase.testAddDbCorrect(), [TestResult name=testAddDbCorrec...)</span>
+                <span class="method-start">91595 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testAddDbAlreadyExist</span>
+                <span class="method-start">91606 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.TestDatabase.testAddDbAlreadyExist(), [TestResult name=testAddDbA...)</span>
+                <span class="method-start">94093 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestPage.TestDashboard.Backup.TestVerifiedBackup</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">classSetUp</span>
+                <span class="method-start">94442 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testCreateVerifiedBackupScheduleIncorrect</span>
+                <span class="method-start">97151 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestVerifiedBackup.testCreateVerifiedBackupScheduleIncorre...)</span>
+                <span class="method-start">97416 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCreateVerifiedBackupMaxNumbNegative</span>
+                <span class="method-start">97425 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestVerifiedBackup.testCreateVerifiedBackupMaxNumbNegative...)</span>
+                <span class="method-start">97855 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCreateVerifiedBackupMaxNumbNotNumbers</span>
+                <span class="method-start">97866 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestVerifiedBackup.testCreateVerifiedBackupMaxNumbNotNumbe...)</span>
+                <span class="method-start">98334 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCreateVerifiedBackupCorrect</span>
+                <span class="method-start">98346 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestVerifiedBackup.testCreateVerifiedBackupCorrect(), [Tes...)</span>
+                <span class="method-start">112056 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestPage.TestDashboard.Backup.TestIncrementalBackup</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">classSetUp</span>
+                <span class="method-start">112065 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testCreateIncrementalBackupMaxDurationEmpty</span>
+                <span class="method-start">114694 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestIncrementalBackup.testCreateIncrementalBackupMaxDurati...)</span>
+                <span class="method-start">118034 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCreateIncrementalBackupMinFreeSpaceEmpty</span>
+                <span class="method-start">118042 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestIncrementalBackup.testCreateIncrementalBackupMinFreeSp...)</span>
+                <span class="method-start">120940 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCreateIncrementalBackupPathFolderEmpty</span>
+                <span class="method-start">120947 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestIncrementalBackup.testCreateIncrementalBackupPathFolde...)</span>
+                <span class="method-start">123751 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCreateIncrementalBackupJournalFolderEmpty</span>
+                <span class="method-start">123759 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestIncrementalBackup.testCreateIncrementalBackupJournalFo...)</span>
+                <span class="method-start">126589 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCreateIncrementalBackupPerformBackupEmpty</span>
+                <span class="method-start">126598 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestIncrementalBackup.testCreateIncrementalBackupPerformBa...)</span>
+                <span class="method-start">129393 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCreateIncrementalBackupCorrect</span>
+                <span class="method-start">129401 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestIncrementalBackup.testCreateIncrementalBackupCorrect()...)</span>
+                <span class="method-start">144193 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestPage.TestDashboard.Backup.TestDumpBackup</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">classSetUp</span>
+                <span class="method-start">144202 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testCreateDumpBackupScheduleIncorrect</span>
+                <span class="method-start">146569 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestDumpBackup.testCreateDumpBackupScheduleIncorrect(), [T...)</span>
+                <span class="method-start">147234 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCreateDumpBackupMinFreeSpaceEmpty</span>
+                <span class="method-start">147244 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestDumpBackup.testCreateDumpBackupMinFreeSpaceEmpty(), [T...)</span>
+                <span class="method-start">147843 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCreateDumpBackupPathFolderEmpty</span>
+                <span class="method-start">147855 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestDumpBackup.testCreateDumpBackupPathFolderEmpty(), [Tes...)</span>
+                <span class="method-start">148425 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCreateDumpBackupMaxNumbFilesEmpty</span>
+                <span class="method-start">148435 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestDumpBackup.testCreateDumpBackupMaxNumbFilesEmpty(), [T...)</span>
+                <span class="method-start">149043 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCreateDumpBackupCorrect</span>
+                <span class="method-start">149055 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestDumpBackup.testCreateDumpBackupCorrect(), [TestResult ...)</span>
+                <span class="method-start">161802 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestPage.TestDashboard.Backup.TestRestoreDb</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">classSetUp</span>
+                <span class="method-start">161810 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testCreateRestoreDbScheduleIncorrect</span>
+                <span class="method-start">164273 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestRestoreDb.testCreateRestoreDbScheduleIncorrect(), [Tes...)</span>
+                <span class="method-start">166089 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCreateRestoreDbBackupFolderEmptyField</span>
+                <span class="method-start">166103 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestRestoreDb.testCreateRestoreDbBackupFolderEmptyField(),...)</span>
+                <span class="method-start">167358 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCreateRestoreDbPathTemplateBackupFolderEmptyField</span>
+                <span class="method-start">167370 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestRestoreDb.testCreateRestoreDbPathTemplateBackupFolderE...)</span>
+                <span class="method-start">168574 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCreateRestoreTimeTakeBackupEmptyField</span>
+                <span class="method-start">168585 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestRestoreDb.testCreateRestoreTimeTakeBackupEmptyField(),...)</span>
+                <span class="method-start">170285 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCreateRestoreDbPathRestoreFolderEmptyField</span>
+                <span class="method-start">170294 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestRestoreDb.testCreateRestoreDbPathRestoreFolderEmptyFie...)</span>
+                <span class="method-start">171466 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCreateRestoreDbRestoreFileNameEmptyField</span>
+                <span class="method-start">171475 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestRestoreDb.testCreateRestoreDbRestoreFileNameEmptyField...)</span>
+                <span class="method-start">173168 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCreateRestoreDbSuffixFileNameEmptyField</span>
+                <span class="method-start">173176 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestRestoreDb.testCreateRestoreDbSuffixFileNameEmptyField(...)</span>
+                <span class="method-start">174357 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCreateRestoreDbLimitProcessTimeEmptyField</span>
+                <span class="method-start">174373 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestRestoreDb.testCreateRestoreDbLimitProcessTimeEmptyFiel...)</span>
+                <span class="method-start">176078 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCreateRestoreDbMinFreeSpaceEmptyField</span>
+                <span class="method-start">176084 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestRestoreDb.testCreateRestoreDbMinFreeSpaceEmptyField(),...)</span>
+                <span class="method-start">177322 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testCreateRestoreDbCorrect</span>
+                <span class="method-start">177332 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestRestoreDb.testCreateRestoreDbCorrect(), [TestResult na...)</span>
+                <span class="method-start">190720 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestPage.TestDashboard.Backup.TestSqlPing</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">classSetUp</span>
+                <span class="method-start">191119 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testCheckScheduleIncorrect</span>
+                <span class="method-start">193435 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestSqlPing.testCheckScheduleIncorrect(), [TestResult name...)</span>
+                <span class="method-start">195174 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCheckSqlQueryEmptyField</span>
+                <span class="method-start">195182 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestSqlPing.testCheckSqlQueryEmptyField(), [TestResult nam...)</span>
+                <span class="method-start">196500 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCreateSqlPingCorrect</span>
+                <span class="method-start">196510 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestSqlPing.testCreateSqlPingCorrect(), [TestResult name=t...)</span>
+                <span class="method-start">210365 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestPage.TestDashboard.Replica.TestReplica</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">classSetUp</span>
+                <span class="method-start">210575 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testCheckPeriodEmptyField</span>
+                <span class="method-start">213416 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Replica.TestReplica.testCheckPeriodEmptyField(), [TestResult name...)</span>
+                <span class="method-start">213674 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCheckMonitorFolderEmptyField</span>
+                <span class="method-start">213681 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Replica.TestReplica.testCheckMonitorFolderEmptyField(), [TestResu...)</span>
+                <span class="method-start">214475 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCheckFilenameTemplateEmptyField</span>
+                <span class="method-start">214483 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Replica.TestReplica.testCheckFilenameTemplateEmptyField(), [TestR...)</span>
+                <span class="method-start">215185 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCheckFiledConnectionFtpEmptyField</span>
+                <span class="method-start">215199 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Replica.TestReplica.testCheckFiledConnectionFtpEmptyField(), [Tes...)</span>
+                <span class="method-start">216101 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCheckKeepNSourceFilesFieldEmptyField</span>
+                <span class="method-start">216116 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Replica.TestReplica.testCheckKeepNSourceFilesFieldEmptyField(), [...)</span>
+                <span class="method-start">216924 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCheckFtpServerEmptyField</span>
+                <span class="method-start">216934 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Replica.TestReplica.testCheckFtpServerEmptyField(), [TestResult n...)</span>
+                <span class="method-start">220630 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCheckFtpPortEmptyField</span>
+                <span class="method-start">220639 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Replica.TestReplica.testCheckFtpPortEmptyField(), [TestResult nam...)</span>
+                <span class="method-start">222021 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testAddFtpCorrect</span>
+                <span class="method-start">222030 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Replica.TestReplica.testAddFtpCorrect(), [TestResult name=testAdd...)</span>
+                <span class="method-start">222435 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testAddCloudBackupCorrect</span>
+                <span class="method-start">222444 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Replica.TestReplica.testAddCloudBackupCorrect(), [TestResult name...)</span>
+                <span class="method-start">224474 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestPage.TestDashboard.Backup.TestCloudBackup</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">classSetUp</span>
+                <span class="method-start">224482 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testCheckPeriodEmptyField</span>
+                <span class="method-start">227416 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestCloudBackup.testCheckPeriodEmptyField(), [TestResult n...)</span>
+                <span class="method-start">227697 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCheckMonitorFolderEmptyField</span>
+                <span class="method-start">227708 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestCloudBackup.testCheckMonitorFolderEmptyField(), [TestR...)</span>
+                <span class="method-start">228473 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCheckFilenameTemplateEmptyField</span>
+                <span class="method-start">228479 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestCloudBackup.testCheckFilenameTemplateEmptyField(), [Te...)</span>
+                <span class="method-start">229182 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCheckFiledConnectionFtpEmptyField</span>
+                <span class="method-start">229194 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestCloudBackup.testCheckFiledConnectionFtpEmptyField(), [...)</span>
+                <span class="method-start">229931 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCheckKeepNSourceFilesFieldEmptyField</span>
+                <span class="method-start">229945 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestCloudBackup.testCheckKeepNSourceFilesFieldEmptyField()...)</span>
+                <span class="method-start">230673 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCheckFtpServerEmptyField</span>
+                <span class="method-start">230683 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestCloudBackup.testCheckFtpServerEmptyField(), [TestResul...)</span>
+                <span class="method-start">234357 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCheckFtpPortEmptyField</span>
+                <span class="method-start">234366 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestCloudBackup.testCheckFtpPortEmptyField(), [TestResult ...)</span>
+                <span class="method-start">235735 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testAddFtpCorrect</span>
+                <span class="method-start">235790 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestCloudBackup.testAddFtpCorrect(), [TestResult name=test...)</span>
+                <span class="method-start">236442 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testAddCloudBackupCorrect</span>
+                <span class="method-start">236450 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestCloudBackup.testAddCloudBackupCorrect(), [TestResult n...)</span>
+                <span class="method-start">250795 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestPage.TestDashboard.Backup.TestCloudBackupReceiver</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">classSetUp</span>
+                <span class="method-start">250803 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testCheckPeriodEmptyField</span>
+                <span class="method-start">253053 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestCloudBackupReceiver.testCheckPeriodEmptyField(), [Test...)</span>
+                <span class="method-start">255638 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCheckWatchIncomingFilesEmptyField</span>
+                <span class="method-start">255648 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestCloudBackupReceiver.testCheckWatchIncomingFilesEmptyFi...)</span>
+                <span class="method-start">256613 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCheckFilenameTemplateEmptyField</span>
+                <span class="method-start">256622 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestCloudBackupReceiver.testCheckFilenameTemplateEmptyFiel...)</span>
+                <span class="method-start">257466 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCheckExtensionPackedFilesEmptyField</span>
+                <span class="method-start">257473 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestCloudBackupReceiver.testCheckExtensionPackedFilesEmpty...)</span>
+                <span class="method-start">258329 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCheckDecryptPasswordEmptyField</span>
+                <span class="method-start">258337 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestCloudBackupReceiver.testCheckDecryptPasswordEmptyField...)</span>
+                <span class="method-start">259182 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCheckAlertFileCountIncorrectValue</span>
+                <span class="method-start">259189 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestCloudBackupReceiver.testCheckAlertFileCountIncorrectVa...)</span>
+                <span class="method-start">260065 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCheckAlertFileAgeEmptyField</span>
+                <span class="method-start">260076 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestCloudBackupReceiver.testCheckAlertFileAgeEmptyField(),...)</span>
+                <span class="method-start">261476 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testAddCloudBackupReceiverCorrect</span>
+                <span class="method-start">261483 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestCloudBackupReceiver.testAddCloudBackupReceiverCorrect(...)</span>
+                <span class="method-start">274337 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestPage.TestDashboard.Backup.TestValidateDb</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">classSetUp</span>
+                <span class="method-start">274702 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testCheckScheduleIncorrectField</span>
+                <span class="method-start">277190 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestValidateDb.testCheckScheduleIncorrectField(), [TestRes...)</span>
+                <span class="method-start">278467 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCheckShutdownTimeoutEmptyField</span>
+                <span class="method-start">278474 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestValidateDb.testCheckShutdownTimeoutEmptyField(), [Test...)</span>
+                <span class="method-start">278870 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCreateValidateBDCorrect</span>
+                <span class="method-start">278880 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown(public void TestPage.TestDashboard.Backup.TestValidateDb.testCreateValidateBDCorrect(), [TestResult ...)</span>
+                <span class="method-start">292308 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestPage.TestDashboard.Replica.TestReplica</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">suiteTearDown</span>
-                <span class="method-start">13855 ms</span>
+                <span class="method-start">292357 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

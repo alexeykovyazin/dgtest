@@ -1,13 +1,991 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="14" total="77" passed="61" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-12-26T10:19:05 MSK" name="TestOne" finished-at="2019-12-26T10:19:06 MSK" duration-ms="1075">
+  <suite started-at="2020-01-19T17:11:26 GMT+03:00" name="TestOne" finished-at="2020-01-19T17:14:56 GMT+03:00" duration-ms="209978">
     <groups>
     </groups>
-    <test started-at="2019-12-26T10:19:05 MSK" name="Common" finished-at="2019-12-26T10:19:06 MSK" duration-ms="1075">
-      <class name="TestPage.TestDashboard.Backup.TestCloudBackup">
-        <test-method is-config="true" signature="suiteSetUp(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestPage.TestDashboard.Backup.TestCloudBackup@2b4a2ec7]" started-at="2019-12-26T10:18:52 MSK" name="suiteSetUp" finished-at="2019-12-26T10:19:05 MSK" duration-ms="12722" status="PASS">
+    <test started-at="2020-01-19T17:11:26 GMT+03:00" name="Database" finished-at="2020-01-19T17:11:38 GMT+03:00" duration-ms="11762">
+      <class name="TestPage.TestDashboard.TestDatabase">
+        <test-method is-config="true" signature="classSetUp()[pri:0, instance:TestPage.TestDashboard.TestDatabase@4f7c0be3]" started-at="2020-01-19T17:11:26 GMT+03:00" name="classSetUp" finished-at="2020-01-19T17:11:28 GMT+03:00" duration-ms="1654" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- classSetUp -->
+        <test-method signature="testAddDbEmptyPath()[pri:1, instance:TestPage.TestDashboard.TestDatabase@4f7c0be3]" started-at="2020-01-19T17:11:28 GMT+03:00" name="testAddDbEmptyPath" finished-at="2020-01-19T17:11:29 GMT+03:00" duration-ms="391" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddDbEmptyPath -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.TestDatabase@4f7c0be3]" started-at="2020-01-19T17:11:29 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:11:29 GMT+03:00" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.TestDatabase.testAddDbEmptyPath()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testAddDbEmptyPath status=SUCCESS method=TestDatabase.testAddDbEmptyPath()[pri:1, instance:TestPage.TestDashboard.TestDatabase@4f7c0be3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testAddDbEmptyName()[pri:2, instance:TestPage.TestDashboard.TestDatabase@4f7c0be3]" started-at="2020-01-19T17:11:29 GMT+03:00" name="testAddDbEmptyName" finished-at="2020-01-19T17:11:29 GMT+03:00" duration-ms="369" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddDbEmptyName -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.TestDatabase@4f7c0be3]" started-at="2020-01-19T17:11:29 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:11:29 GMT+03:00" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.TestDatabase.testAddDbEmptyName()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testAddDbEmptyName status=SUCCESS method=TestDatabase.testAddDbEmptyName()[pri:2, instance:TestPage.TestDashboard.TestDatabase@4f7c0be3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testAddDbIncorrectPath()[pri:3, instance:TestPage.TestDashboard.TestDatabase@4f7c0be3]" started-at="2020-01-19T17:11:29 GMT+03:00" name="testAddDbIncorrectPath" finished-at="2020-01-19T17:11:29 GMT+03:00" duration-ms="282" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddDbIncorrectPath -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.TestDatabase@4f7c0be3]" started-at="2020-01-19T17:11:29 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:11:29 GMT+03:00" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.TestDatabase.testAddDbIncorrectPath()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testAddDbIncorrectPath status=SUCCESS method=TestDatabase.testAddDbIncorrectPath()[pri:3, instance:TestPage.TestDashboard.TestDatabase@4f7c0be3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testAddDbIncorrectAlias()[pri:4, instance:TestPage.TestDashboard.TestDatabase@4f7c0be3]" started-at="2020-01-19T17:11:29 GMT+03:00" name="testAddDbIncorrectAlias" finished-at="2020-01-19T17:11:30 GMT+03:00" duration-ms="517" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddDbIncorrectAlias -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.TestDatabase@4f7c0be3]" started-at="2020-01-19T17:11:30 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:11:30 GMT+03:00" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.TestDatabase.testAddDbIncorrectAlias()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testAddDbIncorrectAlias status=SUCCESS method=TestDatabase.testAddDbIncorrectAlias()[pri:4, instance:TestPage.TestDashboard.TestDatabase@4f7c0be3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testAddDbCorrect()[pri:5, instance:TestPage.TestDashboard.TestDatabase@4f7c0be3]" started-at="2020-01-19T17:11:30 GMT+03:00" name="testAddDbCorrect" finished-at="2020-01-19T17:11:36 GMT+03:00" duration-ms="5835" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddDbCorrect -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.TestDatabase@4f7c0be3]" started-at="2020-01-19T17:11:36 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:11:36 GMT+03:00" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.TestDatabase.testAddDbCorrect()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testAddDbCorrect status=SUCCESS method=TestDatabase.testAddDbCorrect()[pri:5, instance:TestPage.TestDashboard.TestDatabase@4f7c0be3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testAddDbAlreadyExist()[pri:6, instance:TestPage.TestDashboard.TestDatabase@4f7c0be3]" started-at="2020-01-19T17:11:36 GMT+03:00" name="testAddDbAlreadyExist" finished-at="2020-01-19T17:11:38 GMT+03:00" duration-ms="2481" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddDbAlreadyExist -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.TestDatabase@4f7c0be3]" started-at="2020-01-19T17:11:38 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:11:38 GMT+03:00" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.TestDatabase.testAddDbAlreadyExist()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testAddDbAlreadyExist status=SUCCESS method=TestDatabase.testAddDbAlreadyExist()[pri:6, instance:TestPage.TestDashboard.TestDatabase@4f7c0be3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+      </class> <!-- TestPage.TestDashboard.TestDatabase -->
+    </test> <!-- Database -->
+    <test started-at="2020-01-19T17:11:39 GMT+03:00" name="Backup" finished-at="2020-01-19T17:13:34 GMT+03:00" duration-ms="115934">
+      <class name="TestPage.TestDashboard.Backup.TestSqlPing">
+        <test-method is-config="true" signature="classSetUp()[pri:0, instance:TestPage.TestDashboard.Backup.TestSqlPing@41a6d121]" started-at="2020-01-19T17:13:15 GMT+03:00" name="classSetUp" finished-at="2020-01-19T17:13:18 GMT+03:00" duration-ms="2315" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- classSetUp -->
+        <test-method signature="testCheckScheduleIncorrect()[pri:1, instance:TestPage.TestDashboard.Backup.TestSqlPing@41a6d121]" started-at="2020-01-19T17:13:18 GMT+03:00" name="testCheckScheduleIncorrect" finished-at="2020-01-19T17:13:19 GMT+03:00" duration-ms="1735" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckScheduleIncorrect -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestSqlPing@41a6d121]" started-at="2020-01-19T17:13:19 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:13:19 GMT+03:00" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestSqlPing.testCheckScheduleIncorrect()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCheckScheduleIncorrect status=SUCCESS method=TestSqlPing.testCheckScheduleIncorrect()[pri:1, instance:TestPage.TestDashboard.Backup.TestSqlPing@41a6d121] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCheckSqlQueryEmptyField()[pri:2, instance:TestPage.TestDashboard.Backup.TestSqlPing@41a6d121]" started-at="2020-01-19T17:13:19 GMT+03:00" name="testCheckSqlQueryEmptyField" finished-at="2020-01-19T17:13:21 GMT+03:00" duration-ms="1313" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckSqlQueryEmptyField -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestSqlPing@41a6d121]" started-at="2020-01-19T17:13:21 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:13:21 GMT+03:00" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestSqlPing.testCheckSqlQueryEmptyField()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCheckSqlQueryEmptyField status=SUCCESS method=TestSqlPing.testCheckSqlQueryEmptyField()[pri:2, instance:TestPage.TestDashboard.Backup.TestSqlPing@41a6d121] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCreateSqlPingCorrect()[pri:3, instance:TestPage.TestDashboard.Backup.TestSqlPing@41a6d121]" started-at="2020-01-19T17:13:21 GMT+03:00" name="testCreateSqlPingCorrect" finished-at="2020-01-19T17:13:34 GMT+03:00" duration-ms="13850" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateSqlPingCorrect -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestSqlPing@41a6d121]" started-at="2020-01-19T17:13:34 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:13:34 GMT+03:00" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestSqlPing.testCreateSqlPingCorrect()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCreateSqlPingCorrect status=SUCCESS method=TestSqlPing.testCreateSqlPingCorrect()[pri:3, instance:TestPage.TestDashboard.Backup.TestSqlPing@41a6d121] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+      </class> <!-- TestPage.TestDashboard.Backup.TestSqlPing -->
+      <class name="TestPage.TestDashboard.Backup.TestRestoreDb">
+        <test-method is-config="true" signature="classSetUp()[pri:0, instance:TestPage.TestDashboard.Backup.TestRestoreDb@5b6e8f77]" started-at="2020-01-19T17:12:46 GMT+03:00" name="classSetUp" finished-at="2020-01-19T17:12:48 GMT+03:00" duration-ms="2462" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- classSetUp -->
+        <test-method signature="testCreateRestoreDbScheduleIncorrect()[pri:1, instance:TestPage.TestDashboard.Backup.TestRestoreDb@5b6e8f77]" started-at="2020-01-19T17:12:48 GMT+03:00" name="testCreateRestoreDbScheduleIncorrect" finished-at="2020-01-19T17:12:50 GMT+03:00" duration-ms="1807" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateRestoreDbScheduleIncorrect -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestRestoreDb@5b6e8f77]" started-at="2020-01-19T17:12:50 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:12:50 GMT+03:00" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestRestoreDb.testCreateRestoreDbScheduleIncorrect()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCreateRestoreDbScheduleIncorrect status=SUCCESS method=TestRestoreDb.testCreateRestoreDbScheduleIncorrect()[pri:1, instance:TestPage.TestDashboard.Backup.TestRestoreDb@5b6e8f77] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCreateRestoreDbBackupFolderEmptyField()[pri:2, instance:TestPage.TestDashboard.Backup.TestRestoreDb@5b6e8f77]" started-at="2020-01-19T17:12:50 GMT+03:00" name="testCreateRestoreDbBackupFolderEmptyField" finished-at="2020-01-19T17:12:51 GMT+03:00" duration-ms="1249" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateRestoreDbBackupFolderEmptyField -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestRestoreDb@5b6e8f77]" started-at="2020-01-19T17:12:51 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:12:51 GMT+03:00" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestRestoreDb.testCreateRestoreDbBackupFolderEmptyField()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCreateRestoreDbBackupFolderEmptyField status=SUCCESS method=TestRestoreDb.testCreateRestoreDbBackupFolderEmptyField()[pri:2, instance:TestPage.TestDashboard.Backup.TestRestoreDb@5b6e8f77] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCreateRestoreDbPathTemplateBackupFolderEmptyField()[pri:3, instance:TestPage.TestDashboard.Backup.TestRestoreDb@5b6e8f77]" started-at="2020-01-19T17:12:51 GMT+03:00" name="testCreateRestoreDbPathTemplateBackupFolderEmptyField" finished-at="2020-01-19T17:12:53 GMT+03:00" duration-ms="1196" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateRestoreDbPathTemplateBackupFolderEmptyField -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestRestoreDb@5b6e8f77]" started-at="2020-01-19T17:12:53 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:12:53 GMT+03:00" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestRestoreDb.testCreateRestoreDbPathTemplateBackupFolderEmptyField()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCreateRestoreDbPathTemplateBackupFolderEmptyField status=SUCCESS method=TestRestoreDb.testCreateRestoreDbPathTemplateBackupFolderEmptyField()[pri:3, instance:TestPage.TestDashboard.Backup.TestRestoreDb@5b6e8f77] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCreateRestoreTimeTakeBackupEmptyField()[pri:4, instance:TestPage.TestDashboard.Backup.TestRestoreDb@5b6e8f77]" started-at="2020-01-19T17:12:53 GMT+03:00" name="testCreateRestoreTimeTakeBackupEmptyField" finished-at="2020-01-19T17:12:54 GMT+03:00" duration-ms="1694" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateRestoreTimeTakeBackupEmptyField -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestRestoreDb@5b6e8f77]" started-at="2020-01-19T17:12:54 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:12:54 GMT+03:00" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestRestoreDb.testCreateRestoreTimeTakeBackupEmptyField()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCreateRestoreTimeTakeBackupEmptyField status=SUCCESS method=TestRestoreDb.testCreateRestoreTimeTakeBackupEmptyField()[pri:4, instance:TestPage.TestDashboard.Backup.TestRestoreDb@5b6e8f77] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCreateRestoreDbPathRestoreFolderEmptyField()[pri:5, instance:TestPage.TestDashboard.Backup.TestRestoreDb@5b6e8f77]" started-at="2020-01-19T17:12:54 GMT+03:00" name="testCreateRestoreDbPathRestoreFolderEmptyField" finished-at="2020-01-19T17:12:56 GMT+03:00" duration-ms="1155" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateRestoreDbPathRestoreFolderEmptyField -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestRestoreDb@5b6e8f77]" started-at="2020-01-19T17:12:56 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:12:56 GMT+03:00" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestRestoreDb.testCreateRestoreDbPathRestoreFolderEmptyField()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCreateRestoreDbPathRestoreFolderEmptyField status=SUCCESS method=TestRestoreDb.testCreateRestoreDbPathRestoreFolderEmptyField()[pri:5, instance:TestPage.TestDashboard.Backup.TestRestoreDb@5b6e8f77] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCreateRestoreDbRestoreFileNameEmptyField()[pri:6, instance:TestPage.TestDashboard.Backup.TestRestoreDb@5b6e8f77]" started-at="2020-01-19T17:12:56 GMT+03:00" name="testCreateRestoreDbRestoreFileNameEmptyField" finished-at="2020-01-19T17:12:57 GMT+03:00" duration-ms="1688" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateRestoreDbRestoreFileNameEmptyField -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestRestoreDb@5b6e8f77]" started-at="2020-01-19T17:12:57 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:12:57 GMT+03:00" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestRestoreDb.testCreateRestoreDbRestoreFileNameEmptyField()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCreateRestoreDbRestoreFileNameEmptyField status=SUCCESS method=TestRestoreDb.testCreateRestoreDbRestoreFileNameEmptyField()[pri:6, instance:TestPage.TestDashboard.Backup.TestRestoreDb@5b6e8f77] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCreateRestoreDbSuffixFileNameEmptyField()[pri:7, instance:TestPage.TestDashboard.Backup.TestRestoreDb@5b6e8f77]" started-at="2020-01-19T17:12:57 GMT+03:00" name="testCreateRestoreDbSuffixFileNameEmptyField" finished-at="2020-01-19T17:12:58 GMT+03:00" duration-ms="1173" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateRestoreDbSuffixFileNameEmptyField -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestRestoreDb@5b6e8f77]" started-at="2020-01-19T17:12:58 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:12:58 GMT+03:00" duration-ms="8" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestRestoreDb.testCreateRestoreDbSuffixFileNameEmptyField()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCreateRestoreDbSuffixFileNameEmptyField status=SUCCESS method=TestRestoreDb.testCreateRestoreDbSuffixFileNameEmptyField()[pri:7, instance:TestPage.TestDashboard.Backup.TestRestoreDb@5b6e8f77] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCreateRestoreDbLimitProcessTimeEmptyField()[pri:8, instance:TestPage.TestDashboard.Backup.TestRestoreDb@5b6e8f77]" started-at="2020-01-19T17:12:58 GMT+03:00" name="testCreateRestoreDbLimitProcessTimeEmptyField" finished-at="2020-01-19T17:13:00 GMT+03:00" duration-ms="1700" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateRestoreDbLimitProcessTimeEmptyField -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestRestoreDb@5b6e8f77]" started-at="2020-01-19T17:13:00 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:13:00 GMT+03:00" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestRestoreDb.testCreateRestoreDbLimitProcessTimeEmptyField()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCreateRestoreDbLimitProcessTimeEmptyField status=SUCCESS method=TestRestoreDb.testCreateRestoreDbLimitProcessTimeEmptyField()[pri:8, instance:TestPage.TestDashboard.Backup.TestRestoreDb@5b6e8f77] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCreateRestoreDbMinFreeSpaceEmptyField()[pri:9, instance:TestPage.TestDashboard.Backup.TestRestoreDb@5b6e8f77]" started-at="2020-01-19T17:13:00 GMT+03:00" name="testCreateRestoreDbMinFreeSpaceEmptyField" finished-at="2020-01-19T17:13:01 GMT+03:00" duration-ms="1231" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateRestoreDbMinFreeSpaceEmptyField -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestRestoreDb@5b6e8f77]" started-at="2020-01-19T17:13:01 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:13:01 GMT+03:00" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestRestoreDb.testCreateRestoreDbMinFreeSpaceEmptyField()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCreateRestoreDbMinFreeSpaceEmptyField status=SUCCESS method=TestRestoreDb.testCreateRestoreDbMinFreeSpaceEmptyField()[pri:9, instance:TestPage.TestDashboard.Backup.TestRestoreDb@5b6e8f77] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCreateRestoreDbCorrect()[pri:10, instance:TestPage.TestDashboard.Backup.TestRestoreDb@5b6e8f77]" started-at="2020-01-19T17:13:01 GMT+03:00" name="testCreateRestoreDbCorrect" finished-at="2020-01-19T17:13:15 GMT+03:00" duration-ms="13341" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Status verified backup not OK expected [OK] but found [MINOR]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Status verified backup not OK expected [OK] but found [MINOR]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:575)
+at TestPage.TestDashboard.Backup.TestRestoreDb.testCreateRestoreDbCorrect(TestRestoreDb.java:204)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:377)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateRestoreDbCorrect -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestRestoreDb@5b6e8f77]" started-at="2020-01-19T17:13:15 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:13:15 GMT+03:00" duration-ms="394" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestRestoreDb.testCreateRestoreDbCorrect()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCreateRestoreDbCorrect status=FAILURE method=TestRestoreDb.testCreateRestoreDbCorrect()[pri:10, instance:TestPage.TestDashboard.Backup.TestRestoreDb@5b6e8f77] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+      </class> <!-- TestPage.TestDashboard.Backup.TestRestoreDb -->
+      <class name="TestPage.TestDashboard.Backup.TestDumpBackup">
+        <test-method is-config="true" signature="classSetUp()[pri:0, instance:TestPage.TestDashboard.Backup.TestDumpBackup@5baaae4c]" started-at="2020-01-19T17:12:28 GMT+03:00" name="classSetUp" finished-at="2020-01-19T17:12:31 GMT+03:00" duration-ms="2366" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- classSetUp -->
+        <test-method signature="testCreateDumpBackupScheduleIncorrect()[pri:1, instance:TestPage.TestDashboard.Backup.TestDumpBackup@5baaae4c]" started-at="2020-01-19T17:12:31 GMT+03:00" name="testCreateDumpBackupScheduleIncorrect" finished-at="2020-01-19T17:12:31 GMT+03:00" duration-ms="657" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateDumpBackupScheduleIncorrect -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestDumpBackup@5baaae4c]" started-at="2020-01-19T17:12:31 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:12:31 GMT+03:00" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestDumpBackup.testCreateDumpBackupScheduleIncorrect()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCreateDumpBackupScheduleIncorrect status=SUCCESS method=TestDumpBackup.testCreateDumpBackupScheduleIncorrect()[pri:1, instance:TestPage.TestDashboard.Backup.TestDumpBackup@5baaae4c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCreateDumpBackupMinFreeSpaceEmpty()[pri:2, instance:TestPage.TestDashboard.Backup.TestDumpBackup@5baaae4c]" started-at="2020-01-19T17:12:31 GMT+03:00" name="testCreateDumpBackupMinFreeSpaceEmpty" finished-at="2020-01-19T17:12:32 GMT+03:00" duration-ms="592" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateDumpBackupMinFreeSpaceEmpty -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestDumpBackup@5baaae4c]" started-at="2020-01-19T17:12:32 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:12:32 GMT+03:00" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestDumpBackup.testCreateDumpBackupMinFreeSpaceEmpty()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCreateDumpBackupMinFreeSpaceEmpty status=SUCCESS method=TestDumpBackup.testCreateDumpBackupMinFreeSpaceEmpty()[pri:2, instance:TestPage.TestDashboard.Backup.TestDumpBackup@5baaae4c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCreateDumpBackupPathFolderEmpty()[pri:3, instance:TestPage.TestDashboard.Backup.TestDumpBackup@5baaae4c]" started-at="2020-01-19T17:12:32 GMT+03:00" name="testCreateDumpBackupPathFolderEmpty" finished-at="2020-01-19T17:12:33 GMT+03:00" duration-ms="561" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateDumpBackupPathFolderEmpty -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestDumpBackup@5baaae4c]" started-at="2020-01-19T17:12:33 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:12:33 GMT+03:00" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestDumpBackup.testCreateDumpBackupPathFolderEmpty()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCreateDumpBackupPathFolderEmpty status=SUCCESS method=TestDumpBackup.testCreateDumpBackupPathFolderEmpty()[pri:3, instance:TestPage.TestDashboard.Backup.TestDumpBackup@5baaae4c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCreateDumpBackupMaxNumbFilesEmpty()[pri:4, instance:TestPage.TestDashboard.Backup.TestDumpBackup@5baaae4c]" started-at="2020-01-19T17:12:33 GMT+03:00" name="testCreateDumpBackupMaxNumbFilesEmpty" finished-at="2020-01-19T17:12:33 GMT+03:00" duration-ms="600" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateDumpBackupMaxNumbFilesEmpty -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestDumpBackup@5baaae4c]" started-at="2020-01-19T17:12:33 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:12:33 GMT+03:00" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestDumpBackup.testCreateDumpBackupMaxNumbFilesEmpty()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCreateDumpBackupMaxNumbFilesEmpty status=SUCCESS method=TestDumpBackup.testCreateDumpBackupMaxNumbFilesEmpty()[pri:4, instance:TestPage.TestDashboard.Backup.TestDumpBackup@5baaae4c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCreateDumpBackupCorrect()[pri:5, instance:TestPage.TestDashboard.Backup.TestDumpBackup@5baaae4c]" started-at="2020-01-19T17:12:33 GMT+03:00" name="testCreateDumpBackupCorrect" finished-at="2020-01-19T17:12:46 GMT+03:00" duration-ms="12742" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateDumpBackupCorrect -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestDumpBackup@5baaae4c]" started-at="2020-01-19T17:12:46 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:12:46 GMT+03:00" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestDumpBackup.testCreateDumpBackupCorrect()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCreateDumpBackupCorrect status=SUCCESS method=TestDumpBackup.testCreateDumpBackupCorrect()[pri:5, instance:TestPage.TestDashboard.Backup.TestDumpBackup@5baaae4c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+      </class> <!-- TestPage.TestDashboard.Backup.TestDumpBackup -->
+      <class name="TestPage.TestDashboard.Backup.TestVerifiedBackup">
+        <test-method is-config="true" signature="classSetUp()[pri:0, instance:TestPage.TestDashboard.Backup.TestVerifiedBackup@456be73c]" started-at="2020-01-19T17:11:39 GMT+03:00" name="classSetUp" finished-at="2020-01-19T17:11:41 GMT+03:00" duration-ms="2708" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- classSetUp -->
+        <test-method signature="testCreateVerifiedBackupScheduleIncorrect()[pri:1, instance:TestPage.TestDashboard.Backup.TestVerifiedBackup@456be73c]" started-at="2020-01-19T17:11:41 GMT+03:00" name="testCreateVerifiedBackupScheduleIncorrect" finished-at="2020-01-19T17:11:42 GMT+03:00" duration-ms="259" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateVerifiedBackupScheduleIncorrect -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestVerifiedBackup@456be73c]" started-at="2020-01-19T17:11:42 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:11:42 GMT+03:00" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestVerifiedBackup.testCreateVerifiedBackupScheduleIncorrect()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCreateVerifiedBackupScheduleIncorrect status=SUCCESS method=TestVerifiedBackup.testCreateVerifiedBackupScheduleIncorrect()[pri:1, instance:TestPage.TestDashboard.Backup.TestVerifiedBackup@456be73c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCreateVerifiedBackupMaxNumbNegative()[pri:2, instance:TestPage.TestDashboard.Backup.TestVerifiedBackup@456be73c]" started-at="2020-01-19T17:11:42 GMT+03:00" name="testCreateVerifiedBackupMaxNumbNegative" finished-at="2020-01-19T17:11:42 GMT+03:00" duration-ms="419" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateVerifiedBackupMaxNumbNegative -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestVerifiedBackup@456be73c]" started-at="2020-01-19T17:11:42 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:11:42 GMT+03:00" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestVerifiedBackup.testCreateVerifiedBackupMaxNumbNegative()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCreateVerifiedBackupMaxNumbNegative status=SUCCESS method=TestVerifiedBackup.testCreateVerifiedBackupMaxNumbNegative()[pri:2, instance:TestPage.TestDashboard.Backup.TestVerifiedBackup@456be73c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCreateVerifiedBackupMaxNumbNotNumbers()[pri:3, instance:TestPage.TestDashboard.Backup.TestVerifiedBackup@456be73c]" started-at="2020-01-19T17:11:42 GMT+03:00" name="testCreateVerifiedBackupMaxNumbNotNumbers" finished-at="2020-01-19T17:11:42 GMT+03:00" duration-ms="461" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateVerifiedBackupMaxNumbNotNumbers -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestVerifiedBackup@456be73c]" started-at="2020-01-19T17:11:42 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:11:42 GMT+03:00" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestVerifiedBackup.testCreateVerifiedBackupMaxNumbNotNumbers()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCreateVerifiedBackupMaxNumbNotNumbers status=SUCCESS method=TestVerifiedBackup.testCreateVerifiedBackupMaxNumbNotNumbers()[pri:3, instance:TestPage.TestDashboard.Backup.TestVerifiedBackup@456be73c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCreateVerifiedBackupCorrect()[pri:4, instance:TestPage.TestDashboard.Backup.TestVerifiedBackup@456be73c]" started-at="2020-01-19T17:11:42 GMT+03:00" name="testCreateVerifiedBackupCorrect" finished-at="2020-01-19T17:11:56 GMT+03:00" duration-ms="13690" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateVerifiedBackupCorrect -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestVerifiedBackup@456be73c]" started-at="2020-01-19T17:11:56 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:11:56 GMT+03:00" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestVerifiedBackup.testCreateVerifiedBackupCorrect()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCreateVerifiedBackupCorrect status=SUCCESS method=TestVerifiedBackup.testCreateVerifiedBackupCorrect()[pri:4, instance:TestPage.TestDashboard.Backup.TestVerifiedBackup@456be73c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+      </class> <!-- TestPage.TestDashboard.Backup.TestVerifiedBackup -->
+      <class name="TestPage.TestDashboard.Backup.TestIncrementalBackup">
+        <test-method is-config="true" signature="classSetUp()[pri:0, instance:TestPage.TestDashboard.Backup.TestIncrementalBackup@2375b321]" started-at="2020-01-19T17:11:56 GMT+03:00" name="classSetUp" finished-at="2020-01-19T17:11:59 GMT+03:00" duration-ms="2628" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- classSetUp -->
+        <test-method signature="testCreateIncrementalBackupMaxDurationEmpty()[pri:1, instance:TestPage.TestDashboard.Backup.TestIncrementalBackup@2375b321]" started-at="2020-01-19T17:11:59 GMT+03:00" name="testCreateIncrementalBackupMaxDurationEmpty" finished-at="2020-01-19T17:12:02 GMT+03:00" duration-ms="3335" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateIncrementalBackupMaxDurationEmpty -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestIncrementalBackup@2375b321]" started-at="2020-01-19T17:12:02 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:12:02 GMT+03:00" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestIncrementalBackup.testCreateIncrementalBackupMaxDurationEmpty()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCreateIncrementalBackupMaxDurationEmpty status=SUCCESS method=TestIncrementalBackup.testCreateIncrementalBackupMaxDurationEmpty()[pri:1, instance:TestPage.TestDashboard.Backup.TestIncrementalBackup@2375b321] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCreateIncrementalBackupMinFreeSpaceEmpty()[pri:2, instance:TestPage.TestDashboard.Backup.TestIncrementalBackup@2375b321]" started-at="2020-01-19T17:12:02 GMT+03:00" name="testCreateIncrementalBackupMinFreeSpaceEmpty" finished-at="2020-01-19T17:12:05 GMT+03:00" duration-ms="2885" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateIncrementalBackupMinFreeSpaceEmpty -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestIncrementalBackup@2375b321]" started-at="2020-01-19T17:12:05 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:12:05 GMT+03:00" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestIncrementalBackup.testCreateIncrementalBackupMinFreeSpaceEmpty()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCreateIncrementalBackupMinFreeSpaceEmpty status=SUCCESS method=TestIncrementalBackup.testCreateIncrementalBackupMinFreeSpaceEmpty()[pri:2, instance:TestPage.TestDashboard.Backup.TestIncrementalBackup@2375b321] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCreateIncrementalBackupPathFolderEmpty()[pri:3, instance:TestPage.TestDashboard.Backup.TestIncrementalBackup@2375b321]" started-at="2020-01-19T17:12:05 GMT+03:00" name="testCreateIncrementalBackupPathFolderEmpty" finished-at="2020-01-19T17:12:08 GMT+03:00" duration-ms="2799" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateIncrementalBackupPathFolderEmpty -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestIncrementalBackup@2375b321]" started-at="2020-01-19T17:12:08 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:12:08 GMT+03:00" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestIncrementalBackup.testCreateIncrementalBackupPathFolderEmpty()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCreateIncrementalBackupPathFolderEmpty status=SUCCESS method=TestIncrementalBackup.testCreateIncrementalBackupPathFolderEmpty()[pri:3, instance:TestPage.TestDashboard.Backup.TestIncrementalBackup@2375b321] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCreateIncrementalBackupJournalFolderEmpty()[pri:4, instance:TestPage.TestDashboard.Backup.TestIncrementalBackup@2375b321]" started-at="2020-01-19T17:12:08 GMT+03:00" name="testCreateIncrementalBackupJournalFolderEmpty" finished-at="2020-01-19T17:12:11 GMT+03:00" duration-ms="2825" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateIncrementalBackupJournalFolderEmpty -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestIncrementalBackup@2375b321]" started-at="2020-01-19T17:12:11 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:12:11 GMT+03:00" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestIncrementalBackup.testCreateIncrementalBackupJournalFolderEmpty()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCreateIncrementalBackupJournalFolderEmpty status=SUCCESS method=TestIncrementalBackup.testCreateIncrementalBackupJournalFolderEmpty()[pri:4, instance:TestPage.TestDashboard.Backup.TestIncrementalBackup@2375b321] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCreateIncrementalBackupPerformBackupEmpty()[pri:5, instance:TestPage.TestDashboard.Backup.TestIncrementalBackup@2375b321]" started-at="2020-01-19T17:12:11 GMT+03:00" name="testCreateIncrementalBackupPerformBackupEmpty" finished-at="2020-01-19T17:12:13 GMT+03:00" duration-ms="2790" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateIncrementalBackupPerformBackupEmpty -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestIncrementalBackup@2375b321]" started-at="2020-01-19T17:12:14 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:12:14 GMT+03:00" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestIncrementalBackup.testCreateIncrementalBackupPerformBackupEmpty()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCreateIncrementalBackupPerformBackupEmpty status=SUCCESS method=TestIncrementalBackup.testCreateIncrementalBackupPerformBackupEmpty()[pri:5, instance:TestPage.TestDashboard.Backup.TestIncrementalBackup@2375b321] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCreateIncrementalBackupCorrect()[pri:6, instance:TestPage.TestDashboard.Backup.TestIncrementalBackup@2375b321]" started-at="2020-01-19T17:12:14 GMT+03:00" name="testCreateIncrementalBackupCorrect" finished-at="2020-01-19T17:12:28 GMT+03:00" duration-ms="14786" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateIncrementalBackupCorrect -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestIncrementalBackup@2375b321]" started-at="2020-01-19T17:12:28 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:12:28 GMT+03:00" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestIncrementalBackup.testCreateIncrementalBackupCorrect()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCreateIncrementalBackupCorrect status=SUCCESS method=TestIncrementalBackup.testCreateIncrementalBackupCorrect()[pri:6, instance:TestPage.TestDashboard.Backup.TestIncrementalBackup@2375b321] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+      </class> <!-- TestPage.TestDashboard.Backup.TestIncrementalBackup -->
+    </test> <!-- Backup -->
+    <test started-at="2020-01-19T17:13:35 GMT+03:00" name="Replica" finished-at="2020-01-19T17:14:56 GMT+03:00" duration-ms="81741">
+      <class name="TestPage.TestDashboard.Backup.TestCloudBackupReceiver">
+        <test-method is-config="true" signature="classSetUp()[pri:0, instance:TestPage.TestDashboard.Backup.TestCloudBackupReceiver@3e6f3bae]" started-at="2020-01-19T17:14:15 GMT+03:00" name="classSetUp" finished-at="2020-01-19T17:14:17 GMT+03:00" duration-ms="2249" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- classSetUp -->
+        <test-method signature="testCheckPeriodEmptyField()[pri:1, instance:TestPage.TestDashboard.Backup.TestCloudBackupReceiver@3e6f3bae]" started-at="2020-01-19T17:14:17 GMT+03:00" name="testCheckPeriodEmptyField" finished-at="2020-01-19T17:14:20 GMT+03:00" duration-ms="2580" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckPeriodEmptyField -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestCloudBackupReceiver@3e6f3bae]" started-at="2020-01-19T17:14:20 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:14:20 GMT+03:00" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestCloudBackupReceiver.testCheckPeriodEmptyField()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCheckPeriodEmptyField status=SUCCESS method=TestCloudBackupReceiver.testCheckPeriodEmptyField()[pri:1, instance:TestPage.TestDashboard.Backup.TestCloudBackupReceiver@3e6f3bae] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCheckWatchIncomingFilesEmptyField()[pri:2, instance:TestPage.TestDashboard.Backup.TestCloudBackupReceiver@3e6f3bae]" started-at="2020-01-19T17:14:20 GMT+03:00" name="testCheckWatchIncomingFilesEmptyField" finished-at="2020-01-19T17:14:21 GMT+03:00" duration-ms="960" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckWatchIncomingFilesEmptyField -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestCloudBackupReceiver@3e6f3bae]" started-at="2020-01-19T17:14:21 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:14:21 GMT+03:00" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestCloudBackupReceiver.testCheckWatchIncomingFilesEmptyField()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCheckWatchIncomingFilesEmptyField status=SUCCESS method=TestCloudBackupReceiver.testCheckWatchIncomingFilesEmptyField()[pri:2, instance:TestPage.TestDashboard.Backup.TestCloudBackupReceiver@3e6f3bae] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCheckFilenameTemplateEmptyField()[pri:3, instance:TestPage.TestDashboard.Backup.TestCloudBackupReceiver@3e6f3bae]" started-at="2020-01-19T17:14:21 GMT+03:00" name="testCheckFilenameTemplateEmptyField" finished-at="2020-01-19T17:14:22 GMT+03:00" duration-ms="838" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckFilenameTemplateEmptyField -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestCloudBackupReceiver@3e6f3bae]" started-at="2020-01-19T17:14:22 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:14:22 GMT+03:00" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestCloudBackupReceiver.testCheckFilenameTemplateEmptyField()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCheckFilenameTemplateEmptyField status=SUCCESS method=TestCloudBackupReceiver.testCheckFilenameTemplateEmptyField()[pri:3, instance:TestPage.TestDashboard.Backup.TestCloudBackupReceiver@3e6f3bae] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCheckExtensionPackedFilesEmptyField()[pri:4, instance:TestPage.TestDashboard.Backup.TestCloudBackupReceiver@3e6f3bae]" started-at="2020-01-19T17:14:22 GMT+03:00" name="testCheckExtensionPackedFilesEmptyField" finished-at="2020-01-19T17:14:22 GMT+03:00" duration-ms="851" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckExtensionPackedFilesEmptyField -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestCloudBackupReceiver@3e6f3bae]" started-at="2020-01-19T17:14:22 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:14:22 GMT+03:00" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestCloudBackupReceiver.testCheckExtensionPackedFilesEmptyField()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCheckExtensionPackedFilesEmptyField status=SUCCESS method=TestCloudBackupReceiver.testCheckExtensionPackedFilesEmptyField()[pri:4, instance:TestPage.TestDashboard.Backup.TestCloudBackupReceiver@3e6f3bae] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCheckDecryptPasswordEmptyField()[pri:5, instance:TestPage.TestDashboard.Backup.TestCloudBackupReceiver@3e6f3bae]" started-at="2020-01-19T17:14:22 GMT+03:00" name="testCheckDecryptPasswordEmptyField" finished-at="2020-01-19T17:14:23 GMT+03:00" duration-ms="838" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckDecryptPasswordEmptyField -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestCloudBackupReceiver@3e6f3bae]" started-at="2020-01-19T17:14:23 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:14:23 GMT+03:00" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestCloudBackupReceiver.testCheckDecryptPasswordEmptyField()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCheckDecryptPasswordEmptyField status=SUCCESS method=TestCloudBackupReceiver.testCheckDecryptPasswordEmptyField()[pri:5, instance:TestPage.TestDashboard.Backup.TestCloudBackupReceiver@3e6f3bae] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCheckAlertFileCountIncorrectValue()[pri:6, instance:TestPage.TestDashboard.Backup.TestCloudBackupReceiver@3e6f3bae]" started-at="2020-01-19T17:14:23 GMT+03:00" name="testCheckAlertFileCountIncorrectValue" finished-at="2020-01-19T17:14:24 GMT+03:00" duration-ms="868" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckAlertFileCountIncorrectValue -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestCloudBackupReceiver@3e6f3bae]" started-at="2020-01-19T17:14:24 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:14:24 GMT+03:00" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestCloudBackupReceiver.testCheckAlertFileCountIncorrectValue()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCheckAlertFileCountIncorrectValue status=SUCCESS method=TestCloudBackupReceiver.testCheckAlertFileCountIncorrectValue()[pri:6, instance:TestPage.TestDashboard.Backup.TestCloudBackupReceiver@3e6f3bae] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCheckAlertFileAgeEmptyField()[pri:7, instance:TestPage.TestDashboard.Backup.TestCloudBackupReceiver@3e6f3bae]" started-at="2020-01-19T17:14:24 GMT+03:00" name="testCheckAlertFileAgeEmptyField" finished-at="2020-01-19T17:14:26 GMT+03:00" duration-ms="1394" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckAlertFileAgeEmptyField -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestCloudBackupReceiver@3e6f3bae]" started-at="2020-01-19T17:14:26 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:14:26 GMT+03:00" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestCloudBackupReceiver.testCheckAlertFileAgeEmptyField()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCheckAlertFileAgeEmptyField status=SUCCESS method=TestCloudBackupReceiver.testCheckAlertFileAgeEmptyField()[pri:7, instance:TestPage.TestDashboard.Backup.TestCloudBackupReceiver@3e6f3bae] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testAddCloudBackupReceiverCorrect()[pri:8, instance:TestPage.TestDashboard.Backup.TestCloudBackupReceiver@3e6f3bae]" started-at="2020-01-19T17:14:26 GMT+03:00" name="testAddCloudBackupReceiverCorrect" finished-at="2020-01-19T17:14:38 GMT+03:00" duration-ms="12832" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Status cloud backup receiver not OK expected [OK] but found [UNKNOWN]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Status cloud backup receiver not OK expected [OK] but found [UNKNOWN]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:575)
+at TestPage.TestDashboard.Backup.TestCloudBackupReceiver.testAddCloudBackupReceiverCorrect(TestCloudBackupReceiver.java:175)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:377)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddCloudBackupReceiverCorrect -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestCloudBackupReceiver@3e6f3bae]" started-at="2020-01-19T17:14:38 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:14:39 GMT+03:00" duration-ms="361" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestCloudBackupReceiver.testAddCloudBackupReceiverCorrect()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testAddCloudBackupReceiverCorrect status=FAILURE method=TestCloudBackupReceiver.testAddCloudBackupReceiverCorrect()[pri:8, instance:TestPage.TestDashboard.Backup.TestCloudBackupReceiver@3e6f3bae] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+      </class> <!-- TestPage.TestDashboard.Backup.TestCloudBackupReceiver -->
+      <class name="TestPage.TestDashboard.Replica.TestReplica">
+        <test-method is-config="true" signature="suiteSetUp(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestPage.TestDashboard.Replica.TestReplica@9f6e406]" started-at="2020-01-19T17:10:04 GMT+03:00" name="suiteSetUp" finished-at="2020-01-19T17:11:26 GMT+03:00" duration-ms="82336" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -38,38 +1016,447 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetUp -->
-        <test-method is-config="true" signature="suiteSetUp()[pri:0, instance:TestPage.TestDashboard.Backup.TestCloudBackup@2b4a2ec7]" started-at="2019-12-26T10:19:05 MSK" name="suiteSetUp" finished-at="2019-12-26T10:19:06 MSK" duration-ms="1024" status="PASS">
+        <test-method is-config="true" signature="classSetUp()[pri:0, instance:TestPage.TestDashboard.Replica.TestReplica@9f6e406]" started-at="2020-01-19T17:13:35 GMT+03:00" name="classSetUp" finished-at="2020-01-19T17:13:38 GMT+03:00" duration-ms="2841" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- suiteSetUp -->
-        <test-method signature="testCreateVBScheduleIncorrect()[pri:1, instance:TestPage.TestDashboard.Backup.TestCloudBackup@2b4a2ec7]" started-at="2019-12-26T10:19:06 MSK" name="testCreateVBScheduleIncorrect" finished-at="2019-12-26T10:19:06 MSK" duration-ms="1" status="PASS">
+        </test-method> <!-- classSetUp -->
+        <test-method signature="testCheckPeriodEmptyField()[pri:1, instance:TestPage.TestDashboard.Replica.TestReplica@9f6e406]" started-at="2020-01-19T17:13:38 GMT+03:00" name="testCheckPeriodEmptyField" finished-at="2020-01-19T17:13:38 GMT+03:00" duration-ms="253" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCreateVBScheduleIncorrect -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestPage.TestDashboard.Backup.TestCloudBackup@2b4a2ec7]" started-at="2019-12-26T10:19:06 MSK" name="tearDown" finished-at="2019-12-26T10:19:06 MSK" duration-ms="15" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="testTearDown(java.lang.reflect.Method)[pri:0, instance:TestPage.TestDashboard.Backup.TestCloudBackup@2b4a2ec7]" started-at="2019-12-26T10:19:06 MSK" name="testTearDown" finished-at="2019-12-26T10:19:06 MSK" duration-ms="8" status="PASS">
+        </test-method> <!-- testCheckPeriodEmptyField -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Replica.TestReplica@9f6e406]" started-at="2020-01-19T17:13:38 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:13:38 GMT+03:00" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void TestPage.TestDashboard.Backup.TestCloudBackup.testCreateVBScheduleIncorrect()]]>
+                <![CDATA[public void TestPage.TestDashboard.Replica.TestReplica.testCheckPeriodEmptyField()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCheckPeriodEmptyField status=SUCCESS method=TestReplica.testCheckPeriodEmptyField()[pri:1, instance:TestPage.TestDashboard.Replica.TestReplica@9f6e406] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testTearDown -->
-        <test-method is-config="true" signature="testTearDownTests()[pri:0, instance:TestPage.TestDashboard.Backup.TestCloudBackup@2b4a2ec7]" started-at="2019-12-26T10:19:06 MSK" name="testTearDownTests" finished-at="2019-12-26T10:19:06 MSK" duration-ms="1" status="PASS">
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCheckMonitorFolderEmptyField()[pri:2, instance:TestPage.TestDashboard.Replica.TestReplica@9f6e406]" started-at="2020-01-19T17:13:38 GMT+03:00" name="testCheckMonitorFolderEmptyField" finished-at="2020-01-19T17:13:39 GMT+03:00" duration-ms="787" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testTearDownTests -->
-        <test-method is-config="true" signature="suiteTearDown()[pri:0, instance:TestPage.TestDashboard.Backup.TestCloudBackup@2b4a2ec7]" started-at="2019-12-26T10:19:06 MSK" name="suiteTearDown" finished-at="2019-12-26T10:19:07 MSK" duration-ms="945" status="PASS">
+        </test-method> <!-- testCheckMonitorFolderEmptyField -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Replica.TestReplica@9f6e406]" started-at="2020-01-19T17:13:39 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:13:39 GMT+03:00" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Replica.TestReplica.testCheckMonitorFolderEmptyField()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCheckMonitorFolderEmptyField status=SUCCESS method=TestReplica.testCheckMonitorFolderEmptyField()[pri:2, instance:TestPage.TestDashboard.Replica.TestReplica@9f6e406] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCheckFilenameTemplateEmptyField()[pri:3, instance:TestPage.TestDashboard.Replica.TestReplica@9f6e406]" started-at="2020-01-19T17:13:39 GMT+03:00" name="testCheckFilenameTemplateEmptyField" finished-at="2020-01-19T17:13:39 GMT+03:00" duration-ms="697" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckFilenameTemplateEmptyField -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Replica.TestReplica@9f6e406]" started-at="2020-01-19T17:13:39 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:13:39 GMT+03:00" duration-ms="7" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Replica.TestReplica.testCheckFilenameTemplateEmptyField()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCheckFilenameTemplateEmptyField status=SUCCESS method=TestReplica.testCheckFilenameTemplateEmptyField()[pri:3, instance:TestPage.TestDashboard.Replica.TestReplica@9f6e406] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCheckFiledConnectionFtpEmptyField()[pri:4, instance:TestPage.TestDashboard.Replica.TestReplica@9f6e406]" started-at="2020-01-19T17:13:39 GMT+03:00" name="testCheckFiledConnectionFtpEmptyField" finished-at="2020-01-19T17:13:40 GMT+03:00" duration-ms="896" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckFiledConnectionFtpEmptyField -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Replica.TestReplica@9f6e406]" started-at="2020-01-19T17:13:40 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:13:40 GMT+03:00" duration-ms="8" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Replica.TestReplica.testCheckFiledConnectionFtpEmptyField()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCheckFiledConnectionFtpEmptyField status=SUCCESS method=TestReplica.testCheckFiledConnectionFtpEmptyField()[pri:4, instance:TestPage.TestDashboard.Replica.TestReplica@9f6e406] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCheckKeepNSourceFilesFieldEmptyField()[pri:5, instance:TestPage.TestDashboard.Replica.TestReplica@9f6e406]" started-at="2020-01-19T17:13:40 GMT+03:00" name="testCheckKeepNSourceFilesFieldEmptyField" finished-at="2020-01-19T17:13:41 GMT+03:00" duration-ms="801" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckKeepNSourceFilesFieldEmptyField -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Replica.TestReplica@9f6e406]" started-at="2020-01-19T17:13:41 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:13:41 GMT+03:00" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Replica.TestReplica.testCheckKeepNSourceFilesFieldEmptyField()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCheckKeepNSourceFilesFieldEmptyField status=SUCCESS method=TestReplica.testCheckKeepNSourceFilesFieldEmptyField()[pri:5, instance:TestPage.TestDashboard.Replica.TestReplica@9f6e406] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCheckFtpServerEmptyField()[pri:6, instance:TestPage.TestDashboard.Replica.TestReplica@9f6e406]" started-at="2020-01-19T17:13:41 GMT+03:00" name="testCheckFtpServerEmptyField" finished-at="2020-01-19T17:13:45 GMT+03:00" duration-ms="3692" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckFtpServerEmptyField -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Replica.TestReplica@9f6e406]" started-at="2020-01-19T17:13:45 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:13:45 GMT+03:00" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Replica.TestReplica.testCheckFtpServerEmptyField()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCheckFtpServerEmptyField status=SUCCESS method=TestReplica.testCheckFtpServerEmptyField()[pri:6, instance:TestPage.TestDashboard.Replica.TestReplica@9f6e406] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCheckFtpPortEmptyField()[pri:7, instance:TestPage.TestDashboard.Replica.TestReplica@9f6e406]" started-at="2020-01-19T17:13:45 GMT+03:00" name="testCheckFtpPortEmptyField" finished-at="2020-01-19T17:13:46 GMT+03:00" duration-ms="1377" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckFtpPortEmptyField -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Replica.TestReplica@9f6e406]" started-at="2020-01-19T17:13:46 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:13:46 GMT+03:00" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Replica.TestReplica.testCheckFtpPortEmptyField()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCheckFtpPortEmptyField status=SUCCESS method=TestReplica.testCheckFtpPortEmptyField()[pri:7, instance:TestPage.TestDashboard.Replica.TestReplica@9f6e406] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testAddFtpCorrect()[pri:8, instance:TestPage.TestDashboard.Replica.TestReplica@9f6e406]" started-at="2020-01-19T17:13:46 GMT+03:00" name="testAddFtpCorrect" finished-at="2020-01-19T17:13:47 GMT+03:00" duration-ms="395" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddFtpCorrect -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Replica.TestReplica@9f6e406]" started-at="2020-01-19T17:13:47 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:13:47 GMT+03:00" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Replica.TestReplica.testAddFtpCorrect()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testAddFtpCorrect status=SUCCESS method=TestReplica.testAddFtpCorrect()[pri:8, instance:TestPage.TestDashboard.Replica.TestReplica@9f6e406] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testAddCloudBackupCorrect()[pri:9, instance:TestPage.TestDashboard.Replica.TestReplica@9f6e406]" started-at="2020-01-19T17:13:47 GMT+03:00" name="testAddCloudBackupCorrect" finished-at="2020-01-19T17:13:49 GMT+03:00" duration-ms="2019" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddCloudBackupCorrect -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Replica.TestReplica@9f6e406]" started-at="2020-01-19T17:13:49 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:13:49 GMT+03:00" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Replica.TestReplica.testAddCloudBackupCorrect()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testAddCloudBackupCorrect status=SUCCESS method=TestReplica.testAddCloudBackupCorrect()[pri:9, instance:TestPage.TestDashboard.Replica.TestReplica@9f6e406] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method is-config="true" signature="suiteTearDown()[pri:0, instance:TestPage.TestDashboard.Replica.TestReplica@9f6e406]" started-at="2020-01-19T17:14:56 GMT+03:00" name="suiteTearDown" finished-at="2020-01-19T17:14:57 GMT+03:00" duration-ms="721" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteTearDown -->
+      </class> <!-- TestPage.TestDashboard.Replica.TestReplica -->
+      <class name="TestPage.TestDashboard.Backup.TestValidateDb">
+        <test-method is-config="true" signature="classSetUp()[pri:0, instance:TestPage.TestDashboard.Backup.TestValidateDb@12477988]" started-at="2020-01-19T17:14:39 GMT+03:00" name="classSetUp" finished-at="2020-01-19T17:14:41 GMT+03:00" duration-ms="2488" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- classSetUp -->
+        <test-method signature="testCheckScheduleIncorrectField()[pri:1, instance:TestPage.TestDashboard.Backup.TestValidateDb@12477988]" started-at="2020-01-19T17:14:41 GMT+03:00" name="testCheckScheduleIncorrectField" finished-at="2020-01-19T17:14:43 GMT+03:00" duration-ms="1268" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckScheduleIncorrectField -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestValidateDb@12477988]" started-at="2020-01-19T17:14:43 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:14:43 GMT+03:00" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestValidateDb.testCheckScheduleIncorrectField()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCheckScheduleIncorrectField status=SUCCESS method=TestValidateDb.testCheckScheduleIncorrectField()[pri:1, instance:TestPage.TestDashboard.Backup.TestValidateDb@12477988] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCheckShutdownTimeoutEmptyField()[pri:2, instance:TestPage.TestDashboard.Backup.TestValidateDb@12477988]" started-at="2020-01-19T17:14:43 GMT+03:00" name="testCheckShutdownTimeoutEmptyField" finished-at="2020-01-19T17:14:43 GMT+03:00" duration-ms="390" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckShutdownTimeoutEmptyField -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestValidateDb@12477988]" started-at="2020-01-19T17:14:43 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:14:43 GMT+03:00" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestValidateDb.testCheckShutdownTimeoutEmptyField()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCheckShutdownTimeoutEmptyField status=SUCCESS method=TestValidateDb.testCheckShutdownTimeoutEmptyField()[pri:2, instance:TestPage.TestDashboard.Backup.TestValidateDb@12477988] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCreateValidateBDCorrect()[pri:3, instance:TestPage.TestDashboard.Backup.TestValidateDb@12477988]" started-at="2020-01-19T17:14:43 GMT+03:00" name="testCreateValidateBDCorrect" finished-at="2020-01-19T17:14:56 GMT+03:00" duration-ms="13422" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateValidateBDCorrect -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestValidateDb@12477988]" started-at="2020-01-19T17:14:56 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:14:56 GMT+03:00" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestValidateDb.testCreateValidateBDCorrect()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCreateValidateBDCorrect status=SUCCESS method=TestValidateDb.testCreateValidateBDCorrect()[pri:3, instance:TestPage.TestDashboard.Backup.TestValidateDb@12477988] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+      </class> <!-- TestPage.TestDashboard.Backup.TestValidateDb -->
+      <class name="TestPage.TestDashboard.Backup.TestCloudBackup">
+        <test-method is-config="true" signature="classSetUp()[pri:0, instance:TestPage.TestDashboard.Backup.TestCloudBackup@7a94b64e]" started-at="2020-01-19T17:13:49 GMT+03:00" name="classSetUp" finished-at="2020-01-19T17:13:52 GMT+03:00" duration-ms="2934" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- classSetUp -->
+        <test-method signature="testCheckPeriodEmptyField()[pri:1, instance:TestPage.TestDashboard.Backup.TestCloudBackup@7a94b64e]" started-at="2020-01-19T17:13:52 GMT+03:00" name="testCheckPeriodEmptyField" finished-at="2020-01-19T17:13:52 GMT+03:00" duration-ms="276" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckPeriodEmptyField -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestCloudBackup@7a94b64e]" started-at="2020-01-19T17:13:52 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:13:52 GMT+03:00" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestCloudBackup.testCheckPeriodEmptyField()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCheckPeriodEmptyField status=SUCCESS method=TestCloudBackup.testCheckPeriodEmptyField()[pri:1, instance:TestPage.TestDashboard.Backup.TestCloudBackup@7a94b64e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCheckMonitorFolderEmptyField()[pri:2, instance:TestPage.TestDashboard.Backup.TestCloudBackup@7a94b64e]" started-at="2020-01-19T17:13:52 GMT+03:00" name="testCheckMonitorFolderEmptyField" finished-at="2020-01-19T17:13:53 GMT+03:00" duration-ms="759" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckMonitorFolderEmptyField -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestCloudBackup@7a94b64e]" started-at="2020-01-19T17:13:53 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:13:53 GMT+03:00" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestCloudBackup.testCheckMonitorFolderEmptyField()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCheckMonitorFolderEmptyField status=SUCCESS method=TestCloudBackup.testCheckMonitorFolderEmptyField()[pri:2, instance:TestPage.TestDashboard.Backup.TestCloudBackup@7a94b64e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCheckFilenameTemplateEmptyField()[pri:3, instance:TestPage.TestDashboard.Backup.TestCloudBackup@7a94b64e]" started-at="2020-01-19T17:13:53 GMT+03:00" name="testCheckFilenameTemplateEmptyField" finished-at="2020-01-19T17:13:53 GMT+03:00" duration-ms="696" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckFilenameTemplateEmptyField -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestCloudBackup@7a94b64e]" started-at="2020-01-19T17:13:53 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:13:53 GMT+03:00" duration-ms="7" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestCloudBackup.testCheckFilenameTemplateEmptyField()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCheckFilenameTemplateEmptyField status=SUCCESS method=TestCloudBackup.testCheckFilenameTemplateEmptyField()[pri:3, instance:TestPage.TestDashboard.Backup.TestCloudBackup@7a94b64e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCheckFiledConnectionFtpEmptyField()[pri:4, instance:TestPage.TestDashboard.Backup.TestCloudBackup@7a94b64e]" started-at="2020-01-19T17:13:53 GMT+03:00" name="testCheckFiledConnectionFtpEmptyField" finished-at="2020-01-19T17:13:54 GMT+03:00" duration-ms="730" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckFiledConnectionFtpEmptyField -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestCloudBackup@7a94b64e]" started-at="2020-01-19T17:13:54 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:13:54 GMT+03:00" duration-ms="8" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestCloudBackup.testCheckFiledConnectionFtpEmptyField()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCheckFiledConnectionFtpEmptyField status=SUCCESS method=TestCloudBackup.testCheckFiledConnectionFtpEmptyField()[pri:4, instance:TestPage.TestDashboard.Backup.TestCloudBackup@7a94b64e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCheckKeepNSourceFilesFieldEmptyField()[pri:5, instance:TestPage.TestDashboard.Backup.TestCloudBackup@7a94b64e]" started-at="2020-01-19T17:13:54 GMT+03:00" name="testCheckKeepNSourceFilesFieldEmptyField" finished-at="2020-01-19T17:13:55 GMT+03:00" duration-ms="720" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckKeepNSourceFilesFieldEmptyField -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestCloudBackup@7a94b64e]" started-at="2020-01-19T17:13:55 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:13:55 GMT+03:00" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestCloudBackup.testCheckKeepNSourceFilesFieldEmptyField()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCheckKeepNSourceFilesFieldEmptyField status=SUCCESS method=TestCloudBackup.testCheckKeepNSourceFilesFieldEmptyField()[pri:5, instance:TestPage.TestDashboard.Backup.TestCloudBackup@7a94b64e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCheckFtpServerEmptyField()[pri:6, instance:TestPage.TestDashboard.Backup.TestCloudBackup@7a94b64e]" started-at="2020-01-19T17:13:55 GMT+03:00" name="testCheckFtpServerEmptyField" finished-at="2020-01-19T17:13:58 GMT+03:00" duration-ms="3669" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckFtpServerEmptyField -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestCloudBackup@7a94b64e]" started-at="2020-01-19T17:13:58 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:13:58 GMT+03:00" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestCloudBackup.testCheckFtpServerEmptyField()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCheckFtpServerEmptyField status=SUCCESS method=TestCloudBackup.testCheckFtpServerEmptyField()[pri:6, instance:TestPage.TestDashboard.Backup.TestCloudBackup@7a94b64e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testCheckFtpPortEmptyField()[pri:7, instance:TestPage.TestDashboard.Backup.TestCloudBackup@7a94b64e]" started-at="2020-01-19T17:13:58 GMT+03:00" name="testCheckFtpPortEmptyField" finished-at="2020-01-19T17:14:00 GMT+03:00" duration-ms="1364" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckFtpPortEmptyField -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestCloudBackup@7a94b64e]" started-at="2020-01-19T17:14:00 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:14:00 GMT+03:00" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestCloudBackup.testCheckFtpPortEmptyField()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testCheckFtpPortEmptyField status=SUCCESS method=TestCloudBackup.testCheckFtpPortEmptyField()[pri:7, instance:TestPage.TestDashboard.Backup.TestCloudBackup@7a94b64e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testAddFtpCorrect()[pri:8, instance:TestPage.TestDashboard.Backup.TestCloudBackup@7a94b64e]" started-at="2020-01-19T17:14:00 GMT+03:00" name="testAddFtpCorrect" finished-at="2020-01-19T17:14:01 GMT+03:00" duration-ms="642" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddFtpCorrect -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestCloudBackup@7a94b64e]" started-at="2020-01-19T17:14:01 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:14:01 GMT+03:00" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestCloudBackup.testAddFtpCorrect()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testAddFtpCorrect status=SUCCESS method=TestCloudBackup.testAddFtpCorrect()[pri:8, instance:TestPage.TestDashboard.Backup.TestCloudBackup@7a94b64e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method signature="testAddCloudBackupCorrect()[pri:9, instance:TestPage.TestDashboard.Backup.TestCloudBackup@7a94b64e]" started-at="2020-01-19T17:14:01 GMT+03:00" name="testAddCloudBackupCorrect" finished-at="2020-01-19T17:14:15 GMT+03:00" duration-ms="14341" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddCloudBackupCorrect -->
+        <test-method is-config="true" signature="methodTearDown(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:TestPage.TestDashboard.Backup.TestCloudBackup@7a94b64e]" started-at="2020-01-19T17:14:15 GMT+03:00" name="methodTearDown" finished-at="2020-01-19T17:14:15 GMT+03:00" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestPage.TestDashboard.Backup.TestCloudBackup.testAddCloudBackupCorrect()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=testAddCloudBackupCorrect status=SUCCESS method=TestCloudBackup.testAddCloudBackupCorrect()[pri:9, instance:TestPage.TestDashboard.Backup.TestCloudBackup@7a94b64e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
       </class> <!-- TestPage.TestDashboard.Backup.TestCloudBackup -->
-    </test> <!-- Common -->
+    </test> <!-- Replica -->
   </suite> <!-- TestOne -->
 </testng-results>

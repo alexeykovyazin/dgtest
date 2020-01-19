@@ -22,7 +22,7 @@ public class TestReplica extends EnvContainer {
     private Helper _ctx;
 
     @BeforeClass
-    public void suiteSetUp()
+    public void classSetUp()
     {
         _driver = EnvContainer.Driver;
         _ctx = new Helper(_driver);
@@ -34,11 +34,11 @@ public class TestReplica extends EnvContainer {
         _ctx.current(_page.CloudBackupSettingsBtn(BackupBD)).click();
         _ctx.current(_page.CheckPeriodField).waitelementToBeClickable();
     }
-    @AfterMethod
-    public void tearDown() {
-       // openUrl();
-        Helper.interceptionJSonPage(_driver);
-    }
+//    @AfterMethod
+//    public void methodTearDown() {
+//       // openUrl();
+//        Helper.interceptionJSonPage(_driver);
+//    }
     private void openUrl() {
         _url = EnvContainer.URL + _standarturl;
         _driver.navigate().to(_url);

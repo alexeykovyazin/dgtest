@@ -1,5 +1,14 @@
+TestPage\TestDashboard\Backup\TestIncrementalBackup.class
+TestPage\TestDashboard\Backup\TestSqlPing.class
+TestPage\TestDashboard\Backup\TestDumpBackup.class
+TestPage\TestDashboard\Backup\TestRestoreDb.class
+TestPage\TestDashboard\Backup\TestCloudBackupReceiver.class
+TestPage\TestDashboard\Backup\TestCloudBackup.class
+TestPage\TestDashboard\Replica\TestReplica.class
+TestPage\TestDashboard\TestDatabase.class
 SuiteListener.class
 TestPage\EnvContainer.class
+TestPage\TestDashboard\Backup\TestVerifiedBackup.class
 TestPage\TestDashboard\TestDashboard.class
 Listener.class
-TestPage\TestDashboard\TestDatabase.class
+TestPage\TestDashboard\Backup\TestValidateDb.class
