@@ -61,19 +61,19 @@ public class EnvContainer
         dashboardpage = PageFactory.initElements(Driver, Dashboard.class);
         _pagedatabase = PageFactory.initElements(Driver, Database.class);
 
-        InitData();
+        //InitData();
         Driver.navigate().to(url);
         Driver.manage().window().setSize(new Dimension(1920, 1080));
         Helper.waitSetup(Driver,3000);
 
         // Registration enterprise version
-        Registration();
+       // Registration();
         //Add default server
-        AddServer();
-        StopRefreshPage();
+       // AddServer();
+        //StopRefreshPage();
 
         // Create DB Backup, Replica, Master
-        AddDatabaseInit();
+        //AddDatabaseInit();
 
     }
 
@@ -132,15 +132,15 @@ public class EnvContainer
     private void InitData() throws IOException, InterruptedException {
 
         // stop service dg and wait 30s
-        Runtime.getRuntime().exec("powershell.exe  Start-Process C:\\dgtest\\src\\test\\resurces\\BatFiles\\stopservice.bat -Verb runAs").waitFor();
+        Runtime.getRuntime().exec("powershell.exe  Start-Process C:\\dgtest\\src\\test\\resurces\\BatFiles\\stopservice.bat -Verb runAs");
         Helper.waitSetup(Driver, 30000);
 
         // delete some folders and files in the config
-        _helper.deleteFolder(new File("C:\\HQbird\\config\\agent\\servers\\hqbirdsrv"));
-        _helper.deleteFolder(new File("C:\\HQbird\\output\\logs\\agent\\servers\\hqbirdsrv"));
-        _helper.deleteFolder(new File("C:\\HQbird\\output\\output\\output\\hqbirdsrv"));
-        _helper.deleteFolder(new File("C:\\HQbird\\config\\installid.bin"));
-        _helper.deleteFolder(new File("C:\\HQbird\\config\\unlock"));
+        _helper.deleteFolder(new File("C:\\HQBirdData\\config\\agent\\servers\\hqbirdsrv"));
+        _helper.deleteFolder(new File("C:\\HQBirdData\\output\\logs\\agent\\servers\\hqbirdsrv"));
+        _helper.deleteFolder(new File("C:\\HQBirdData\\output\\output\\output\\hqbirdsrv"));
+        _helper.deleteFolder(new File("C:\\HQBirdData\\config\\installid.bin"));
+        _helper.deleteFolder(new File("C:\\HQBirdData\\config\\unlock"));
 
         // we delete some spent backups and copy the reference backups to this folder
         _helper.deleteFolder(new File("C:\\dgtest\\src\\test\\resurces\\WorkDB"));
@@ -154,15 +154,19 @@ public class EnvContainer
         DirectoryCopy("C:\\dgtest\\src\\test\\resurces\\StandartDB", "C:\\dgtest\\src\\test\\resurces\\WorkDB");
 
         // start service dg and wait 5s
-        Runtime.getRuntime().exec("powershell.exe  Start-Process C:\\dgtest\\src\\test\\resurces\\BatFiles\\restartservice.bat -Verb runAs").waitFor();
+        Runtime.getRuntime().exec("powershell.exe  Start-Process C:\\dgtest\\src\\test\\resurces\\BatFiles\\restartservice.bat -Verb runAs");
         _helper.implicitlyWaitElement();
         Helper.waitSetup(Driver, 5000);
 
     }
     private void AddDatabaseInit(){
         AddDatabase(BackupBD,Backup_DB_Path);
-        AddDatabase(ReplicaBD,Replica_DB_Path);
-        AddDatabase(MasterBD,Master_DB_Path);
+        AddDatabase(CloudTestDB,Cloud_DB_Path);
+        AddDatabase(TestDB,Test_DB_Path);
+        AddDatabase(MasterAsyncBD,Master_Async_DB_Path);
+        AddDatabase(ReplicaAsyncBD,Replica_Async_DB_Path);
+        AddDatabase(MasterSyncBD,Master_Sync_DB_Path);
+        AddDatabase(ReplicaSyncBD,Replica_Sync_DB_Path);
     }
 
     private void StopRefreshPage(){

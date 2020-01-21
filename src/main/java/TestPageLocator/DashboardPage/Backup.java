@@ -65,6 +65,8 @@ public class Backup {
     public WebElement FiledConnectionFtpField;
     @FindBy(id = "form-keep_n_source_files")
     public WebElement KeepNsourceFilesField;
+    @FindBy(xpath = "//*[@id='form-FreshBackup']//ancestor::label//span")
+    public WebElement PerformFreshBackupCheckbox;
     @FindBy(id = "form-archive_extension")
     public WebElement ArchiveExtentionField;
     @FindBy(id = "form-decrypt_password")
@@ -89,6 +91,30 @@ public class Backup {
     public WebElement AppendSuffixFileNameField;
     @FindBy(id = "form-max-duration")
     public WebElement LimitRestoreProcTimeField;
+    /**
+     * REPLICA
+     */
+    public WebElement ReplicaBtn(String nameDB) {return _driver.findElement(By.xpath("//*[@class='db-item-tab']//span[text()='"+nameDB+"']//ancestor::div[1]//img[@class='status-icon icon-replication']")); }
+    @FindBy(xpath = "//*[@id='form-section-db-replication_role']//*[@value='master']//ancestor::label[2]")
+    public WebElement MasterBtn;
+    @FindBy(xpath = "//*[@id='form-section-db-replication_role']//*[@value='replica']//ancestor::label[2]")
+    public WebElement ReplicaBtn;
+    @FindBy(xpath = "//*[@id='form-section-db-replication_mode']//*[@value='async']//ancestor::label[2]")
+    public WebElement AsyncBtn;
+    @FindBy(xpath = "//*[@id='form-section-db-replication_mode']//*[@value='sync']//ancestor::label[2]")
+    public WebElement SyncBtn;
+    @FindBy(id = "form-db-replica_database")
+    public WebElement ReplicaDatabaseField;
+    @FindBy(id = "form-db-repparam_log_directory")
+    public WebElement LogDirectoryField;
+    @FindBy(id = "form-db-repparam_log_archive_directory")
+    public WebElement LogArchiveDirectoryField;
+    @FindBy(id = "form-db-repparam_log_archive_timeout")
+    public WebElement LogArchiveTimeoutField;
+    @FindBy(xpath = "//*[@id='link-reinitialyze-repl']//button")
+    public WebElement ReinitializeReplicaDatabaseBtn;
+    @FindBy(id = "btnReplMoL")
+    public WebElement MoreBtn;
 
      /**
      *  FTP settings
@@ -166,6 +192,8 @@ public class Backup {
             "//ancestor::div[2]//*[contains(@class,'panel panel-default tooltip-cloud-backup')]//*[@class='control']")); }
     public WebElement CloudBackupPanelOk(String text) {return _driver.findElement(By.xpath("(//*[@class='head-name panel-heading']//*[text()='"+text+"']" +
             "//ancestor::div[2]//*[contains(@class,'panel panel-default tooltip-cloud-backup')]//tr//strong)[1]")); }
+    public WebElement CloudBackupPanelPeriod(String text) {return _driver.findElement(By.xpath("(//*[@class='head-name panel-heading']//*[text()='"+text+"']" +
+            "//ancestor::div[2]//*[contains(@class,'panel panel-default tooltip-cloud-backup')]//tr//font)[1]")); }
     public WebElement CloudBackupPanelLastSendFile (String dbName) {return _driver.findElement(By.xpath("(//*[@class='head-name panel-heading']//*[text()='"+dbName+"']" +
             "//ancestor::div[2]//*[contains(@class,'panel panel-default tooltip-cloud-backup')]//tr[3]//b)[1]")); }
 
@@ -176,8 +204,10 @@ public class Backup {
             "//ancestor::div[2]//*[contains(@class,'panel panel-default tooltip-cloud-backup-receiver')]//*[@class='control']")); }
     public WebElement CloudBackupReceiverPanelOk(String text) {return _driver.findElement(By.xpath("//*[@class='head-name panel-heading']//*[text()='"+text+"']" +
             "//ancestor::div[2]//*[contains(@class,'panel panel-default tooltip-cloud-backup-receiver')]//tr//strong")); }
-    public WebElement CloudBackupReceiverPanel(String text) {return _driver.findElement(By.xpath("//*[@class='head-name panel-heading']//*[text()='"+text+"']" +
-            "//ancestor::div[2]//*[contains(@class,'panel panel-default tooltip-cloud-backup-receiver')]//tr[2]/td/b")); }
+    public WebElement CloudBackupReceiverPanelPeriod(String text) {return _driver.findElement(By.xpath("//*[@class='head-name panel-heading']//*[text()='"+text+"']" +
+            "//ancestor::div[2]//*[contains(@class,'panel panel-default tooltip-cloud-backup-receiver')]//tr//font")); }
+    public WebElement CloudBackupReceiverPanelLastSendFile (String dbName) {return _driver.findElement(By.xpath("//*[@class='head-name panel-heading']//*[text()='"+dbName+"']" +
+            "//ancestor::div[2]//*[contains(@class,'panel panel-default tooltip-cloud-backup-receiver')]//tr[3]//b")); }
 
     /**
      * validate-db panel

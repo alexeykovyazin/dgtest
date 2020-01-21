@@ -17,11 +17,4 @@ SC queryex %ServiceName%|Find "STATE"|Find "RUNNING">Nul&&(
     )
 )
 
-:loop
-sc query %ServiceName% | find "STOPPED"
-if errorlevel 1 (
-  timeout 1
-  goto loop
-)
-
 Exit

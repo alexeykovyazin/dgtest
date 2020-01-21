@@ -285,7 +285,7 @@ public class Helper {
      */
     public static void waitUpdate(WebDriver driver) {
         try {
-            WebDriverWait wait = new WebDriverWait(driver, 10);
+            WebDriverWait wait = new WebDriverWait(driver, 15);
             wait.until((ExpectedCondition<Boolean>) wdriver -> ((JavascriptExecutor) driver)
                     .executeScript("return((window.jQuery != null) && (jQuery.active === 0))").equals(true));
         } catch (WebDriverException exWebDriverException) {

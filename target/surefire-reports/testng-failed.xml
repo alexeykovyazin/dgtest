@@ -6,30 +6,25 @@
   <parameter name="browsername" value="chrome"/>
   <parameter name="url" value="http://admin:strong password@localhost:8082/"/>
   <parameter name="username" value="admin"/>
-  <test thread-count="5" name="Backup(failed)" verbose="0">
-    <classes>
-      <class name="TestPage.TestDashboard.Backup.TestRestoreDb">
-        <methods>
-          <include name="classSetUp"/>
-          <include name="methodTearDown"/>
-          <include name="suiteSetUp"/>
-          <include name="suiteTearDown"/>
-          <include name="testCreateRestoreDbCorrect"/>
-        </methods>
-      </class> <!-- TestPage.TestDashboard.Backup.TestRestoreDb -->
-    </classes>
-  </test> <!-- Backup(failed) -->
   <test thread-count="5" name="Replica(failed)" verbose="0">
     <classes>
-      <class name="TestPage.TestDashboard.Backup.TestCloudBackupReceiver">
+      <class name="TestPage.TestDashboard.Replica.TestReplica">
         <methods>
-          <include name="methodTearDown"/>
-          <include name="classSetUp"/>
-          <include name="testAddCloudBackupReceiverCorrect"/>
-          <include name="suiteSetUp"/>
+          <include name="testCreateMasterAsync_IncorrectLogArchiveTimeoutField"/>
+          <include name="testCreateReplicaAsync_Correct"/>
+          <include name="testCreateMasterAsync_EmptyLogArchiveDirectoryField"/>
+          <include name="testCreateMasterAsync_EmptyLogDirectoryField"/>
           <include name="suiteTearDown"/>
+          <include name="testCreateMasterSync_EmptyReplicaDatabaseField"/>
+          <include name="testCreateReplicaAsync_EmptyLogArchiveDirectoryField"/>
+          <include name="testCreateMasterAsync_Correct"/>
+          <include name="testCreateReplicaSync_Correct"/>
+          <include name="classSetUp"/>
+          <include name="testCreateMasterSync_Correct"/>
+          <include name="methodTearDown"/>
+          <include name="suiteSetUp"/>
         </methods>
-      </class> <!-- TestPage.TestDashboard.Backup.TestCloudBackupReceiver -->
+      </class> <!-- TestPage.TestDashboard.Replica.TestReplica -->
     </classes>
   </test> <!-- Replica(failed) -->
 </suite> <!-- Failed suite [TestOne] -->

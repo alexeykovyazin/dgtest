@@ -31,8 +31,8 @@ public class TestCloudBackup extends EnvContainer {
         _pagedatabase = PageFactory.initElements(_driver, Database.class);
         openUrl();
         Helper.waitSetup(_driver, 1000);
-        _ctx.current(_page.NameBDText(ReplicaBD)).click();
-        _ctx.current(_page.CloudBackupSettingsBtn(ReplicaBD)).click();
+        _ctx.current(_page.NameBDText(CloudTestDB)).click();
+        _ctx.current(_page.CloudBackupSettingsBtn(CloudTestDB)).click();
         _ctx.current(_page.CheckPeriodField).waitelementToBeClickable();
     }
 //    @AfterMethod
@@ -187,22 +187,25 @@ public class TestCloudBackup extends EnvContainer {
         InitTestCloudBackup();
         _ctx.current(_page.EnabledCheckbox).click().
                 current(_page.CheckPeriodField).setValue("10").
-                current(_page.MonitorFolderField).setValue("C:\\dgtest\\src\\test\\resurces\\WorkDB").
+                current(_page.MonitorFolderField).setValue("C:\\dgtest\\src\\test\\resurces\\WorkDB\\CloudTest").
                 current(_page.FilenameTemplateField).setValue("*.arch*").
                 current(_page.FiledConnectionFtpField).setValue("3").
-                current(_page.KeepNsourceFilesField).setValue("33");
+                current(_page.KeepNsourceFilesField).setValue("33").
+                current(_page.PerformFreshBackupCheckbox).click();
         //actions
         _ctx.current(_page.DbSaveBtn).click().waitUpdate();
         Helper.waitSetup(_driver,10000);
         openUrl();
         _ctx.implicitlyWaitElement();
-        _ctx.current(_page.NameBDText(ReplicaBD)).click();
+        _ctx.current(_page.NameBDText(CloudTestDB)).click();
         Helper.waitSetup(_driver,1000);
         // verification
-        Assert.assertEquals(_page.CloudBackupPanelOk(ReplicaBD).getText(),"OK",
+        Assert.assertEquals(_page.CloudBackupPanelOk(CloudTestDB).getText(),"OK",
                 "Status verified backup not OK");
-        Assert.assertEquals(_page.CloudBackupPanelLastSendFile(ReplicaBD).getText(),CloudFileArch ,
+        Assert.assertEquals(_page.CloudBackupPanelPeriod(CloudTestDB).getText(),"[period 10 sec]" ,
                 "cron schedule must be displayed");
+        Assert.assertEquals(_page.CloudBackupPanelLastSendFile(CloudTestDB).getText(),CloudFileArch ,
+                "Name file must be displayed");
 
 
     }
