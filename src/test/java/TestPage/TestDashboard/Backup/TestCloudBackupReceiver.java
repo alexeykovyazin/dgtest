@@ -31,8 +31,8 @@ public class TestCloudBackupReceiver extends EnvContainer {
         _pagedatabase = PageFactory.initElements(_driver, Database.class);
         openUrl();
         Helper.waitSetup(_driver, 1000);
-        _ctx.current(_page.NameBDText(ReplicaBD)).click();
-        _ctx.current(_page.CloudBackupReceiverSettingsBtn(ReplicaBD)).click();
+        _ctx.current(_page.NameBDText(CloudTestDB)).click();
+        _ctx.current(_page.CloudBackupReceiverSettingsBtn(CloudTestDB)).click();
         _ctx.current(_page.CheckPeriodField).waitelementToBeClickable();
     }
 //    @AfterMethod
@@ -169,21 +169,25 @@ public class TestCloudBackupReceiver extends EnvContainer {
         Helper.waitSetup(_driver,10000);
         openUrl();
         _ctx.implicitlyWaitElement();
-        _ctx.current(_page.NameBDText(ReplicaBD)).click();
+        _ctx.current(_page.NameBDText(CloudTestDB)).click();
 
         // verification
-        Assert.assertEquals(_page.CloudBackupReceiverPanelOk(ReplicaBD).getText(),"OK" ,
+        Assert.assertEquals(_page.CloudBackupReceiverPanelOk(CloudTestDB).getText(),"OK" ,
                 "Status cloud backup receiver not OK");
+        Assert.assertEquals(_page.CloudBackupReceiverPanelPeriod(CloudTestDB).getText(),"[period 10 sec]" ,
+                "cron schedule must be displayed");
+        Assert.assertEquals(_page.CloudBackupReceiverPanelLastSendFile(CloudTestDB).getText(),CloudReceiverFileReplpacked ,
+                "Name file must be displayed");
     }
 
 
     private void InitTestCloudBackupReceiver() {
         _ctx.current(_page.CheckPeriodField).setValue("10").
-                current(_page.MonitorFolderField).setValue("C:\\dgtest\\src\\test\\resurces\\Ftp\\WorkCloudDB").
-                current(_page.UnpackDirectoryField).setValue("C:\\dgtest\\src\\test\\resurces\\Ftp\\WorkCloudReceiverDB").
+                current(_page.MonitorFolderField).setValue("C:\\dgtest\\src\\test\\resurces\\WorkDB\\CloudReceiverTest").
+                current(_page.UnpackDirectoryField).setValue("C:\\dgtest\\src\\test\\resurces\\WorkDB\\CloudReceiverTest").
                 current(_page.FilenameTemplateField).setValue("*.arch*").
                 current(_page.ArchiveExtentionField).setValue(".replpacked").
-                current(_page.DecryptPasswordField).setValue("123").
+                current(_page.DecryptPasswordField).setValue("zipmasterkey").
                 current(_page.AlertFileCountField).setValue("33").
                 current(_page.AlertFileAgeField).setValue("360");
 

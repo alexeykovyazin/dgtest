@@ -211,7 +211,7 @@ public class TestRestoreDb extends EnvContainer {
     private void InitBackup() {
         _ctx.current(_page.ScheduleField).setValue("0 0 23 ? * MON-SUN").
                 current(_page.DirectoryField).setValue("C:\\dgtest\\src\\test\\resurces\\WorkDB").
-                current(_page.NamePatternField).setValue("backup_restore").
+                current(_page.NamePatternField).setValue("backup_{0,date,yyyyMMdd_HH-mm}").
                 current(_page.MaxFileageTorestoreHField).setValue("24").
                 current(_page.RestoreDirField).setValue("${backup-directory}").
                 current(_page.RestoreDbNameField).setValue("${db.id}_{0,date,yyyyMMdd_HH-mm}_testrestore.fdb").

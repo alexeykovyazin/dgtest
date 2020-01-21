@@ -1,9 +1,11 @@
 package TestPage.TestDashboard.Replica;
 
+import Constants.InitData;
 import Helpers.Helper;
 import TestPage.EnvContainer;
 import TestPageLocator.DashboardPage.Backup;
 import TestPageLocator.DashboardPage.Database;
+import io.qameta.allure.Description;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
@@ -11,7 +13,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import static Constants.InitData.BackupBD;
+import static Constants.InitData.*;
 
 public class TestReplica extends EnvContainer {
     private WebDriver _driver;
@@ -28,189 +30,183 @@ public class TestReplica extends EnvContainer {
         _ctx = new Helper(_driver);
         _page = PageFactory.initElements(_driver, Backup.class);
         _pagedatabase = PageFactory.initElements(_driver, Database.class);
-        openUrl();
+        openUrl(MasterSyncBD);
         Helper.waitSetup(_driver, 1000);
-        _ctx.current(_page.NameBDText(BackupBD)).click();
-        _ctx.current(_page.CloudBackupSettingsBtn(BackupBD)).click();
-        _ctx.current(_page.CheckPeriodField).waitelementToBeClickable();
+        //_ctx.current(_page.NameBDText(MasterSyncBD)).click();
+
     }
 //    @AfterMethod
 //    public void methodTearDown() {
 //       // openUrl();
 //        Helper.interceptionJSonPage(_driver);
 //    }
-    private void openUrl() {
+    private void openUrl(String nameBD) {
         _url = EnvContainer.URL + _standarturl;
         _driver.navigate().to(_url);
         Helper.interceptionJSonPage(_driver);
         Helper.waitUpdate(_driver);
+        _ctx.current(_page.NameBDText(nameBD)).click();
     }
 
-    // WHEN we leave the field empty "Period" field THEN, the error "Cron expression or period must be set properly"
     @Test( enabled = true, priority = 1)
-    public void testCheckPeriodEmptyField()  {
-
+    @Description(value ="WHEN we create a replica \"master sync\" with an empty field \"ReplicaDatabase\" THEN, the error \"Incorrect connection string: Do not use aliases! Use explicit path to the database!\"")
+    public void testCreateMasterSync_EmptyReplicaDatabaseField()  {
+        _ctx.current(_page.ReplicaBtn(MasterSyncBD)).click();
         //actions
-        _ctx.current(_page.CheckPeriodField).setValue("").
-                current(_page.DbSaveBtn).click().waitUpdate();
-//        Helper.waitSetup(_driver,4000);
+        _ctx.current(_page.MasterBtn).click().waitUpdate().
+                current(_page.SyncBtn).click().waitUpdate().
+                current(_page.ReplicaDatabaseField).setValue("").waitUpdate().
+                current(_page.DbSaveBtn).doubleClick().waitUpdate();
+
         // verification
-        Assert.assertEquals(_page.BackupAllertDanger.getText(),"Cron expression or period must be set properly",
-                "Cron expression installed incorrectly");
+        Assert.assertEquals(_page.BackupAllertDanger.getText(),"Incorrect connection string: Do not use aliases! Use explicit path to the database!",
+                "Incorrect connection string: Do not use aliases! Use explicit path to the database!");
 
     }
 
-    // WHEN we leave the field empty "Monitor Folder" field THEN, the error "Monitored folder is empty - please specify it"
+    //TODO::Add correct link, regex
     @Test( enabled = true, priority = 2)
-    public void testCheckMonitorFolderEmptyField()  {
-        // prepare
-        InitTestCloudBackup();
+    @Description(value ="WHEN we create a replica \"master sync\" with the correct fields THEN replica \"master sync\" the successfully created")
+    public void testCreateMasterSync_Correct()  {
 
         //actions
-        _ctx.current(_page.MonitorFolderField).setValue("").
+        _ctx.current(_page.ReplicaDatabaseField).setValue("//sysdba:masterkey@replicaserver:/C:/dgtest/src/test/resurces/WorkDB/ReplicaSynch.fdb").waitUpdate().
                 current(_page.DbSaveBtn).click().waitUpdate();
 
         // verification
-        Assert.assertEquals(_page.BackupAllertDanger.getText(),"Monitored folder is empty - please specify it",
-                "the field must not be empty");
+        Assert.assertEquals(_page.ReplicaBtn(MasterSyncBD).getAttribute("src"),"http://admin:strong%20password@localhost:8082/static/img/icons32/replicationactive.png",
+                "Icon should change");
 
     }
 
-    // WHEN we leave the field empty "Filename Template" field THEN, the error "should not be null or empty"
     @Test( enabled = true, priority = 3)
-    public void testCheckFilenameTemplateEmptyField()  {
-        // prepare
-        InitTestCloudBackup();
-
+    @Description(value ="WHEN we create a replica \"replica sync\" with the correct fields THEN replica \"master sync\" the successfully created")
+    public void testCreateReplicaSync_Correct()  {
+        openUrl(ReplicaSyncBD);
+        _ctx.current(_page.ReplicaBtn(ReplicaSyncBD)).click();
         //actions
-        _ctx.current(_page.FilenameTemplateField).setValue("").
+        _ctx.current(_page.ReplicaBtn).click().waitUpdate().
+                current(_page.SyncBtn).click().waitUpdate().
                 current(_page.DbSaveBtn).click().waitUpdate();
 
         // verification
-        Assert.assertEquals(_page.BackupAllertDanger.getText(),"\"\" should not be null or empty",
-                "the field must not be empty");
+        Assert.assertEquals(_page.ReplicaBtn(ReplicaSyncBD).getAttribute("src"),"http://admin:strong%20password@localhost:8082/static/img/icons32/replicationslave.png",
+                "Icon should change");
 
     }
 
-    // WHEN we leave the field empty "Filed Connection Ftp" field THEN, the error "is not an integer number"
     @Test( enabled = true, priority = 4)
-    public void testCheckFiledConnectionFtpEmptyField()  {
-        // prepare
-        InitTestCloudBackup();
-
+    @Description(value ="WHEN we create a replica \"master async\" with an empty field \"LogDirectory\" THEN, the error \"Specify log directory\"")
+    public void testCreateMasterAsync_EmptyLogDirectoryField()  {
+        openUrl(MasterAsyncBD);
+        _ctx.current(_page.ReplicaBtn(MasterAsyncBD)).click();
         //actions
-        _ctx.current(_page.FiledConnectionFtpField).setValue("").
+        _ctx.current(_page.MasterBtn).click().waitUpdate().
+                current(_page.AsyncBtn).click().waitUpdate().
+                current(_page.MoreBtn).click().waitUpdate().
+                current(_page.LogDirectoryField).setValue("").waitUpdate().
                 current(_page.DbSaveBtn).click().waitUpdate();
 
         // verification
-        Assert.assertEquals(_page.BackupAllertDanger.getText(),"\"\" is not an integer number",
-                "value must be a number");
+        Assert.assertEquals(_page.BackupAllertDanger.getText(),"Specify log directory",
+                "Field Log directory must not be empty");
 
     }
 
-    // WHEN we leave the field empty "Keep N Source Files" field THEN, the error "is not an integer number"
     @Test( enabled = true, priority = 5)
-    public void testCheckKeepNSourceFilesFieldEmptyField()  {
-        // prepare
-        InitTestCloudBackup();
-
+    @Description(value ="WHEN we create a replica \"master async\" with an empty field \"LogArchiveDirectory\" THEN, the error \"Specify log archive directory\"")
+    public void testCreateMasterAsync_EmptyLogArchiveDirectoryField()  {
+        InitAsyncTest();
         //actions
-        _ctx.current(_page.KeepNsourceFilesField).setValue("").
+        _ctx.current(_page.LogArchiveDirectoryField).setValue("").waitUpdate();
+
+        // verification
+        Assert.assertEquals(_page.BackupAllertDanger.getText(),"Specify log archive directory",
+                "Field Log archive directory must not be empty");
+
+    }
+
+    @Test( enabled = true, priority = 6)
+    @Description(value ="WHEN we create a replica \"master async\" with an incorrect field \"LogArchiveTimeout\" THEN, the error \"Parameter \"Write commited data every NN seconds\" must be integer (seconds)!\"")
+    public void testCreateMasterAsync_IncorrectLogArchiveTimeoutField()  {
+        InitAsyncTest();
+        //actions
+        _ctx.current(_page.LogArchiveTimeoutField).setValue("....").waitUpdate().
                 current(_page.DbSaveBtn).click().waitUpdate();
 
         // verification
-        Assert.assertEquals(_page.BackupAllertDanger.getText(),"\"\" is not an integer number",
-                "value must be a number");
+        Assert.assertEquals(_page.BackupAllertDanger.getText(),"Parameter \"Write commited data every NN seconds\" must be integer (seconds)!",
+                "Field must be integer");
 
     }
 
-    // WHEN we leave the field empty "Ftp Server" field THEN, the error "FTP Server parameter is empty"
-    @Test( enabled = true, priority = 6)
-    public void testCheckFtpServerEmptyField()  {
-        // prepare
-        _ctx.current(_page.ConfigureFtpBtn).click();
-
-        //_ctx.current(_page.UploadFtpCheckbox).click();
-        Helper.waitSetup(_driver,1000);
-        _ctx.current(_page.UploadFtpCheckbox).waitelementToBeClickable();
-        _ctx.hoverAndClick(_page.UploadFtpCheckbox);
-        Helper.waitSetup(_driver,1000);
-        //actions
-
-        _ctx.current(_page.FtpServerField).setValue("").
-            current(_page.FtpSaveBtn).click().waitUpdate();
-        Helper.waitSetup(_driver,1000);
-        // verification
-        Assert.assertEquals(_page.BackupAllertDangerFtp.getText(),"FTP Server parameter is empty",
-                "the field must not be empty");
-
-    }
-
-    // WHEN we leave the field empty "Ftp Port" field THEN, the error "FTP Port is not valid"
+   //TODO::Alert windows
     @Test( enabled = true, priority = 7)
-    public void testCheckFtpPortEmptyField()  {
-        //prepare
-        InitTestFtp();
+    @Description(value ="not found")
+    public void testCreateMasterAsync_ReinitializeReplicaDatabaseCorrect()  {
+//        InitAsyncTest();
+//        //actions
+//        _ctx.current(_page.ReinitializeReplicaDatabaseBtn).click().waitUpdate();
+//        _driver.switchTo().alert().accept();
+//        _driver.switchTo().alert().accept();
+//        Helper.waitSetup(_driver, 1000);
 
-        //actions
-        _ctx.current(_page.FtpPortField).setValue("").
-                current(_page.FtpSaveBtn).click().waitUpdate();
-        Helper.waitSetup(_driver,1000);
         // verification
-        Assert.assertEquals(_page.BackupAllertDangerFtp.getText(),"FTP Port is not valid",
-                "the field must not be empty");
+      //  Assert.assertEquals(_page.BackupAllertDanger.getText(),"Incorrect connection string: Do not use aliases! Use explicit path to the database!",
+      //          "Incorrect connection string: Do not use aliases! Use explicit path to the database!");
 
     }
 
-    // WHEN we fill in the settings FTP with the correct data THEN the FTP is successfully created
-    //TODO:: ADD Check
     @Test( enabled = true, priority = 8)
-    public void testAddFtpCorrect()  {
-        //prepare
-        _ctx.current(_page.FtpServerField).setValue("www.myserver.com").
-                current(_page.FtpPortField).setValue("21").
-                current(_page.FtpUserField).setValue("UserName").
-                current(_page.FtpSaveBtn).click().waitUpdate();
+    @Description(value ="WHEN we create a replica \"master async\" with the correct fields THEN replica \"master async\" the successfully created")
+    public void testCreateMasterAsync_Correct()  {
+        InitAsyncTest();
 
-        // verification
-       // Assert.assertEquals(_page.BackupAllertDanger.getText(),"FTP Server parameter is empty",
-                //"-------");
-
-    }
-
-    // WHEN we fill in the settings Cloud Backup with the correct data THEN the backup is successfully created
-    //TODO:: ADD Check
-    @Test( enabled = true, priority = 9)
-    public void testAddCloudBackupCorrect()  {
-        // prepare
-        InitTestCloudBackup();
-        _ctx.current(_page.EnabledCheckbox).click().
-                current(_page.CheckPeriodField).setValue("10").
-                current(_page.MonitorFolderField).setValue("${db.repparam_log_archive_directory}").
-                current(_page.FilenameTemplateField).setValue("*.arch*").
-                current(_page.FiledConnectionFtpField).setValue("3").
-                current(_page.KeepNsourceFilesField).setValue("33");
         //actions
         _ctx.current(_page.DbSaveBtn).click().waitUpdate();
 
         // verification
-
-
-    }
-
-
-    private void InitTestCloudBackup() {
-        _ctx.current(_page.CheckPeriodField).setValue("10").
-                current(_page.MonitorFolderField).setValue("${db.repparam_log_archive_directory}").
-                current(_page.FilenameTemplateField).setValue("*.arch*").
-                current(_page.FiledConnectionFtpField).setValue("3").
-                current(_page.KeepNsourceFilesField).setValue("33");
+        Assert.assertEquals(_page.ReplicaBtn(MasterSyncBD).getAttribute("src"),"http://admin:strong%20password@localhost:8082/static/img/icons32/replicationactive.png",
+                "Icon should change");
 
     }
 
-    private void InitTestFtp() {
-        _ctx.current(_page.FtpServerField).setValue("www.myserver.com").
-                current(_page.FtpPortField).setValue("21");
+
+    @Test( enabled = true, priority = 9)
+    @Description(value ="WHEN we create a replica \"replica async\" with an empty field \"LogArchiveDirectory\" THEN, the error \"Specify log archive directory\"")
+    public void testCreateReplicaAsync_EmptyLogArchiveDirectoryField()  {
+        openUrl(ReplicaAsyncBD);
+        _ctx.current(_page.ReplicaBtn(ReplicaAsyncBD)).click();
+        //actions
+        _ctx.current(_page.ReplicaBtn).click().waitUpdate().
+                current(_page.AsyncBtn).click().waitUpdate().
+                current(_page.MoreBtn).click().waitUpdate().
+                current(_page.LogArchiveDirectoryField).setValue("").waitUpdate().
+                current(_page.DbSaveBtn).click().waitUpdate();
+        Helper.waitSetup(_driver, 1000);
+        // verification
+        Assert.assertEquals(_page.BackupAllertDanger.getText(),"Specify log archive directory",
+                "Field Log directory must not be empty");
+
+    }
+
+    @Test( enabled = true, priority = 10)
+    @Description(value ="WHEN we create a replica \"replica async\" with the correct fields THEN replica \"replica async\" the successfully created")
+    public void testCreateReplicaAsync_Correct()  {
+
+        //actions
+        _ctx.current(_page.LogArchiveDirectoryField).setValue("${db.path}.LogArch").
+                current(_page.DbSaveBtn).click().waitUpdate();
+
+        // verification
+        Assert.assertEquals(_page.ReplicaBtn(ReplicaAsyncBD).getAttribute("src"),"http://admin:strong%20password@localhost:8082/static/img/icons32/replicationslave.png",
+                "Icon should change");
+
+    }
+    private void InitAsyncTest() {
+        _ctx.current(_page.LogDirectoryField).setValue("${db.path}.ReplLog").
+                current(_page.LogArchiveDirectoryField).setValue("${db.path}.LogArch").
+                current(_page.LogArchiveTimeoutField).setValue("90");
 
     }
 }

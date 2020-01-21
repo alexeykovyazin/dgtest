@@ -8,7 +8,6 @@ import io.qameta.allure.Description;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -31,8 +30,8 @@ public class TestValidateDb extends EnvContainer {
         _pagedatabase = PageFactory.initElements(_driver, Database.class);
         openUrl();
         Helper.waitSetup(_driver, 1000);
-        _ctx.current(_page.NameBDText(ReplicaBD)).click();
-        _ctx.current(_page.ValidateDbSettingsBtn(ReplicaBD)).click();
+        _ctx.current(_page.NameBDText(CloudTestDB)).click();
+        _ctx.current(_page.ValidateDbSettingsBtn(CloudTestDB)).click();
         _ctx.current(_page.ScheduleField).waitelementToBeClickable();
     }
 //    @AfterMethod
@@ -93,13 +92,13 @@ public class TestValidateDb extends EnvContainer {
         Helper.waitSetup(_driver,10000);
         openUrl();
         _ctx.implicitlyWaitElement();
-        _ctx.current(_page.NameBDText(ReplicaBD)).click();
+        _ctx.current(_page.NameBDText(CloudTestDB)).click();
         Helper.waitSetup(_driver,1000);
 
         // verification
-        Assert.assertEquals(_page.ValidateDbPanelSchedule(ReplicaBD).getText(),"[scheduled "+cron+"]" ,
+        Assert.assertEquals(_page.ValidateDbPanelSchedule(CloudTestDB).getText(),"[scheduled "+cron+"]" ,
                 "cron schedule must be displayed");
-        Assert.assertEquals(_page.ValidateDbPanelOk(ReplicaBD).getText(),"OK",
+        Assert.assertEquals(_page.ValidateDbPanelOk(CloudTestDB).getText(),"OK",
                 "Status verified backup not OK");
 
 
