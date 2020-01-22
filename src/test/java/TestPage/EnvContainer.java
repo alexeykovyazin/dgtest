@@ -61,19 +61,19 @@ public class EnvContainer
         dashboardpage = PageFactory.initElements(Driver, Dashboard.class);
         _pagedatabase = PageFactory.initElements(Driver, Database.class);
 
-        //InitData();
+        InitData();
         Driver.navigate().to(url);
         Driver.manage().window().setSize(new Dimension(1920, 1080));
         Helper.waitSetup(Driver,3000);
 
         // Registration enterprise version
-       // Registration();
+        Registration();
         //Add default server
-       // AddServer();
+        AddServer();
         //StopRefreshPage();
 
         // Create DB Backup, Replica, Master
-        //AddDatabaseInit();
+        AddDatabaseInit();
 
     }
 
