@@ -521,7 +521,7 @@ public class Helper {
         }else{
             for(File f : listFiles)
                 delete(new File(dir + File.separator + f.getName()));
-                System.out.println("Файл: удален"  );
+                System.out.println("Delete file"  );
         }
     }
 
@@ -599,30 +599,25 @@ public class Helper {
     }
 
     public static String read(String fileName) throws FileNotFoundException {
-        //Этот спец. объект для построения строки
         StringBuilder sb = new StringBuilder();
         File file = new File(fileName);
         exists(fileName);
 
         try {
-            //Объект для чтения файла в буфер
             BufferedReader in = new BufferedReader(new FileReader( file.getAbsoluteFile()));
             try {
-                //В цикле построчно считываем файл
                 String s;
                 while ((s = in.readLine()) != null) {
                     sb.append(s);
                     sb.append("\n");
                 }
             } finally {
-                //Также не забываем закрыть файл
                 in.close();
             }
         } catch(IOException e) {
             throw new RuntimeException(e);
         }
 
-        //Возвращаем полученный текст с файла
         return sb.toString();
     }
     private static void exists(String fileName) throws FileNotFoundException {
