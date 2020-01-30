@@ -68,7 +68,6 @@ public class EnvContainer
         //Add default server
         AddServer();
         StopRefreshPage();
-
         // Create DB Backup, Replica, Master
         AddDatabaseInit();
 
