@@ -8,7 +8,9 @@
 <!--    </listeners>-->
     <!-- ХРОМ   -->
     <parameter name="browsername" value="chrome"/>
-    <parameter name="pathdriver" value="src/test/resurces/chromedriver.exe"/>  
+    <parameter name="pathdriver" value="src/test/resurces/chromedriver.exe"/>
+    <!-- Path to folder  HQBirdData-->
+    <parameter name="pathhqbirddata" value="C:\HQBirdData\"/>
 <!--    <parameter name="pathdriver" value="src/test/resurces/chromedriver"/>-->
 
      <parameter name="url" value="http://admin:strong password@localhost:8082/"/>

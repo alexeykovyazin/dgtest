@@ -4,6 +4,7 @@ import java.io.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLDecoder;
+import java.nio.file.Files;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -22,6 +23,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import static Constants.InitData.*;
 
 import static org.openqa.selenium.io.FileHandler.delete;
 
@@ -490,7 +492,54 @@ public class Helper {
     /**
      * Function Deleting Folder
      */
-    public void deleteFolder(final File file) {
+    // method search expansion file and delete him
+    public static void findExpFilesRenameCopy(String dir, String ext) {
+        File file = new File(dir);
+        if(!file.exists()) System.out.println(dir + " dir not found");
+        File[] listFiles = file.listFiles(new MyFileNameFilter(ext));
+        if(listFiles.length == 0){
+            System.out.println(dir + " does not contain files with the extension  " + ext);
+        }else{
+            for(File f : listFiles)
+               file = new File(dir + File.separator + f.getName());
+            try {
+                copyDirectory(file,new File(Replica_Async_DB_Path));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        }
+    }
+
+    // method search expansion file and delete him
+    public static void findExpFilesDelete(String dir, String ext) {
+        File file = new File(dir);
+        if(!file.exists()) System.out.println(dir + " dir not found");
+        File[] listFiles = file.listFiles(new MyFileNameFilter(ext));
+        if(listFiles.length == 0){
+            System.out.println(dir + " does not contain files with the extension " + ext);
+        }else{
+            for(File f : listFiles)
+                delete(new File(dir + File.separator + f.getName()));
+                System.out.println("Файл: удален"  );
+        }
+    }
+
+    // Interface FileNameFilter
+    public static class MyFileNameFilter implements FilenameFilter{
+
+        private String ext;
+
+        public MyFileNameFilter(String ext){
+            this.ext = ext.toLowerCase();
+        }
+        @Override
+        public boolean accept(File dir, String name) {
+            return name.toLowerCase().endsWith(ext);
+        }
+    }
+
+    public void deleteFolderOrFile(final File file) {
         System.out.println("Delete file: " + file.getAbsolutePath());
         if(file.isDirectory()) {
             String[] files = file.list();
@@ -549,4 +598,49 @@ public class Helper {
         }
     }
 
+    public static String read(String fileName) throws FileNotFoundException {
+        //Этот спец. объект для построения строки
+        StringBuilder sb = new StringBuilder();
+        File file = new File(fileName);
+        exists(fileName);
+
+        try {
+            //Объект для чтения файла в буфер
+            BufferedReader in = new BufferedReader(new FileReader( file.getAbsoluteFile()));
+            try {
+                //В цикле построчно считываем файл
+                String s;
+                while ((s = in.readLine()) != null) {
+                    sb.append(s);
+                    sb.append("\n");
+                }
+            } finally {
+                //Также не забываем закрыть файл
+                in.close();
+            }
+        } catch(IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        //Возвращаем полученный текст с файла
+        return sb.toString();
+    }
+    private static void exists(String fileName) throws FileNotFoundException {
+        File file = new File(fileName);
+        if (!file.exists()){
+            throw new FileNotFoundException(file.getName());
+        }
+    }
+
+
+    public static void existFileExt(String dir, String ext) {
+        File file = new File(dir);
+        if(!file.exists()) System.out.println(dir + " dir not found");
+        File[] listFiles = file.listFiles(new MyFileNameFilter(ext));
+        if(listFiles.length == 0){
+
+        }else{
+            Assert.fail(""+dir+"+\"file extension\"+"+ext+"+\" not found\"");
+        }
+    }
 }

@@ -104,14 +104,14 @@ public class TestVerifiedBackup extends EnvContainer {
     @Description(value = "WHEN we fill in the settings Verified Backup with the correct data THEN the backup is successfully created")
     public void testCreateVerifiedBackupCorrect ()  {
         // prepare
-        String cron = "0/10 * * * * ?";
+        String cron = "0/30 * * * * ?";
         InitVerifiedBackup();
         //actions
         _ctx.current(_page.EnabledCheckbox).waitelementToBeClickable();
         _ctx.current(_page.EnabledCheckbox).click().
             current(_page.ScheduleField).setValue(cron).
                 current(_page.DbSaveBtn).click().waitUpdate();
-        Helper.waitSetup(_driver,10000);
+        Helper.waitSetup(_driver,30000);
         openUrl();
         _ctx.implicitlyWaitElement();
         _ctx.current(_page.NameBDText(BackupBD)).click();

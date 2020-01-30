@@ -118,13 +118,13 @@ public class TestDumpBackup extends EnvContainer {
     public void testCreateDumpBackupCorrect ()  {
         // prepare
         InitBackup();
-        String cron = "0/10 * * * * ?";
+        String cron = "0/30 * * * * ?";
 
         //actions
         _ctx.current(_page.EnabledCheckbox).click().
             current(_page.ScheduleField).setValue(cron).
                 current(_page.DbSaveBtn).click().waitUpdate();
-        Helper.waitSetup(_driver,10000);
+        Helper.waitSetup(_driver,30000);
         openUrl();
         _ctx.implicitlyWaitElement();
         _ctx.current(_page.NameBDText(TestDB)).click();

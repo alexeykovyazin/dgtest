@@ -153,43 +153,43 @@ public class TestCloudBackupReceiver extends EnvContainer {
                 current(_page.DbSaveBtn).click().waitUpdate();
 
         // verification
-        Assert.assertEquals(_page.BackupAllertDanger.getText(),"The server encountered an unexpected condition which prevented it from fulfilling the request",
+        Assert.assertEquals(_page.BackupAllertDanger.getText(),"\"\" is not an integer number",
                 "the field must not be empty");
 
     }
 
-    @Test( enabled = true, priority = 8)
-    @Description(value = "WHEN we fill in the settings Cloud Backup Receiver with the correct data THEN the backup is successfully created")
-    public void testAddCloudBackupReceiverCorrect()  {
-        //actions
-        _ctx.current(_page.EnabledCheckbox).click();
-        InitTestCloudBackupReceiver();
-        _ctx.current(_page.DbSaveBtn).click().waitUpdate();
-
-        Helper.waitSetup(_driver,10000);
-        openUrl();
-        _ctx.implicitlyWaitElement();
-        _ctx.current(_page.NameBDText(CloudTestDB)).click();
-
-        // verification
-        Assert.assertEquals(_page.CloudBackupReceiverPanelOk(CloudTestDB).getText(),"OK" ,
-                "Status cloud backup receiver not OK");
-        Assert.assertEquals(_page.CloudBackupReceiverPanelPeriod(CloudTestDB).getText(),"[period 10 sec]" ,
-                "cron schedule must be displayed");
-        Assert.assertEquals(_page.CloudBackupReceiverPanelLastSendFile(CloudTestDB).getText(),CloudReceiverFileReplpacked ,
-                "Name file must be displayed");
-    }
+//    @Test( enabled = true, priority = 8)
+//    @Description(value = "WHEN we fill in the settings Cloud Backup Receiver with the correct data THEN the backup is successfully created")
+//    public void testAddCloudBackupReceiverCorrect()  {
+//        //actions
+//        _ctx.current(_page.EnabledCheckbox).click();
+//        InitTestCloudBackupReceiver();
+//        _ctx.current(_page.DbSaveBtn).click().waitUpdate();
+//
+//        Helper.waitSetup(_driver,30000);
+//        openUrl();
+//        _ctx.implicitlyWaitElement();
+//        _ctx.current(_page.NameBDText(CloudTestDB)).click();
+//
+//        // verification
+//        Assert.assertEquals(_page.CloudBackupReceiverPanelOk(CloudTestDB).getText(),"OK" ,
+//                "Status cloud backup receiver not OK");
+//        Assert.assertEquals(_page.CloudBackupReceiverPanelPeriod(CloudTestDB).getText(),"[period 30 sec]" ,
+//                "cron schedule must be displayed");
+//        Assert.assertEquals(_page.CloudBackupReceiverPanelLastSendFile(CloudTestDB).getText(),CloudReceiverFileReplpacked ,
+//                "Name file must be displayed");
+//    }
 
 
     private void InitTestCloudBackupReceiver() {
-        _ctx.current(_page.CheckPeriodField).setValue("10").
+        _ctx.current(_page.CheckPeriodField).setValue("30").
                 current(_page.MonitorFolderField).setValue("C:\\dgtest\\src\\test\\resurces\\WorkDB\\CloudReceiverTest").
                 current(_page.UnpackDirectoryField).setValue("C:\\dgtest\\src\\test\\resurces\\WorkDB\\CloudReceiverTest").
                 current(_page.FilenameTemplateField).setValue("*.arch*").
                 current(_page.ArchiveExtentionField).setValue(".replpacked").
                 current(_page.DecryptPasswordField).setValue("zipmasterkey").
                 current(_page.AlertFileCountField).setValue("33").
-                current(_page.AlertFileAgeField).setValue("360");
+                current(_page.AlertFileAgeField).setValue("36000");
 
     }
 }
