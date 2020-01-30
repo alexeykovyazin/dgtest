@@ -134,8 +134,8 @@ public class EnvContainer
 
         // delete some folders and files in the config
         _helper.deleteFolderOrFile(new File(Pathhqbirddata + "config\\agent\\servers\\hqbirdsrv"));
-        _helper.deleteFolderOrFile(new File(Pathhqbirddata + "output\\logs\\agent\\servers\\hqbirdsrv"));
-        _helper.deleteFolderOrFile(new File(Pathhqbirddata + "output\\output\\hqbirdsrv"));
+        //_helper.deleteFolderOrFile(new File(Pathhqbirddata + "output\\logs\\agent\\servers\\hqbirdsrv"));
+        _helper.deleteFolderOrFile(new File(Pathhqbirddata + "output\\"));
         _helper.deleteFolderOrFile(new File(Pathhqbirddata + "config\\installid.bin"));
         _helper.deleteFolderOrFile(new File(Pathhqbirddata + "config\\unlock"));
 
