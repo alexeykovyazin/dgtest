@@ -31,7 +31,7 @@ public class GeneralLocators {
     @FindBy(id = "performance")
     public WebElement PerformanceMenuBtn;
     @FindBy(xpath = "//*[@id='dqTimers']//li//i")
-    public WebElement PanelPageRefrtshBtn;
+    public WebElement PanelPageRefreshBtn;
     @FindBy(xpath = "//*[@id='dqTimers']//*[@id='0']")
     public WebElement StopRefreshBtn;
 

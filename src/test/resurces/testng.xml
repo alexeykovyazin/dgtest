@@ -8,7 +8,9 @@
 <!--    </listeners>-->
     <!-- ХРОМ   -->
     <parameter name="browsername" value="chrome"/>
-    <parameter name="pathdriver" value="src/test/resurces/chromedriver.exe"/>  
+    <parameter name="pathdriver" value="src/test/resurces/chromedriver.exe"/>
+    <!-- Path to folder  HQBirdData-->
+    <parameter name="pathhqbirddata" value="C:\HQBirdData\"/>
 <!--    <parameter name="pathdriver" value="src/test/resurces/chromedriver"/>-->
 
      <parameter name="url" value="http://admin:strong password@localhost:8082/"/>
@@ -19,25 +21,25 @@
 
     <test name="Database" group-by-instances="true">
         <classes >
-<!--            <class name = "TestPage.TestDashboard.TestDatabase"/>-->
+            <class name = "TestPage.TestDashboard.TestDatabase"/>
 
         </classes>
     </test>
 
     <test name="Backup" group-by-instances="true">
         <classes >
-<!--            <class name = "TestPage.TestDashboard.Backup.TestVerifiedBackup"/>-->
-<!--            <class name = "TestPage.TestDashboard.Backup.TestIncrementalBackup"/>-->
-<!--            <class name = "TestPage.TestDashboard.Backup.TestDumpBackup"/>-->
-<!--            <class name = "TestPage.TestDashboard.Backup.TestRestoreDb"/>-->
-<!--            <class name = "TestPage.TestDashboard.Backup.TestSqlPing"/>-->
-<!--            <class name = "TestPage.TestDashboard.Backup.TestValidateDb"/>-->
+            <class name = "TestPage.TestDashboard.Backup.TestVerifiedBackup"/>
+            <class name = "TestPage.TestDashboard.Backup.TestIncrementalBackup"/>
+            <class name = "TestPage.TestDashboard.Backup.TestDumpBackup"/>
+            <class name = "TestPage.TestDashboard.Backup.TestRestoreDb"/>
+            <class name = "TestPage.TestDashboard.Backup.TestSqlPing"/>
+            <class name = "TestPage.TestDashboard.Backup.TestValidateDb"/>
         </classes>
     </test>
     <test name="CloudBackup" group-by-instances="true">
         <classes >
-<!--            <class name = "TestPage.TestDashboard.Backup.TestCloudBackup"/>-->
-<!--            <class name = "TestPage.TestDashboard.Backup.TestCloudBackupReceiver"/>-->
+            <class name = "TestPage.TestDashboard.Backup.TestCloudBackup"/>
+            <class name = "TestPage.TestDashboard.Backup.TestCloudBackupReceiver"/>
         </classes>
     </test>
     <test name="Replica" group-by-instances="true">

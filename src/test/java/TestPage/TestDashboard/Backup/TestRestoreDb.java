@@ -105,7 +105,7 @@ public class TestRestoreDb extends EnvContainer {
                 current(_page.DbSaveBtn).click().waitUpdate();
 
         // verification
-        Assert.assertEquals(_page.BackupAllertDanger.getText(),"The server encountered an unexpected condition which prevented it from fulfilling the request",
+        Assert.assertEquals(_page.BackupAllertDanger.getText(),"\"\" is not an integer number",
                 "");
     }
 
@@ -165,7 +165,7 @@ public class TestRestoreDb extends EnvContainer {
                 current(_page.DbSaveBtn).click().waitUpdate();
 
         // verification
-        Assert.assertEquals(_page.BackupAllertDanger.getText(),"The server encountered an unexpected condition which prevented it from fulfilling the request",
+        Assert.assertEquals(_page.BackupAllertDanger.getText(),"\"NaN\" is not an integer number",
                 "");
     }
 
@@ -190,13 +190,14 @@ public class TestRestoreDb extends EnvContainer {
     public void testCreateRestoreDbCorrect ()  {
         // prepare
         InitBackup();
-        String cron = "0/10 * * * * ?";
+        String cron = "0/30 * * * * ?";
 
         //actions
         _ctx.current(_page.EnabledCheckbox).click().
                 current(_page.ScheduleField).setValue(cron).
+                current(_page.ReplaceExistingDb).click().
                 current(_page.DbSaveBtn).click().waitUpdate();
-        Helper.waitSetup(_driver,10000);
+        Helper.waitSetup(_driver,30000);
         openUrl();
         _ctx.implicitlyWaitElement();
         _ctx.current(_page.NameBDText(BackupBD)).click();
@@ -210,9 +211,9 @@ public class TestRestoreDb extends EnvContainer {
 
     private void InitBackup() {
         _ctx.current(_page.ScheduleField).setValue("0 0 23 ? * MON-SUN").
-                current(_page.DirectoryField).setValue("C:\\dgtest\\src\\test\\resurces\\WorkDB").
+                current(_page.DirectoryField).setValue("C:\\dgtest\\src\\test\\resurces\\WorkDB\\RestoreDb").
                 current(_page.NamePatternField).setValue("backup_{0,date,yyyyMMdd_HH-mm}").
-                current(_page.MaxFileageTorestoreHField).setValue("24").
+                current(_page.MaxFileageTorestoreHField).setValue("720").
                 current(_page.RestoreDirField).setValue("${backup-directory}").
                 current(_page.RestoreDbNameField).setValue("${db.id}_{0,date,yyyyMMdd_HH-mm}_testrestore.fdb").
                 current(_page.AppendSuffixFileNameField).setValue("{0,date,yyyyMMdd_HH-mm}.old").

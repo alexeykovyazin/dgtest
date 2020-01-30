@@ -85,6 +85,8 @@ public class Backup {
     public WebElement MaxFileageTorestoreHField;
     @FindBy(id = "form-restore_dir")
     public WebElement RestoreDirField;
+    @FindBy(xpath = "(//*[@id='form-section-delete_existing_db']//label[2])[1]")
+    public WebElement ReplaceExistingDb;
     @FindBy(id = "form-restore_dbname")
     public WebElement RestoreDbNameField;
     @FindBy(id = "form-addname_to_backup_extisting_db")
@@ -115,6 +117,8 @@ public class Backup {
     public WebElement ReinitializeReplicaDatabaseBtn;
     @FindBy(id = "btnReplMoL")
     public WebElement MoreBtn;
+    public WebElement ReinitializeReplicaStatus(String puthDB)
+    {return _driver.findElement(By.xpath("//*[@class='modal-body']//tr[3]//*[contains(text(),'"+puthDB+"')]")); }
 
      /**
      *  FTP settings
@@ -143,6 +147,8 @@ public class Backup {
     @FindBy(xpath = "(//*[contains(@class,'btn-dialog-ok')])[2]")
     public WebElement DbSaveBtn;
 
+    @FindBy(xpath = "(//*[contains(@class,'btn-dialog-ok')])[3]")
+    public WebElement OkBtn;
     /**
      * verified-backup settings
      */
