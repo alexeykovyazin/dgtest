@@ -11,6 +11,15 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxDriverLogLevel;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.logging.LogEntries;
+import org.openqa.selenium.logging.LogEntry;
+import org.openqa.selenium.logging.LogType;
+import org.openqa.selenium.logging.LoggingPreferences;
+import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -18,17 +27,19 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
-
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Method;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.logging.Level;
 
 import static Constants.InitData.*;
 
 public class EnvContainer
 {
-    public static String URL,Pass, Login, Pathhqbirddata;
+    public static String URL, Pathhqbirddata, BrowserType,pathDriver;
     public static WebDriver Driver;
     private Helper _helper;
     public static GeneralLocators generalpage;
@@ -38,16 +49,22 @@ public class EnvContainer
 
 
     @BeforeSuite
-    @Parameters({ "browsername", "pathdriver", "url", "username", "password" ,"pathhqbirddata"})
-    public void suiteSetUp(String browserType, String pathDriver, String url, String username, String password, String pathhqbirddata) throws IOException, InterruptedException {
-
+    @Parameters({ "browsername", "url","pathhqbirddata"})
+    public void suiteSetUp(String browserType, String url, String pathhqbirddata) throws IOException, InterruptedException {
+        pathDriver = "null";
         if (System.getProperty("url") != null) {
             url = System.getProperty("url");
         }
-        Pass = password;
-        Pass = password;
-        Login = username;
+        BrowserType = browserType;
         Pathhqbirddata = pathhqbirddata;
+
+        if (BrowserType.equals("chrome")) {
+            pathDriver = "src/test/resurces/Driver/chromedriver.exe";
+        }
+        if(BrowserType.equals("firefox")){
+         pathDriver = "src/test/resurces/Driver/geckodriver.exe";
+        }
+
         Driver = getDriverByName(browserType, pathDriver);
         _helper = new Helper(Driver);
         URL = url;
@@ -75,8 +92,8 @@ public class EnvContainer
 
     @AfterSuite
     public void suiteTearDown() {
-
         Driver.quit();
+
     }
 
     @AfterMethod
@@ -86,7 +103,7 @@ public class EnvContainer
             makeScreenshot(result.getName());
         }
         try {
-            Helper.interceptionJSonPage(Driver);
+            interceptionJSonPage(Driver);
         }catch (Exception ex){
 
         }
@@ -177,17 +194,18 @@ public class EnvContainer
         //actions
         Helper.waitSetup(Driver, 1000);
         _helper.current(_pagedatabase.DatabaseSettingsBtn).click();
+        Helper.waitSetup(Driver, 1000);
         _helper.current(_pagedatabase.DbNameField).waitelementToBeClickable();
         _helper.current(_pagedatabase.DbNameField).setValue(dbName).
                 current(_pagedatabase.DbPathField).setValue(dbPath).
-                current(_pagedatabase.DbSaveBtn).click().waitUpdate();
+                current(_pagedatabase.DbSaveBtn).doubleClick().waitUpdate();
         Assert.assertTrue(_helper.isdisplayedElement(_pagedatabase.NameBD(dbName)), "database is not successfully add");
 
 
     }
     private void openUrl() {
         Driver.navigate().to(URL);
-        Helper.interceptionJSonPage(Driver);
+        interceptionJSonPage(Driver);
     }
     private void DirectoryCopy(String copyFolder, String replacement) throws IOException {
         File srcFolder = new File(copyFolder);
@@ -232,11 +250,65 @@ public class EnvContainer
 
             driver = new ChromeDriver(options);
             return driver;
-        } else {
+        }
+        if (browserType.equals("firefox")) {
+
+            System.setProperty("webdriver.gecko.driver", pathDriver);
+//            LoggingPreferences loggingPrefs = new LoggingPreferences();
+//            loggingPrefs.enable(LogType.BROWSER, Level.ALL);
+//            loggingPrefs.enable(LogType.CLIENT, Level.ALL);
+//            loggingPrefs.enable(LogType.DRIVER, Level.ALL);
+//            loggingPrefs.enable(LogType.PERFORMANCE, Level.ALL);
+//            loggingPrefs.enable(LogType.PROFILER, Level.ALL);
+//            loggingPrefs.enable(LogType.SERVER, Level.ALL);
+            FirefoxOptions options = new FirefoxOptions();
+//            DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
+//            desiredCapabilities.setCapability("marionette", true);
+//            desiredCapabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+//            desiredCapabilities.setCapability(CapabilityType.LOGGING_PREFS, loggingPrefs);
+
+
+//            options.merge(desiredCapabilities);
+
+            //options.setLogLevel(FirefoxDriverLogLevel.TRACE);
+
+            driver = new FirefoxDriver(options);
+            return driver;
+        }
+        else {
             throw new RuntimeException("driver not found");
             // return null;
         }
 
+    }
+    /**
+     * Intercept function JS ERROR
+     */
+    public static String interceptionJSonPage(WebDriver webDriver) {
+        if (BrowserType == "chrome") {
+            Set<String> errorStrings = new HashSet<>();
+            errorStrings.add("SyntaxError");
+            errorStrings.add("EvalError");
+            errorStrings.add("ReferenceError");
+            errorStrings.add("RangeError");
+            errorStrings.add("TypeError");
+            errorStrings.add("URIError");
+            //errorStrings.add("404");
+
+            LogEntries logEntries = webDriver.manage().logs().get(LogType.BROWSER);
+            if (logEntries != null) {
+                for (LogEntry logEntry : logEntries) {
+                    for (String errorString : errorStrings) {
+                        if (logEntry.getMessage().contains(errorString)) {
+                            Assert.fail(new Date(logEntry.getTimestamp()) + " " + logEntry.getLevel() + " " + logEntry.getMessage());
+                        }
+                    }
+                }
+            }
+            return null;
+        } else {
+            return null;
+        }
     }
 
 

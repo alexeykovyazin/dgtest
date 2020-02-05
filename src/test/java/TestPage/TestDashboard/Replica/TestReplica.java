@@ -3,8 +3,8 @@ package TestPage.TestDashboard.Replica;
 import Constants.InitData;
 import Helpers.Helper;
 import TestPage.EnvContainer;
-import TestPageLocator.DashboardPage.Backup;
 import TestPageLocator.DashboardPage.Database;
+import TestPageLocator.GeneralLocators;
 import io.qameta.allure.Description;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -23,14 +23,14 @@ public class TestReplica extends EnvContainer {
 
     public String _url, _standarturl = "http://localhost:8082/static/dashboard.html";
     private Database _pagedatabase;
-    private Backup _page;
+    private GeneralLocators _page;
     private Helper _ctx;
 
     @BeforeClass
     public void classSetUp() {
         _driver = EnvContainer.Driver;
         _ctx = new Helper(_driver);
-        _page = PageFactory.initElements(_driver, Backup.class);
+        _page = PageFactory.initElements(_driver, GeneralLocators.class);
         _pagedatabase = PageFactory.initElements(_driver, Database.class);
         openUrl();
         Helper.waitSetup(_driver, 1000);
@@ -46,7 +46,7 @@ public class TestReplica extends EnvContainer {
     private void openUrl() {
         _url = EnvContainer.URL + _standarturl;
         _driver.navigate().to(_url);
-        Helper.interceptionJSonPage(_driver);
+        interceptionJSonPage(_driver);
         Helper.waitUpdate(_driver);
 
     }
@@ -237,7 +237,7 @@ public class TestReplica extends EnvContainer {
         //prepare
         _ctx.current(_page.NameBDText(MasterAsyncBD)).click();
         Helper.waitSetup(_driver,2000);
-        _ctx.current(_page.CloudBackupSettingsBtn(MasterAsyncBD)).click();
+        _ctx.current(_page.CloudBackupSettingsBtn(MasterAsyncBD)).scrollToElement().click();
         _ctx.current(_page.CheckPeriodField).waitelementToBeClickable();
         _ctx.current(_page.ConfigureFtpBtn).click();
         Helper.waitSetup(_driver,1000);
@@ -291,7 +291,7 @@ public class TestReplica extends EnvContainer {
 
         _ctx.current(_page.NameBDText(ReplicaAsyncBD)).click();
         Helper.waitSetup(_driver,2000);
-        _ctx.current(_page.CloudBackupReceiverSettingsBtn(ReplicaAsyncBD)).click();
+        _ctx.current(_page.CloudBackupReceiverSettingsBtn(ReplicaAsyncBD)).scrollToElement().click();
         _ctx.current(_page.CheckPeriodField).waitelementToBeClickable();
         Helper.waitSetup(_driver,1000);
         _ctx.current(_page.EnabledCheckbox).click().waitUpdate().

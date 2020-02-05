@@ -3,7 +3,7 @@ package TestPage.TestDashboard.Backup;
 import Helpers.Helper;
 import TestPage.EnvContainer;
 import TestPageLocator.DashboardPage.Database;
-import TestPageLocator.DashboardPage.Backup;
+import TestPageLocator.GeneralLocators;
 import io.qameta.allure.Description;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -17,7 +17,7 @@ public class TestVerifiedBackup extends EnvContainer {
 
     public String _url,_standarturl = "http://localhost:8082/static/dashboard.html";
     private Database _pagedatabase;
-    private Backup _page;
+    private GeneralLocators _page;
     private Helper _ctx;
 
     @BeforeClass
@@ -25,15 +25,15 @@ public class TestVerifiedBackup extends EnvContainer {
     {
         _driver = EnvContainer.Driver;
         _ctx = new Helper(_driver);
-        _page = PageFactory.initElements(_driver, Backup.class);
+        _page = PageFactory.initElements(_driver, GeneralLocators.class);
         _pagedatabase = PageFactory.initElements(_driver, Database.class);
         openUrl();
         _ctx.waitSetup(_driver,1000);
 
         _ctx.current(_page.NameBDText(BackupBD)).click();
-        _ctx.current(_page.VerifiedBackupSettingsBtn(BackupBD)).click();
+        _ctx.current(_page.VerifiedBackupSettingsBtn(BackupBD)).scrollToElement().click();
         _ctx.current(_page.ScheduleField).waitelementToBeClickable();
-        InitVerifiedBackup();
+        //InitVerifiedBackup();
 
 
     }
@@ -46,7 +46,7 @@ public class TestVerifiedBackup extends EnvContainer {
     private void openUrl() {
         _url = EnvContainer.URL + _standarturl;
         _driver.navigate().to(_url);
-        Helper.interceptionJSonPage(_driver);
+        interceptionJSonPage(_driver);
         Helper.waitUpdate(_driver);
     }
 
@@ -54,7 +54,7 @@ public class TestVerifiedBackup extends EnvContainer {
     @Test( enabled = true, priority = 1)
     @Description(value = "WHEN we set the wrong schedule in the backup settings THEN, the error \"Cron expression or period must be set properly\"")
     public void testCreateVerifiedBackupScheduleIncorrect()  {
-
+        _ctx.waitSetup(_driver,1000);
         //actions
         _ctx.current(_page.ScheduleField).setValue("").
             current(_page.DbSaveBtn).click().waitUpdate();

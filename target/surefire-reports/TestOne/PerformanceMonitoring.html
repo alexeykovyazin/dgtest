@@ -1,0 +1,2153 @@
+<html>
+<head>
+<title>TestNG:  PerformanceMonitoring</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>PerformanceMonitoring</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Feb 05 23:55:17 GMT+03:00 2020</td>
+</tr>
+<tr><td>Total time:</td><td>6 seconds (6241 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestPage.TestDashboard.TestLowLevelMetadata.testCheckFieldMaxFormatsEmptyValue()'><b>testCheckFieldMaxFormatsEmptyValue</b><br>Test class: TestPage.TestDashboard.TestLowLevelMetadata</td>
+<td><div><pre>java.lang.AssertionError: value must be a number expected [&quot;&quot; is not an integer number] but found [The server encountered an unexpected condition which prevented it from fulfilling the request]
+	at TestPage.TestDashboard.TestLowLevelMetadata.testCheckFieldMaxFormatsEmptyValue(TestLowLevelMetadata.java:87)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1572686250", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1572686250'><pre>java.lang.AssertionError: value must be a number expected [&quot;&quot; is not an integer number] but found [The server encountered an unexpected condition which prevented it from fulfilling the request]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:575)
+	at TestPage.TestDashboard.TestLowLevelMetadata.testCheckFieldMaxFormatsEmptyValue(TestLowLevelMetadata.java:87)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:377)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
+</pre></div></td>
+<td>1</td>
+<td>TestPage.TestDashboard.TestLowLevelMetadata@6331250e</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestTransactions.testCheckFiledAlterNextOATMoreEmptyField()'><b>testCheckFiledAlterNextOATMoreEmptyField</b><br>Test class: TestPage.TestDashboard.TestTransactions</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#form\-period&quot;}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=id, value=form-period}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.clear(Unknown Source)
+	at Helpers.Helper.setValue(Helper.java:68)
+	at TestPage.TestDashboard.TestTransactions.InitTest(TestTransactions.java:114)
+	at TestPage.TestDashboard.TestTransactions.testCheckFiledAlterNextOATMoreEmptyField(TestTransactions.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace300474755", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace300474755'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#form\-period&quot;}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=id, value=form-period}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.clear(Unknown Source)
+	at Helpers.Helper.setValue(Helper.java:68)
+	at TestPage.TestDashboard.TestTransactions.InitTest(TestTransactions.java:114)
+	at TestPage.TestDashboard.TestTransactions.testCheckFiledAlterNextOATMoreEmptyField(TestTransactions.java:100)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:377)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
+</pre></div></td>
+<td>3</td>
+<td>TestPage.TestDashboard.TestTransactions@26a94fa5</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestTransactions.testCheckFiledAlterOSTOITMoreEmptyField()'><b>testCheckFiledAlterOSTOITMoreEmptyField</b><br>Test class: TestPage.TestDashboard.TestTransactions</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#form\-period&quot;}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=id, value=form-period}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.clear(Unknown Source)
+	at Helpers.Helper.setValue(Helper.java:68)
+	at TestPage.TestDashboard.TestTransactions.InitTest(TestTransactions.java:114)
+	at TestPage.TestDashboard.TestTransactions.testCheckFiledAlterOSTOITMoreEmptyField(TestTransactions.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1826504108", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1826504108'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#form\-period&quot;}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=id, value=form-period}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.clear(Unknown Source)
+	at Helpers.Helper.setValue(Helper.java:68)
+	at TestPage.TestDashboard.TestTransactions.InitTest(TestTransactions.java:114)
+	at TestPage.TestDashboard.TestTransactions.testCheckFiledAlterOSTOITMoreEmptyField(TestTransactions.java:84)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:377)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
+</pre></div></td>
+<td>3</td>
+<td>TestPage.TestDashboard.TestTransactions@26a94fa5</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestLockprint.testCheckFiledBuffersMaxEmptyValue()'><b>testCheckFiledBuffersMaxEmptyValue</b><br>Test class: TestPage.TestDashboard.TestLockprint</td>
+<td><div><pre>java.lang.AssertionError: value must be a number expected [&quot;&quot; is not an integer number] but found [The server encountered an unexpected condition which prevented it from fulfilling the request]
+	at TestPage.TestDashboard.TestLockprint.testCheckFiledBuffersMaxEmptyValue(TestLockprint.java:358)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace422650431", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace422650431'><pre>java.lang.AssertionError: value must be a number expected [&quot;&quot; is not an integer number] but found [The server encountered an unexpected condition which prevented it from fulfilling the request]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:575)
+	at TestPage.TestDashboard.TestLockprint.testCheckFiledBuffersMaxEmptyValue(TestLockprint.java:358)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:377)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
+</pre></div></td>
+<td>1</td>
+<td>TestPage.TestDashboard.TestLockprint@5c089b2f</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestDelta.testCheckFiledMaxDeltaMinutesEmptyValue()'><b>testCheckFiledMaxDeltaMinutesEmptyValue</b><br>Test class: TestPage.TestDashboard.TestDelta</td>
+<td><div><pre>java.lang.AssertionError: value must be a number expected [&quot;&quot; is not an integer number] but found [&quot;NaN&quot; is not an integer number]
+	at TestPage.TestDashboard.TestDelta.testCheckFiledMaxDeltaMinutesEmptyValue(TestDelta.java:87)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace664896563", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace664896563'><pre>java.lang.AssertionError: value must be a number expected [&quot;&quot; is not an integer number] but found [&quot;NaN&quot; is not an integer number]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:575)
+	at TestPage.TestDashboard.TestDelta.testCheckFiledMaxDeltaMinutesEmptyValue(TestDelta.java:87)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:377)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
+</pre></div></td>
+<td>0</td>
+<td>TestPage.TestDashboard.TestDelta@17ca8b92</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestTransactions.testCheckFiledMaxTransactionsEmptyField()'><b>testCheckFiledMaxTransactionsEmptyField</b><br>Test class: TestPage.TestDashboard.TestTransactions</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#form\-period&quot;}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=id, value=form-period}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.clear(Unknown Source)
+	at Helpers.Helper.setValue(Helper.java:68)
+	at TestPage.TestDashboard.TestTransactions.InitTest(TestTransactions.java:114)
+	at TestPage.TestDashboard.TestTransactions.testCheckFiledMaxTransactionsEmptyField(TestTransactions.java:67)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1585691356", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1585691356'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#form\-period&quot;}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=id, value=form-period}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.clear(Unknown Source)
+	at Helpers.Helper.setValue(Helper.java:68)
+	at TestPage.TestDashboard.TestTransactions.InitTest(TestTransactions.java:114)
+	at TestPage.TestDashboard.TestTransactions.testCheckFiledMaxTransactionsEmptyField(TestTransactions.java:67)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:377)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
+</pre></div></td>
+<td>3</td>
+<td>TestPage.TestDashboard.TestTransactions@26a94fa5</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestTransactions.testCheckPeriodEmptyField()'><b>testCheckPeriodEmptyField</b><br>Test class: TestPage.TestDashboard.TestTransactions</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#form\-period&quot;}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=id, value=form-period}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.clear(Unknown Source)
+	at Helpers.Helper.setValue(Helper.java:68)
+	at TestPage.TestDashboard.TestTransactions.testCheckPeriodEmptyField(TestTransactions.java:53)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace284879817", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace284879817'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#form\-period&quot;}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=id, value=form-period}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.clear(Unknown Source)
+	at Helpers.Helper.setValue(Helper.java:68)
+	at TestPage.TestDashboard.TestTransactions.testCheckPeriodEmptyField(TestTransactions.java:53)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:377)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
+</pre></div></td>
+<td>3</td>
+<td>TestPage.TestDashboard.TestTransactions@26a94fa5</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestValidateDb.testCheckScheduleIncorrectField()'><b>testCheckScheduleIncorrectField</b><br>Test class: TestPage.TestDashboard.Backup.TestValidateDb</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#form\-cron\-expression&quot;}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=id, value=form-cron-expression}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.clear(Unknown Source)
+	at Helpers.Helper.setValue(Helper.java:68)
+	at TestPage.TestDashboard.Backup.TestValidateDb.testCheckScheduleIncorrectField(TestValidateDb.java:54)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1556060910", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1556060910'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#form\-cron\-expression&quot;}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=id, value=form-cron-expression}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.clear(Unknown Source)
+	at Helpers.Helper.setValue(Helper.java:68)
+	at TestPage.TestDashboard.Backup.TestValidateDb.testCheckScheduleIncorrectField(TestValidateDb.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:377)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
+</pre></div></td>
+<td>3</td>
+<td>TestPage.TestDashboard.Backup.TestValidateDb@7a94b64e</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestValidateDb.testCheckShutdownTimeoutEmptyField()'><b>testCheckShutdownTimeoutEmptyField</b><br>Test class: TestPage.TestDashboard.Backup.TestValidateDb</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#form\-cron\-expression&quot;}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=id, value=form-cron-expression}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.clear(Unknown Source)
+	at Helpers.Helper.setValue(Helper.java:68)
+	at TestPage.TestDashboard.Backup.TestValidateDb.InitTestValidateDb(TestValidateDb.java:109)
+	at TestPage.TestDashboard.Backup.TestValidateDb.testCheckShutdownTimeoutEmptyField(TestValidateDb.java:69)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1594964071", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1594964071'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#form\-cron\-expression&quot;}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=id, value=form-cron-expression}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.clear(Unknown Source)
+	at Helpers.Helper.setValue(Helper.java:68)
+	at TestPage.TestDashboard.Backup.TestValidateDb.InitTestValidateDb(TestValidateDb.java:109)
+	at TestPage.TestDashboard.Backup.TestValidateDb.testCheckShutdownTimeoutEmptyField(TestValidateDb.java:69)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:377)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
+</pre></div></td>
+<td>3</td>
+<td>TestPage.TestDashboard.Backup.TestValidateDb@7a94b64e</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestLockprint.testCreateFiledBuffersMaxNumbNegativeValue()'><b>testCreateFiledBuffersMaxNumbNegativeValue</b><br>Test class: TestPage.TestDashboard.TestLockprint</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//*[@class=&apos;alert alert-danger&apos;]//span)[2]&quot;}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=xpath, value=(//*[@class=&apos;alert alert-danger&apos;]//span)[2]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.getText(Unknown Source)
+	at TestPage.TestDashboard.TestLockprint.testCreateFiledBuffersMaxNumbNegativeValue(TestLockprint.java:374)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace383886401", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace383886401'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//*[@class=&apos;alert alert-danger&apos;]//span)[2]&quot;}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=xpath, value=(//*[@class=&apos;alert alert-danger&apos;]//span)[2]}
+	at jdk.internal.reflect.GeneratedConstructorAccessor18.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.getText(Unknown Source)
+	at TestPage.TestDashboard.TestLockprint.testCreateFiledBuffersMaxNumbNegativeValue(TestLockprint.java:374)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:377)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
+</pre></div></td>
+<td>3</td>
+<td>TestPage.TestDashboard.TestLockprint@5c089b2f</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Replica.TestReplica.testCreateMasterAsync_EmptyLogDirectoryField()'><b>testCreateMasterAsync_EmptyLogDirectoryField</b><br>Test class: TestPage.TestDashboard.Replica.TestReplica</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@class=&apos;db-item-tab&apos;]//span[text()=&apos;MasterAsync&apos;]&quot;}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=xpath, value=//*[@class=&apos;db-item-tab&apos;]//span[text()=&apos;MasterAsync&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at TestPageLocator.GeneralLocators.NameBDText(GeneralLocators.java:310)
+	at TestPage.TestDashboard.Replica.TestReplica.ClickAndCheckBd(TestReplica.java:336)
+	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterAsync_EmptyLogDirectoryField(TestReplica.java:103)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace655792768", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace655792768'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@class=&apos;db-item-tab&apos;]//span[text()=&apos;MasterAsync&apos;]&quot;}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=xpath, value=//*[@class=&apos;db-item-tab&apos;]//span[text()=&apos;MasterAsync&apos;]}
+	at jdk.internal.reflect.GeneratedConstructorAccessor18.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at TestPageLocator.GeneralLocators.NameBDText(GeneralLocators.java:310)
+	at TestPage.TestDashboard.Replica.TestReplica.ClickAndCheckBd(TestReplica.java:336)
+	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterAsync_EmptyLogDirectoryField(TestReplica.java:103)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:377)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
+</pre></div></td>
+<td>4</td>
+<td>TestPage.TestDashboard.Replica.TestReplica@6f6962ba</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Replica.TestReplica.testCreateMasterSync_Correct()'><b>testCreateMasterSync_Correct</b><br>Test class: TestPage.TestDashboard.Replica.TestReplica</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#form\-db\-replica_database&quot;}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=id, value=form-db-replica_database}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.clear(Unknown Source)
+	at Helpers.Helper.setValue(Helper.java:68)
+	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterSync_Correct(TestReplica.java:75)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace289946479", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace289946479'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#form\-db\-replica_database&quot;}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=id, value=form-db-replica_database}
+	at jdk.internal.reflect.GeneratedConstructorAccessor18.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.clear(Unknown Source)
+	at Helpers.Helper.setValue(Helper.java:68)
+	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterSync_Correct(TestReplica.java:75)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:377)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
+</pre></div></td>
+<td>3</td>
+<td>TestPage.TestDashboard.Replica.TestReplica@6f6962ba</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Replica.TestReplica.testCreateMasterSync_EmptyReplicaDatabaseField()'><b>testCreateMasterSync_EmptyReplicaDatabaseField</b><br>Test class: TestPage.TestDashboard.Replica.TestReplica</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@class=&apos;db-item-tab&apos;]//span[text()=&apos;MasterSync&apos;]&quot;}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=xpath, value=//*[@class=&apos;db-item-tab&apos;]//span[text()=&apos;MasterSync&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at TestPageLocator.GeneralLocators.NameBDText(GeneralLocators.java:310)
+	at TestPage.TestDashboard.Replica.TestReplica.ClickAndCheckBd(TestReplica.java:336)
+	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterSync_EmptyReplicaDatabaseField(TestReplica.java:57)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1335406231", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1335406231'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@class=&apos;db-item-tab&apos;]//span[text()=&apos;MasterSync&apos;]&quot;}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=xpath, value=//*[@class=&apos;db-item-tab&apos;]//span[text()=&apos;MasterSync&apos;]}
+	at jdk.internal.reflect.GeneratedConstructorAccessor18.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at TestPageLocator.GeneralLocators.NameBDText(GeneralLocators.java:310)
+	at TestPage.TestDashboard.Replica.TestReplica.ClickAndCheckBd(TestReplica.java:336)
+	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterSync_EmptyReplicaDatabaseField(TestReplica.java:57)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:377)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
+</pre></div></td>
+<td>3</td>
+<td>TestPage.TestDashboard.Replica.TestReplica@6f6962ba</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Replica.TestReplica.testCreateReplicaSync_Correct()'><b>testCreateReplicaSync_Correct</b><br>Test class: TestPage.TestDashboard.Replica.TestReplica</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@class=&apos;db-item-tab&apos;]//span[text()=&apos;ReplicaSync&apos;]&quot;}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=xpath, value=//*[@class=&apos;db-item-tab&apos;]//span[text()=&apos;ReplicaSync&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at TestPageLocator.GeneralLocators.NameBDText(GeneralLocators.java:310)
+	at TestPage.TestDashboard.Replica.TestReplica.ClickAndCheckBd(TestReplica.java:336)
+	at TestPage.TestDashboard.Replica.TestReplica.testCreateReplicaSync_Correct(TestReplica.java:87)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace225635355", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace225635355'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@class=&apos;db-item-tab&apos;]//span[text()=&apos;ReplicaSync&apos;]&quot;}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=xpath, value=//*[@class=&apos;db-item-tab&apos;]//span[text()=&apos;ReplicaSync&apos;]}
+	at jdk.internal.reflect.GeneratedConstructorAccessor18.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at TestPageLocator.GeneralLocators.NameBDText(GeneralLocators.java:310)
+	at TestPage.TestDashboard.Replica.TestReplica.ClickAndCheckBd(TestReplica.java:336)
+	at TestPage.TestDashboard.Replica.TestReplica.testCreateReplicaSync_Correct(TestReplica.java:87)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:377)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
+</pre></div></td>
+<td>3</td>
+<td>TestPage.TestDashboard.Replica.TestReplica@6f6962ba</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestValidateDb.testCreateValidateBDCorrect()'><b>testCreateValidateBDCorrect</b><br>Test class: TestPage.TestDashboard.Backup.TestValidateDb</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#form\-cron\-expression&quot;}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=id, value=form-cron-expression}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.clear(Unknown Source)
+	at Helpers.Helper.setValue(Helper.java:68)
+	at TestPage.TestDashboard.Backup.TestValidateDb.InitTestValidateDb(TestValidateDb.java:109)
+	at TestPage.TestDashboard.Backup.TestValidateDb.testCreateValidateBDCorrect(TestValidateDb.java:86)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace346269292", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace346269292'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#form\-cron\-expression&quot;}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=id, value=form-cron-expression}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.clear(Unknown Source)
+	at Helpers.Helper.setValue(Helper.java:68)
+	at TestPage.TestDashboard.Backup.TestValidateDb.InitTestValidateDb(TestValidateDb.java:109)
+	at TestPage.TestDashboard.Backup.TestValidateDb.testCreateValidateBDCorrect(TestValidateDb.java:86)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:377)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
+</pre></div></td>
+<td>3</td>
+<td>TestPage.TestDashboard.Backup.TestValidateDb@7a94b64e</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestPage.TestDashboard.TestDatabase.testAddDbAlreadyExist()'><b>testAddDbAlreadyExist</b><br>Test class: TestPage.TestDashboard.TestDatabase</td>
+<td></td>
+<td>2</td>
+<td>TestPage.TestDashboard.TestDatabase@58faa93b</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestDatabase.testAddDbCorrect()'><b>testAddDbCorrect</b><br>Test class: TestPage.TestDashboard.TestDatabase</td>
+<td></td>
+<td>4</td>
+<td>TestPage.TestDashboard.TestDatabase@58faa93b</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestDatabase.testAddDbEmptyName()'><b>testAddDbEmptyName</b><br>Test class: TestPage.TestDashboard.TestDatabase</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.TestDatabase@58faa93b</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestDatabase.testAddDbEmptyPath()'><b>testAddDbEmptyPath</b><br>Test class: TestPage.TestDashboard.TestDatabase</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.TestDatabase@58faa93b</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestDatabase.testAddDbIncorrectAlias()'><b>testAddDbIncorrectAlias</b><br>Test class: TestPage.TestDashboard.TestDatabase</td>
+<td></td>
+<td>1</td>
+<td>TestPage.TestDashboard.TestDatabase@58faa93b</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestDatabase.testAddDbIncorrectPath()'><b>testAddDbIncorrectPath</b><br>Test class: TestPage.TestDashboard.TestDatabase</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.TestDatabase@58faa93b</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestCloudBackupReceiver.testCheckAlertFileAgeEmptyField()'><b>testCheckAlertFileAgeEmptyField</b><br>Test class: TestPage.TestDashboard.Backup.TestCloudBackupReceiver</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.Backup.TestCloudBackupReceiver@60f2e0bd</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestCloudBackupReceiver.testCheckAlertFileCountIncorrectValue()'><b>testCheckAlertFileCountIncorrectValue</b><br>Test class: TestPage.TestDashboard.Backup.TestCloudBackupReceiver</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.Backup.TestCloudBackupReceiver@60f2e0bd</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestCloudBackupReceiver.testCheckDecryptPasswordEmptyField()'><b>testCheckDecryptPasswordEmptyField</b><br>Test class: TestPage.TestDashboard.Backup.TestCloudBackupReceiver</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.Backup.TestCloudBackupReceiver@60f2e0bd</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestCloudBackupReceiver.testCheckExtensionPackedFilesEmptyField()'><b>testCheckExtensionPackedFilesEmptyField</b><br>Test class: TestPage.TestDashboard.Backup.TestCloudBackupReceiver</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.Backup.TestCloudBackupReceiver@60f2e0bd</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestLowLevelMetadata.testCheckFieldDateFormatFolderNameEmptyValue()'><b>testCheckFieldDateFormatFolderNameEmptyValue</b><br>Test class: TestPage.TestDashboard.TestLowLevelMetadata</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.TestLowLevelMetadata@6331250e</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestLowLevelMetadata.testCheckFieldMetadataFolderEmptyValue()'><b>testCheckFieldMetadataFolderEmptyValue</b><br>Test class: TestPage.TestDashboard.TestLowLevelMetadata</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.TestLowLevelMetadata@6331250e</td></tr>
+<tr>
+<td title='TestPage.TestPerformance.TestTransactionMonitoring.testCheckFieldOutputFolderEmptyValue()'><b>testCheckFieldOutputFolderEmptyValue</b><br>Test class: TestPage.TestPerformance.TestTransactionMonitoring</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestPerformance.TestTransactionMonitoring@6ad11a56</td></tr>
+<tr>
+<td title='TestPage.TestPerformance.TestPerformanceMonitoring.testCheckFieldOutputFolderEmptyValue()'><b>testCheckFieldOutputFolderEmptyValue</b><br>Test class: TestPage.TestPerformance.TestPerformanceMonitoring</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestPerformance.TestPerformanceMonitoring@3e134896</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestIndexStatistics.testCheckFieldPeriodEmptyValue()'><b>testCheckFieldPeriodEmptyValue</b><br>Test class: TestPage.TestDashboard.TestIndexStatistics</td>
+<td></td>
+<td>1</td>
+<td>TestPage.TestDashboard.TestIndexStatistics@375b5b7f</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestIndexStatistics.testCheckFieldStatisticsArchiveDepthEmptyValue()'><b>testCheckFieldStatisticsArchiveDepthEmptyValue</b><br>Test class: TestPage.TestDashboard.TestIndexStatistics</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.TestIndexStatistics@375b5b7f</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestLockprint.testCheckFiledAverageLengthEmptyValue()'><b>testCheckFiledAverageLengthEmptyValue</b><br>Test class: TestPage.TestDashboard.TestLockprint</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.TestLockprint@5c089b2f</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestCloudBackup.testCheckFiledConnectionFtpEmptyField()'><b>testCheckFiledConnectionFtpEmptyField</b><br>Test class: TestPage.TestDashboard.Backup.TestCloudBackup</td>
+<td></td>
+<td>1</td>
+<td>TestPage.TestDashboard.Backup.TestCloudBackup@3a60c416</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestLockprint.testCheckFiledDeadlockScansThresholdEmptyValue()'><b>testCheckFiledDeadlockScansThresholdEmptyValue</b><br>Test class: TestPage.TestDashboard.TestLockprint</td>
+<td></td>
+<td>1</td>
+<td>TestPage.TestDashboard.TestLockprint@5c089b2f</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestSweepSchedule.testCheckFiledDeadlockScansThresholdEmptyValue()'><b>testCheckFiledDeadlockScansThresholdEmptyValue</b><br>Test class: TestPage.TestDashboard.TestSweepSchedule</td>
+<td></td>
+<td>1</td>
+<td>TestPage.TestDashboard.TestSweepSchedule@3122b117</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestLockprint.testCheckFiledDeadlockThresholdEmptyValue()'><b>testCheckFiledDeadlockThresholdEmptyValue</b><br>Test class: TestPage.TestDashboard.TestLockprint</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.TestLockprint@5c089b2f</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestLockprint.testCheckFiledFreeOwnersLimitEmptyValue()'><b>testCheckFiledFreeOwnersLimitEmptyValue</b><br>Test class: TestPage.TestDashboard.TestLockprint</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.TestLockprint@5c089b2f</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestLockprint.testCheckFiledHashSlotsEmptyValue()'><b>testCheckFiledHashSlotsEmptyValue</b><br>Test class: TestPage.TestDashboard.TestLockprint</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.TestLockprint@5c089b2f</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestLockprint.testCheckFiledLockTableSizeEmptyValue()'><b>testCheckFiledLockTableSizeEmptyValue</b><br>Test class: TestPage.TestDashboard.TestLockprint</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.TestLockprint@5c089b2f</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestDelta.testCheckFiledMaxDeltaBytesEmptyValue()'><b>testCheckFiledMaxDeltaBytesEmptyValue</b><br>Test class: TestPage.TestDashboard.TestDelta</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.TestDelta@17ca8b92</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestDiskSpace.testCheckFiledMaxDeltaBytesEmptyValue()'><b>testCheckFiledMaxDeltaBytesEmptyValue</b><br>Test class: TestPage.TestDashboard.TestDiskSpace</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.TestDiskSpace@5bb3131b</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestDiskSpace.testCheckFiledMaxDeltaMinutesEmptyValue()'><b>testCheckFiledMaxDeltaMinutesEmptyValue</b><br>Test class: TestPage.TestDashboard.TestDiskSpace</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.TestDiskSpace@5bb3131b</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestLockprint.testCheckFiledMinLengthEmptyValue()'><b>testCheckFiledMinLengthEmptyValue</b><br>Test class: TestPage.TestDashboard.TestLockprint</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.TestLockprint@5c089b2f</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestLockprint.testCheckFiledMutexWaitThresholdEmptyValue()'><b>testCheckFiledMutexWaitThresholdEmptyValue</b><br>Test class: TestPage.TestDashboard.TestLockprint</td>
+<td></td>
+<td>1</td>
+<td>TestPage.TestDashboard.TestLockprint@5c089b2f</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestLockprint.testCheckFiledOwnersLimitEmptyValue()'><b>testCheckFiledOwnersLimitEmptyValue</b><br>Test class: TestPage.TestDashboard.TestLockprint</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.TestLockprint@5c089b2f</td></tr>
+<tr>
+<td title='TestPage.TestPerformance.TestTransactionMonitoring.testCheckFiledShowTransactionsOlderEmptyValue()'><b>testCheckFiledShowTransactionsOlderEmptyValue</b><br>Test class: TestPage.TestPerformance.TestTransactionMonitoring</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestPerformance.TestTransactionMonitoring@6ad11a56</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestCloudBackup.testCheckFilenameTemplateEmptyField()'><b>testCheckFilenameTemplateEmptyField</b><br>Test class: TestPage.TestDashboard.Backup.TestCloudBackup</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.Backup.TestCloudBackup@3a60c416</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestCloudBackupReceiver.testCheckFilenameTemplateEmptyField()'><b>testCheckFilenameTemplateEmptyField</b><br>Test class: TestPage.TestDashboard.Backup.TestCloudBackupReceiver</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.Backup.TestCloudBackupReceiver@60f2e0bd</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestCloudBackup.testCheckFtpPortEmptyField()'><b>testCheckFtpPortEmptyField</b><br>Test class: TestPage.TestDashboard.Backup.TestCloudBackup</td>
+<td></td>
+<td>1</td>
+<td>TestPage.TestDashboard.Backup.TestCloudBackup@3a60c416</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestCloudBackup.testCheckFtpServerEmptyField()'><b>testCheckFtpServerEmptyField</b><br>Test class: TestPage.TestDashboard.Backup.TestCloudBackup</td>
+<td></td>
+<td>3</td>
+<td>TestPage.TestDashboard.Backup.TestCloudBackup@3a60c416</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestCloudBackup.testCheckKeepNSourceFilesFieldEmptyField()'><b>testCheckKeepNSourceFilesFieldEmptyField</b><br>Test class: TestPage.TestDashboard.Backup.TestCloudBackup</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.Backup.TestCloudBackup@3a60c416</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestCloudBackup.testCheckMonitorFolderEmptyField()'><b>testCheckMonitorFolderEmptyField</b><br>Test class: TestPage.TestDashboard.Backup.TestCloudBackup</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.Backup.TestCloudBackup@3a60c416</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestCloudBackup.testCheckPeriodEmptyField()'><b>testCheckPeriodEmptyField</b><br>Test class: TestPage.TestDashboard.Backup.TestCloudBackup</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.Backup.TestCloudBackup@3a60c416</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestCloudBackupReceiver.testCheckPeriodEmptyField()'><b>testCheckPeriodEmptyField</b><br>Test class: TestPage.TestDashboard.Backup.TestCloudBackupReceiver</td>
+<td></td>
+<td>2</td>
+<td>TestPage.TestDashboard.Backup.TestCloudBackupReceiver@60f2e0bd</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestLockprint.testCheckPeriodEmptyField()'><b>testCheckPeriodEmptyField</b><br>Test class: TestPage.TestDashboard.TestLockprint</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.TestLockprint@5c089b2f</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestSweepSchedule.testCheckPeriodEmptyField()'><b>testCheckPeriodEmptyField</b><br>Test class: TestPage.TestDashboard.TestSweepSchedule</td>
+<td></td>
+<td>1</td>
+<td>TestPage.TestDashboard.TestSweepSchedule@3122b117</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestDelta.testCheckPeriodEmptyField()'><b>testCheckPeriodEmptyField</b><br>Test class: TestPage.TestDashboard.TestDelta</td>
+<td></td>
+<td>1</td>
+<td>TestPage.TestDashboard.TestDelta@17ca8b92</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestDiskSpace.testCheckPeriodEmptyField()'><b>testCheckPeriodEmptyField</b><br>Test class: TestPage.TestDashboard.TestDiskSpace</td>
+<td></td>
+<td>1</td>
+<td>TestPage.TestDashboard.TestDiskSpace@5bb3131b</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestDbStatus.testCheckPeriodEmptyField()'><b>testCheckPeriodEmptyField</b><br>Test class: TestPage.TestDashboard.TestDbStatus</td>
+<td></td>
+<td>1</td>
+<td>TestPage.TestDashboard.TestDbStatus@4d8539de</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestLowLevelMetadata.testCheckPeriodEmptyField()'><b>testCheckPeriodEmptyField</b><br>Test class: TestPage.TestDashboard.TestLowLevelMetadata</td>
+<td></td>
+<td>1</td>
+<td>TestPage.TestDashboard.TestLowLevelMetadata@6331250e</td></tr>
+<tr>
+<td title='TestPage.TestPerformance.TestTransactionMonitoring.testCheckPeriodEmptyField()'><b>testCheckPeriodEmptyField</b><br>Test class: TestPage.TestPerformance.TestTransactionMonitoring</td>
+<td></td>
+<td>2</td>
+<td>TestPage.TestPerformance.TestTransactionMonitoring@6ad11a56</td></tr>
+<tr>
+<td title='TestPage.TestPerformance.TestPerformanceMonitoring.testCheckPeriodEmptyField()'><b>testCheckPeriodEmptyField</b><br>Test class: TestPage.TestPerformance.TestPerformanceMonitoring</td>
+<td></td>
+<td>3</td>
+<td>TestPage.TestPerformance.TestPerformanceMonitoring@3e134896</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestSqlPing.testCheckScheduleIncorrect()'><b>testCheckScheduleIncorrect</b><br>Test class: TestPage.TestDashboard.Backup.TestSqlPing</td>
+<td></td>
+<td>1</td>
+<td>TestPage.TestDashboard.Backup.TestSqlPing@9f6e406</td></tr>
+<tr>
+<td title='TestPage.TestPerformance.TestTransactionMonitoring.testCheckSendAlertOldestActiveTransactionEmptyValue()'><b>testCheckSendAlertOldestActiveTransactionEmptyValue</b><br>Test class: TestPage.TestPerformance.TestTransactionMonitoring</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestPerformance.TestTransactionMonitoring@6ad11a56</td></tr>
+<tr>
+<td title='TestPage.TestPerformance.TestTransactionMonitoring.testCheckShowOnlyNNOldestActiveTransactionsEmptyValue()'><b>testCheckShowOnlyNNOldestActiveTransactionsEmptyValue</b><br>Test class: TestPage.TestPerformance.TestTransactionMonitoring</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestPerformance.TestTransactionMonitoring@6ad11a56</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestSqlPing.testCheckSqlQueryEmptyField()'><b>testCheckSqlQueryEmptyField</b><br>Test class: TestPage.TestDashboard.Backup.TestSqlPing</td>
+<td></td>
+<td>1</td>
+<td>TestPage.TestDashboard.Backup.TestSqlPing@9f6e406</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestDbStatus.testCheckStatisticsArchiveDepthEmptyValue()'><b>testCheckStatisticsArchiveDepthEmptyValue</b><br>Test class: TestPage.TestDashboard.TestDbStatus</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.TestDbStatus@4d8539de</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestDbStatus.testCheckStatisticsFileNamePatternEmptyField()'><b>testCheckStatisticsFileNamePatternEmptyField</b><br>Test class: TestPage.TestDashboard.TestDbStatus</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.TestDbStatus@4d8539de</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestDbStatus.testCheckStoreStatisticEmptyField()'><b>testCheckStoreStatisticEmptyField</b><br>Test class: TestPage.TestDashboard.TestDbStatus</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.TestDbStatus@4d8539de</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestCloudBackupReceiver.testCheckWatchIncomingFilesEmptyField()'><b>testCheckWatchIncomingFilesEmptyField</b><br>Test class: TestPage.TestDashboard.Backup.TestCloudBackupReceiver</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.Backup.TestCloudBackupReceiver@60f2e0bd</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestDumpBackup.testCreateDumpBackupCorrect()'><b>testCreateDumpBackupCorrect</b><br>Test class: TestPage.TestDashboard.Backup.TestDumpBackup</td>
+<td></td>
+<td>32</td>
+<td>TestPage.TestDashboard.Backup.TestDumpBackup@7e97551f</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestDumpBackup.testCreateDumpBackupMaxNumbFilesEmpty()'><b>testCreateDumpBackupMaxNumbFilesEmpty</b><br>Test class: TestPage.TestDashboard.Backup.TestDumpBackup</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.Backup.TestDumpBackup@7e97551f</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestDumpBackup.testCreateDumpBackupMinFreeSpaceEmpty()'><b>testCreateDumpBackupMinFreeSpaceEmpty</b><br>Test class: TestPage.TestDashboard.Backup.TestDumpBackup</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.Backup.TestDumpBackup@7e97551f</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestDumpBackup.testCreateDumpBackupPathFolderEmpty()'><b>testCreateDumpBackupPathFolderEmpty</b><br>Test class: TestPage.TestDashboard.Backup.TestDumpBackup</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.Backup.TestDumpBackup@7e97551f</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestDumpBackup.testCreateDumpBackupScheduleIncorrect()'><b>testCreateDumpBackupScheduleIncorrect</b><br>Test class: TestPage.TestDashboard.Backup.TestDumpBackup</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.Backup.TestDumpBackup@7e97551f</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestLockprint.testCreateFiledAverageLengthNumbNegativeValue()'><b>testCreateFiledAverageLengthNumbNegativeValue</b><br>Test class: TestPage.TestDashboard.TestLockprint</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.TestLockprint@5c089b2f</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestLockprint.testCreateFiledDeadlockScansThresholdNumbNegativeValue()'><b>testCreateFiledDeadlockScansThresholdNumbNegativeValue</b><br>Test class: TestPage.TestDashboard.TestLockprint</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.TestLockprint@5c089b2f</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestSweepSchedule.testCreateFiledDeadlockScansThresholdNumbNegativeValue()'><b>testCreateFiledDeadlockScansThresholdNumbNegativeValue</b><br>Test class: TestPage.TestDashboard.TestSweepSchedule</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.TestSweepSchedule@3122b117</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestLockprint.testCreateFiledDeadlockThresholdNumbNegativeValue()'><b>testCreateFiledDeadlockThresholdNumbNegativeValue</b><br>Test class: TestPage.TestDashboard.TestLockprint</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.TestLockprint@5c089b2f</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestLockprint.testCreateFiledFreeOwnersLimitNumbNegativeValue()'><b>testCreateFiledFreeOwnersLimitNumbNegativeValue</b><br>Test class: TestPage.TestDashboard.TestLockprint</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.TestLockprint@5c089b2f</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestLockprint.testCreateFiledHashSlotsNumbNegativeValue()'><b>testCreateFiledHashSlotsNumbNegativeValue</b><br>Test class: TestPage.TestDashboard.TestLockprint</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.TestLockprint@5c089b2f</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestLockprint.testCreateFiledLockTableSizeNumbNegativeValue()'><b>testCreateFiledLockTableSizeNumbNegativeValue</b><br>Test class: TestPage.TestDashboard.TestLockprint</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.TestLockprint@5c089b2f</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestLockprint.testCreateFiledMinLengthNumbNegativeValue()'><b>testCreateFiledMinLengthNumbNegativeValue</b><br>Test class: TestPage.TestDashboard.TestLockprint</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.TestLockprint@5c089b2f</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestLockprint.testCreateFiledMutexWaitThresholdNumbNegativeValue()'><b>testCreateFiledMutexWaitThresholdNumbNegativeValue</b><br>Test class: TestPage.TestDashboard.TestLockprint</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.TestLockprint@5c089b2f</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.TestLockprint.testCreateFiledOwnersLimitNumbNegativeValue()'><b>testCreateFiledOwnersLimitNumbNegativeValue</b><br>Test class: TestPage.TestDashboard.TestLockprint</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.TestLockprint@5c089b2f</td></tr>
+<tr>
+<td title='TestPage.TestPerformance.TestTransactionMonitoring.testCreateFiledShowTransactionsOlderNumbNegativeValue()'><b>testCreateFiledShowTransactionsOlderNumbNegativeValue</b><br>Test class: TestPage.TestPerformance.TestTransactionMonitoring</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestPerformance.TestTransactionMonitoring@6ad11a56</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestIncrementalBackup.testCreateIncrementalBackupCorrect()'><b>testCreateIncrementalBackupCorrect</b><br>Test class: TestPage.TestDashboard.Backup.TestIncrementalBackup</td>
+<td></td>
+<td>34</td>
+<td>TestPage.TestDashboard.Backup.TestIncrementalBackup@70807224</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestIncrementalBackup.testCreateIncrementalBackupJournalFolderEmpty()'><b>testCreateIncrementalBackupJournalFolderEmpty</b><br>Test class: TestPage.TestDashboard.Backup.TestIncrementalBackup</td>
+<td></td>
+<td>2</td>
+<td>TestPage.TestDashboard.Backup.TestIncrementalBackup@70807224</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestIncrementalBackup.testCreateIncrementalBackupMaxDurationEmpty()'><b>testCreateIncrementalBackupMaxDurationEmpty</b><br>Test class: TestPage.TestDashboard.Backup.TestIncrementalBackup</td>
+<td></td>
+<td>3</td>
+<td>TestPage.TestDashboard.Backup.TestIncrementalBackup@70807224</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestIncrementalBackup.testCreateIncrementalBackupMinFreeSpaceEmpty()'><b>testCreateIncrementalBackupMinFreeSpaceEmpty</b><br>Test class: TestPage.TestDashboard.Backup.TestIncrementalBackup</td>
+<td></td>
+<td>2</td>
+<td>TestPage.TestDashboard.Backup.TestIncrementalBackup@70807224</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestIncrementalBackup.testCreateIncrementalBackupPathFolderEmpty()'><b>testCreateIncrementalBackupPathFolderEmpty</b><br>Test class: TestPage.TestDashboard.Backup.TestIncrementalBackup</td>
+<td></td>
+<td>3</td>
+<td>TestPage.TestDashboard.Backup.TestIncrementalBackup@70807224</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestIncrementalBackup.testCreateIncrementalBackupPerformBackupEmpty()'><b>testCreateIncrementalBackupPerformBackupEmpty</b><br>Test class: TestPage.TestDashboard.Backup.TestIncrementalBackup</td>
+<td></td>
+<td>2</td>
+<td>TestPage.TestDashboard.Backup.TestIncrementalBackup@70807224</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestRestoreDb.testCreateRestoreDbBackupFolderEmptyField()'><b>testCreateRestoreDbBackupFolderEmptyField</b><br>Test class: TestPage.TestDashboard.Backup.TestRestoreDb</td>
+<td></td>
+<td>1</td>
+<td>TestPage.TestDashboard.Backup.TestRestoreDb@400d912a</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestRestoreDb.testCreateRestoreDbCorrect()'><b>testCreateRestoreDbCorrect</b><br>Test class: TestPage.TestDashboard.Backup.TestRestoreDb</td>
+<td></td>
+<td>33</td>
+<td>TestPage.TestDashboard.Backup.TestRestoreDb@400d912a</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestRestoreDb.testCreateRestoreDbLimitProcessTimeEmptyField()'><b>testCreateRestoreDbLimitProcessTimeEmptyField</b><br>Test class: TestPage.TestDashboard.Backup.TestRestoreDb</td>
+<td></td>
+<td>1</td>
+<td>TestPage.TestDashboard.Backup.TestRestoreDb@400d912a</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestRestoreDb.testCreateRestoreDbMinFreeSpaceEmptyField()'><b>testCreateRestoreDbMinFreeSpaceEmptyField</b><br>Test class: TestPage.TestDashboard.Backup.TestRestoreDb</td>
+<td></td>
+<td>1</td>
+<td>TestPage.TestDashboard.Backup.TestRestoreDb@400d912a</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestRestoreDb.testCreateRestoreDbPathRestoreFolderEmptyField()'><b>testCreateRestoreDbPathRestoreFolderEmptyField</b><br>Test class: TestPage.TestDashboard.Backup.TestRestoreDb</td>
+<td></td>
+<td>1</td>
+<td>TestPage.TestDashboard.Backup.TestRestoreDb@400d912a</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestRestoreDb.testCreateRestoreDbPathTemplateBackupFolderEmptyField()'><b>testCreateRestoreDbPathTemplateBackupFolderEmptyField</b><br>Test class: TestPage.TestDashboard.Backup.TestRestoreDb</td>
+<td></td>
+<td>1</td>
+<td>TestPage.TestDashboard.Backup.TestRestoreDb@400d912a</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestRestoreDb.testCreateRestoreDbRestoreFileNameEmptyField()'><b>testCreateRestoreDbRestoreFileNameEmptyField</b><br>Test class: TestPage.TestDashboard.Backup.TestRestoreDb</td>
+<td></td>
+<td>1</td>
+<td>TestPage.TestDashboard.Backup.TestRestoreDb@400d912a</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestRestoreDb.testCreateRestoreDbScheduleIncorrect()'><b>testCreateRestoreDbScheduleIncorrect</b><br>Test class: TestPage.TestDashboard.Backup.TestRestoreDb</td>
+<td></td>
+<td>1</td>
+<td>TestPage.TestDashboard.Backup.TestRestoreDb@400d912a</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestRestoreDb.testCreateRestoreDbSuffixFileNameEmptyField()'><b>testCreateRestoreDbSuffixFileNameEmptyField</b><br>Test class: TestPage.TestDashboard.Backup.TestRestoreDb</td>
+<td></td>
+<td>1</td>
+<td>TestPage.TestDashboard.Backup.TestRestoreDb@400d912a</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestRestoreDb.testCreateRestoreTimeTakeBackupEmptyField()'><b>testCreateRestoreTimeTakeBackupEmptyField</b><br>Test class: TestPage.TestDashboard.Backup.TestRestoreDb</td>
+<td></td>
+<td>1</td>
+<td>TestPage.TestDashboard.Backup.TestRestoreDb@400d912a</td></tr>
+<tr>
+<td title='TestPage.TestPerformance.TestTransactionMonitoring.testCreateSendAlertOldestActiveTransactionNumbNegativeValue()'><b>testCreateSendAlertOldestActiveTransactionNumbNegativeValue</b><br>Test class: TestPage.TestPerformance.TestTransactionMonitoring</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestPerformance.TestTransactionMonitoring@6ad11a56</td></tr>
+<tr>
+<td title='TestPage.TestPerformance.TestTransactionMonitoring.testCreateShowOnlyNNOldestActiveTransactionsNumbNegativeValue()'><b>testCreateShowOnlyNNOldestActiveTransactionsNumbNegativeValue</b><br>Test class: TestPage.TestPerformance.TestTransactionMonitoring</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestPerformance.TestTransactionMonitoring@6ad11a56</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestSqlPing.testCreateSqlPingCorrect()'><b>testCreateSqlPingCorrect</b><br>Test class: TestPage.TestDashboard.Backup.TestSqlPing</td>
+<td></td>
+<td>34</td>
+<td>TestPage.TestDashboard.Backup.TestSqlPing@9f6e406</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestVerifiedBackup.testCreateVerifiedBackupCorrect()'><b>testCreateVerifiedBackupCorrect</b><br>Test class: TestPage.TestDashboard.Backup.TestVerifiedBackup</td>
+<td></td>
+<td>34</td>
+<td>TestPage.TestDashboard.Backup.TestVerifiedBackup@23cd4ff2</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestVerifiedBackup.testCreateVerifiedBackupMaxNumbNegative()'><b>testCreateVerifiedBackupMaxNumbNegative</b><br>Test class: TestPage.TestDashboard.Backup.TestVerifiedBackup</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.Backup.TestVerifiedBackup@23cd4ff2</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestVerifiedBackup.testCreateVerifiedBackupMaxNumbNotNumbers()'><b>testCreateVerifiedBackupMaxNumbNotNumbers</b><br>Test class: TestPage.TestDashboard.Backup.TestVerifiedBackup</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.Backup.TestVerifiedBackup@23cd4ff2</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Backup.TestVerifiedBackup.testCreateVerifiedBackupScheduleIncorrect()'><b>testCreateVerifiedBackupScheduleIncorrect</b><br>Test class: TestPage.TestDashboard.Backup.TestVerifiedBackup</td>
+<td></td>
+<td>0</td>
+<td>TestPage.TestDashboard.Backup.TestVerifiedBackup@23cd4ff2</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestPage.TestDashboard.Replica.TestReplica.testAddCloudBackupCorrect()'><b>testAddCloudBackupCorrect</b><br>Test class: TestPage.TestDashboard.Replica.TestReplica</td>
+<td><div><pre>java.lang.Throwable: Method TestReplica.testAddCloudBackupCorrect()[pri:13, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1719893371", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1719893371'><pre>java.lang.Throwable: Method TestReplica.testAddCloudBackupCorrect()[pri:13, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:377)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
+</pre></div></td>
+<td>0</td>
+<td>TestPage.TestDashboard.Replica.TestReplica@6f6962ba</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Replica.TestReplica.testAddCloudBackupReceiverCorrect()'><b>testAddCloudBackupReceiverCorrect</b><br>Test class: TestPage.TestDashboard.Replica.TestReplica</td>
+<td><div><pre>java.lang.Throwable: Method TestReplica.testAddCloudBackupReceiverCorrect()[pri:14, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace569046875", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace569046875'><pre>java.lang.Throwable: Method TestReplica.testAddCloudBackupReceiverCorrect()[pri:14, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:377)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
+</pre></div></td>
+<td>0</td>
+<td>TestPage.TestDashboard.Replica.TestReplica@6f6962ba</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Replica.TestReplica.testAddFtpCorrect()'><b>testAddFtpCorrect</b><br>Test class: TestPage.TestDashboard.Replica.TestReplica</td>
+<td><div><pre>java.lang.Throwable: Method TestReplica.testAddFtpCorrect()[pri:12, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1970866392", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1970866392'><pre>java.lang.Throwable: Method TestReplica.testAddFtpCorrect()[pri:12, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:377)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
+</pre></div></td>
+<td>0</td>
+<td>TestPage.TestDashboard.Replica.TestReplica@6f6962ba</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Replica.TestReplica.testCreateMasterAsync_CheckCreateTable()'><b>testCreateMasterAsync_CheckCreateTable</b><br>Test class: TestPage.TestDashboard.Replica.TestReplica</td>
+<td><div><pre>java.lang.Throwable: Method TestReplica.testCreateMasterAsync_CheckCreateTable()[pri:8, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1380643243", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1380643243'><pre>java.lang.Throwable: Method TestReplica.testCreateMasterAsync_CheckCreateTable()[pri:8, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:377)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
+</pre></div></td>
+<td>0</td>
+<td>TestPage.TestDashboard.Replica.TestReplica@6f6962ba</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Replica.TestReplica.testCreateMasterAsync_Correct()'><b>testCreateMasterAsync_Correct</b><br>Test class: TestPage.TestDashboard.Replica.TestReplica</td>
+<td><div><pre>java.lang.Throwable: Method TestReplica.testCreateMasterAsync_Correct()[pri:7, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1267287892", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1267287892'><pre>java.lang.Throwable: Method TestReplica.testCreateMasterAsync_Correct()[pri:7, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:377)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
+</pre></div></td>
+<td>0</td>
+<td>TestPage.TestDashboard.Replica.TestReplica@6f6962ba</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Replica.TestReplica.testCreateMasterAsync_EmptyLogArchiveDirectoryField()'><b>testCreateMasterAsync_EmptyLogArchiveDirectoryField</b><br>Test class: TestPage.TestDashboard.Replica.TestReplica</td>
+<td><div><pre>java.lang.Throwable: Method TestReplica.testCreateMasterAsync_EmptyLogArchiveDirectoryField()[pri:5, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1473205525", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1473205525'><pre>java.lang.Throwable: Method TestReplica.testCreateMasterAsync_EmptyLogArchiveDirectoryField()[pri:5, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:377)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
+</pre></div></td>
+<td>0</td>
+<td>TestPage.TestDashboard.Replica.TestReplica@6f6962ba</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Replica.TestReplica.testCreateMasterAsync_IncorrectLogArchiveTimeoutField()'><b>testCreateMasterAsync_IncorrectLogArchiveTimeoutField</b><br>Test class: TestPage.TestDashboard.Replica.TestReplica</td>
+<td><div><pre>java.lang.Throwable: Method TestReplica.testCreateMasterAsync_IncorrectLogArchiveTimeoutField()[pri:6, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1488803904", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1488803904'><pre>java.lang.Throwable: Method TestReplica.testCreateMasterAsync_IncorrectLogArchiveTimeoutField()[pri:6, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:377)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
+</pre></div></td>
+<td>0</td>
+<td>TestPage.TestDashboard.Replica.TestReplica@6f6962ba</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Replica.TestReplica.testCreateMasterAsync_ReinitializeReplicaDatabaseCorrect()'><b>testCreateMasterAsync_ReinitializeReplicaDatabaseCorrect</b><br>Test class: TestPage.TestDashboard.Replica.TestReplica</td>
+<td><div><pre>java.lang.Throwable: Method TestReplica.testCreateMasterAsync_ReinitializeReplicaDatabaseCorrect()[pri:9, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace726176539", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace726176539'><pre>java.lang.Throwable: Method TestReplica.testCreateMasterAsync_ReinitializeReplicaDatabaseCorrect()[pri:9, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:377)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
+</pre></div></td>
+<td>0</td>
+<td>TestPage.TestDashboard.Replica.TestReplica@6f6962ba</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Replica.TestReplica.testCreateReplicaAsync_CheckSelectTable()'><b>testCreateReplicaAsync_CheckSelectTable</b><br>Test class: TestPage.TestDashboard.Replica.TestReplica</td>
+<td><div><pre>java.lang.Throwable: Method TestReplica.testCreateReplicaAsync_CheckSelectTable()[pri:15, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace998538545", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace998538545'><pre>java.lang.Throwable: Method TestReplica.testCreateReplicaAsync_CheckSelectTable()[pri:15, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:377)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
+</pre></div></td>
+<td>0</td>
+<td>TestPage.TestDashboard.Replica.TestReplica@6f6962ba</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Replica.TestReplica.testCreateReplicaAsync_Correct()'><b>testCreateReplicaAsync_Correct</b><br>Test class: TestPage.TestDashboard.Replica.TestReplica</td>
+<td><div><pre>java.lang.Throwable: Method TestReplica.testCreateReplicaAsync_Correct()[pri:11, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1671984614", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1671984614'><pre>java.lang.Throwable: Method TestReplica.testCreateReplicaAsync_Correct()[pri:11, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:377)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
+</pre></div></td>
+<td>0</td>
+<td>TestPage.TestDashboard.Replica.TestReplica@6f6962ba</td></tr>
+<tr>
+<td title='TestPage.TestDashboard.Replica.TestReplica.testCreateReplicaAsync_EmptyLogArchiveDirectoryField()'><b>testCreateReplicaAsync_EmptyLogArchiveDirectoryField</b><br>Test class: TestPage.TestDashboard.Replica.TestReplica</td>
+<td><div><pre>java.lang.Throwable: Method TestReplica.testCreateReplicaAsync_EmptyLogArchiveDirectoryField()[pri:10, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1879467705", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1879467705'><pre>java.lang.Throwable: Method TestReplica.testCreateReplicaAsync_EmptyLogArchiveDirectoryField()[pri:10, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:377)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
+</pre></div></td>
+<td>0</td>
+<td>TestPage.TestDashboard.Replica.TestReplica@6f6962ba</td></tr>
+</table><p>
+</body>
+</html>

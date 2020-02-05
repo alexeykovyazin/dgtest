@@ -1,146 +1,180 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 9, Errors: 0, Skipped: 0, Time elapsed: 29.497 s <<< FAILURE! - in TestSuite
-TestPage.TestDashboard.Replica.TestReplica.testCreateMasterSync_EmptyReplicaDatabaseField  Time elapsed: 0.211 s  <<< FAILURE!
-org.openqa.selenium.json.JsonException: 
-java.lang.reflect.InvocationTargetException
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'MSI', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
-Driver info: driver.version: RemoteWebDriver
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterSync_EmptyReplicaDatabaseField(TestReplica.java:56)
-Caused by: java.lang.reflect.InvocationTargetException
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterSync_EmptyReplicaDatabaseField(TestReplica.java:56)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='form-section-db-replication_role']//*[@value='master']//ancestor::label[2]"}
-  (Session info: chrome=79.0.3945.117)
+Tests run: 120, Failures: 15, Errors: 0, Skipped: 11, Time elapsed: 517.981 s <<< FAILURE! - in TestSuite
+TestPage.TestDashboard.Backup.TestValidateDb.testCheckScheduleIncorrectField  Time elapsed: 3.202 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"#form\-cron\-expression"}
+  (Session info: chrome=79.0.3945.130)
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
 System info: host: 'MSI', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:52913}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0fc3d964738ac3d6dd1a2f66391250d7
-*** Element info: {Using=xpath, value=//*[@id='form-section-db-replication_role']//*[@value='master']//ancestor::label[2]}
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterSync_EmptyReplicaDatabaseField(TestReplica.java:56)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=id, value=form-cron-expression}
+	at TestPage.TestDashboard.Backup.TestValidateDb.testCheckScheduleIncorrectField(TestValidateDb.java:54)
 
-TestPage.TestDashboard.Replica.TestReplica.testCreateMasterSync_Correct  Time elapsed: 0.03 s  <<< FAILURE!
-org.openqa.selenium.ElementNotInteractableException: 
-element not interactable
-  (Session info: chrome=79.0.3945.117)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'MSI', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:52913}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0fc3d964738ac3d6dd1a2f66391250d7
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterSync_Correct(TestReplica.java:73)
-
-TestPage.TestDashboard.Replica.TestReplica.testCreateReplicaSync_Correct  Time elapsed: 1.543 s  <<< FAILURE!
-org.openqa.selenium.json.JsonException: 
-java.lang.reflect.InvocationTargetException
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'MSI', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
-Driver info: driver.version: RemoteWebDriver
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateReplicaSync_Correct(TestReplica.java:88)
-Caused by: java.lang.reflect.InvocationTargetException
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateReplicaSync_Correct(TestReplica.java:88)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='form-section-db-replication_role']//*[@value='replica']//ancestor::label[2]"}
-  (Session info: chrome=79.0.3945.117)
+TestPage.TestDashboard.Backup.TestValidateDb.testCheckShutdownTimeoutEmptyField  Time elapsed: 3.072 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"#form\-cron\-expression"}
+  (Session info: chrome=79.0.3945.130)
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
 System info: host: 'MSI', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:52913}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0fc3d964738ac3d6dd1a2f66391250d7
-*** Element info: {Using=xpath, value=//*[@id='form-section-db-replication_role']//*[@value='replica']//ancestor::label[2]}
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateReplicaSync_Correct(TestReplica.java:88)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=id, value=form-cron-expression}
+	at TestPage.TestDashboard.Backup.TestValidateDb.InitTestValidateDb(TestValidateDb.java:109)
+	at TestPage.TestDashboard.Backup.TestValidateDb.testCheckShutdownTimeoutEmptyField(TestValidateDb.java:69)
 
-TestPage.TestDashboard.Replica.TestReplica.testCreateMasterAsync_EmptyLogDirectoryField  Time elapsed: 2.273 s  <<< FAILURE!
-org.openqa.selenium.json.JsonException: 
-java.lang.reflect.InvocationTargetException
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'MSI', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
-Driver info: driver.version: RemoteWebDriver
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterAsync_EmptyLogDirectoryField(TestReplica.java:104)
-Caused by: java.lang.reflect.InvocationTargetException
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterAsync_EmptyLogDirectoryField(TestReplica.java:104)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='form-section-db-replication_role']//*[@value='master']//ancestor::label[2]"}
-  (Session info: chrome=79.0.3945.117)
+TestPage.TestDashboard.Backup.TestValidateDb.testCreateValidateBDCorrect  Time elapsed: 3.346 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"#form\-cron\-expression"}
+  (Session info: chrome=79.0.3945.130)
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
 System info: host: 'MSI', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:52913}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0fc3d964738ac3d6dd1a2f66391250d7
-*** Element info: {Using=xpath, value=//*[@id='form-section-db-replication_role']//*[@value='master']//ancestor::label[2]}
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterAsync_EmptyLogDirectoryField(TestReplica.java:104)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=id, value=form-cron-expression}
+	at TestPage.TestDashboard.Backup.TestValidateDb.InitTestValidateDb(TestValidateDb.java:109)
+	at TestPage.TestDashboard.Backup.TestValidateDb.testCreateValidateBDCorrect(TestValidateDb.java:86)
 
-TestPage.TestDashboard.Replica.TestReplica.testCreateMasterAsync_EmptyLogArchiveDirectoryField  Time elapsed: 0.032 s  <<< FAILURE!
-org.openqa.selenium.ElementNotInteractableException: 
-element not interactable
-  (Session info: chrome=79.0.3945.117)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'MSI', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:52913}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0fc3d964738ac3d6dd1a2f66391250d7
-	at TestPage.TestDashboard.Replica.TestReplica.InitAsyncTest(TestReplica.java:207)
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterAsync_EmptyLogArchiveDirectoryField(TestReplica.java:119)
-
-TestPage.TestDashboard.Replica.TestReplica.testCreateMasterAsync_IncorrectLogArchiveTimeoutField  Time elapsed: 0.019 s  <<< FAILURE!
-org.openqa.selenium.ElementNotInteractableException: 
-element not interactable
-  (Session info: chrome=79.0.3945.117)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'MSI', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:52913}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0fc3d964738ac3d6dd1a2f66391250d7
-	at TestPage.TestDashboard.Replica.TestReplica.InitAsyncTest(TestReplica.java:207)
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterAsync_IncorrectLogArchiveTimeoutField(TestReplica.java:132)
-
-TestPage.TestDashboard.Replica.TestReplica.testCreateMasterAsync_Correct  Time elapsed: 0.02 s  <<< FAILURE!
-org.openqa.selenium.ElementNotInteractableException: 
-element not interactable
-  (Session info: chrome=79.0.3945.117)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'MSI', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:52913}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0fc3d964738ac3d6dd1a2f66391250d7
-	at TestPage.TestDashboard.Replica.TestReplica.InitAsyncTest(TestReplica.java:207)
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterAsync_Correct(TestReplica.java:163)
-
-TestPage.TestDashboard.Replica.TestReplica.testCreateReplicaAsync_EmptyLogArchiveDirectoryField  Time elapsed: 1.805 s  <<< FAILURE!
-org.openqa.selenium.json.JsonException: 
-java.lang.reflect.InvocationTargetException
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'MSI', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
-Driver info: driver.version: RemoteWebDriver
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateReplicaAsync_EmptyLogArchiveDirectoryField(TestReplica.java:181)
-Caused by: java.lang.reflect.InvocationTargetException
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateReplicaAsync_EmptyLogArchiveDirectoryField(TestReplica.java:181)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='form-section-db-replication_role']//*[@value='replica']//ancestor::label[2]"}
-  (Session info: chrome=79.0.3945.117)
+TestPage.TestDashboard.TestTransactions.testCheckPeriodEmptyField  Time elapsed: 3.096 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"#form\-period"}
+  (Session info: chrome=79.0.3945.130)
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
 System info: host: 'MSI', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:52913}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0fc3d964738ac3d6dd1a2f66391250d7
-*** Element info: {Using=xpath, value=//*[@id='form-section-db-replication_role']//*[@value='replica']//ancestor::label[2]}
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateReplicaAsync_EmptyLogArchiveDirectoryField(TestReplica.java:181)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=id, value=form-period}
+	at TestPage.TestDashboard.TestTransactions.testCheckPeriodEmptyField(TestTransactions.java:53)
 
-TestPage.TestDashboard.Replica.TestReplica.testCreateReplicaAsync_Correct  Time elapsed: 0.026 s  <<< FAILURE!
-org.openqa.selenium.ElementNotInteractableException: 
-element not interactable
-  (Session info: chrome=79.0.3945.117)
+TestPage.TestDashboard.TestTransactions.testCheckFiledAlterOSTOITMoreEmptyField  Time elapsed: 3.048 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"#form\-period"}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
 System info: host: 'MSI', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:52913}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0fc3d964738ac3d6dd1a2f66391250d7
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateReplicaAsync_Correct(TestReplica.java:198)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=id, value=form-period}
+	at TestPage.TestDashboard.TestTransactions.InitTest(TestTransactions.java:114)
+	at TestPage.TestDashboard.TestTransactions.testCheckFiledAlterOSTOITMoreEmptyField(TestTransactions.java:84)
+
+TestPage.TestDashboard.TestTransactions.testCheckFiledMaxTransactionsEmptyField  Time elapsed: 3.065 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"#form\-period"}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'MSI', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=id, value=form-period}
+	at TestPage.TestDashboard.TestTransactions.InitTest(TestTransactions.java:114)
+	at TestPage.TestDashboard.TestTransactions.testCheckFiledMaxTransactionsEmptyField(TestTransactions.java:67)
+
+TestPage.TestDashboard.TestTransactions.testCheckFiledAlterNextOATMoreEmptyField  Time elapsed: 3.038 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"#form\-period"}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'MSI', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=id, value=form-period}
+	at TestPage.TestDashboard.TestTransactions.InitTest(TestTransactions.java:114)
+	at TestPage.TestDashboard.TestTransactions.testCheckFiledAlterNextOATMoreEmptyField(TestTransactions.java:100)
+
+TestPage.TestDashboard.TestLockprint.testCheckFiledBuffersMaxEmptyValue  Time elapsed: 1.376 s  <<< FAILURE!
+java.lang.AssertionError: value must be a number expected ["" is not an integer number] but found [The server encountered an unexpected condition which prevented it from fulfilling the request]
+	at TestPage.TestDashboard.TestLockprint.testCheckFiledBuffersMaxEmptyValue(TestLockprint.java:358)
+
+TestPage.TestDashboard.TestLockprint.testCreateFiledBuffersMaxNumbNegativeValue  Time elapsed: 3.795 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"(//*[@class='alert alert-danger']//span)[2]"}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'MSI', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=xpath, value=(//*[@class='alert alert-danger']//span)[2]}
+	at TestPage.TestDashboard.TestLockprint.testCreateFiledBuffersMaxNumbNegativeValue(TestLockprint.java:374)
+
+TestPage.TestDashboard.TestDelta.testCheckFiledMaxDeltaMinutesEmptyValue  Time elapsed: 0.41 s  <<< FAILURE!
+java.lang.AssertionError: value must be a number expected ["" is not an integer number] but found ["NaN" is not an integer number]
+	at TestPage.TestDashboard.TestDelta.testCheckFiledMaxDeltaMinutesEmptyValue(TestDelta.java:87)
+
+TestPage.TestDashboard.TestLowLevelMetadata.testCheckFieldMaxFormatsEmptyValue  Time elapsed: 1.173 s  <<< FAILURE!
+java.lang.AssertionError: value must be a number expected ["" is not an integer number] but found [The server encountered an unexpected condition which prevented it from fulfilling the request]
+	at TestPage.TestDashboard.TestLowLevelMetadata.testCheckFieldMaxFormatsEmptyValue(TestLowLevelMetadata.java:87)
+
+TestPage.TestDashboard.Replica.TestReplica.testCreateMasterSync_EmptyReplicaDatabaseField  Time elapsed: 3.056 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class='db-item-tab']//span[text()='MasterSync']"}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'MSI', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=xpath, value=//*[@class='db-item-tab']//span[text()='MasterSync']}
+	at TestPage.TestDashboard.Replica.TestReplica.ClickAndCheckBd(TestReplica.java:336)
+	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterSync_EmptyReplicaDatabaseField(TestReplica.java:57)
+
+TestPage.TestDashboard.Replica.TestReplica.testCreateMasterSync_Correct  Time elapsed: 3.033 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"#form\-db\-replica_database"}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'MSI', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=id, value=form-db-replica_database}
+	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterSync_Correct(TestReplica.java:75)
+
+TestPage.TestDashboard.Replica.TestReplica.testCreateReplicaSync_Correct  Time elapsed: 3.79 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class='db-item-tab']//span[text()='ReplicaSync']"}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'MSI', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=xpath, value=//*[@class='db-item-tab']//span[text()='ReplicaSync']}
+	at TestPage.TestDashboard.Replica.TestReplica.ClickAndCheckBd(TestReplica.java:336)
+	at TestPage.TestDashboard.Replica.TestReplica.testCreateReplicaSync_Correct(TestReplica.java:87)
+
+TestPage.TestDashboard.Replica.TestReplica.testCreateMasterAsync_EmptyLogDirectoryField  Time elapsed: 4.304 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class='db-item-tab']//span[text()='MasterAsync']"}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'MSI', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=xpath, value=//*[@class='db-item-tab']//span[text()='MasterAsync']}
+	at TestPage.TestDashboard.Replica.TestReplica.ClickAndCheckBd(TestReplica.java:336)
+	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterAsync_EmptyLogDirectoryField(TestReplica.java:103)
 

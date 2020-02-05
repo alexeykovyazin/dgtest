@@ -2,8 +2,8 @@ package TestPage.TestDashboard.Backup;
 
 import Helpers.Helper;
 import TestPage.EnvContainer;
-import TestPageLocator.DashboardPage.Backup;
 import TestPageLocator.DashboardPage.Database;
+import TestPageLocator.GeneralLocators;
 import io.qameta.allure.Description;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -19,7 +19,7 @@ public class TestCloudBackup extends EnvContainer {
 
     public String _url,_standarturl = "http://localhost:8082/static/dashboard.html";
     private Database _pagedatabase;
-    private Backup _page;
+    private GeneralLocators _page;
     private Helper _ctx;
 
     @BeforeClass
@@ -27,12 +27,12 @@ public class TestCloudBackup extends EnvContainer {
     {
         _driver = EnvContainer.Driver;
         _ctx = new Helper(_driver);
-        _page = PageFactory.initElements(_driver, Backup.class);
+        _page = PageFactory.initElements(_driver, GeneralLocators.class);
         _pagedatabase = PageFactory.initElements(_driver, Database.class);
         openUrl();
         Helper.waitSetup(_driver, 1000);
         _ctx.current(_page.NameBDText(CloudTestDB)).click();
-        _ctx.current(_page.CloudBackupSettingsBtn(CloudTestDB)).click();
+        _ctx.current(_page.CloudBackupSettingsBtn(CloudTestDB)).scrollToElement().click();
         _ctx.current(_page.CheckPeriodField).waitelementToBeClickable();
     }
 //    @AfterMethod
@@ -43,12 +43,12 @@ public class TestCloudBackup extends EnvContainer {
     private void openUrl() {
         _url = EnvContainer.URL + _standarturl;
         _driver.navigate().to(_url);
-        Helper.interceptionJSonPage(_driver);
+        interceptionJSonPage(_driver);
         Helper.waitUpdate(_driver);
     }
 
     @Test( enabled = true, priority = 1)
-    @Description(value = "WHEN we leave the field empty \"Period\" field THEN, the error \"Cron expression or period must be set properly\"")
+    @Description(value = "WHEN we leave the field  \"Period\" empty THEN, the error \"Cron expression or period must be set properly\"")
     public void testCheckPeriodEmptyField()  {
 
         //actions
@@ -62,7 +62,7 @@ public class TestCloudBackup extends EnvContainer {
     }
 
     @Test( enabled = true, priority = 2)
-    @Description(value = "WHEN we leave the field empty \"Monitor Folder\" field THEN, the error \"Monitored folder is empty - please specify it\"")
+    @Description(value = "WHEN we leave the field  \"Monitor Folder\" empty THEN, the error \"Monitored folder is empty - please specify it\"")
     public void testCheckMonitorFolderEmptyField()  {
         // prepare
         InitTestCloudBackup();
@@ -78,7 +78,7 @@ public class TestCloudBackup extends EnvContainer {
     }
 
     @Test( enabled = true, priority = 3)
-    @Description(value = "WHEN we leave the field empty \"Filename Template\" field THEN, the error \"should not be null or empty\"")
+    @Description(value = "WHEN we leave the field  \"Filename Template\" empty THEN, the error \"should not be null or empty\"")
     public void testCheckFilenameTemplateEmptyField()  {
         // prepare
         InitTestCloudBackup();
@@ -94,7 +94,7 @@ public class TestCloudBackup extends EnvContainer {
     }
 
     @Test( enabled = true, priority = 4)
-    @Description(value = "WHEN we leave the field empty \"Filed Connection Ftp\" field THEN, the error \"is not an integer number\"")
+    @Description(value = "WHEN we leave the field  \"Filed Connection Ftp\" empty THEN, the error \"is not an integer number\"")
     public void testCheckFiledConnectionFtpEmptyField()  {
         // prepare
         InitTestCloudBackup();
@@ -110,7 +110,7 @@ public class TestCloudBackup extends EnvContainer {
     }
 
     @Test( enabled = true, priority = 5)
-    @Description(value = "WHEN we leave the field empty \"Keep N Source Files\" field THEN, the error \"is not an integer number\"")
+    @Description(value = "WHEN we leave the field  \"Keep N Source Files\" empty THEN, the error \"is not an integer number\"")
     public void testCheckKeepNSourceFilesFieldEmptyField()  {
         // prepare
         InitTestCloudBackup();
@@ -126,7 +126,7 @@ public class TestCloudBackup extends EnvContainer {
     }
 
     @Test( enabled = true, priority = 6)
-    @Description(value = "WHEN we leave the field empty \"Ftp Server\" field THEN, the error \"FTP Server parameter is empty\"")
+    @Description(value = "WHEN we leave the field  \"Ftp Server\" empty THEN, the error \"FTP Server parameter is empty\"")
     public void testCheckFtpServerEmptyField()  {
         // prepare
         _ctx.current(_page.ConfigureFtpBtn).click();
@@ -148,7 +148,7 @@ public class TestCloudBackup extends EnvContainer {
     }
 
     @Test( enabled = true, priority = 7)
-    @Description(value = "WHEN we leave the field empty \"Ftp Port\" field THEN, the error \"FTP Port is not valid\"")
+    @Description(value = "WHEN we leave the field  \"Ftp Port\" empty THEN, the error \"FTP Port is not valid\"")
     public void testCheckFtpPortEmptyField()  {
         //prepare
         InitTestFtp();

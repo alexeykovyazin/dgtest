@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="29.497" tests="10" errors="0" skipped="0" failures="9">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="517.981" tests="120" errors="0" skipped="11" failures="15">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
     <property name="java.specification.version" value="12"/>
-    <property name="webdriver.chrome.driver" value="src/test/resurces/chromedriver.exe"/>
+    <property name="webdriver.chrome.driver" value="src/test/resurces/Driver/chromedriver.exe"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.class.path" value="C:\dgtest\target\test-classes;C:\dgtest\target\classes;C:\Users\Proger\.m2\repository\org\seleniumhq\selenium\selenium-java\3.14.0\selenium-java-3.14.0.jar;C:\Users\Proger\.m2\repository\org\seleniumhq\selenium\selenium-api\3.14.0\selenium-api-3.14.0.jar;C:\Users\Proger\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.14.0\selenium-chrome-driver-3.14.0.jar;C:\Users\Proger\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.14.0\selenium-edge-driver-3.14.0.jar;C:\Users\Proger\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.14.0\selenium-firefox-driver-3.14.0.jar;C:\Users\Proger\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.14.0\selenium-ie-driver-3.14.0.jar;C:\Users\Proger\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.14.0\selenium-opera-driver-3.14.0.jar;C:\Users\Proger\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.14.0\selenium-remote-driver-3.14.0.jar;C:\Users\Proger\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.14.0\selenium-safari-driver-3.14.0.jar;C:\Users\Proger\.m2\repository\org\seleniumhq\selenium\selenium-support\3.14.0\selenium-support-3.14.0.jar;C:\Users\Proger\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Users\Proger\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\Proger\.m2\repository\commons-codec\commons-codec\1.10\commons-codec-1.10.jar;C:\Users\Proger\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Proger\.m2\repository\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;C:\Users\Proger\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\Proger\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\Users\Proger\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\Users\Proger\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\Proger\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\Proger\.m2\repository\org\apache\httpcomponents\httpclient\4.5.5\httpclient-4.5.5.jar;C:\Users\Proger\.m2\repository\org\apache\httpcomponents\httpcore\4.4.9\httpcore-4.4.9.jar;C:\Users\Proger\.m2\repository\com\squareup\okhttp3\okhttp\3.10.0\okhttp-3.10.0.jar;C:\Users\Proger\.m2\repository\com\squareup\okio\okio\1.14.1\okio-1.14.1.jar;C:\Users\Proger\.m2\repository\org\apache\directory\studio\org.apache.commons.io\2.4\org.apache.commons.io-2.4.jar;C:\Users\Proger\.m2\repository\commons-io\commons-io\2.4\commons-io-2.4.jar;C:\Users\Proger\.m2\repository\org\testng\testng\7.0.0\testng-7.0.0.jar;C:\Users\Proger\.m2\repository\com\beust\jcommander\1.72\jcommander-1.72.jar;C:\Users\Proger\.m2\repository\io\qameta\allure\allure-testng\2.13.1\allure-testng-2.13.1.jar;C:\Users\Proger\.m2\repository\io\qameta\allure\allure-java-commons\2.13.1\allure-java-commons-2.13.1.jar;C:\Users\Proger\.m2\repository\io\qameta\allure\allure-model\2.13.1\allure-model-2.13.1.jar;C:\Users\Proger\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.9.8\jackson-databind-2.9.8.jar;C:\Users\Proger\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar;C:\Users\Proger\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.9.8\jackson-core-2.9.8.jar;C:\Users\Proger\.m2\repository\org\apache\tika\tika-core\1.20\tika-core-1.20.jar;C:\Users\Proger\.m2\repository\org\jooq\joor-java-8\0.9.10\joor-java-8-0.9.10.jar;C:\Users\Proger\.m2\repository\org\slf4j\slf4j-simple\1.7.30\slf4j-simple-1.7.30.jar;C:\Users\Proger\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;"/>
@@ -19,7 +19,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="RU"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-12\bin"/>
-    <property name="sun.java.command" value="C:\Users\Proger\AppData\Local\Temp\surefire8919563838850887174\surefirebooter8387927849645048644.jar C:\Users\Proger\AppData\Local\Temp\surefire8919563838850887174 2020-01-21T22-32-56_326-jvmRun1 surefire1096130818950573552tmp surefire_04899909778657510564tmp"/>
+    <property name="sun.java.command" value="C:\Users\Proger\AppData\Local\Temp\surefire4409221145321825991\surefirebooter7815429929896706394.jar C:\Users\Proger\AppData\Local\Temp\surefire4409221145321825991 2020-02-05T23-46-46_957-jvmRun1 surefire3067518908468708913tmp surefire_016554536606554188231tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\dgtest\target\test-classes;C:\dgtest\target\classes;C:\Users\Proger\.m2\repository\org\seleniumhq\selenium\selenium-java\3.14.0\selenium-java-3.14.0.jar;C:\Users\Proger\.m2\repository\org\seleniumhq\selenium\selenium-api\3.14.0\selenium-api-3.14.0.jar;C:\Users\Proger\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.14.0\selenium-chrome-driver-3.14.0.jar;C:\Users\Proger\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.14.0\selenium-edge-driver-3.14.0.jar;C:\Users\Proger\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.14.0\selenium-firefox-driver-3.14.0.jar;C:\Users\Proger\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.14.0\selenium-ie-driver-3.14.0.jar;C:\Users\Proger\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.14.0\selenium-opera-driver-3.14.0.jar;C:\Users\Proger\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.14.0\selenium-remote-driver-3.14.0.jar;C:\Users\Proger\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.14.0\selenium-safari-driver-3.14.0.jar;C:\Users\Proger\.m2\repository\org\seleniumhq\selenium\selenium-support\3.14.0\selenium-support-3.14.0.jar;C:\Users\Proger\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Users\Proger\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\Proger\.m2\repository\commons-codec\commons-codec\1.10\commons-codec-1.10.jar;C:\Users\Proger\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Proger\.m2\repository\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;C:\Users\Proger\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\Proger\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\Users\Proger\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\Users\Proger\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\Proger\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\Proger\.m2\repository\org\apache\httpcomponents\httpclient\4.5.5\httpclient-4.5.5.jar;C:\Users\Proger\.m2\repository\org\apache\httpcomponents\httpcore\4.4.9\httpcore-4.4.9.jar;C:\Users\Proger\.m2\repository\com\squareup\okhttp3\okhttp\3.10.0\okhttp-3.10.0.jar;C:\Users\Proger\.m2\repository\com\squareup\okio\okio\1.14.1\okio-1.14.1.jar;C:\Users\Proger\.m2\repository\org\apache\directory\studio\org.apache.commons.io\2.4\org.apache.commons.io-2.4.jar;C:\Users\Proger\.m2\repository\commons-io\commons-io\2.4\commons-io-2.4.jar;C:\Users\Proger\.m2\repository\org\testng\testng\7.0.0\testng-7.0.0.jar;C:\Users\Proger\.m2\repository\com\beust\jcommander\1.72\jcommander-1.72.jar;C:\Users\Proger\.m2\repository\io\qameta\allure\allure-testng\2.13.1\allure-testng-2.13.1.jar;C:\Users\Proger\.m2\repository\io\qameta\allure\allure-java-commons\2.13.1\allure-java-commons-2.13.1.jar;C:\Users\Proger\.m2\repository\io\qameta\allure\allure-model\2.13.1\allure-model-2.13.1.jar;C:\Users\Proger\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.9.8\jackson-databind-2.9.8.jar;C:\Users\Proger\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar;C:\Users\Proger\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.9.8\jackson-core-2.9.8.jar;C:\Users\Proger\.m2\repository\org\apache\tika\tika-core\1.20\tika-core-1.20.jar;C:\Users\Proger\.m2\repository\org\jooq\joor-java-8\0.9.10\joor-java-8-0.9.10.jar;C:\Users\Proger\.m2\repository\org\slf4j\slf4j-simple\1.7.30\slf4j-simple-1.7.30.jar;C:\Users\Proger\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -36,7 +36,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\Proger\AppData\Local\Temp\surefire8919563838850887174\surefirebooter8387927849645048644.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Proger\AppData\Local\Temp\surefire4409221145321825991\surefirebooter7815429929896706394.jar"/>
     <property name="webdriver.chrome.verboseLogging" value="false"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -55,6 +55,7 @@
     <property name="user.dir" value="C:\dgtest"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="browsername" value="chrome"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk-12\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\bin;C:\bin\usr\local\wbin;C:\Program Files\Java\jdk-12\bin;C:\Program Files\TortoiseSVN\bin;C:\Windows\System32;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk-12\bin;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;;."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
@@ -63,156 +64,322 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="56.0"/>
   </properties>
-  <testcase name="testCreateMasterSync_EmptyReplicaDatabaseField" classname="TestPage.TestDashboard.Replica.TestReplica" time="0.211">
-    <failure message="java.lang.reflect.InvocationTargetException&#10;Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;&#10;System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;&#10;Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.json.JsonException"><![CDATA[org.openqa.selenium.json.JsonException: 
-java.lang.reflect.InvocationTargetException
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'MSI', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
-Driver info: driver.version: RemoteWebDriver
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterSync_EmptyReplicaDatabaseField(TestReplica.java:56)
-Caused by: java.lang.reflect.InvocationTargetException
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterSync_EmptyReplicaDatabaseField(TestReplica.java:56)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='form-section-db-replication_role']//*[@value='master']//ancestor::label[2]"}
-  (Session info: chrome=79.0.3945.117)
+  <testcase name="testAddDbEmptyPath" classname="TestPage.TestDashboard.TestDatabase" time="0.446"/>
+  <testcase name="testAddDbEmptyName" classname="TestPage.TestDashboard.TestDatabase" time="0.355"/>
+  <testcase name="testAddDbIncorrectPath" classname="TestPage.TestDashboard.TestDatabase" time="0.306"/>
+  <testcase name="testAddDbIncorrectAlias" classname="TestPage.TestDashboard.TestDatabase" time="1.114"/>
+  <testcase name="testAddDbCorrect" classname="TestPage.TestDashboard.TestDatabase" time="4.827"/>
+  <testcase name="testAddDbAlreadyExist" classname="TestPage.TestDashboard.TestDatabase" time="2.762"/>
+  <testcase name="testCreateVerifiedBackupScheduleIncorrect" classname="TestPage.TestDashboard.Backup.TestVerifiedBackup" time="0.771"/>
+  <testcase name="testCreateVerifiedBackupMaxNumbNegative" classname="TestPage.TestDashboard.Backup.TestVerifiedBackup" time="0.467"/>
+  <testcase name="testCreateVerifiedBackupMaxNumbNotNumbers" classname="TestPage.TestDashboard.Backup.TestVerifiedBackup" time="0.452"/>
+  <testcase name="testCreateVerifiedBackupCorrect" classname="TestPage.TestDashboard.Backup.TestVerifiedBackup" time="34.105"/>
+  <testcase name="testCreateIncrementalBackupMaxDurationEmpty" classname="TestPage.TestDashboard.Backup.TestIncrementalBackup" time="3.242"/>
+  <testcase name="testCreateIncrementalBackupMinFreeSpaceEmpty" classname="TestPage.TestDashboard.Backup.TestIncrementalBackup" time="2.386"/>
+  <testcase name="testCreateIncrementalBackupPathFolderEmpty" classname="TestPage.TestDashboard.Backup.TestIncrementalBackup" time="3.393"/>
+  <testcase name="testCreateIncrementalBackupJournalFolderEmpty" classname="TestPage.TestDashboard.Backup.TestIncrementalBackup" time="2.88"/>
+  <testcase name="testCreateIncrementalBackupPerformBackupEmpty" classname="TestPage.TestDashboard.Backup.TestIncrementalBackup" time="2.944"/>
+  <testcase name="testCreateIncrementalBackupCorrect" classname="TestPage.TestDashboard.Backup.TestIncrementalBackup" time="34.976"/>
+  <testcase name="testCreateDumpBackupScheduleIncorrect" classname="TestPage.TestDashboard.Backup.TestDumpBackup" time="0.776"/>
+  <testcase name="testCreateDumpBackupMinFreeSpaceEmpty" classname="TestPage.TestDashboard.Backup.TestDumpBackup" time="0.568"/>
+  <testcase name="testCreateDumpBackupPathFolderEmpty" classname="TestPage.TestDashboard.Backup.TestDumpBackup" time="0.672"/>
+  <testcase name="testCreateDumpBackupMaxNumbFilesEmpty" classname="TestPage.TestDashboard.Backup.TestDumpBackup" time="0.577"/>
+  <testcase name="testCreateDumpBackupCorrect" classname="TestPage.TestDashboard.Backup.TestDumpBackup" time="32.93"/>
+  <testcase name="testCreateRestoreDbScheduleIncorrect" classname="TestPage.TestDashboard.Backup.TestRestoreDb" time="1.733"/>
+  <testcase name="testCreateRestoreDbBackupFolderEmptyField" classname="TestPage.TestDashboard.Backup.TestRestoreDb" time="1.318"/>
+  <testcase name="testCreateRestoreDbPathTemplateBackupFolderEmptyField" classname="TestPage.TestDashboard.Backup.TestRestoreDb" time="1.252"/>
+  <testcase name="testCreateRestoreTimeTakeBackupEmptyField" classname="TestPage.TestDashboard.Backup.TestRestoreDb" time="1.274"/>
+  <testcase name="testCreateRestoreDbPathRestoreFolderEmptyField" classname="TestPage.TestDashboard.Backup.TestRestoreDb" time="1.382"/>
+  <testcase name="testCreateRestoreDbRestoreFileNameEmptyField" classname="TestPage.TestDashboard.Backup.TestRestoreDb" time="1.767"/>
+  <testcase name="testCreateRestoreDbSuffixFileNameEmptyField" classname="TestPage.TestDashboard.Backup.TestRestoreDb" time="1.361"/>
+  <testcase name="testCreateRestoreDbLimitProcessTimeEmptyField" classname="TestPage.TestDashboard.Backup.TestRestoreDb" time="1.429"/>
+  <testcase name="testCreateRestoreDbMinFreeSpaceEmptyField" classname="TestPage.TestDashboard.Backup.TestRestoreDb" time="1.234"/>
+  <testcase name="testCreateRestoreDbCorrect" classname="TestPage.TestDashboard.Backup.TestRestoreDb" time="33.66"/>
+  <testcase name="testCheckScheduleIncorrect" classname="TestPage.TestDashboard.Backup.TestSqlPing" time="1.831"/>
+  <testcase name="testCheckSqlQueryEmptyField" classname="TestPage.TestDashboard.Backup.TestSqlPing" time="1.411"/>
+  <testcase name="testCreateSqlPingCorrect" classname="TestPage.TestDashboard.Backup.TestSqlPing" time="34.08"/>
+  <testcase name="testCheckScheduleIncorrectField" classname="TestPage.TestDashboard.Backup.TestValidateDb" time="3.202">
+    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#form\-cron\-expression&quot;}&#10;  (Session info: chrome=79.0.3945.130)&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;&#10;System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: e06d9cc8825f39d2eff65e1f8163cc08&#10;*** Element info: {Using=id, value=form-cron-expression}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"#form\-cron\-expression"}
+  (Session info: chrome=79.0.3945.130)
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
 System info: host: 'MSI', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:52913}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0fc3d964738ac3d6dd1a2f66391250d7
-*** Element info: {Using=xpath, value=//*[@id='form-section-db-replication_role']//*[@value='master']//ancestor::label[2]}
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterSync_EmptyReplicaDatabaseField(TestReplica.java:56)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=id, value=form-cron-expression}
+	at TestPage.TestDashboard.Backup.TestValidateDb.testCheckScheduleIncorrectField(TestValidateDb.java:54)
 ]]></failure>
   </testcase>
-  <testcase name="testCreateMasterSync_Correct" classname="TestPage.TestDashboard.Replica.TestReplica" time="0.03">
-    <failure message="element not interactable&#10;  (Session info: chrome=79.0.3945.117)&#10;Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;&#10;System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:52913}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: 0fc3d964738ac3d6dd1a2f66391250d7" type="org.openqa.selenium.ElementNotInteractableException"><![CDATA[org.openqa.selenium.ElementNotInteractableException: 
-element not interactable
-  (Session info: chrome=79.0.3945.117)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'MSI', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:52913}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0fc3d964738ac3d6dd1a2f66391250d7
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterSync_Correct(TestReplica.java:73)
-]]></failure>
-  </testcase>
-  <testcase name="testCreateReplicaSync_Correct" classname="TestPage.TestDashboard.Replica.TestReplica" time="1.543">
-    <failure message="java.lang.reflect.InvocationTargetException&#10;Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;&#10;System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;&#10;Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.json.JsonException"><![CDATA[org.openqa.selenium.json.JsonException: 
-java.lang.reflect.InvocationTargetException
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'MSI', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
-Driver info: driver.version: RemoteWebDriver
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateReplicaSync_Correct(TestReplica.java:88)
-Caused by: java.lang.reflect.InvocationTargetException
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateReplicaSync_Correct(TestReplica.java:88)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='form-section-db-replication_role']//*[@value='replica']//ancestor::label[2]"}
-  (Session info: chrome=79.0.3945.117)
+  <testcase name="testCheckShutdownTimeoutEmptyField" classname="TestPage.TestDashboard.Backup.TestValidateDb" time="3.072">
+    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#form\-cron\-expression&quot;}&#10;  (Session info: chrome=79.0.3945.130)&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;&#10;System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: e06d9cc8825f39d2eff65e1f8163cc08&#10;*** Element info: {Using=id, value=form-cron-expression}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"#form\-cron\-expression"}
+  (Session info: chrome=79.0.3945.130)
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
 System info: host: 'MSI', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:52913}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0fc3d964738ac3d6dd1a2f66391250d7
-*** Element info: {Using=xpath, value=//*[@id='form-section-db-replication_role']//*[@value='replica']//ancestor::label[2]}
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateReplicaSync_Correct(TestReplica.java:88)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=id, value=form-cron-expression}
+	at TestPage.TestDashboard.Backup.TestValidateDb.InitTestValidateDb(TestValidateDb.java:109)
+	at TestPage.TestDashboard.Backup.TestValidateDb.testCheckShutdownTimeoutEmptyField(TestValidateDb.java:69)
 ]]></failure>
   </testcase>
-  <testcase name="testCreateMasterAsync_EmptyLogDirectoryField" classname="TestPage.TestDashboard.Replica.TestReplica" time="2.273">
-    <failure message="java.lang.reflect.InvocationTargetException&#10;Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;&#10;System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;&#10;Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.json.JsonException"><![CDATA[org.openqa.selenium.json.JsonException: 
-java.lang.reflect.InvocationTargetException
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'MSI', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
-Driver info: driver.version: RemoteWebDriver
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterAsync_EmptyLogDirectoryField(TestReplica.java:104)
-Caused by: java.lang.reflect.InvocationTargetException
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterAsync_EmptyLogDirectoryField(TestReplica.java:104)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='form-section-db-replication_role']//*[@value='master']//ancestor::label[2]"}
-  (Session info: chrome=79.0.3945.117)
+  <testcase name="testCreateValidateBDCorrect" classname="TestPage.TestDashboard.Backup.TestValidateDb" time="3.346">
+    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#form\-cron\-expression&quot;}&#10;  (Session info: chrome=79.0.3945.130)&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;&#10;System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: e06d9cc8825f39d2eff65e1f8163cc08&#10;*** Element info: {Using=id, value=form-cron-expression}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"#form\-cron\-expression"}
+  (Session info: chrome=79.0.3945.130)
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
 System info: host: 'MSI', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:52913}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0fc3d964738ac3d6dd1a2f66391250d7
-*** Element info: {Using=xpath, value=//*[@id='form-section-db-replication_role']//*[@value='master']//ancestor::label[2]}
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterAsync_EmptyLogDirectoryField(TestReplica.java:104)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=id, value=form-cron-expression}
+	at TestPage.TestDashboard.Backup.TestValidateDb.InitTestValidateDb(TestValidateDb.java:109)
+	at TestPage.TestDashboard.Backup.TestValidateDb.testCreateValidateBDCorrect(TestValidateDb.java:86)
 ]]></failure>
   </testcase>
-  <testcase name="testCreateMasterAsync_EmptyLogArchiveDirectoryField" classname="TestPage.TestDashboard.Replica.TestReplica" time="0.032">
-    <failure message="element not interactable&#10;  (Session info: chrome=79.0.3945.117)&#10;Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;&#10;System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:52913}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: 0fc3d964738ac3d6dd1a2f66391250d7" type="org.openqa.selenium.ElementNotInteractableException"><![CDATA[org.openqa.selenium.ElementNotInteractableException: 
-element not interactable
-  (Session info: chrome=79.0.3945.117)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'MSI', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:52913}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0fc3d964738ac3d6dd1a2f66391250d7
-	at TestPage.TestDashboard.Replica.TestReplica.InitAsyncTest(TestReplica.java:207)
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterAsync_EmptyLogArchiveDirectoryField(TestReplica.java:119)
-]]></failure>
-  </testcase>
-  <testcase name="testCreateMasterAsync_IncorrectLogArchiveTimeoutField" classname="TestPage.TestDashboard.Replica.TestReplica" time="0.019">
-    <failure message="element not interactable&#10;  (Session info: chrome=79.0.3945.117)&#10;Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;&#10;System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:52913}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: 0fc3d964738ac3d6dd1a2f66391250d7" type="org.openqa.selenium.ElementNotInteractableException"><![CDATA[org.openqa.selenium.ElementNotInteractableException: 
-element not interactable
-  (Session info: chrome=79.0.3945.117)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'MSI', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:52913}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0fc3d964738ac3d6dd1a2f66391250d7
-	at TestPage.TestDashboard.Replica.TestReplica.InitAsyncTest(TestReplica.java:207)
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterAsync_IncorrectLogArchiveTimeoutField(TestReplica.java:132)
-]]></failure>
-  </testcase>
-  <testcase name="testCreateMasterAsync_ReinitializeReplicaDatabaseCorrect" classname="TestPage.TestDashboard.Replica.TestReplica" time="0.001"/>
-  <testcase name="testCreateMasterAsync_Correct" classname="TestPage.TestDashboard.Replica.TestReplica" time="0.02">
-    <failure message="element not interactable&#10;  (Session info: chrome=79.0.3945.117)&#10;Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;&#10;System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:52913}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: 0fc3d964738ac3d6dd1a2f66391250d7" type="org.openqa.selenium.ElementNotInteractableException"><![CDATA[org.openqa.selenium.ElementNotInteractableException: 
-element not interactable
-  (Session info: chrome=79.0.3945.117)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'MSI', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:52913}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0fc3d964738ac3d6dd1a2f66391250d7
-	at TestPage.TestDashboard.Replica.TestReplica.InitAsyncTest(TestReplica.java:207)
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterAsync_Correct(TestReplica.java:163)
-]]></failure>
-  </testcase>
-  <testcase name="testCreateReplicaAsync_EmptyLogArchiveDirectoryField" classname="TestPage.TestDashboard.Replica.TestReplica" time="1.805">
-    <failure message="java.lang.reflect.InvocationTargetException&#10;Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;&#10;System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;&#10;Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.json.JsonException"><![CDATA[org.openqa.selenium.json.JsonException: 
-java.lang.reflect.InvocationTargetException
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'MSI', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
-Driver info: driver.version: RemoteWebDriver
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateReplicaAsync_EmptyLogArchiveDirectoryField(TestReplica.java:181)
-Caused by: java.lang.reflect.InvocationTargetException
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateReplicaAsync_EmptyLogArchiveDirectoryField(TestReplica.java:181)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='form-section-db-replication_role']//*[@value='replica']//ancestor::label[2]"}
-  (Session info: chrome=79.0.3945.117)
+  <testcase name="testCheckPeriodEmptyField" classname="TestPage.TestDashboard.Backup.TestCloudBackup" time="0.305"/>
+  <testcase name="testCheckMonitorFolderEmptyField" classname="TestPage.TestDashboard.Backup.TestCloudBackup" time="0.798"/>
+  <testcase name="testCheckFilenameTemplateEmptyField" classname="TestPage.TestDashboard.Backup.TestCloudBackup" time="0.75"/>
+  <testcase name="testCheckFiledConnectionFtpEmptyField" classname="TestPage.TestDashboard.Backup.TestCloudBackup" time="1.195"/>
+  <testcase name="testCheckKeepNSourceFilesFieldEmptyField" classname="TestPage.TestDashboard.Backup.TestCloudBackup" time="0.742"/>
+  <testcase name="testCheckFtpServerEmptyField" classname="TestPage.TestDashboard.Backup.TestCloudBackup" time="3.82"/>
+  <testcase name="testCheckFtpPortEmptyField" classname="TestPage.TestDashboard.Backup.TestCloudBackup" time="1.388"/>
+  <testcase name="testCheckPeriodEmptyField" classname="TestPage.TestDashboard.Backup.TestCloudBackupReceiver" time="2.196"/>
+  <testcase name="testCheckWatchIncomingFilesEmptyField" classname="TestPage.TestDashboard.Backup.TestCloudBackupReceiver" time="0.907"/>
+  <testcase name="testCheckFilenameTemplateEmptyField" classname="TestPage.TestDashboard.Backup.TestCloudBackupReceiver" time="0.88"/>
+  <testcase name="testCheckExtensionPackedFilesEmptyField" classname="TestPage.TestDashboard.Backup.TestCloudBackupReceiver" time="0.889"/>
+  <testcase name="testCheckDecryptPasswordEmptyField" classname="TestPage.TestDashboard.Backup.TestCloudBackupReceiver" time="0.882"/>
+  <testcase name="testCheckAlertFileCountIncorrectValue" classname="TestPage.TestDashboard.Backup.TestCloudBackupReceiver" time="0.91"/>
+  <testcase name="testCheckAlertFileAgeEmptyField" classname="TestPage.TestDashboard.Backup.TestCloudBackupReceiver" time="0.97"/>
+  <testcase name="testCheckPeriodEmptyField" classname="TestPage.TestDashboard.TestTransactions" time="3.096">
+    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#form\-period&quot;}&#10;  (Session info: chrome=79.0.3945.130)&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;&#10;System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: e06d9cc8825f39d2eff65e1f8163cc08&#10;*** Element info: {Using=id, value=form-period}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"#form\-period"}
+  (Session info: chrome=79.0.3945.130)
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
 System info: host: 'MSI', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:52913}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0fc3d964738ac3d6dd1a2f66391250d7
-*** Element info: {Using=xpath, value=//*[@id='form-section-db-replication_role']//*[@value='replica']//ancestor::label[2]}
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateReplicaAsync_EmptyLogArchiveDirectoryField(TestReplica.java:181)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=id, value=form-period}
+	at TestPage.TestDashboard.TestTransactions.testCheckPeriodEmptyField(TestTransactions.java:53)
 ]]></failure>
   </testcase>
-  <testcase name="testCreateReplicaAsync_Correct" classname="TestPage.TestDashboard.Replica.TestReplica" time="0.026">
-    <failure message="element not interactable&#10;  (Session info: chrome=79.0.3945.117)&#10;Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;&#10;System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:52913}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: 0fc3d964738ac3d6dd1a2f66391250d7" type="org.openqa.selenium.ElementNotInteractableException"><![CDATA[org.openqa.selenium.ElementNotInteractableException: 
-element not interactable
-  (Session info: chrome=79.0.3945.117)
+  <testcase name="testCheckFiledAlterOSTOITMoreEmptyField" classname="TestPage.TestDashboard.TestTransactions" time="3.048">
+    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#form\-period&quot;}&#10;  (Session info: chrome=79.0.3945.130)&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;&#10;System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: e06d9cc8825f39d2eff65e1f8163cc08&#10;*** Element info: {Using=id, value=form-period}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"#form\-period"}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
 System info: host: 'MSI', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:52913}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0fc3d964738ac3d6dd1a2f66391250d7
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateReplicaAsync_Correct(TestReplica.java:198)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=id, value=form-period}
+	at TestPage.TestDashboard.TestTransactions.InitTest(TestTransactions.java:114)
+	at TestPage.TestDashboard.TestTransactions.testCheckFiledAlterOSTOITMoreEmptyField(TestTransactions.java:84)
 ]]></failure>
   </testcase>
+  <testcase name="testCheckFiledMaxTransactionsEmptyField" classname="TestPage.TestDashboard.TestTransactions" time="3.065">
+    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#form\-period&quot;}&#10;  (Session info: chrome=79.0.3945.130)&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;&#10;System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: e06d9cc8825f39d2eff65e1f8163cc08&#10;*** Element info: {Using=id, value=form-period}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"#form\-period"}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'MSI', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=id, value=form-period}
+	at TestPage.TestDashboard.TestTransactions.InitTest(TestTransactions.java:114)
+	at TestPage.TestDashboard.TestTransactions.testCheckFiledMaxTransactionsEmptyField(TestTransactions.java:67)
+]]></failure>
+  </testcase>
+  <testcase name="testCheckFiledAlterNextOATMoreEmptyField" classname="TestPage.TestDashboard.TestTransactions" time="3.038">
+    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#form\-period&quot;}&#10;  (Session info: chrome=79.0.3945.130)&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;&#10;System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: e06d9cc8825f39d2eff65e1f8163cc08&#10;*** Element info: {Using=id, value=form-period}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"#form\-period"}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'MSI', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=id, value=form-period}
+	at TestPage.TestDashboard.TestTransactions.InitTest(TestTransactions.java:114)
+	at TestPage.TestDashboard.TestTransactions.testCheckFiledAlterNextOATMoreEmptyField(TestTransactions.java:100)
+]]></failure>
+  </testcase>
+  <testcase name="testCheckPeriodEmptyField" classname="TestPage.TestDashboard.TestLockprint" time="0.302"/>
+  <testcase name="testCheckFiledDeadlockScansThresholdEmptyValue" classname="TestPage.TestDashboard.TestLockprint" time="1.039"/>
+  <testcase name="testCreateFiledDeadlockScansThresholdNumbNegativeValue" classname="TestPage.TestDashboard.TestLockprint" time="0.263"/>
+  <testcase name="testCheckFiledDeadlockThresholdEmptyValue" classname="TestPage.TestDashboard.TestLockprint" time="0.864"/>
+  <testcase name="testCreateFiledDeadlockThresholdNumbNegativeValue" classname="TestPage.TestDashboard.TestLockprint" time="0.256"/>
+  <testcase name="testCheckFiledMutexWaitThresholdEmptyValue" classname="TestPage.TestDashboard.TestLockprint" time="1.106"/>
+  <testcase name="testCreateFiledMutexWaitThresholdNumbNegativeValue" classname="TestPage.TestDashboard.TestLockprint" time="0.261"/>
+  <testcase name="testCheckFiledHashSlotsEmptyValue" classname="TestPage.TestDashboard.TestLockprint" time="0.867"/>
+  <testcase name="testCreateFiledHashSlotsNumbNegativeValue" classname="TestPage.TestDashboard.TestLockprint" time="0.261"/>
+  <testcase name="testCheckFiledMinLengthEmptyValue" classname="TestPage.TestDashboard.TestLockprint" time="0.873"/>
+  <testcase name="testCreateFiledMinLengthNumbNegativeValue" classname="TestPage.TestDashboard.TestLockprint" time="0.259"/>
+  <testcase name="testCheckFiledAverageLengthEmptyValue" classname="TestPage.TestDashboard.TestLockprint" time="0.894"/>
+  <testcase name="testCreateFiledAverageLengthNumbNegativeValue" classname="TestPage.TestDashboard.TestLockprint" time="0.258"/>
+  <testcase name="testCheckFiledOwnersLimitEmptyValue" classname="TestPage.TestDashboard.TestLockprint" time="0.862"/>
+  <testcase name="testCreateFiledOwnersLimitNumbNegativeValue" classname="TestPage.TestDashboard.TestLockprint" time="0.275"/>
+  <testcase name="testCheckFiledFreeOwnersLimitEmptyValue" classname="TestPage.TestDashboard.TestLockprint" time="0.856"/>
+  <testcase name="testCreateFiledFreeOwnersLimitNumbNegativeValue" classname="TestPage.TestDashboard.TestLockprint" time="0.298"/>
+  <testcase name="testCheckFiledLockTableSizeEmptyValue" classname="TestPage.TestDashboard.TestLockprint" time="0.875"/>
+  <testcase name="testCreateFiledLockTableSizeNumbNegativeValue" classname="TestPage.TestDashboard.TestLockprint" time="0.3"/>
+  <testcase name="testCheckFiledBuffersMaxEmptyValue" classname="TestPage.TestDashboard.TestLockprint" time="1.376">
+    <failure message="value must be a number expected [&quot;&quot; is not an integer number] but found [The server encountered an unexpected condition which prevented it from fulfilling the request]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: value must be a number expected ["" is not an integer number] but found [The server encountered an unexpected condition which prevented it from fulfilling the request]
+	at TestPage.TestDashboard.TestLockprint.testCheckFiledBuffersMaxEmptyValue(TestLockprint.java:358)
+]]></failure>
+  </testcase>
+  <testcase name="testCreateFiledBuffersMaxNumbNegativeValue" classname="TestPage.TestDashboard.TestLockprint" time="3.795">
+    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//*[@class=&apos;alert alert-danger&apos;]//span)[2]&quot;}&#10;  (Session info: chrome=79.0.3945.130)&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;&#10;System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: e06d9cc8825f39d2eff65e1f8163cc08&#10;*** Element info: {Using=xpath, value=(//*[@class=&apos;alert alert-danger&apos;]//span)[2]}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"(//*[@class='alert alert-danger']//span)[2]"}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'MSI', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=xpath, value=(//*[@class='alert alert-danger']//span)[2]}
+	at TestPage.TestDashboard.TestLockprint.testCreateFiledBuffersMaxNumbNegativeValue(TestLockprint.java:374)
+]]></failure>
+  </testcase>
+  <testcase name="testCheckPeriodEmptyField" classname="TestPage.TestDashboard.TestSweepSchedule" time="1.364"/>
+  <testcase name="testCheckFiledDeadlockScansThresholdEmptyValue" classname="TestPage.TestDashboard.TestSweepSchedule" time="1.524"/>
+  <testcase name="testCreateFiledDeadlockScansThresholdNumbNegativeValue" classname="TestPage.TestDashboard.TestSweepSchedule" time="0.272"/>
+  <testcase name="testCheckPeriodEmptyField" classname="TestPage.TestDashboard.TestDelta" time="1.356"/>
+  <testcase name="testCheckFiledMaxDeltaBytesEmptyValue" classname="TestPage.TestDashboard.TestDelta" time="0.449"/>
+  <testcase name="testCheckFiledMaxDeltaMinutesEmptyValue" classname="TestPage.TestDashboard.TestDelta" time="0.41">
+    <failure message="value must be a number expected [&quot;&quot; is not an integer number] but found [&quot;NaN&quot; is not an integer number]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: value must be a number expected ["" is not an integer number] but found ["NaN" is not an integer number]
+	at TestPage.TestDashboard.TestDelta.testCheckFiledMaxDeltaMinutesEmptyValue(TestDelta.java:87)
+]]></failure>
+  </testcase>
+  <testcase name="testCheckPeriodEmptyField" classname="TestPage.TestDashboard.TestDiskSpace" time="1.343"/>
+  <testcase name="testCheckFiledMaxDeltaBytesEmptyValue" classname="TestPage.TestDashboard.TestDiskSpace" time="0.428"/>
+  <testcase name="testCheckFiledMaxDeltaMinutesEmptyValue" classname="TestPage.TestDashboard.TestDiskSpace" time="0.419"/>
+  <testcase name="testCheckPeriodEmptyField" classname="TestPage.TestDashboard.TestDbStatus" time="1.296"/>
+  <testcase name="testCheckStoreStatisticEmptyField" classname="TestPage.TestDashboard.TestDbStatus" time="0.647"/>
+  <testcase name="testCheckStatisticsArchiveDepthEmptyValue" classname="TestPage.TestDashboard.TestDbStatus" time="0.557"/>
+  <testcase name="testCheckStatisticsFileNamePatternEmptyField" classname="TestPage.TestDashboard.TestDbStatus" time="0.578"/>
+  <testcase name="testCheckFieldPeriodEmptyValue" classname="TestPage.TestDashboard.TestIndexStatistics" time="1.355"/>
+  <testcase name="testCheckFieldStatisticsArchiveDepthEmptyValue" classname="TestPage.TestDashboard.TestIndexStatistics" time="0.433"/>
+  <testcase name="testCheckPeriodEmptyField" classname="TestPage.TestDashboard.TestLowLevelMetadata" time="1.337"/>
+  <testcase name="testCheckFieldMetadataFolderEmptyValue" classname="TestPage.TestDashboard.TestLowLevelMetadata" time="0.586"/>
+  <testcase name="testCheckFieldMaxFormatsEmptyValue" classname="TestPage.TestDashboard.TestLowLevelMetadata" time="1.173">
+    <failure message="value must be a number expected [&quot;&quot; is not an integer number] but found [The server encountered an unexpected condition which prevented it from fulfilling the request]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: value must be a number expected ["" is not an integer number] but found [The server encountered an unexpected condition which prevented it from fulfilling the request]
+	at TestPage.TestDashboard.TestLowLevelMetadata.testCheckFieldMaxFormatsEmptyValue(TestLowLevelMetadata.java:87)
+]]></failure>
+  </testcase>
+  <testcase name="testCheckFieldDateFormatFolderNameEmptyValue" classname="TestPage.TestDashboard.TestLowLevelMetadata" time="0.529"/>
+  <testcase name="testCheckPeriodEmptyField" classname="TestPage.TestPerformance.TestTransactionMonitoring" time="2.482"/>
+  <testcase name="testCheckFieldOutputFolderEmptyValue" classname="TestPage.TestPerformance.TestTransactionMonitoring" time="0.613"/>
+  <testcase name="testCheckFiledShowTransactionsOlderEmptyValue" classname="TestPage.TestPerformance.TestTransactionMonitoring" time="0.559"/>
+  <testcase name="testCreateFiledShowTransactionsOlderNumbNegativeValue" classname="TestPage.TestPerformance.TestTransactionMonitoring" time="0.212"/>
+  <testcase name="testCheckSendAlertOldestActiveTransactionEmptyValue" classname="TestPage.TestPerformance.TestTransactionMonitoring" time="0.543"/>
+  <testcase name="testCreateSendAlertOldestActiveTransactionNumbNegativeValue" classname="TestPage.TestPerformance.TestTransactionMonitoring" time="0.205"/>
+  <testcase name="testCheckShowOnlyNNOldestActiveTransactionsEmptyValue" classname="TestPage.TestPerformance.TestTransactionMonitoring" time="0.546"/>
+  <testcase name="testCreateShowOnlyNNOldestActiveTransactionsNumbNegativeValue" classname="TestPage.TestPerformance.TestTransactionMonitoring" time="0.211"/>
+  <testcase name="testCreateMasterSync_EmptyReplicaDatabaseField" classname="TestPage.TestDashboard.Replica.TestReplica" time="3.056">
+    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@class=&apos;db-item-tab&apos;]//span[text()=&apos;MasterSync&apos;]&quot;}&#10;  (Session info: chrome=79.0.3945.130)&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;&#10;System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: e06d9cc8825f39d2eff65e1f8163cc08&#10;*** Element info: {Using=xpath, value=//*[@class=&apos;db-item-tab&apos;]//span[text()=&apos;MasterSync&apos;]}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class='db-item-tab']//span[text()='MasterSync']"}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'MSI', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=xpath, value=//*[@class='db-item-tab']//span[text()='MasterSync']}
+	at TestPage.TestDashboard.Replica.TestReplica.ClickAndCheckBd(TestReplica.java:336)
+	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterSync_EmptyReplicaDatabaseField(TestReplica.java:57)
+]]></failure>
+  </testcase>
+  <testcase name="testCreateMasterSync_Correct" classname="TestPage.TestDashboard.Replica.TestReplica" time="3.033">
+    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#form\-db\-replica_database&quot;}&#10;  (Session info: chrome=79.0.3945.130)&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;&#10;System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: e06d9cc8825f39d2eff65e1f8163cc08&#10;*** Element info: {Using=id, value=form-db-replica_database}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"#form\-db\-replica_database"}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'MSI', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=id, value=form-db-replica_database}
+	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterSync_Correct(TestReplica.java:75)
+]]></failure>
+  </testcase>
+  <testcase name="testCreateReplicaSync_Correct" classname="TestPage.TestDashboard.Replica.TestReplica" time="3.79">
+    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@class=&apos;db-item-tab&apos;]//span[text()=&apos;ReplicaSync&apos;]&quot;}&#10;  (Session info: chrome=79.0.3945.130)&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;&#10;System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: e06d9cc8825f39d2eff65e1f8163cc08&#10;*** Element info: {Using=xpath, value=//*[@class=&apos;db-item-tab&apos;]//span[text()=&apos;ReplicaSync&apos;]}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class='db-item-tab']//span[text()='ReplicaSync']"}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'MSI', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=xpath, value=//*[@class='db-item-tab']//span[text()='ReplicaSync']}
+	at TestPage.TestDashboard.Replica.TestReplica.ClickAndCheckBd(TestReplica.java:336)
+	at TestPage.TestDashboard.Replica.TestReplica.testCreateReplicaSync_Correct(TestReplica.java:87)
+]]></failure>
+  </testcase>
+  <testcase name="testCreateMasterAsync_EmptyLogDirectoryField" classname="TestPage.TestDashboard.Replica.TestReplica" time="4.304">
+    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@class=&apos;db-item-tab&apos;]//span[text()=&apos;MasterAsync&apos;]&quot;}&#10;  (Session info: chrome=79.0.3945.130)&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;&#10;System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: e06d9cc8825f39d2eff65e1f8163cc08&#10;*** Element info: {Using=xpath, value=//*[@class=&apos;db-item-tab&apos;]//span[text()=&apos;MasterAsync&apos;]}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class='db-item-tab']//span[text()='MasterAsync']"}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'MSI', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=xpath, value=//*[@class='db-item-tab']//span[text()='MasterAsync']}
+	at TestPage.TestDashboard.Replica.TestReplica.ClickAndCheckBd(TestReplica.java:336)
+	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterAsync_EmptyLogDirectoryField(TestReplica.java:103)
+]]></failure>
+  </testcase>
+  <testcase name="testCreateMasterAsync_EmptyLogArchiveDirectoryField" classname="TestPage.TestDashboard.Replica.TestReplica" time="0">
+    <skipped message="Method TestReplica.testCreateMasterAsync_EmptyLogArchiveDirectoryField()[pri:5, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods"/>
+  </testcase>
+  <testcase name="testCreateMasterAsync_IncorrectLogArchiveTimeoutField" classname="TestPage.TestDashboard.Replica.TestReplica" time="0">
+    <skipped message="Method TestReplica.testCreateMasterAsync_IncorrectLogArchiveTimeoutField()[pri:6, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods"/>
+  </testcase>
+  <testcase name="testCreateMasterAsync_Correct" classname="TestPage.TestDashboard.Replica.TestReplica" time="0">
+    <skipped message="Method TestReplica.testCreateMasterAsync_Correct()[pri:7, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods"/>
+  </testcase>
+  <testcase name="testCreateMasterAsync_CheckCreateTable" classname="TestPage.TestDashboard.Replica.TestReplica" time="0">
+    <skipped message="Method TestReplica.testCreateMasterAsync_CheckCreateTable()[pri:8, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods"/>
+  </testcase>
+  <testcase name="testCreateMasterAsync_ReinitializeReplicaDatabaseCorrect" classname="TestPage.TestDashboard.Replica.TestReplica" time="0">
+    <skipped message="Method TestReplica.testCreateMasterAsync_ReinitializeReplicaDatabaseCorrect()[pri:9, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods"/>
+  </testcase>
+  <testcase name="testCreateReplicaAsync_EmptyLogArchiveDirectoryField" classname="TestPage.TestDashboard.Replica.TestReplica" time="0">
+    <skipped message="Method TestReplica.testCreateReplicaAsync_EmptyLogArchiveDirectoryField()[pri:10, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods"/>
+  </testcase>
+  <testcase name="testCreateReplicaAsync_Correct" classname="TestPage.TestDashboard.Replica.TestReplica" time="0">
+    <skipped message="Method TestReplica.testCreateReplicaAsync_Correct()[pri:11, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods"/>
+  </testcase>
+  <testcase name="testAddFtpCorrect" classname="TestPage.TestDashboard.Replica.TestReplica" time="0">
+    <skipped message="Method TestReplica.testAddFtpCorrect()[pri:12, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods"/>
+  </testcase>
+  <testcase name="testAddCloudBackupCorrect" classname="TestPage.TestDashboard.Replica.TestReplica" time="0">
+    <skipped message="Method TestReplica.testAddCloudBackupCorrect()[pri:13, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods"/>
+  </testcase>
+  <testcase name="testAddCloudBackupReceiverCorrect" classname="TestPage.TestDashboard.Replica.TestReplica" time="0">
+    <skipped message="Method TestReplica.testAddCloudBackupReceiverCorrect()[pri:14, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods"/>
+  </testcase>
+  <testcase name="testCreateReplicaAsync_CheckSelectTable" classname="TestPage.TestDashboard.Replica.TestReplica" time="0">
+    <skipped message="Method TestReplica.testCreateReplicaAsync_CheckSelectTable()[pri:15, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods"/>
+  </testcase>
+  <testcase name="testCheckPeriodEmptyField" classname="TestPage.TestPerformance.TestPerformanceMonitoring" time="3.069"/>
+  <testcase name="testCheckFieldOutputFolderEmptyValue" classname="TestPage.TestPerformance.TestPerformanceMonitoring" time="0.666"/>
 </testsuite>

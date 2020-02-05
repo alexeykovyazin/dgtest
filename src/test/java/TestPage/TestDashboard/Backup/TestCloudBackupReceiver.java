@@ -2,8 +2,8 @@ package TestPage.TestDashboard.Backup;
 
 import Helpers.Helper;
 import TestPage.EnvContainer;
-import TestPageLocator.DashboardPage.Backup;
 import TestPageLocator.DashboardPage.Database;
+import TestPageLocator.GeneralLocators;
 import io.qameta.allure.Description;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -19,7 +19,7 @@ public class TestCloudBackupReceiver extends EnvContainer {
 
     public String _url,_standarturl = "http://localhost:8082/static/dashboard.html";
     private Database _pagedatabase;
-    private Backup _page;
+    private GeneralLocators _page;
     private Helper _ctx;
 
     @BeforeClass
@@ -27,12 +27,12 @@ public class TestCloudBackupReceiver extends EnvContainer {
     {
         _driver = EnvContainer.Driver;
         _ctx = new Helper(_driver);
-        _page = PageFactory.initElements(_driver, Backup.class);
+        _page = PageFactory.initElements(_driver, GeneralLocators.class);
         _pagedatabase = PageFactory.initElements(_driver, Database.class);
         openUrl();
         Helper.waitSetup(_driver, 1000);
         _ctx.current(_page.NameBDText(CloudTestDB)).click();
-        _ctx.current(_page.CloudBackupReceiverSettingsBtn(CloudTestDB)).click();
+        _ctx.current(_page.CloudBackupReceiverSettingsBtn(CloudTestDB)).scrollToElement().click();
         _ctx.current(_page.CheckPeriodField).waitelementToBeClickable();
     }
 //    @AfterMethod
@@ -43,7 +43,7 @@ public class TestCloudBackupReceiver extends EnvContainer {
     private void openUrl() {
         _url = EnvContainer.URL + _standarturl;
         _driver.navigate().to(_url);
-        Helper.interceptionJSonPage(_driver);
+        interceptionJSonPage(_driver);
         Helper.waitUpdate(_driver);
     }
 
@@ -63,7 +63,7 @@ public class TestCloudBackupReceiver extends EnvContainer {
     }
 
     @Test( enabled = true, priority = 2)
-    @Description(value = "WHEN we leave the field empty \"Watch Incoming Files\" field THEN, the error \"Monitored folder is empty - please specify it\"")
+    @Description(value = "WHEN we leave the field  \"Watch Incoming Files\" empty THEN, the error \"Monitored folder is empty - please specify it\"")
     public void testCheckWatchIncomingFilesEmptyField()  {
         // prepare
         InitTestCloudBackupReceiver();
@@ -79,7 +79,7 @@ public class TestCloudBackupReceiver extends EnvContainer {
     }
 
     @Test( enabled = true, priority = 3)
-    @Description(value = "WHEN we leave the field empty \"Filename Template\" field THEN, the error \"Template for monitored file names is empty\"")
+    @Description(value = "WHEN we leave the field  \"Filename Template\" empty THEN, the error \"Template for monitored file names is empty\"")
     public void testCheckFilenameTemplateEmptyField()  {
         // prepare
         InitTestCloudBackupReceiver();
@@ -95,7 +95,7 @@ public class TestCloudBackupReceiver extends EnvContainer {
     }
 
     @Test( enabled = true, priority = 4)
-    @Description(value = "WHEN we leave the field empty \"Extension Packed Files\" field THEN, the error \"Extension for packed files is empty\"")
+    @Description(value = "WHEN we leave the field  \"Extension Packed Files\" empty THEN, the error \"Extension for packed files is empty\"")
     public void testCheckExtensionPackedFilesEmptyField()  {
         // prepare
         InitTestCloudBackupReceiver();
@@ -111,7 +111,7 @@ public class TestCloudBackupReceiver extends EnvContainer {
     }
 
     @Test( enabled = true, priority = 5)
-    @Description(value = "WHEN we leave the field empty \"Decrypt Password\" field THEN, the error \"Decrypt password is empty\"")
+    @Description(value = "WHEN we leave the field  \"Decrypt Password\" empty THEN, the error \"Decrypt password is empty\"")
     public void testCheckDecryptPasswordEmptyField()  {
         // prepare
         InitTestCloudBackupReceiver();
@@ -131,14 +131,21 @@ public class TestCloudBackupReceiver extends EnvContainer {
     public void testCheckAlertFileCountIncorrectValue()  {
         // prepare
         InitTestCloudBackupReceiver();
-        String value = "ere";
+        String value = "text";
         //actions
         _ctx.current(_page.AlertFileCountField).setValue(value).
                 current(_page.DbSaveBtn).click().waitUpdate();
 
         // verification
-        Assert.assertEquals(_page.BackupAllertDanger.getText(),"\"1"+value+"\" is not an integer number",
-                "value must be a number");
+        if (BrowserType.equals("chrome")) {
+            Assert.assertEquals(_page.BackupAllertDanger.getText(),"\"1"+value+"\" is not an integer number",
+                    "value must be a number");
+        }
+        if(BrowserType.equals("firefox")){
+            Assert.assertEquals(_page.BackupAllertDanger.getText(),"\""+value+"\" is not an integer number",
+                    "value must be a number");
+        }
+
 
     }
 

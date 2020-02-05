@@ -2,8 +2,8 @@ package TestPage.TestDashboard.Backup;
 
 import Helpers.Helper;
 import TestPage.EnvContainer;
-import TestPageLocator.DashboardPage.Backup;
 import TestPageLocator.DashboardPage.Database;
+import TestPageLocator.GeneralLocators;
 import io.qameta.allure.Description;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -18,7 +18,7 @@ public class TestValidateDb extends EnvContainer {
 
     public String _url,_standarturl = "http://localhost:8082/static/dashboard.html";
     private Database _pagedatabase;
-    private Backup _page;
+    private GeneralLocators _page;
     private Helper _ctx;
 
     @BeforeClass
@@ -26,13 +26,15 @@ public class TestValidateDb extends EnvContainer {
     {
         _driver = EnvContainer.Driver;
         _ctx = new Helper(_driver);
-        _page = PageFactory.initElements(_driver, Backup.class);
+        _page = PageFactory.initElements(_driver, GeneralLocators.class);
         _pagedatabase = PageFactory.initElements(_driver, Database.class);
         openUrl();
         Helper.waitSetup(_driver, 1000);
         _ctx.current(_page.NameBDText(CloudTestDB)).click();
-        _ctx.current(_page.ValidateDbSettingsBtn(CloudTestDB)).click();
+        Helper.waitSetup(_driver, 1000);
+        _ctx.current(_page.ValidateDbSettingsBtn(CloudTestDB)).scrollToElement().click();
         _ctx.current(_page.ScheduleField).waitelementToBeClickable();
+        Helper.waitSetup(_driver, 2000);
     }
 //    @AfterMethod
 //    public void methodTearDown() {
@@ -42,7 +44,7 @@ public class TestValidateDb extends EnvContainer {
     private void openUrl() {
         _url = EnvContainer.URL + _standarturl;
         _driver.navigate().to(_url);
-        Helper.interceptionJSonPage(_driver);
+        interceptionJSonPage(_driver);
         Helper.waitUpdate(_driver);
     }
 
@@ -63,7 +65,7 @@ public class TestValidateDb extends EnvContainer {
     }
 
     @Test( enabled = true, priority = 2)
-    @Description(value = "WHEN we leave the field empty \"Shutdown Timeout\" field THEN, the error \"is not an integer number\"")
+    @Description(value = "WHEN we leave the field  \"Shutdown Timeout\" empty THEN, the error \"is not an integer number\"")
     public void testCheckShutdownTimeoutEmptyField ()  {
         // prepare
         InitTestValidateDb();

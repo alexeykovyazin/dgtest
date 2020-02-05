@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="66efdd9f-1b8d-4849-8ad1-2d54cab2b35b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/resurces/BatFiles/restartdg.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resurces/BatFiles/restartserver.bat" afterDir="false" />
+    <list default="true" id="66efdd9f-1b8d-4849-8ad1-2d54cab2b35b" name="Default Changelist" comment="add tests">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/TestDbStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/TestDelta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/TestDiskSpace.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/TestIndexStatistics.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/TestLockprint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/TestLowLevelMetadata.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/TestSweepSchedule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/TestTransactions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestPage/TestPerformance/TestPerformanceMonitoring.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestPage/TestPerformance/TestTransactionMonitoring.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Constants/InitData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Constants/InitData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Helpers/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Helpers/Helper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TestPageLocator/DashboardPage/Backup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TestPageLocator/DashboardPage/Backup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TestPageLocator/DashboardPage/Backup.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/TestPageLocator/GeneralLocators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TestPageLocator/GeneralLocators.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestPage/EnvContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestPage/EnvContainer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Backup/TestCloudBackup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Backup/TestCloudBackup.java" afterDir="false" />
@@ -20,375 +28,44 @@
       <change beforePath="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Backup/TestValidateDb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Backup/TestValidateDb.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Backup/TestVerifiedBackup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Backup/TestVerifiedBackup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Replica/TestReplica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Replica/TestReplica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/018466e5-8877-419f-9727-a1b44bac901c-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/032007d5-5ca2-45f7-8cde-546a18c6b2b8-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/041a93a3-2b24-442a-8095-ead220a74ace-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/055fff70-18ef-4e4f-8f03-ab73f610a0b1-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/08016116-6611-4f14-98be-2da09e83c93d-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/0890ca66-4b00-44fb-9dc9-9d8d99b17af4-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/08a8c91b-a443-4eda-a836-7d7c5f90e416-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/0a5fa324-8201-4ff0-934b-e35d1c74a6a9-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/0bf70448-2397-4d6a-bcfe-1b367365ff13-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/0c635f72-e1e3-4d9e-b13c-d6fad12a9b66-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/0ea45591-2ce1-454b-a79b-b4290b6f9a3d-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/0efe3b41-f9a2-401e-b605-e28b37368bcf-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/116fd32f-5192-47e8-bb98-2bb523c3e9e9-attachment" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/142c3fd6-6602-4bb6-92c9-c051648aa036-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/158af219-00e3-4248-a585-bfac84876a4f-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/16f66e89-ed3f-41ab-aef3-9cc8cfdcc683-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/173e7f3c-1744-4cb8-a904-c1e4fae20e19-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/188f2d1d-2150-4102-a573-3a1c45d8f0a0-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/199fce8d-4039-4c62-a3a6-571b21bd5697-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/19a5e277-6a3b-4026-9f15-e125d88431d9-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/19e1758b-9c14-40e5-8fba-3e5ca8a20804-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/1a4aa3fa-e9dd-4733-aba7-92af0fc57227-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/1bc07995-6c2e-4428-8f9d-eb8f22c89408-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/1c64a216-83c8-46e4-bc1a-af6b0204347b-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/1c759b65-7941-4e55-bb59-430f659e99b0-attachment" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/1d4dd062-1f23-4513-b504-9493c7dc2eb7-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/1d516b1a-a5e3-4e52-9107-23c2131c8fc2-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/1d8a5d7f-ffba-43ba-8622-06691e8a5c9b-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/1d975ad9-39e0-4890-9eb3-7a38577a2b72-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/1ed2434a-b839-4958-b551-d024c6738aa1-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/1f8e2bea-52e3-46ad-a9ce-adca4dd08167-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/1fa3a7aa-c5ea-4746-88d4-87bd5f09ff7d-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/1faf5fd0-4c77-4f95-90fc-03b7941dc60b-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/1fbc0b3d-4b3b-49ef-9ff1-168a74740497-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/20237d43-d21b-48ff-912f-6267f0f4a60a-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/208e77f0-46be-4d4f-b096-dccbd7eddea4-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/21323bb0-2baa-41e1-8c4a-07c38f3cbb22-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/22509e0e-861a-4626-b255-8fe34a66ea49-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/234e369f-6ff2-47f3-8c2a-3a76a7701f58-attachment" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/252dfe8d-f4aa-4fb9-b62d-c3d07f4ab977-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/284b5ee0-ec4d-4ffb-ae37-3f5a8c42e758-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/28f96621-cdb0-49b6-baf1-145fd2642c3e-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/290948c7-0cb0-4593-80bf-d8727eddd24a-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/29f89e3f-b270-43e2-bcab-33b40abf8fd2-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/2a56e778-14a5-4540-af11-de5fdf353337-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/2acd3bb4-8d44-469b-aa67-2bfcc6cbeff8-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/2d9cb524-2aca-4b73-92b8-58b9774fd8ef-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/2e9f5834-b3e5-45a9-af1f-a6ad4ebf47dd-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/2fe8d62a-66c2-4295-a93c-4ec6475a08eb-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/30280e02-6c90-4f40-9fb8-5d704ddd3f88-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/329605de-08ed-4a30-ab5c-2c8afe9246d3-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/33d5913c-5b79-4b8d-9e59-c05b53ceae04-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/342cfaec-9bc4-41c7-9417-8cca5dbd9524-attachment" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/3466ce60-0b21-4971-8c9d-232688b4b883-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/353d5e19-d2ae-4594-8d46-4a7c6b6cfe44-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/355a7ace-6f6d-460e-829d-339bb6e68db2-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/371e18d4-5211-48c4-9a02-88504c3bdca1-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/3734c61d-5348-4411-89d1-2616fbeeca61-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/373d5b78-0d17-4527-ad9b-a53ed79e261b-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/37dc8476-bb46-4c65-b42c-5cd3790a85c8-attachment" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/38a5ea58-eb4f-4f26-8b68-cc557ce3ac11-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/38d65abe-e87d-424a-a2a9-1d54502ce687-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/38e6758c-391f-4037-a457-f7d40cd8d13b-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/39fa8d34-c96d-4b74-a195-53e4b52b20f1-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/3c0efae5-1939-4ce4-9ad9-4e97f52878ab-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/3e0a4b99-7c6d-4259-9af1-1d1fa8deca97-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/425c4ff3-7a77-4ab2-b69a-47dc78b552e7-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/42eb518d-53ed-47df-b9ce-e9c7e252baf1-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/4308a708-02cc-45d2-8b4f-58e08a78a226-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/434c4bb9-efec-491d-b0de-916c6397b4c4-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/442351fd-5245-4d40-bca3-027bd1b8dc94-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/455d6cdb-ea7e-423f-9fda-0e5cc138e452-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/46ff23b0-5d5f-47e2-a118-2428cd5ec59a-attachment" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/4832e8df-2240-4d2c-b746-189667fb7a13-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/483768ab-657d-4c20-927f-6ea207b8ae0d-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/509c0c11-6792-49fb-9161-8222491762b1-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/516b379d-4e92-4f81-a949-7e1c0b8a4e32-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/527c7e09-4a62-427e-a7f0-fdff48fb82a6-attachment" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/5310fff0-fbe4-4cd5-ae05-26e4c20cac4f-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/55eb3eb0-c641-4253-a79f-c2d4d7075a67-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/58da0c7c-6dce-45f9-939f-044b577ddbfc-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/5bb79499-c9aa-4baa-9865-c478e5dcd670-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/5cc319cd-de56-4daf-beb7-b8cf757d3288-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/5cf57b20-19bb-4a7d-b8da-dcf65e1cf216-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/5d079609-4218-42fe-88a6-7190302aa192-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/5f9877f7-7d72-45e8-8b13-9edd6f48281f-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/60e9bb90-2e85-4cc1-8810-6d0dbd8285cf-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/61a8bbf7-37a9-4fda-bdf0-48879863e745-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/61ce3abd-d8bd-4446-be21-2fcdcb9335a9-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/624e4523-bdd2-44c5-8cde-1a56d92cbd1a-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/64ad439f-5539-4810-bb88-d082572b975c-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/658662c8-4b7e-4096-b097-24bf0b49f02b-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/6749a2a1-12c7-43bd-b557-00686eae6daa-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/674e46a7-67a9-4e94-88d5-200420738358-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/6bb99d88-91be-4dcc-9510-202b362985a7-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/6bfe59d9-1794-4547-9a84-b373fb23cc9c-attachment" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/6e8807be-6419-4ce5-95dc-293c576fa7e5-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/6e9af5e4-48a9-4adf-8476-aa93ab8687cd-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/6f0711bd-f683-4e06-b07e-f2e8fd3e7d40-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/725c053d-d135-4a16-ae72-f6cbbc8d9227-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/729b9741-8396-4aa5-ac26-9e7c1f3db7db-attachment" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/745c8033-4e9c-484c-ba4d-7677f8fee957-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/76b71a80-ed6a-4bde-8877-68d466bce30f-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/7b3b45a0-b502-4300-b018-d87d5a849159-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/7c9edb36-486c-4ac4-adea-d062ca36d653-attachment" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/7d1c00b9-4afe-4232-af68-ae1c76eaa0bf-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/7e2f597f-8cfc-483f-a058-ae9845a97e37-attachment" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/7f4056e3-f28b-4872-868c-d8d1576731f9-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/802db29a-cb1a-48ba-8bc1-fae40ac81018-attachment" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/82ccaf1b-64fd-4ce2-a0e1-8abdd7a0d9dc-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/82d66c8a-5c5d-4f2c-a8a7-08f3b95e55b8-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/836cc47c-e9f8-438d-b0e4-58220f32fd9e-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/86279a75-5362-4b65-a2fb-7ff598a9f093-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/87c06aeb-20f8-4172-9adf-490b3ad1e77c-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/89cfc462-85d8-4074-86f7-12dbdafa26fb-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/89d17b48-cf2b-4ce9-937e-8fae93a3fa70-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/8a70dc6d-a930-4a0d-ad0c-3c7b030e9bee-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/8b22cb65-4aa4-4eaa-8493-5bef01f2670d-attachment" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/8c7ecd98-d436-4053-8658-209da3e6fd69-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/8d4fcc2f-7fc4-4970-9d4d-7ce3b815fd37-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/8e0510bb-9608-464c-94b5-492fb906c471-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/8f4f3825-cf53-4ad0-8b29-e7545fe0011f-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/91ff373d-f068-482d-9538-e5361e386ad5-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/920b17cd-7e00-4325-b4c6-c24f09a7eabe-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/92c11e96-6f8e-4868-aa20-32f7ecd20dd7-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/92f1327a-842b-4409-8b16-6e519e983569-attachment" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/92f82a27-a600-49bd-87ba-e4b2b744def5-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/9325b276-aa67-485e-a7b6-bbd6d97baa4d-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/936006d1-bef4-439a-87e9-439a1b344975-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/93a46a0b-981e-4b23-acd0-ae9c2edefce2-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/95a1f8f8-2b40-4d79-96d0-287f91c9e626-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/9633b010-b3ad-4b25-a5e9-d9449e28b7e5-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/9927de2e-098b-4b9b-adc8-b51c40770884-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/9db3ce3f-a0dd-458f-8058-9bc82afbafbc-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/9ddd14fc-813f-41ca-b8a8-29692f7de482-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/9de7200f-bafb-443d-b2e5-7c33fb76940a-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/9eade253-cc9c-4859-b0d6-dda7fae1a983-attachment" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/9f7ba780-38c2-4710-8fd0-609f4fc8fc09-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/9f9e96e1-c9b7-4353-9ca0-29d0b77b4000-attachment" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/a0d586ed-0a70-4068-86ef-7d1ff2ec4393-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/a327bd77-c642-42aa-b362-1986c0dd66aa-attachment" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/a57292f7-9238-459d-aecc-a831c1036946-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/a7373650-93d3-40e9-bb03-e23d6aa169a3-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/a7d88e40-6af4-4754-bb15-10d8f95f589c-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/a8567281-1dea-43e9-8c2a-090864fe1891-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/a981d850-8d7a-4ca3-b1d9-29971ac19fbe-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/ab2c6b7d-8f26-4ee0-9aa8-698b6073b566-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/ab9655cb-79e1-40dd-8e56-0aefc5441899-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/ae46ef56-2d55-4ffb-ac03-9e6c080968a4-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/ae5c810e-6087-45c0-8ea3-f3ae5238d907-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/aeaac12e-da14-4bec-826c-4a5d4022e10d-attachment" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/af56cf2b-1e57-45f2-9ca1-ceca013d838a-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/allure.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/b01cf7d0-467b-4927-bcdb-f4818cd33730-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/b0271ae3-78a6-41ea-bca1-0d0355924ce8-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/b0a0ad17-cd1c-439d-8459-fb75ed49f255-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/b1a9a8a6-0656-4f6a-ab39-aac1608cd0cc-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/b1e210b7-7d38-4292-bd1f-e7b922dfcf67-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/b3c29a0a-7ea8-4d42-84e6-7aa5148040d7-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/b4ad87a9-db6b-491b-868e-3b4f2e191bde-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/b4cbac29-4a81-4f71-adc0-ca37984aaf8c-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/b5b109c9-686b-4892-8032-5a368e46e0be-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/b6a832f0-c3d1-49ff-85bd-9e5f4a9d7d53-attachment" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/b6bc45e5-5bfc-4a7a-91cf-26c0dcdd7221-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/b7b6661f-4592-4b7a-848e-1ac1739da4d5-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/b8fbbb91-7b6c-4aef-9128-5249cf258362-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/baa969c1-8c3d-4f8f-bd1d-32eda347063c-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/bcf9a352-d211-48e2-8375-5163da26e119-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/be8d6a78-30c5-45c8-9782-24b4236a1e52-attachment" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/c088806b-7f9b-4c4c-bf40-add1ded64e34-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/c4bdd939-ea7c-438f-b09a-7ce0f058af0b-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/c57b5e44-6ba9-4500-b92a-53273967483d-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/c593e397-f092-4b59-ad3f-5d0fadc672df-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/c5f860e8-7098-4256-9c7f-d4079dc4da19-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/c74f29a0-336c-4ec8-93a9-50986ac379e3-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/c8748da2-bd55-474e-b936-47f64716a60c-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/c9b13c18-c69b-44d0-adba-415cf00ab736-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/c9cff8a6-fc02-48a1-b7d0-855d74d20f7a-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/cbcdf94f-8e92-410d-9baa-34c31079d4bc-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/cbf7e972-23db-45ee-b492-551b8df0a5c5-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/cc99a272-16cf-4b37-9dbc-fced97a5fff6-attachment" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/cd3595a9-e164-49c3-a45d-a188bef07644-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/ceef418e-d51a-4e4f-858f-ab0ab89136b1-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/cf855210-2cff-4b00-9d12-5e950c109ab5-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/d0890e44-9621-4fb6-9cd9-75a605414176-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/d0cf284c-37ff-47e0-a160-33996f8e7e10-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/d1c7c7eb-6e7d-4299-8e98-906084c9ea93-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/d1d2c903-c848-4439-a0dc-b4e23f078215-attachment" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/d485691c-b8c7-4ccf-a4fc-5869ec28a1f1-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/d860d30f-dbec-4a87-81ee-16cba518cbb7-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/d8baddbf-cd67-4502-ba69-9aa3cea80163-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/d9000fba-1973-4629-ba27-23ae28891aef-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/d9d873c9-7728-45e1-8f50-4b5ee19b53d3-attachment" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/da1d6f4b-5bf4-4327-b799-f572f37719e7-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/da8ce07a-4405-477d-9eda-11fa9426de78-attachment" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/daae9eac-fd26-45cc-84ad-c2bd88fe4b36-attachment" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/dad4e3e9-ff5b-41ad-b7e2-29da7219da14-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/db3e9ae3-3850-4f3b-af1f-d701e0e40b2d-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/db51d592-0264-4fd6-b83f-f24afd2cdc07-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/dd09c0d3-3ed1-494f-add8-2174dd2d520a-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/dd94a20c-d54d-42f8-92a4-a0fa30f57ff4-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/dde37fa8-3b84-418d-9721-1ef0a4cfc6fc-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/df3ae302-810f-4bfe-8aa8-3ef747a95926-attachment" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/e151afdd-f46e-4fa1-bca1-2264c0ff5fe4-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/e1b15eb8-db76-495a-a0c5-c0fc0d026f1c-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/e4ba95ff-8f4f-4704-8d1e-6cd95e29aaae-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/e5a6765e-2c7d-4657-be9b-2f8a72b6a12a-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/e692cf65-4d65-43cb-9bc2-867dacedb806-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/e6b8eb2a-2cec-44ef-84f7-10953b249b94-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/e78ca3ef-b113-4c6e-ab56-5b8e6732d3c8-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/e8386579-d8d9-4a86-b23a-ac6ad0c24449-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/e9078da0-375d-4255-bd3d-4bb949bcfc23-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/ea5385e1-826c-40b4-95cb-1348b391fa85-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/executor.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/f0fc0df1-37a3-4716-8cb7-c5b261afed2e-attachment" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/f25304c7-0ef9-4ffb-b11e-962788503b24-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/f5d1d8a5-2b20-4f06-9b1d-ae6e26029a27-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/f7be0916-8473-4e85-9978-0f856c26cbb7-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/fa0422ee-87c7-459f-8ef9-4d29eddb0bea-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/fa161ab2-b6c1-4739-9410-777ed35eef1a-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/fad4c679-cfab-4905-89ca-fa7b8aa3dfb7-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/fb12b90f-3320-4c7e-81a9-60ab2227d308-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/fdc2e4bd-c8ff-490b-a9f5-b3b503449972-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/reports/allure-results/ff2bccb3-8de1-4b2c-b136-04c8bed8e2f7-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/BatFiles/restartservice.bat" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resurces/BatFiles/startservice.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/Ftp/WorkCloudDB/CLOUDTEST.FDB.arch-000000001.replpacked" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/StandartDB/MasterAsync.FDB" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/StandartDB/MasterSync.FDB" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/StandartDB/ReplicaAsync.FDB" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/StandartDB/ReplicaSync.FDB" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/StandartDB/backup_20200121_20-15.fbk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-27_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-27_testrestore.fdb20200121_22-27.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-28_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-28_testrestore.fdb20200121_22-28.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-29_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-29_testrestore.fdb20200121_22-29.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-30_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-30_testrestore.fdb20200121_22-30.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-31_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-31_testrestore.fdb20200121_22-31.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-32_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-32_testrestore.fdb20200121_22-32.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-33_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-33_testrestore.fdb20200121_22-33.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-34_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-34_testrestore.fdb20200121_22-34.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-35_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-35_testrestore.fdb20200121_22-35.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-36_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-36_testrestore.fdb20200121_22-36.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-37_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-37_testrestore.fdb20200121_22-37.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-38_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-38_testrestore.fdb20200121_22-38.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-39_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-39_testrestore.fdb20200121_22-39.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-40_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-40_testrestore.fdb20200121_22-40.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-41_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-41_testrestore.fdb20200121_22-41.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-42_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-42_testrestore.fdb20200121_22-42.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-43_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-43_testrestore.fdb20200121_22-43.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-44_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-44_testrestore.fdb20200121_22-44.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-45_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-45_testrestore.fdb20200121_22-45.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-46_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-46_testrestore.fdb20200121_22-46.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-47_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-47_testrestore.fdb20200121_22-47.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-48_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-48_testrestore.fdb20200121_22-48.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-49_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-49_testrestore.fdb20200121_22-49.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-50_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-50_testrestore.fdb20200121_22-50.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-51_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-51_testrestore.fdb20200121_22-51.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-52_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-52_testrestore.fdb20200121_22-52.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-53_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-53_testrestore.fdb20200121_22-53.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-54_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-54_testrestore.fdb20200121_22-54.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-55_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-55_testrestore.fdb20200121_22-55.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-56_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-56_testrestore.fdb20200121_22-56.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-57_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-57_testrestore.fdb20200121_22-57.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-58_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-58_testrestore.fdb20200121_22-58.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-59_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_22-59_testrestore.fdb20200121_22-59.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-00_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-00_testrestore.fdb20200121_23-00.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-01_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-01_testrestore.fdb20200121_23-01.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-02_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-02_testrestore.fdb20200121_23-02.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-03_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-03_testrestore.fdb20200121_23-03.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-04_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-04_testrestore.fdb20200121_23-04.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-05_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-05_testrestore.fdb20200121_23-05.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-06_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-06_testrestore.fdb20200121_23-06.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-07_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-07_testrestore.fdb20200121_23-07.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-08_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-08_testrestore.fdb20200121_23-08.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-09_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-09_testrestore.fdb20200121_23-09.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-10_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-10_testrestore.fdb20200121_23-10.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-11_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-11_testrestore.fdb20200121_23-11.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-12_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-12_testrestore.fdb20200121_23-12.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-13_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-13_testrestore.fdb20200121_23-13.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-14_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-14_testrestore.fdb20200121_23-14.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-15_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-15_testrestore.fdb20200121_23-15.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-16_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-16_testrestore.fdb20200121_23-16.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-17_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-17_testrestore.fdb20200121_23-17.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-18_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-18_testrestore.fdb20200121_23-18.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-19_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-19_testrestore.fdb20200121_23-19.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-20_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-20_testrestore.fdb20200121_23-20.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-21_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-21_testrestore.fdb20200121_23-21.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-22_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-22_testrestore.fdb20200121_23-22.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-23_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-23_testrestore.fdb20200121_23-23.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-24_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-24_testrestore.fdb20200121_23-24.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-25_testrestore.fdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/3465bb40-b1fa-424f-aad0-305964fe2c52_20200121_23-25_testrestore.fdb20200121_23-25.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/Backup.FDB" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/CloudReceiverTest/CLOUDTEST.FDB.arch-000000001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/CloudTest.FDB" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/CloudTest/CLOUDTEST.FDB.arch-000000001.uploaded" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/MasterAsync.FDB" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/MasterSync.FDB" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/ReplicaAsync.FDB" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/ReplicaSync.FDB" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/Test.FDB" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/backup_20200121_20-15.fbk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/testA.FDB" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resurces/WorkDB/testC.FDB" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/TestDashboard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/TestDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/TestDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resurces/chromedriver" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resurces/Driver/chromedriver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resurces/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resurces/Driver/chromedriver.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resurces/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resurces/testng.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Constants/InitData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Constants/InitData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Helpers/Helper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Helpers/Helper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/TestPageLocator/DashboardPage/Backup.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TestPageLocator/DashboardPage/Backup.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/TestPageLocator/DashboardPage/Dashboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TestPageLocator/DashboardPage/Dashboard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/TestPageLocator/DashboardPage/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TestPageLocator/DashboardPage/Database.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/TestPageLocator/GeneralLocators.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TestPageLocator/GeneralLocators.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/TestPageLocator/RegistrationLocators.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TestPageLocator/RegistrationLocators.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-TestSuite.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-TestSuite.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TestOne/Backup.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TestOne/Backup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TestOne/Backup.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TestOne/Backup.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TestOne/CloudBackup.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TestOne/CloudBackup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TestOne/CloudBackup.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TestOne/CloudBackup.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TestOne/Database.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TestOne/Database.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TestOne/Database.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TestOne/Database.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TestOne/Replica.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TestOne/Replica.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TestOne/Replica.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TestOne/Replica.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TestOne/testng-failed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TestOne/testng-failed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TestSuite.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TestSuite.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/emailable-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/emailable-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/junitreports/TEST-TestPage.TestDashboard.Replica.TestReplica.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/junitreports/TEST-TestPage.TestDashboard.Replica.TestReplica.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/TestOne/Backup.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/old/TestOne/Backup.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/TestOne/CloudBackup.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/old/TestOne/CloudBackup.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/TestOne/Database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/old/TestOne/Database.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/TestOne/Replica.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/old/TestOne/Replica.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/TestOne/classes.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/old/TestOne/classes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/TestOne/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/old/TestOne/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/TestOne/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/old/TestOne/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/TestOne/methods-alphabetical.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/old/TestOne/methods-alphabetical.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/TestOne/methods-not-run.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/old/TestOne/methods-not-run.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/TestOne/methods.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/old/TestOne/methods.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/TestOne/testng.xml.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/old/TestOne/testng.xml.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/TestOne/toc.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/old/TestOne/toc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/old/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng-failed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/testng-failed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/Listener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Listener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/SuiteListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SuiteListener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/TestPage/EnvContainer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TestPage/EnvContainer.class" afterDir="false" />
@@ -401,7 +78,7 @@
       <change beforePath="$PROJECT_DIR$/target/test-classes/TestPage/TestDashboard/Backup/TestValidateDb.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TestPage/TestDashboard/Backup/TestValidateDb.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/TestPage/TestDashboard/Backup/TestVerifiedBackup.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TestPage/TestDashboard/Backup/TestVerifiedBackup.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/TestPage/TestDashboard/Replica/TestReplica.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TestPage/TestDashboard/Replica/TestReplica.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestPage/TestDashboard/TestDashboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TestPage/TestDashboard/TestDashboard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/TestPage/TestDashboard/TestDashboard.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/TestPage/TestDashboard/TestDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TestPage/TestDashboard/TestDatabase.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -418,55 +95,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resurces/testng.xml">
+        <entry file="file://$PROJECT_DIR$/src/test/java/TestPage/EnvContainer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="37" column="11" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="56" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
+            <state relative-caret-position="714">
+              <caret line="77" column="8" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/TestPage/EnvContainer.java">
+        <entry file="file://$PROJECT_DIR$/src/test/resurces/testng.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2325">
-              <caret line="163" column="32" selection-start-line="163" selection-start-column="19" selection-end-line="163" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Replica/TestReplica.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="920">
-              <caret line="174" column="81" selection-start-line="174" selection-start-column="81" selection-end-line="174" selection-end-column="81" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resurces/BatFiles/selectTable.bat">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resurces/Scripts/createTable.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="71" selection-start-column="71" selection-end-column="71" />
+            <state relative-caret-position="170">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -488,6 +129,9 @@
       <find>btn-dialog-ok</find>
       <find>contains</find>
       <find>findExpFilesRenameCopy</find>
+      <find>JavaScript</find>
+      <find>form-max-depth</find>
+      <find>scrollIntoView</find>
     </findStrings>
     <dirStrings>
       <dir>D:\789\src\test</dir>
@@ -496,53 +140,29 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="762d4da9149268aa728b3c5d592e21f2340b8066" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/TestPage/TestCommon/TestDashboard.java" />
-        <option value="$PROJECT_DIR$/src/main/java/TestPageLocator/Common/RegistrationLocators.java" />
-        <option value="$PROJECT_DIR$/src/main/java/TestPageLocator/RegistrationLocators.java" />
-        <option value="$PROJECT_DIR$/src/main/java/TestPageLocator/DashboardLocators.java" />
-        <option value="$PROJECT_DIR$/src/test/java/TestPage/TestCommon/TestDatabase/TestDatabase.java" />
-        <option value="$PROJECT_DIR$/src/test/java/TestPage/TestCommon/TestBackup/Backup.java" />
-        <option value="$PROJECT_DIR$/src/main/java/TestPageLocator/Dashboard/Dashboard.java" />
-        <option value="$PROJECT_DIR$/src/main/java/TestPageLocator/Dashboard/Database/Database.java" />
-        <option value="$PROJECT_DIR$/src/main/java/TestPageLocator/Dashboard/Database/Backup.java" />
-        <option value="$PROJECT_DIR$/src/main/java/TestPageLocator/DashboardPage/Database/Backup.java" />
-        <option value="$PROJECT_DIR$/src/main/java/TestPageLocator/DashboardPage/DatabaseLocators/Backup.java" />
-        <option value="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/TestDatabase/Database.java" />
-        <option value="$PROJECT_DIR$/src/test/resurces/restartservice.bat" />
-        <option value="$PROJECT_DIR$/src/test/java/SuiteListener.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/TestBackup.java" />
         <option value="$PROJECT_DIR$/src/main/java/TestPageLocator/DashboardPage/Database.java" />
         <option value="$PROJECT_DIR$/src/test/java/Listener.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Backup/TestCloudValidateDb.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Backup/TestCloudRestoreDb.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Replica/TestCloudBackup.java" />
-        <option value="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/TestDashboard.java" />
         <option value="$PROJECT_DIR$/src/test/resurces/allure.properties" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/TestDatabase.java" />
         <option value="$PROJECT_DIR$/src/test/resurces/BatFiles/stopservice.bat" />
-        <option value="$PROJECT_DIR$/src/main/java/TestPageLocator/GeneralLocators.java" />
-        <option value="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Backup/TestDumpBackup.java" />
-        <option value="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Backup/TestSqlPing.java" />
-        <option value="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Backup/TestValidateDb.java" />
-        <option value="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Backup/TestVerifiedBackup.java" />
-        <option value="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Backup/TestIncrementalBackup.java" />
-        <option value="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Backup/TestCloudBackup.java" />
         <option value="$PROJECT_DIR$/src/test/resurces/config/ftpsrv.properties" />
         <option value="$PROJECT_DIR$/src/test/resurces/BatFiles/restartservice.bat" />
-        <option value="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Backup/TestCloudBackupReceiver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/TestPageLocator/DashboardPage/Backup.java" />
-        <option value="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Backup/TestRestoreDb.java" />
         <option value="$PROJECT_DIR$/src/test/resurces/Script/myscript1.sql" />
         <option value="$PROJECT_DIR$/src/test/resurces/BatFiles/restartdg.bat" />
-        <option value="$PROJECT_DIR$/src/test/java/TestPage/EnvContainer.java" />
         <option value="$PROJECT_DIR$/src/test/resurces/Scripts/myscript1.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/Helpers/Helper.java" />
-        <option value="$PROJECT_DIR$/src/test/resurces/testng.xml" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/test/resurces/Scripts/selectTable.sql" />
         <option value="$PROJECT_DIR$/src/main/java/Constants/InitData.java" />
@@ -550,7 +170,36 @@
         <option value="$PROJECT_DIR$/src/test/resurces/BatFiles/111.bat" />
         <option value="$PROJECT_DIR$/src/test/resurces/Scripts/createTable.sql" />
         <option value="$PROJECT_DIR$/src/test/resurces/BatFiles/selectTable.bat" />
+        <option value="$PROJECT_DIR$/src/main/java/TestPageLocator/DashboardPage/Backup.java" />
+        <option value="$PROJECT_DIR$/src/main/java/TestPageLocator/DashboardPage/Dashboard.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/TestDashboard.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/TestDatabase.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Helpers/Helper.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/TestTranzaction.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/TestTranzactions.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/TestDbStatus.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/TestDelta.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/TestDiskSpace.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/TestIndexStatistics.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/TestLockprint.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/TestLowLevelMetadata.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/TestSweepSchedule.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Backup/TestCloudBackup.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Backup/TestDumpBackup.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Backup/TestSqlPing.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Replica/TestReplica.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestPage/TestPerformance/Performance.java" />
+        <option value="$PROJECT_DIR$/src/main/java/TestPageLocator/GeneralLocators.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestPage/TestPerformance/TestTransactionMonitoring.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestPage/TestPerformance/TestPerformanceMonitoring.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Backup/TestVerifiedBackup.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/TestTransactions.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Backup/TestCloudBackupReceiver.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Backup/TestRestoreDb.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Backup/TestValidateDb.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Backup/TestIncrementalBackup.java" />
+        <option value="$PROJECT_DIR$/src/test/resurces/testng.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/TestPage/EnvContainer.java" />
       </list>
     </option>
   </component>
@@ -588,18 +237,17 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="198" />
-    <option name="width" value="1651" />
-    <option name="height" value="1047" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="158" />
+    <option name="y" value="86" />
+    <option name="width" value="1634" />
+    <option name="height" value="960" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -705,8 +353,7 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="TestPage" type="462c0819:PsiDirectoryNode" />
-              <item name="TestDashboard" type="462c0819:PsiDirectoryNode" />
-              <item name="Replica" type="462c0819:PsiDirectoryNode" />
+              <item name="TestPerformance" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="seleniumtest" type="b2602c69:ProjectViewProjectNode" />
@@ -714,14 +361,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="resurces" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="seleniumtest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dgtest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="resurces" type="462c0819:PsiDirectoryNode" />
-              <item name="BatFiles" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="seleniumtest" type="b2602c69:ProjectViewProjectNode" />
@@ -743,30 +382,33 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/resurces/BatFiles" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\dgtest\src\test\resurces\Driver" />
+      <recent name="C:\dgtest\src\test\resurces\BatFiles" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="TestPage.TestPerformance" />
+      <recent name="TestPage.TestDashboard" />
+      <recent name="TestPage.TestDashboard.Replica" />
+      <recent name="TestPage.TestDashboard.Backup" />
+      <recent name="TestPageLocator.Dashboard.Database" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\dgtest\src\test\resurces\BatFiles" />
       <recent name="C:\dgtest\src\test\resurces\Scripts" />
       <recent name="C:\dgtest\src\test\resurces\DB" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="TestPage.TestDashboard.Replica" />
-      <recent name="TestPage.TestDashboard.Backup" />
-      <recent name="TestPageLocator.Dashboard.Database" />
-      <recent name="TestPage.TestCommon.TestBackup" />
-      <recent name="TestPage.TestCommon.TestDatabase" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\dgtest\src\test\resurces\BatFiles" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -908,34 +550,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="D__dgtest_src_test_resurces_testng_xml - 2020.01.29 at 17h 51m 31s.xml">
+    <history-entry file="D__dgtest_src_test_resurces_testng_xml - 2020.02.06 at 00h 36m 58s.xml">
       <configuration name="D:/dgtest/src/test/resurces/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="D__dgtest_src_test_resurces_testng_xml - 2020.01.29 at 17h 57m 43s.xml">
+    <history-entry file="D__dgtest_src_test_resurces_testng_xml - 2020.02.06 at 00h 37m 20s.xml">
       <configuration name="D:/dgtest/src/test/resurces/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="D__dgtest_src_test_resurces_testng_xml - 2020.01.29 at 18h 19m 33s.xml">
+    <history-entry file="D__dgtest_src_test_resurces_testng_xml - 2020.02.06 at 00h 39m 00s.xml">
       <configuration name="D:/dgtest/src/test/resurces/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="D__dgtest_src_test_resurces_testng_xml - 2020.01.29 at 18h 24m 25s.xml">
+    <history-entry file="D__dgtest_src_test_resurces_testng_xml - 2020.02.06 at 00h 39m 29s.xml">
       <configuration name="D:/dgtest/src/test/resurces/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="D__dgtest_src_test_resurces_testng_xml - 2020.01.29 at 18h 30m 02s.xml">
+    <history-entry file="D__dgtest_src_test_resurces_testng_xml - 2020.02.06 at 00h 50m 46s.xml">
       <configuration name="D:/dgtest/src/test/resurces/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="D__dgtest_src_test_resurces_testng_xml - 2020.01.29 at 18h 39m 39s.xml">
+    <history-entry file="D__dgtest_src_test_resurces_testng_xml - 2020.02.06 at 01h 03m 24s.xml">
       <configuration name="D:/dgtest/src/test/resurces/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="D__dgtest_src_test_resurces_testng_xml - 2020.01.29 at 20h 44m 53s.xml">
+    <history-entry file="D__dgtest_src_test_resurces_testng_xml - 2020.02.06 at 01h 12m 07s.xml">
       <configuration name="D:/dgtest/src/test/resurces/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="D__dgtest_src_test_resurces_testng_xml - 2020.01.29 at 20h 56m 59s.xml">
+    <history-entry file="D__dgtest_src_test_resurces_testng_xml - 2020.02.06 at 01h 14m 43s.xml">
       <configuration name="D:/dgtest/src/test/resurces/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="D__dgtest_src_test_resurces_testng_xml - 2020.01.29 at 21h 07m 56s.xml">
+    <history-entry file="D__dgtest_src_test_resurces_testng_xml - 2020.02.06 at 01h 19m 23s.xml">
       <configuration name="D:/dgtest/src/test/resurces/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="D__dgtest_src_test_resurces_testng_xml - 2020.01.29 at 21h 22m 34s.xml">
+    <history-entry file="D__dgtest_src_test_resurces_testng_xml - 2020.02.06 at 01h 22m 15s.xml">
       <configuration name="D:/dgtest/src/test/resurces/testng.xml" configurationId="TestNG" />
     </history-entry>
   </component>
@@ -949,27 +591,35 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="198" y="0" width="1651" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4968051" visible="true" weight="0.17284727" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4968051" visible="true" weight="0.16204691" />
       <window_info id="Structure" order="1" sideWeight="0.50319487" side_tool="true" weight="0.1866171" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="DB Browser" order="7" />
+      <window_info id="Project Explorer" order="8" />
+      <window_info id="Job Explorer" order="9" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32713348" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4990572" weight="0.2713348" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39824945" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3261105" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4990572" weight="0.2990249" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39761648" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32951945" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5009428" side_tool="true" weight="0.26914662" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32936078" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3249453" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32394367" />
+      <window_info anchor="bottom" id="DB Execution Console" order="11" />
+      <window_info anchor="bottom" id="Anonymous Apex" order="12" />
+      <window_info anchor="bottom" id="Log Analyzer" order="13" />
+      <window_info anchor="bottom" id="SOQL Query" order="14" />
+      <window_info anchor="bottom" id="Console" order="15" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24946237" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -980,16 +630,19 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4968051" visible="true" weight="0.17096166" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4968051" visible="true" weight="0.18038969" />
       <window_info id="Structure" order="1" sideWeight="0.50319487" side_tool="true" weight="0.1866171" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="DB Browser" order="7" />
+      <window_info id="Project Explorer" order="8" />
+      <window_info id="Job Explorer" order="9" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32713348" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4990572" visible="true" weight="0.27242887" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4990572" visible="true" weight="0.28117913" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39824945" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -998,6 +651,11 @@
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5009428" side_tool="true" weight="0.26914662" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32936078" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3249453" />
+      <window_info anchor="bottom" id="DB Execution Console" order="11" />
+      <window_info anchor="bottom" id="Anonymous Apex" order="12" />
+      <window_info anchor="bottom" id="Log Analyzer" order="13" />
+      <window_info anchor="bottom" id="SOQL Query" order="14" />
+      <window_info anchor="bottom" id="Console" order="15" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24946237" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1020,25 +678,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/3.14.0/selenium-remote-driver-3.14.0.jar!/org/openqa/selenium/remote/RemoteWebElement.class" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestPage/TestCommon/TestLocalization.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/TestDashboardDashboard.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/ParseUrl.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/TestPageLocator/Common/PageAuth.java" />
-    <entry file="file://$PROJECT_DIR$/Readme" />
-    <entry file="file://$PROJECT_DIR$/src/test/resurces/config/.defaults/database3/jobs/transactions/main.xml" />
-    <entry file="file://$PROJECT_DIR$/src/test/resurces/config/.defaults/database4/jobs/db-available/main.xml" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/3.14.0/selenium-api-3.14.0.jar!/org/openqa/selenium/WebDriver.class" />
-    <entry file="jar://$PROJECT_DIR$/../Program Files/Java/jdk-12/lib/src.zip!/java.base/java/util/function/Function.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/7.0.0/testng-7.0.0.jar!/org/testng/SuiteRunnerWorker.class" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/TestPageLocator/RegistrationLocators.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="46" column="5" lean-forward="true" selection-start-line="38" selection-start-column="3" selection-end-line="46" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../Program Files/Java/jdk-12/lib/src.zip!/java.base/java/lang/ClassLoader.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/Listener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1055,24 +694,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/TestPageLocator/DashboardPage/Database.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="47" selection-start-line="47" selection-end-line="48" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/3.14.0/selenium-api-3.14.0.jar!/org/openqa/selenium/WebElement.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
           <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/TestPageLocator/DashboardPage/Dashboard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -1104,13 +729,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/TestPageLocator/GeneralLocators.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="33" column="41" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/3.14.0/selenium-remote-driver-3.14.0.jar!/org/openqa/selenium/io/FileHandler.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
@@ -1118,100 +736,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/TestDashboard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/TestPageLocator/DashboardPage/Backup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="88" column="39" selection-start-line="88" selection-start-column="22" selection-end-line="88" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Backup/TestRestoreDb.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="211" column="17" selection-start-line="211" selection-start-column="17" selection-end-line="211" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Backup/TestVerifiedBackup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1241">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Backup/TestValidateDb.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="84" column="26" selection-start-line="84" selection-start-column="26" selection-end-line="84" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Backup/TestSqlPing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="93" column="34" selection-start-line="93" selection-start-column="34" selection-end-line="93" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/TestDatabase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="139" selection-start-line="139" selection-end-line="140" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Backup/TestDumpBackup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="120" column="26" selection-start-line="120" selection-start-column="26" selection-end-line="120" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resurces/Script/myscript1.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resurces/Script/myscript1.sql" />
     <entry file="file://$PROJECT_DIR$/src/test/resurces/BatFiles/restartserver.bat">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Backup/TestIncrementalBackup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="587">
-          <caret line="122" column="93" selection-start-line="122" selection-start-column="93" selection-end-line="122" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Backup/TestCloudBackupReceiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2125">
-          <caret line="33" selection-start-line="33" selection-end-line="35" selection-end-column="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resurces/config/ftpsrv.properties">
       <provider selected="true" editor-type-id="text-editor">
@@ -1230,20 +757,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Helpers/Helper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="635" column="35" selection-start-line="635" selection-start-column="23" selection-end-line="635" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Constants/InitData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="15" column="129" selection-start-line="15" selection-start-column="129" selection-end-line="15" selection-end-column="129" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resurces/BatFiles/restartdg.bat">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -1258,38 +771,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Backup/TestCloudBackup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resurces/Scripts/createTable.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="71" selection-start-column="71" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resurces/BatFiles/selectTable.bat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resurces/BatFiles/createTable.bat">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="63" selection-start-line="3" selection-start-column="63" selection-end-line="3" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Replica/TestReplica.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="920">
-          <caret line="174" column="81" selection-start-line="174" selection-start-column="81" selection-end-line="174" selection-end-column="81" />
         </state>
       </provider>
     </entry>
@@ -1300,17 +785,241 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resurces/testng.xml">
+    <entry file="file://$PROJECT_DIR$/src/test/resurces/BatFiles/selectTable.bat">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="37" column="11" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="11" />
+        <state relative-caret-position="68">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resurces/Scripts/createTable.sql">
+      <provider editor-type-id="text-editor">
+        <state>
+          <caret column="71" selection-start-column="71" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TestPageLocator/DashboardPage/Backup.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/TestPageLocator/DashboardPage/Dashboard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="46" column="33" selection-start-line="20" selection-start-column="3" selection-end-line="46" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TestPageLocator/RegistrationLocators.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="46" column="5" selection-start-line="38" selection-start-column="3" selection-end-line="46" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/3.14.0/selenium-api-3.14.0.jar!/org/openqa/selenium/JavascriptExecutor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/7.0.0/testng-7.0.0.jar!/org/testng/SuiteRunnerWorker.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/TestDashboard.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/TestPageLocator/DashboardPage/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="52" column="58" selection-start-line="52" selection-start-column="58" selection-end-line="52" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Constants/InitData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="18" column="61" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/TestDelta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="33" column="78" selection-start-line="33" selection-start-column="78" selection-end-line="33" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/TestSweepSchedule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="33" column="86" selection-start-line="33" selection-start-column="86" selection-end-line="33" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Replica/TestReplica.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1227">
+          <caret line="293" column="100" selection-start-line="293" selection-start-column="100" selection-end-line="293" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Backup/TestCloudBackup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="34" column="64" selection-start-line="34" selection-start-column="64" selection-end-line="34" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Backup/TestDumpBackup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="34" column="83" selection-start-line="34" selection-start-column="83" selection-end-line="34" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Backup/TestSqlPing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="34" column="82" selection-start-line="34" selection-start-column="82" selection-end-line="34" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/TestDatabase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/TestIndexStatistics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-39">
+          <caret line="33" column="88" selection-start-line="33" selection-start-column="88" selection-end-line="33" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/TestLowLevelMetadata.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-345">
+          <caret line="33" column="95" selection-start-line="33" selection-start-column="95" selection-end-line="33" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/TestDiskSpace.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-111">
+          <caret line="34" column="82" selection-start-line="34" selection-start-column="82" selection-end-line="34" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestPage/TestPerformance/TestPerformanceMonitoring.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="52" column="39" selection-start-line="52" selection-start-column="39" selection-end-line="52" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/TestLockprint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1309">
+          <caret line="88" column="5" selection-start-line="58" selection-start-column="3" selection-end-line="88" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/TestDbStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1598">
+          <caret line="105" column="5" selection-start-line="91" selection-start-column="4" selection-end-line="105" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Backup/TestVerifiedBackup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="556">
+          <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Backup/TestCloudBackupReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="144" column="71" selection-start-line="144" selection-start-column="71" selection-end-line="144" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Helpers/Helper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Backup/TestValidateDb.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="34" column="43" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/TestTransactions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-916">
+          <caret line="40" column="9" selection-start-line="35" selection-start-column="8" selection-end-line="40" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Backup/TestRestoreDb.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1331">
+          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestPage/TestDashboard/Backup/TestIncrementalBackup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="34" column="64" selection-start-line="34" selection-start-column="56" selection-end-line="34" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestPage/TestPerformance/TestTransactionMonitoring.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="52" column="39" selection-start-line="52" selection-start-column="39" selection-end-line="52" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TestPageLocator/GeneralLocators.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="75" column="43" selection-start-line="75" selection-start-column="18" selection-end-line="75" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TestPage/EnvContainer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2325">
-          <caret line="163" column="32" selection-start-line="163" selection-start-column="19" selection-end-line="163" selection-end-column="32" />
+        <state relative-caret-position="714">
+          <caret line="77" column="8" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resurces/testng.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
