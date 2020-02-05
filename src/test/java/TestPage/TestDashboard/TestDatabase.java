@@ -38,7 +38,7 @@ public class TestDatabase extends EnvContainer {
     private void openUrl() {
         _url = EnvContainer.URL + _standarturl;
         _driver.navigate().to(_url);
-        Helper.interceptionJSonPage(_driver);
+        interceptionJSonPage(_driver);
         Helper.waitUpdate(_driver);
         _ctx.current(_page.DatabaseSettingsBtn).waitelementToBeClickable();
     }

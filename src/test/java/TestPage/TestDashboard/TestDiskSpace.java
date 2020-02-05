@@ -1,0 +1,101 @@
+package TestPage.TestDashboard;
+
+import Helpers.Helper;
+import TestPage.EnvContainer;
+import TestPageLocator.DashboardPage.Database;
+import TestPageLocator.GeneralLocators;
+import io.qameta.allure.Description;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import static Constants.InitData.TestDB;
+
+public class TestDiskSpace extends EnvContainer {
+    private WebDriver _driver;
+
+    public String _url,_standarturl = "http://localhost:8082/static/dashboard.html";
+    private Database _pagedatabase;
+    private GeneralLocators _page;
+    private Helper _ctx;
+
+    @BeforeClass
+    public void classSetUp()
+    {
+        _driver = EnvContainer.Driver;
+        _ctx = new Helper(_driver);
+        _page = PageFactory.initElements(_driver, GeneralLocators.class);
+        _pagedatabase = PageFactory.initElements(_driver, Database.class);
+        openUrl();
+
+        _ctx.current(_page.NameBDText(TestDB)).click();
+        Helper.waitSetup(_driver, 2000);
+        _ctx.current(_page.DiskSpaceSettingsBtn(TestDB)).scrollToElement().click();
+        _ctx.current(_page.CheckPeriodField).waitelementToBeClickable();
+    }
+
+    private void openUrl() {
+        _url = EnvContainer.URL + _standarturl;
+        _driver.navigate().to(_url);
+        interceptionJSonPage(_driver);
+        Helper.waitUpdate(_driver);
+    }
+
+    @Test( enabled = true, priority = 1)
+    @Description(value = "WHEN we leave the field \"Period\" empty THEN, the error \"Cron expression or period must be set properly\"")
+    public void testCheckPeriodEmptyField()  {
+
+        //actions
+        _ctx.current(_page.CheckPeriodField).setValue("");
+        Helper.waitSetup(_driver,1000);
+        _ctx.current(_page.DbSaveBtn).click().waitUpdate();
+
+        // verification
+        Assert.assertEquals(_page.BackupAllertDanger.getText(),"Cron expression or period must be set properly",
+                "Cron expression installed incorrectly");
+
+    }
+
+    @Test( enabled = true, priority = 2)
+    @Description(value = "WHEN we leave the field \"Free space minimum, %\" empty THEN, the error \"is not an integer number\"")
+    public void testCheckFiledMaxDeltaBytesEmptyValue()  {
+        // prepare
+        InitTest();
+
+        //actions
+        _ctx.current(_page.FreeSpaceMinPercentField).setValue("").
+                current(_page.DbSaveBtn).click().waitUpdate();
+
+        // verification
+        Assert.assertEquals(_page.BackupAllertDanger.getText(),"\"\" is not an integer number",
+                "value must be a number");
+
+    }
+
+    @Test( enabled = true, priority = 2)
+    @Description(value = "WHEN we leave the field \"Free space minimum, bytes\" empty THEN, the error \"is not an integer number\"")
+    public void testCheckFiledMaxDeltaMinutesEmptyValue()  {
+        // prepare
+        InitTest();
+
+        //actions
+        _ctx.current(_page.FreeSpaceMinBytesField).setValue("").
+                current(_page.DbSaveBtn).click().waitUpdate();
+
+        // verification
+        Assert.assertEquals(_page.BackupAllertDanger.getText(),"\"\" is not an integer number",
+                "value must be a number");
+
+    }
+
+    private void InitTest() {
+        _ctx.current(_page.CheckPeriodField).setValue("4").
+                current(_page.FreeSpaceMinPercentField).setValue("10").
+                current(_page.FreeSpaceMinBytesField).setValue("0");
+
+    }
+
+
+}

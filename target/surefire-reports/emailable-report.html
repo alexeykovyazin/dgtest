@@ -9,110 +9,285 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">TestOne</th></tr>
-<tr><td><a href="#t0">Database</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">10</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">Backup</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td></td><td></td></tr>
-<tr><td><a href="#t2">CloudBackup</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t3">Replica</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">9</td><td class="num">12 623</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">1</th><th class="num">0</th><th class="num">0</th><th class="num attn">9</th><th class="num">12 633</th><th colspan="2"></th></tr>
+<tr><td><a href="#t0">Database</a></td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">11 991</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Backup</a></td><td class="num">28</td><td class="num">0</td><td class="num">0</td><td class="num attn">3</td><td class="num">249 045</td><td></td><td></td></tr>
+<tr><td><a href="#t2">CloudBackup</a></td><td class="num">14</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">23 648</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t3">Transactions</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">4</td><td class="num">30 521</td><td></td><td></td></tr>
+<tr><td><a href="#t4">Lockprint</a></td><td class="num">19</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">20 432</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t5">SweepSchedule</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">6 129</td><td></td><td></td></tr>
+<tr><td><a href="#t6">Delta</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">5 434</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t7">DiskSpace</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">5 915</td><td></td><td></td></tr>
+<tr><td><a href="#t8">DbStatus</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">5 956</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t9">IndexStatistics</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">4 982</td><td></td><td></td></tr>
+<tr><td><a href="#t10">LowLevelMetadata</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">7 199</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t11">TransactionMonitoring</a></td><td class="num">8</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">8 311</td><td></td><td></td></tr>
+<tr><td><a href="#t12">Replica</a></td><td class="num">0</td><td class="num attn">11</td><td class="num">0</td><td class="num attn">4</td><td class="num">18 127</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t13">PerformanceMonitoring</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">6 241</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">94</th><th class="num attn">11</th><th class="num">0</th><th class="num attn">15</th><th class="num">403 931</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">TestOne</th></tr></tbody><tbody id="t0"><tr><th colspan="4" class="invisible"/></tr></tbody>
-<tbody id="t1"><tr><th colspan="4" class="invisible"/></tr></tbody>
-<tbody id="t2"><tr><th colspan="4" class="invisible"/></tr></tbody>
-<tbody id="t3"><tr><th colspan="4">Replica &#8212; failed</th></tr><tr class="failedeven"><td rowspan="9">TestPage.TestDashboard.Replica.TestReplica</td><td><a href="#m0">testCreateMasterAsync_Correct</a></td><td rowspan="1">1579635203343</td><td rowspan="1">19</td></tr><tr class="failedeven"><td><a href="#m1">testCreateMasterAsync_EmptyLogArchiveDirectoryField</a></td><td rowspan="1">1579635202563</td><td rowspan="1">30</td></tr><tr class="failedeven"><td><a href="#m2">testCreateMasterAsync_EmptyLogDirectoryField</a></td><td rowspan="1">1579635199878</td><td rowspan="1">2271</td></tr><tr class="failedeven"><td><a href="#m3">testCreateMasterAsync_IncorrectLogArchiveTimeoutField</a></td><td rowspan="1">1579635202932</td><td rowspan="1">18</td></tr><tr class="failedeven"><td><a href="#m4">testCreateMasterSync_Correct</a></td><td rowspan="1">1579635197540</td><td rowspan="1">28</td></tr><tr class="failedeven"><td><a href="#m5">testCreateMasterSync_EmptyReplicaDatabaseField</a></td><td rowspan="1">1579635196842</td><td rowspan="1">200</td></tr><tr class="failedeven"><td><a href="#m6">testCreateReplicaAsync_Correct</a></td><td rowspan="1">1579635205975</td><td rowspan="1">26</td></tr><tr class="failedeven"><td><a href="#m7">testCreateReplicaAsync_EmptyLogArchiveDirectoryField</a></td><td rowspan="1">1579635203739</td><td rowspan="1">1804</td></tr><tr class="failedeven"><td><a href="#m8">testCreateReplicaSync_Correct</a></td><td rowspan="1">1579635197908</td><td rowspan="1">1542</td></tr><tr><th colspan="4">Replica &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">TestPage.TestDashboard.Replica.TestReplica</td><td><a href="#m9">testCreateMasterAsync_ReinitializeReplicaDatabaseCorrect</a></td><td rowspan="1">1579635203328</td><td rowspan="1">1</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">TestOne</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Database &#8212; passed</th></tr><tr class="passedeven"><td rowspan="6">TestPage.TestDashboard.TestDatabase</td><td><a href="#m0">testAddDbAlreadyExist</a></td><td rowspan="1">1580935726561</td><td rowspan="1">2755</td></tr><tr class="passedeven"><td><a href="#m1">testAddDbCorrect</a></td><td rowspan="1">1580935721721</td><td rowspan="1">4825</td></tr><tr class="passedeven"><td><a href="#m2">testAddDbEmptyName</a></td><td rowspan="1">1580935719914</td><td rowspan="1">348</td></tr><tr class="passedeven"><td><a href="#m3">testAddDbEmptyPath</a></td><td rowspan="1">1580935719387</td><td rowspan="1">418</td></tr><tr class="passedeven"><td><a href="#m4">testAddDbIncorrectAlias</a></td><td rowspan="1">1580935720589</td><td rowspan="1">1099</td></tr><tr class="passedeven"><td><a href="#m5">testAddDbIncorrectPath</a></td><td rowspan="1">1580935720276</td><td rowspan="1">302</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Backup &#8212; failed</th></tr><tr class="failedeven"><td rowspan="3">TestPage.TestDashboard.Backup.TestValidateDb</td><td><a href="#m6">testCheckScheduleIncorrectField</a></td><td rowspan="1">1580935967577</td><td rowspan="1">3008</td></tr><tr class="failedeven"><td><a href="#m7">testCheckShutdownTimeoutEmptyField</a></td><td rowspan="1">1580935971525</td><td rowspan="1">3038</td></tr><tr class="failedeven"><td><a href="#m8">testCreateValidateBDCorrect</a></td><td rowspan="1">1580935974967</td><td rowspan="1">3071</td></tr><tr><th colspan="4">Backup &#8212; passed</th></tr><tr class="passedeven"><td rowspan="5">TestPage.TestDashboard.Backup.TestDumpBackup</td><td><a href="#m9">testCreateDumpBackupCorrect</a></td><td rowspan="1">1580935827233</td><td rowspan="1">32916</td></tr><tr class="passedeven"><td><a href="#m10">testCreateDumpBackupMaxNumbFilesEmpty</a></td><td rowspan="1">1580935826649</td><td rowspan="1">572</td></tr><tr class="passedeven"><td><a href="#m11">testCreateDumpBackupMinFreeSpaceEmpty</a></td><td rowspan="1">1580935825396</td><td rowspan="1">560</td></tr><tr class="passedeven"><td><a href="#m12">testCreateDumpBackupPathFolderEmpty</a></td><td rowspan="1">1580935825971</td><td rowspan="1">666</td></tr><tr class="passedeven"><td><a href="#m13">testCreateDumpBackupScheduleIncorrect</a></td><td rowspan="1">1580935824607</td><td rowspan="1">776</td></tr><tr class="passedodd"><td rowspan="6">TestPage.TestDashboard.Backup.TestIncrementalBackup</td><td><a href="#m14">testCreateIncrementalBackupCorrect</a></td><td rowspan="1">1580935786734</td><td rowspan="1">34972</td></tr><tr class="passedodd"><td><a href="#m15">testCreateIncrementalBackupJournalFolderEmpty</a></td><td rowspan="1">1580935780885</td><td rowspan="1">2873</td></tr><tr class="passedodd"><td><a href="#m16">testCreateIncrementalBackupMaxDurationEmpty</a></td><td rowspan="1">1580935771838</td><td rowspan="1">3238</td></tr><tr class="passedodd"><td><a href="#m17">testCreateIncrementalBackupMinFreeSpaceEmpty</a></td><td rowspan="1">1580935775089</td><td rowspan="1">2381</td></tr><tr class="passedodd"><td><a href="#m18">testCreateIncrementalBackupPathFolderEmpty</a></td><td rowspan="1">1580935777482</td><td rowspan="1">3384</td></tr><tr class="passedodd"><td><a href="#m19">testCreateIncrementalBackupPerformBackupEmpty</a></td><td rowspan="1">1580935783774</td><td rowspan="1">2928</td></tr><tr class="passedeven"><td rowspan="10">TestPage.TestDashboard.Backup.TestRestoreDb</td><td><a href="#m20">testCreateRestoreDbBackupFolderEmptyField</a></td><td rowspan="1">1580935864911</td><td rowspan="1">1312</td></tr><tr class="passedeven"><td><a href="#m21">testCreateRestoreDbCorrect</a></td><td rowspan="1">1580935876013</td><td rowspan="1">33656</td></tr><tr class="passedeven"><td><a href="#m22">testCreateRestoreDbLimitProcessTimeEmptyField</a></td><td rowspan="1">1580935873326</td><td rowspan="1">1316</td></tr><tr class="passedeven"><td><a href="#m23">testCreateRestoreDbMinFreeSpaceEmptyField</a></td><td rowspan="1">1580935874771</td><td rowspan="1">1229</td></tr><tr class="passedeven"><td><a href="#m24">testCreateRestoreDbPathRestoreFolderEmptyField</a></td><td rowspan="1">1580935868778</td><td rowspan="1">1378</td></tr><tr class="passedeven"><td><a href="#m25">testCreateRestoreDbPathTemplateBackupFolderEmptyField</a></td><td rowspan="1">1580935866239</td><td rowspan="1">1243</td></tr><tr class="passedeven"><td><a href="#m26">testCreateRestoreDbRestoreFileNameEmptyField</a></td><td rowspan="1">1580935870168</td><td rowspan="1">1757</td></tr><tr class="passedeven"><td><a href="#m27">testCreateRestoreDbScheduleIncorrect</a></td><td rowspan="1">1580935863166</td><td rowspan="1">1730</td></tr><tr class="passedeven"><td><a href="#m28">testCreateRestoreDbSuffixFileNameEmptyField</a></td><td rowspan="1">1580935871945</td><td rowspan="1">1242</td></tr><tr class="passedeven"><td><a href="#m29">testCreateRestoreTimeTakeBackupEmptyField</a></td><td rowspan="1">1580935867497</td><td rowspan="1">1267</td></tr><tr class="passedodd"><td rowspan="3">TestPage.TestDashboard.Backup.TestSqlPing</td><td><a href="#m30">testCheckScheduleIncorrect</a></td><td rowspan="1">1580935912535</td><td rowspan="1">1821</td></tr><tr class="passedodd"><td><a href="#m31">testCheckSqlQueryEmptyField</a></td><td rowspan="1">1580935914377</td><td rowspan="1">1405</td></tr><tr class="passedodd"><td><a href="#m32">testCreateSqlPingCorrect</a></td><td rowspan="1">1580935915799</td><td rowspan="1">34072</td></tr><tr class="passedeven"><td rowspan="4">TestPage.TestDashboard.Backup.TestVerifiedBackup</td><td><a href="#m33">testCreateVerifiedBackupCorrect</a></td><td rowspan="1">1580935734649</td><td rowspan="1">34100</td></tr><tr class="passedeven"><td><a href="#m34">testCreateVerifiedBackupMaxNumbNegative</a></td><td rowspan="1">1580935733714</td><td rowspan="1">457</td></tr><tr class="passedeven"><td><a href="#m35">testCreateVerifiedBackupMaxNumbNotNumbers</a></td><td rowspan="1">1580935734189</td><td rowspan="1">446</td></tr><tr class="passedeven"><td><a href="#m36">testCreateVerifiedBackupScheduleIncorrect</a></td><td rowspan="1">1580935732933</td><td rowspan="1">760</td></tr></tbody>
+<tbody id="t2"><tr><th colspan="4">CloudBackup &#8212; passed</th></tr><tr class="passedeven"><td rowspan="7">TestPage.TestDashboard.Backup.TestCloudBackup</td><td><a href="#m37">testCheckFiledConnectionFtpEmptyField</a></td><td rowspan="1">1580935985207</td><td rowspan="1">1190</td></tr><tr class="passedeven"><td><a href="#m38">testCheckFilenameTemplateEmptyField</a></td><td rowspan="1">1580935984449</td><td rowspan="1">743</td></tr><tr class="passedeven"><td><a href="#m39">testCheckFtpPortEmptyField</a></td><td rowspan="1">1580935990985</td><td rowspan="1">1384</td></tr><tr class="passedeven"><td><a href="#m40">testCheckFtpServerEmptyField</a></td><td rowspan="1">1580935987159</td><td rowspan="1">3816</td></tr><tr class="passedeven"><td><a href="#m41">testCheckKeepNSourceFilesFieldEmptyField</a></td><td rowspan="1">1580935986408</td><td rowspan="1">735</td></tr><tr class="passedeven"><td><a href="#m42">testCheckMonitorFolderEmptyField</a></td><td rowspan="1">1580935983623</td><td rowspan="1">792</td></tr><tr class="passedeven"><td><a href="#m43">testCheckPeriodEmptyField</a></td><td rowspan="1">1580935983310</td><td rowspan="1">294</td></tr><tr class="passedodd"><td rowspan="7">TestPage.TestDashboard.Backup.TestCloudBackupReceiver</td><td><a href="#m44">testCheckAlertFileAgeEmptyField</a></td><td rowspan="1">1580936001881</td><td rowspan="1">964</td></tr><tr class="passedodd"><td><a href="#m45">testCheckAlertFileCountIncorrectValue</a></td><td rowspan="1">1580936000962</td><td rowspan="1">906</td></tr><tr class="passedodd"><td><a href="#m46">testCheckDecryptPasswordEmptyField</a></td><td rowspan="1">1580936000074</td><td rowspan="1">878</td></tr><tr class="passedodd"><td><a href="#m47">testCheckExtensionPackedFilesEmptyField</a></td><td rowspan="1">1580935999178</td><td rowspan="1">885</td></tr><tr class="passedodd"><td><a href="#m48">testCheckFilenameTemplateEmptyField</a></td><td rowspan="1">1580935998292</td><td rowspan="1">874</td></tr><tr class="passedodd"><td><a href="#m49">testCheckPeriodEmptyField</a></td><td rowspan="1">1580935995177</td><td rowspan="1">2191</td></tr><tr class="passedodd"><td><a href="#m50">testCheckWatchIncomingFilesEmptyField</a></td><td rowspan="1">1580935997379</td><td rowspan="1">903</td></tr></tbody>
+<tbody id="t3"><tr><th colspan="4">Transactions &#8212; failed</th></tr><tr class="failedeven"><td rowspan="4">TestPage.TestDashboard.TestTransactions</td><td><a href="#m51">testCheckFiledAlterNextOATMoreEmptyField</a></td><td rowspan="1">1580936030198</td><td rowspan="1">3015</td></tr><tr class="failedeven"><td><a href="#m52">testCheckFiledAlterOSTOITMoreEmptyField</a></td><td rowspan="1">1580936023358</td><td rowspan="1">3022</td></tr><tr class="failedeven"><td><a href="#m53">testCheckFiledMaxTransactionsEmptyField</a></td><td rowspan="1">1580936026757</td><td rowspan="1">3037</td></tr><tr class="failedeven"><td><a href="#m54">testCheckPeriodEmptyField</a></td><td rowspan="1">1580936019882</td><td rowspan="1">3073</td></tr></tbody>
+<tbody id="t4"><tr><th colspan="4">Lockprint &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">TestPage.TestDashboard.TestLockprint</td><td><a href="#m55">testCheckFiledBuffersMaxEmptyValue</a></td><td rowspan="1">1580936048309</td><td rowspan="1">1368</td></tr><tr class="failedeven"><td><a href="#m56">testCreateFiledBuffersMaxNumbNegativeValue</a></td><td rowspan="1">1580936050081</td><td rowspan="1">3774</td></tr><tr><th colspan="4">Lockprint &#8212; passed</th></tr><tr class="passedeven"><td rowspan="19">TestPage.TestDashboard.TestLockprint</td><td><a href="#m57">testCheckFiledAverageLengthEmptyValue</a></td><td rowspan="1">1580936043632</td><td rowspan="1">887</td></tr><tr class="passedeven"><td><a href="#m58">testCheckFiledDeadlockScansThresholdEmptyValue</a></td><td rowspan="1">1580936037504</td><td rowspan="1">1030</td></tr><tr class="passedeven"><td><a href="#m59">testCheckFiledDeadlockThresholdEmptyValue</a></td><td rowspan="1">1580936038825</td><td rowspan="1">858</td></tr><tr class="passedeven"><td><a href="#m60">testCheckFiledFreeOwnersLimitEmptyValue</a></td><td rowspan="1">1580936045950</td><td rowspan="1">851</td></tr><tr class="passedeven"><td><a href="#m61">testCheckFiledHashSlotsEmptyValue</a></td><td rowspan="1">1580936041344</td><td rowspan="1">859</td></tr><tr class="passedeven"><td><a href="#m62">testCheckFiledLockTableSizeEmptyValue</a></td><td rowspan="1">1580936047119</td><td rowspan="1">868</td></tr><tr class="passedeven"><td><a href="#m63">testCheckFiledMinLengthEmptyValue</a></td><td rowspan="1">1580936042484</td><td rowspan="1">867</td></tr><tr class="passedeven"><td><a href="#m64">testCheckFiledMutexWaitThresholdEmptyValue</a></td><td rowspan="1">1580936039960</td><td rowspan="1">1101</td></tr><tr class="passedeven"><td><a href="#m65">testCheckFiledOwnersLimitEmptyValue</a></td><td rowspan="1">1580936044797</td><td rowspan="1">852</td></tr><tr class="passedeven"><td><a href="#m66">testCheckPeriodEmptyField</a></td><td rowspan="1">1580936037194</td><td rowspan="1">298</td></tr><tr class="passedeven"><td><a href="#m67">testCreateFiledAverageLengthNumbNegativeValue</a></td><td rowspan="1">1580936044532</td><td rowspan="1">252</td></tr><tr class="passedeven"><td><a href="#m68">testCreateFiledDeadlockScansThresholdNumbNegativeValue</a></td><td rowspan="1">1580936038554</td><td rowspan="1">259</td></tr><tr class="passedeven"><td><a href="#m69">testCreateFiledDeadlockThresholdNumbNegativeValue</a></td><td rowspan="1">1580936039696</td><td rowspan="1">251</td></tr><tr class="passedeven"><td><a href="#m70">testCreateFiledFreeOwnersLimitNumbNegativeValue</a></td><td rowspan="1">1580936046813</td><td rowspan="1">292</td></tr><tr class="passedeven"><td><a href="#m71">testCreateFiledHashSlotsNumbNegativeValue</a></td><td rowspan="1">1580936042217</td><td rowspan="1">253</td></tr><tr class="passedeven"><td><a href="#m72">testCreateFiledLockTableSizeNumbNegativeValue</a></td><td rowspan="1">1580936048001</td><td rowspan="1">295</td></tr><tr class="passedeven"><td><a href="#m73">testCreateFiledMinLengthNumbNegativeValue</a></td><td rowspan="1">1580936043363</td><td rowspan="1">253</td></tr><tr class="passedeven"><td><a href="#m74">testCreateFiledMutexWaitThresholdNumbNegativeValue</a></td><td rowspan="1">1580936041074</td><td rowspan="1">256</td></tr><tr class="passedeven"><td><a href="#m75">testCreateFiledOwnersLimitNumbNegativeValue</a></td><td rowspan="1">1580936045668</td><td rowspan="1">269</td></tr></tbody>
+<tbody id="t5"><tr><th colspan="4">SweepSchedule &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">TestPage.TestDashboard.TestSweepSchedule</td><td><a href="#m76">testCheckFiledDeadlockScansThresholdEmptyValue</a></td><td rowspan="1">1580936058768</td><td rowspan="1">1516</td></tr><tr class="passedeven"><td><a href="#m77">testCheckPeriodEmptyField</a></td><td rowspan="1">1580936057396</td><td rowspan="1">1362</td></tr><tr class="passedeven"><td><a href="#m78">testCreateFiledDeadlockScansThresholdNumbNegativeValue</a></td><td rowspan="1">1580936060299</td><td rowspan="1">264</td></tr></tbody>
+<tbody id="t6"><tr><th colspan="4">Delta &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">TestPage.TestDashboard.TestDelta</td><td><a href="#m79">testCheckFiledMaxDeltaMinutesEmptyValue</a></td><td rowspan="1">1580936065563</td><td rowspan="1">401</td></tr><tr><th colspan="4">Delta &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">TestPage.TestDashboard.TestDelta</td><td><a href="#m80">testCheckFiledMaxDeltaBytesEmptyValue</a></td><td rowspan="1">1580936065104</td><td rowspan="1">444</td></tr><tr class="passedeven"><td><a href="#m81">testCheckPeriodEmptyField</a></td><td rowspan="1">1580936063735</td><td rowspan="1">1357</td></tr></tbody>
+<tbody id="t7"><tr><th colspan="4">DiskSpace &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">TestPage.TestDashboard.TestDiskSpace</td><td><a href="#m82">testCheckFiledMaxDeltaBytesEmptyValue</a></td><td rowspan="1">1580936071510</td><td rowspan="1">420</td></tr><tr class="passedeven"><td><a href="#m83">testCheckFiledMaxDeltaMinutesEmptyValue</a></td><td rowspan="1">1580936071944</td><td rowspan="1">412</td></tr><tr class="passedeven"><td><a href="#m84">testCheckPeriodEmptyField</a></td><td rowspan="1">1580936070161</td><td rowspan="1">1334</td></tr></tbody>
+<tbody id="t8"><tr><th colspan="4">DbStatus &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">TestPage.TestDashboard.TestDbStatus</td><td><a href="#m85">testCheckPeriodEmptyField</a></td><td rowspan="1">1580936075490</td><td rowspan="1">1290</td></tr><tr class="passedeven"><td><a href="#m86">testCheckStatisticsArchiveDepthEmptyValue</a></td><td rowspan="1">1580936077446</td><td rowspan="1">551</td></tr><tr class="passedeven"><td><a href="#m87">testCheckStatisticsFileNamePatternEmptyField</a></td><td rowspan="1">1580936078009</td><td rowspan="1">572</td></tr><tr class="passedeven"><td><a href="#m88">testCheckStoreStatisticEmptyField</a></td><td rowspan="1">1580936076794</td><td rowspan="1">640</td></tr></tbody>
+<tbody id="t9"><tr><th colspan="4">IndexStatistics &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">TestPage.TestDashboard.TestIndexStatistics</td><td><a href="#m89">testCheckFieldPeriodEmptyValue</a></td><td rowspan="1">1580936081885</td><td rowspan="1">1353</td></tr><tr class="passedeven"><td><a href="#m90">testCheckFieldStatisticsArchiveDepthEmptyValue</a></td><td rowspan="1">1580936083248</td><td rowspan="1">428</td></tr></tbody>
+<tbody id="t10"><tr><th colspan="4">LowLevelMetadata &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">TestPage.TestDashboard.TestLowLevelMetadata</td><td><a href="#m91">testCheckFieldMaxFormatsEmptyValue</a></td><td rowspan="1">1580936088893</td><td rowspan="1">1163</td></tr><tr><th colspan="4">LowLevelMetadata &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">TestPage.TestDashboard.TestLowLevelMetadata</td><td><a href="#m92">testCheckFieldDateFormatFolderNameEmptyValue</a></td><td rowspan="1">1580936090447</td><td rowspan="1">525</td></tr><tr class="passedeven"><td><a href="#m93">testCheckFieldMetadataFolderEmptyValue</a></td><td rowspan="1">1580936088301</td><td rowspan="1">578</td></tr><tr class="passedeven"><td><a href="#m94">testCheckPeriodEmptyField</a></td><td rowspan="1">1580936086956</td><td rowspan="1">1333</td></tr></tbody>
+<tbody id="t11"><tr><th colspan="4">TransactionMonitoring &#8212; passed</th></tr><tr class="passedeven"><td rowspan="8">TestPage.TestPerformance.TestTransactionMonitoring</td><td><a href="#m95">testCheckFieldOutputFolderEmptyValue</a></td><td rowspan="1">1580936096588</td><td rowspan="1">605</td></tr><tr class="passedeven"><td><a href="#m96">testCheckFiledShowTransactionsOlderEmptyValue</a></td><td rowspan="1">1580936097206</td><td rowspan="1">554</td></tr><tr class="passedeven"><td><a href="#m97">testCheckPeriodEmptyField</a></td><td rowspan="1">1580936094100</td><td rowspan="1">2475</td></tr><tr class="passedeven"><td><a href="#m98">testCheckSendAlertOldestActiveTransactionEmptyValue</a></td><td rowspan="1">1580936097990</td><td rowspan="1">538</td></tr><tr class="passedeven"><td><a href="#m99">testCheckShowOnlyNNOldestActiveTransactionsEmptyValue</a></td><td rowspan="1">1580936098751</td><td rowspan="1">540</td></tr><tr class="passedeven"><td><a href="#m100">testCreateFiledShowTransactionsOlderNumbNegativeValue</a></td><td rowspan="1">1580936097771</td><td rowspan="1">207</td></tr><tr class="passedeven"><td><a href="#m101">testCreateSendAlertOldestActiveTransactionNumbNegativeValue</a></td><td rowspan="1">1580936098540</td><td rowspan="1">200</td></tr><tr class="passedeven"><td><a href="#m102">testCreateShowOnlyNNOldestActiveTransactionsNumbNegativeValue</a></td><td rowspan="1">1580936099302</td><td rowspan="1">207</td></tr></tbody>
+<tbody id="t12"><tr><th colspan="4">Replica &#8212; failed</th></tr><tr class="failedeven"><td rowspan="4">TestPage.TestDashboard.Replica.TestReplica</td><td><a href="#m103">testCreateMasterAsync_EmptyLogDirectoryField</a></td><td rowspan="1">1580936112951</td><td rowspan="1">4292</td></tr><tr class="failedeven"><td><a href="#m104">testCreateMasterSync_Correct</a></td><td rowspan="1">1580936105416</td><td rowspan="1">3012</td></tr><tr class="failedeven"><td><a href="#m105">testCreateMasterSync_EmptyReplicaDatabaseField</a></td><td rowspan="1">1580936101978</td><td rowspan="1">3037</td></tr><tr class="failedeven"><td><a href="#m106">testCreateReplicaSync_Correct</a></td><td rowspan="1">1580936108785</td><td rowspan="1">3774</td></tr><tr><th colspan="4">Replica &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="11">TestPage.TestDashboard.Replica.TestReplica</td><td><a href="#m107">testAddCloudBackupCorrect</a></td><td rowspan="1">1580936117691</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m108">testAddCloudBackupReceiverCorrect</a></td><td rowspan="1">1580936117698</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m109">testAddFtpCorrect</a></td><td rowspan="1">1580936117685</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m110">testCreateMasterAsync_CheckCreateTable</a></td><td rowspan="1">1580936117655</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m111">testCreateMasterAsync_Correct</a></td><td rowspan="1">1580936117648</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m112">testCreateMasterAsync_EmptyLogArchiveDirectoryField</a></td><td rowspan="1">1580936117625</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m113">testCreateMasterAsync_IncorrectLogArchiveTimeoutField</a></td><td rowspan="1">1580936117632</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m114">testCreateMasterAsync_ReinitializeReplicaDatabaseCorrect</a></td><td rowspan="1">1580936117662</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m115">testCreateReplicaAsync_CheckSelectTable</a></td><td rowspan="1">1580936117706</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m116">testCreateReplicaAsync_Correct</a></td><td rowspan="1">1580936117676</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m117">testCreateReplicaAsync_EmptyLogArchiveDirectoryField</a></td><td rowspan="1">1580936117669</td><td rowspan="1">0</td></tr></tbody>
+<tbody id="t13"><tr><th colspan="4">PerformanceMonitoring &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">TestPage.TestPerformance.TestPerformanceMonitoring</td><td><a href="#m118">testCheckFieldOutputFolderEmptyValue</a></td><td rowspan="1">1580936123342</td><td rowspan="1">662</td></tr><tr class="passedeven"><td><a href="#m119">testCheckPeriodEmptyField</a></td><td rowspan="1">1580936120261</td><td rowspan="1">3058</td></tr></tbody>
 </table>
-<h2>Database</h2><h2>Backup</h2><h2>CloudBackup</h2><h2>Replica</h2><h3 id="m0">TestPage.TestDashboard.Replica.TestReplica#testCreateMasterAsync_Correct</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=79.0.3945.117)
-Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
-System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:52913}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0fc3d964738ac3d6dd1a2f66391250d7
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
-	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:118)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy14.clear(Unknown Source)
-	at Helpers.Helper.setValue(Helper.java:66)
-	at TestPage.TestDashboard.Replica.TestReplica.InitAsyncTest(TestReplica.java:207)
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterAsync_Correct(TestReplica.java:163)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 40 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">TestPage.TestDashboard.Replica.TestReplica#testCreateMasterAsync_EmptyLogArchiveDirectoryField</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=79.0.3945.117)
-Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
-System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:52913}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0fc3d964738ac3d6dd1a2f66391250d7
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
-	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:118)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy14.clear(Unknown Source)
-	at Helpers.Helper.setValue(Helper.java:66)
-	at TestPage.TestDashboard.Replica.TestReplica.InitAsyncTest(TestReplica.java:207)
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterAsync_EmptyLogArchiveDirectoryField(TestReplica.java:119)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 40 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">TestPage.TestDashboard.Replica.TestReplica#testCreateMasterAsync_EmptyLogDirectoryField</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
-Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
-System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:315)
-	at org.openqa.selenium.json.JsonOutput.lambda$new$14(JsonOutput.java:152)
-	at org.openqa.selenium.json.JsonOutput$SafeBiConsumer.accept(JsonOutput.java:407)
-	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:261)
-	at org.openqa.selenium.json.JsonOutput.lambda$null$19(JsonOutput.java:165)
-	at java.base/java.util.LinkedHashMap$LinkedValues.forEach(LinkedHashMap.java:608)
-	at org.openqa.selenium.json.JsonOutput.lambda$new$20(JsonOutput.java:165)
-	at org.openqa.selenium.json.JsonOutput$SafeBiConsumer.accept(JsonOutput.java:407)
-	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:261)
-	at org.openqa.selenium.json.JsonOutput.lambda$null$21(JsonOutput.java:174)
-	at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:65)
-	at org.openqa.selenium.json.JsonOutput.lambda$new$22(JsonOutput.java:173)
-	at org.openqa.selenium.json.JsonOutput$SafeBiConsumer.accept(JsonOutput.java:407)
-	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:261)
-	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:252)
-	at org.openqa.selenium.json.Json.toJson(Json.java:42)
-	at org.openqa.selenium.remote.http.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:227)
-	at org.openqa.selenium.remote.http.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:117)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:152)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:614)
-	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:640)
-	at org.openqa.selenium.interactions.Actions.perform(Actions.java:596)
-	at Helpers.Helper.click(Helper.java:189)
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterAsync_EmptyLogDirectoryField(TestReplica.java:104)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-	Suppressed: org.openqa.selenium.json.JsonException: Attempting to close incomplete json stream
-Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
-System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
-Driver info: driver.version: RemoteWebDriver
-		at org.openqa.selenium.json.JsonOutput.close(JsonOutput.java:276)
-		at org.openqa.selenium.json.Json.toJson(Json.java:44)
-		... 42 more
-	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:311)
-	... 57 more
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;form-section-db-replication_role&apos;]//*[@value=&apos;master&apos;]//ancestor::label[2]&quot;}
-  (Session info: chrome=79.0.3945.117)
+<h2>Database</h2><h3 id="m0">TestPage.TestDashboard.TestDatabase#testAddDbAlreadyExist</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">TestPage.TestDashboard.TestDatabase#testAddDbCorrect</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">TestPage.TestDashboard.TestDatabase#testAddDbEmptyName</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">TestPage.TestDashboard.TestDatabase#testAddDbEmptyPath</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">TestPage.TestDashboard.TestDatabase#testAddDbIncorrectAlias</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">TestPage.TestDashboard.TestDatabase#testAddDbIncorrectPath</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Backup</h2><h3 id="m6">TestPage.TestDashboard.Backup.TestValidateDb#testCheckScheduleIncorrectField</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#form\-cron\-expression&quot;}
+  (Session info: chrome=79.0.3945.130)
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
 System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:52913}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0fc3d964738ac3d6dd1a2f66391250d7
-*** Element info: {Using=xpath, value=//*[@id=&apos;form-section-db-replication_role&apos;]//*[@value=&apos;master&apos;]//ancestor::label[2]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=id, value=form-cron-expression}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.clear(Unknown Source)
+	at Helpers.Helper.setValue(Helper.java:68)
+	at TestPage.TestDashboard.Backup.TestValidateDb.testCheckScheduleIncorrectField(TestValidateDb.java:54)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">TestPage.TestDashboard.Backup.TestValidateDb#testCheckShutdownTimeoutEmptyField</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#form\-cron\-expression&quot;}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=id, value=form-cron-expression}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.clear(Unknown Source)
+	at Helpers.Helper.setValue(Helper.java:68)
+	at TestPage.TestDashboard.Backup.TestValidateDb.InitTestValidateDb(TestValidateDb.java:109)
+	at TestPage.TestDashboard.Backup.TestValidateDb.testCheckShutdownTimeoutEmptyField(TestValidateDb.java:69)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">TestPage.TestDashboard.Backup.TestValidateDb#testCreateValidateBDCorrect</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#form\-cron\-expression&quot;}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=id, value=form-cron-expression}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.clear(Unknown Source)
+	at Helpers.Helper.setValue(Helper.java:68)
+	at TestPage.TestDashboard.Backup.TestValidateDb.InitTestValidateDb(TestValidateDb.java:109)
+	at TestPage.TestDashboard.Backup.TestValidateDb.testCreateValidateBDCorrect(TestValidateDb.java:86)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">TestPage.TestDashboard.Backup.TestDumpBackup#testCreateDumpBackupCorrect</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">TestPage.TestDashboard.Backup.TestDumpBackup#testCreateDumpBackupMaxNumbFilesEmpty</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">TestPage.TestDashboard.Backup.TestDumpBackup#testCreateDumpBackupMinFreeSpaceEmpty</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">TestPage.TestDashboard.Backup.TestDumpBackup#testCreateDumpBackupPathFolderEmpty</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m13">TestPage.TestDashboard.Backup.TestDumpBackup#testCreateDumpBackupScheduleIncorrect</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m14">TestPage.TestDashboard.Backup.TestIncrementalBackup#testCreateIncrementalBackupCorrect</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m15">TestPage.TestDashboard.Backup.TestIncrementalBackup#testCreateIncrementalBackupJournalFolderEmpty</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m16">TestPage.TestDashboard.Backup.TestIncrementalBackup#testCreateIncrementalBackupMaxDurationEmpty</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m17">TestPage.TestDashboard.Backup.TestIncrementalBackup#testCreateIncrementalBackupMinFreeSpaceEmpty</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m18">TestPage.TestDashboard.Backup.TestIncrementalBackup#testCreateIncrementalBackupPathFolderEmpty</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m19">TestPage.TestDashboard.Backup.TestIncrementalBackup#testCreateIncrementalBackupPerformBackupEmpty</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m20">TestPage.TestDashboard.Backup.TestRestoreDb#testCreateRestoreDbBackupFolderEmptyField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m21">TestPage.TestDashboard.Backup.TestRestoreDb#testCreateRestoreDbCorrect</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m22">TestPage.TestDashboard.Backup.TestRestoreDb#testCreateRestoreDbLimitProcessTimeEmptyField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m23">TestPage.TestDashboard.Backup.TestRestoreDb#testCreateRestoreDbMinFreeSpaceEmptyField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m24">TestPage.TestDashboard.Backup.TestRestoreDb#testCreateRestoreDbPathRestoreFolderEmptyField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m25">TestPage.TestDashboard.Backup.TestRestoreDb#testCreateRestoreDbPathTemplateBackupFolderEmptyField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m26">TestPage.TestDashboard.Backup.TestRestoreDb#testCreateRestoreDbRestoreFileNameEmptyField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m27">TestPage.TestDashboard.Backup.TestRestoreDb#testCreateRestoreDbScheduleIncorrect</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m28">TestPage.TestDashboard.Backup.TestRestoreDb#testCreateRestoreDbSuffixFileNameEmptyField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m29">TestPage.TestDashboard.Backup.TestRestoreDb#testCreateRestoreTimeTakeBackupEmptyField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m30">TestPage.TestDashboard.Backup.TestSqlPing#testCheckScheduleIncorrect</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m31">TestPage.TestDashboard.Backup.TestSqlPing#testCheckSqlQueryEmptyField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m32">TestPage.TestDashboard.Backup.TestSqlPing#testCreateSqlPingCorrect</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m33">TestPage.TestDashboard.Backup.TestVerifiedBackup#testCreateVerifiedBackupCorrect</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m34">TestPage.TestDashboard.Backup.TestVerifiedBackup#testCreateVerifiedBackupMaxNumbNegative</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m35">TestPage.TestDashboard.Backup.TestVerifiedBackup#testCreateVerifiedBackupMaxNumbNotNumbers</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m36">TestPage.TestDashboard.Backup.TestVerifiedBackup#testCreateVerifiedBackupScheduleIncorrect</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>CloudBackup</h2><h3 id="m37">TestPage.TestDashboard.Backup.TestCloudBackup#testCheckFiledConnectionFtpEmptyField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m38">TestPage.TestDashboard.Backup.TestCloudBackup#testCheckFilenameTemplateEmptyField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m39">TestPage.TestDashboard.Backup.TestCloudBackup#testCheckFtpPortEmptyField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m40">TestPage.TestDashboard.Backup.TestCloudBackup#testCheckFtpServerEmptyField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m41">TestPage.TestDashboard.Backup.TestCloudBackup#testCheckKeepNSourceFilesFieldEmptyField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m42">TestPage.TestDashboard.Backup.TestCloudBackup#testCheckMonitorFolderEmptyField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m43">TestPage.TestDashboard.Backup.TestCloudBackup#testCheckPeriodEmptyField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m44">TestPage.TestDashboard.Backup.TestCloudBackupReceiver#testCheckAlertFileAgeEmptyField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m45">TestPage.TestDashboard.Backup.TestCloudBackupReceiver#testCheckAlertFileCountIncorrectValue</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m46">TestPage.TestDashboard.Backup.TestCloudBackupReceiver#testCheckDecryptPasswordEmptyField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m47">TestPage.TestDashboard.Backup.TestCloudBackupReceiver#testCheckExtensionPackedFilesEmptyField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m48">TestPage.TestDashboard.Backup.TestCloudBackupReceiver#testCheckFilenameTemplateEmptyField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m49">TestPage.TestDashboard.Backup.TestCloudBackupReceiver#testCheckPeriodEmptyField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m50">TestPage.TestDashboard.Backup.TestCloudBackupReceiver#testCheckWatchIncomingFilesEmptyField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Transactions</h2><h3 id="m51">TestPage.TestDashboard.TestTransactions#testCheckFiledAlterNextOATMoreEmptyField</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#form\-period&quot;}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=id, value=form-period}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.clear(Unknown Source)
+	at Helpers.Helper.setValue(Helper.java:68)
+	at TestPage.TestDashboard.TestTransactions.InitTest(TestTransactions.java:114)
+	at TestPage.TestDashboard.TestTransactions.testCheckFiledAlterNextOATMoreEmptyField(TestTransactions.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m52">TestPage.TestDashboard.TestTransactions#testCheckFiledAlterOSTOITMoreEmptyField</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#form\-period&quot;}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=id, value=form-period}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.clear(Unknown Source)
+	at Helpers.Helper.setValue(Helper.java:68)
+	at TestPage.TestDashboard.TestTransactions.InitTest(TestTransactions.java:114)
+	at TestPage.TestDashboard.TestTransactions.testCheckFiledAlterOSTOITMoreEmptyField(TestTransactions.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m53">TestPage.TestDashboard.TestTransactions#testCheckFiledMaxTransactionsEmptyField</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#form\-period&quot;}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=id, value=form-period}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.clear(Unknown Source)
+	at Helpers.Helper.setValue(Helper.java:68)
+	at TestPage.TestDashboard.TestTransactions.InitTest(TestTransactions.java:114)
+	at TestPage.TestDashboard.TestTransactions.testCheckFiledMaxTransactionsEmptyField(TestTransactions.java:67)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m54">TestPage.TestDashboard.TestTransactions#testCheckPeriodEmptyField</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#form\-period&quot;}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=id, value=form-period}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.clear(Unknown Source)
+	at Helpers.Helper.setValue(Helper.java:68)
+	at TestPage.TestDashboard.TestTransactions.testCheckPeriodEmptyField(TestTransactions.java:53)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Lockprint</h2><h3 id="m55">TestPage.TestDashboard.TestLockprint#testCheckFiledBuffersMaxEmptyValue</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: value must be a number expected [&quot;&quot; is not an integer number] but found [The server encountered an unexpected condition which prevented it from fulfilling the request]
+	at TestPage.TestDashboard.TestLockprint.testCheckFiledBuffersMaxEmptyValue(TestLockprint.java:358)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m56">TestPage.TestDashboard.TestLockprint#testCreateFiledBuffersMaxNumbNegativeValue</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//*[@class=&apos;alert alert-danger&apos;]//span)[2]&quot;}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=xpath, value=(//*[@class=&apos;alert alert-danger&apos;]//span)[2]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -125,105 +300,71 @@ Session ID: 0fc3d964738ac3d6dd1a2f66391250d7
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy14.getWrappedElement(Unknown Source)
-	at org.openqa.selenium.interactions.PointerInput$Origin.asArg(PointerInput.java:204)
-	at org.openqa.selenium.interactions.PointerInput$Move.encode(PointerInput.java:155)
-	at org.openqa.selenium.interactions.Sequence.encode(Sequence.java:75)
-	at org.openqa.selenium.interactions.Sequence.toJson(Sequence.java:84)
-	... 62 more
-... Removed 41 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">TestPage.TestDashboard.Replica.TestReplica#testCreateMasterAsync_IncorrectLogArchiveTimeoutField</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=79.0.3945.117)
-Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
-System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:52913}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0fc3d964738ac3d6dd1a2f66391250d7
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
-	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:118)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy14.clear(Unknown Source)
-	at Helpers.Helper.setValue(Helper.java:66)
-	at TestPage.TestDashboard.Replica.TestReplica.InitAsyncTest(TestReplica.java:207)
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterAsync_IncorrectLogArchiveTimeoutField(TestReplica.java:132)
+	at com.sun.proxy.$Proxy14.getText(Unknown Source)
+	at TestPage.TestDashboard.TestLockprint.testCreateFiledBuffersMaxNumbNegativeValue(TestLockprint.java:374)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 40 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">TestPage.TestDashboard.Replica.TestReplica#testCreateMasterSync_Correct</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=79.0.3945.117)
-Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
-System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:52913}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0fc3d964738ac3d6dd1a2f66391250d7
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
-	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:118)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy14.clear(Unknown Source)
-	at Helpers.Helper.setValue(Helper.java:66)
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterSync_Correct(TestReplica.java:73)
+... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m57">TestPage.TestDashboard.TestLockprint#testCheckFiledAverageLengthEmptyValue</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m58">TestPage.TestDashboard.TestLockprint#testCheckFiledDeadlockScansThresholdEmptyValue</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m59">TestPage.TestDashboard.TestLockprint#testCheckFiledDeadlockThresholdEmptyValue</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m60">TestPage.TestDashboard.TestLockprint#testCheckFiledFreeOwnersLimitEmptyValue</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m61">TestPage.TestDashboard.TestLockprint#testCheckFiledHashSlotsEmptyValue</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m62">TestPage.TestDashboard.TestLockprint#testCheckFiledLockTableSizeEmptyValue</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m63">TestPage.TestDashboard.TestLockprint#testCheckFiledMinLengthEmptyValue</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m64">TestPage.TestDashboard.TestLockprint#testCheckFiledMutexWaitThresholdEmptyValue</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m65">TestPage.TestDashboard.TestLockprint#testCheckFiledOwnersLimitEmptyValue</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m66">TestPage.TestDashboard.TestLockprint#testCheckPeriodEmptyField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m67">TestPage.TestDashboard.TestLockprint#testCreateFiledAverageLengthNumbNegativeValue</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m68">TestPage.TestDashboard.TestLockprint#testCreateFiledDeadlockScansThresholdNumbNegativeValue</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m69">TestPage.TestDashboard.TestLockprint#testCreateFiledDeadlockThresholdNumbNegativeValue</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m70">TestPage.TestDashboard.TestLockprint#testCreateFiledFreeOwnersLimitNumbNegativeValue</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m71">TestPage.TestDashboard.TestLockprint#testCreateFiledHashSlotsNumbNegativeValue</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m72">TestPage.TestDashboard.TestLockprint#testCreateFiledLockTableSizeNumbNegativeValue</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m73">TestPage.TestDashboard.TestLockprint#testCreateFiledMinLengthNumbNegativeValue</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m74">TestPage.TestDashboard.TestLockprint#testCreateFiledMutexWaitThresholdNumbNegativeValue</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m75">TestPage.TestDashboard.TestLockprint#testCreateFiledOwnersLimitNumbNegativeValue</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>SweepSchedule</h2><h3 id="m76">TestPage.TestDashboard.TestSweepSchedule#testCheckFiledDeadlockScansThresholdEmptyValue</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m77">TestPage.TestDashboard.TestSweepSchedule#testCheckPeriodEmptyField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m78">TestPage.TestDashboard.TestSweepSchedule#testCreateFiledDeadlockScansThresholdNumbNegativeValue</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Delta</h2><h3 id="m79">TestPage.TestDashboard.TestDelta#testCheckFiledMaxDeltaMinutesEmptyValue</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: value must be a number expected [&quot;&quot; is not an integer number] but found [&quot;NaN&quot; is not an integer number]
+	at TestPage.TestDashboard.TestDelta.testCheckFiledMaxDeltaMinutesEmptyValue(TestDelta.java:87)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 40 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">TestPage.TestDashboard.Replica.TestReplica#testCreateMasterSync_EmptyReplicaDatabaseField</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
-Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
-System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:315)
-	at org.openqa.selenium.json.JsonOutput.lambda$new$14(JsonOutput.java:152)
-	at org.openqa.selenium.json.JsonOutput$SafeBiConsumer.accept(JsonOutput.java:407)
-	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:261)
-	at org.openqa.selenium.json.JsonOutput.lambda$null$19(JsonOutput.java:165)
-	at java.base/java.util.LinkedHashMap$LinkedValues.forEach(LinkedHashMap.java:608)
-	at org.openqa.selenium.json.JsonOutput.lambda$new$20(JsonOutput.java:165)
-	at org.openqa.selenium.json.JsonOutput$SafeBiConsumer.accept(JsonOutput.java:407)
-	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:261)
-	at org.openqa.selenium.json.JsonOutput.lambda$null$21(JsonOutput.java:174)
-	at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:65)
-	at org.openqa.selenium.json.JsonOutput.lambda$new$22(JsonOutput.java:173)
-	at org.openqa.selenium.json.JsonOutput$SafeBiConsumer.accept(JsonOutput.java:407)
-	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:261)
-	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:252)
-	at org.openqa.selenium.json.Json.toJson(Json.java:42)
-	at org.openqa.selenium.remote.http.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:227)
-	at org.openqa.selenium.remote.http.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:117)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:152)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:614)
-	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:640)
-	at org.openqa.selenium.interactions.Actions.perform(Actions.java:596)
-	at Helpers.Helper.click(Helper.java:189)
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterSync_EmptyReplicaDatabaseField(TestReplica.java:56)
+... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m80">TestPage.TestDashboard.TestDelta#testCheckFiledMaxDeltaBytesEmptyValue</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m81">TestPage.TestDashboard.TestDelta#testCheckPeriodEmptyField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>DiskSpace</h2><h3 id="m82">TestPage.TestDashboard.TestDiskSpace#testCheckFiledMaxDeltaBytesEmptyValue</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m83">TestPage.TestDashboard.TestDiskSpace#testCheckFiledMaxDeltaMinutesEmptyValue</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m84">TestPage.TestDashboard.TestDiskSpace#testCheckPeriodEmptyField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>DbStatus</h2><h3 id="m85">TestPage.TestDashboard.TestDbStatus#testCheckPeriodEmptyField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m86">TestPage.TestDashboard.TestDbStatus#testCheckStatisticsArchiveDepthEmptyValue</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m87">TestPage.TestDashboard.TestDbStatus#testCheckStatisticsFileNamePatternEmptyField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m88">TestPage.TestDashboard.TestDbStatus#testCheckStoreStatisticEmptyField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>IndexStatistics</h2><h3 id="m89">TestPage.TestDashboard.TestIndexStatistics#testCheckFieldPeriodEmptyValue</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m90">TestPage.TestDashboard.TestIndexStatistics#testCheckFieldStatisticsArchiveDepthEmptyValue</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>LowLevelMetadata</h2><h3 id="m91">TestPage.TestDashboard.TestLowLevelMetadata#testCheckFieldMaxFormatsEmptyValue</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: value must be a number expected [&quot;&quot; is not an integer number] but found [The server encountered an unexpected condition which prevented it from fulfilling the request]
+	at TestPage.TestDashboard.TestLowLevelMetadata.testCheckFieldMaxFormatsEmptyValue(TestLowLevelMetadata.java:87)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-	Suppressed: org.openqa.selenium.json.JsonException: Attempting to close incomplete json stream
-Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
-System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
-Driver info: driver.version: RemoteWebDriver
-		at org.openqa.selenium.json.JsonOutput.close(JsonOutput.java:276)
-		at org.openqa.selenium.json.Json.toJson(Json.java:44)
-		... 42 more
-	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:311)
-	... 57 more
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;form-section-db-replication_role&apos;]//*[@value=&apos;master&apos;]//ancestor::label[2]&quot;}
-  (Session info: chrome=79.0.3945.117)
+... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m92">TestPage.TestDashboard.TestLowLevelMetadata#testCheckFieldDateFormatFolderNameEmptyValue</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m93">TestPage.TestDashboard.TestLowLevelMetadata#testCheckFieldMetadataFolderEmptyValue</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m94">TestPage.TestDashboard.TestLowLevelMetadata#testCheckPeriodEmptyField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>TransactionMonitoring</h2><h3 id="m95">TestPage.TestPerformance.TestTransactionMonitoring#testCheckFieldOutputFolderEmptyValue</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m96">TestPage.TestPerformance.TestTransactionMonitoring#testCheckFiledShowTransactionsOlderEmptyValue</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m97">TestPage.TestPerformance.TestTransactionMonitoring#testCheckPeriodEmptyField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m98">TestPage.TestPerformance.TestTransactionMonitoring#testCheckSendAlertOldestActiveTransactionEmptyValue</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m99">TestPage.TestPerformance.TestTransactionMonitoring#testCheckShowOnlyNNOldestActiveTransactionsEmptyValue</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m100">TestPage.TestPerformance.TestTransactionMonitoring#testCreateFiledShowTransactionsOlderNumbNegativeValue</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m101">TestPage.TestPerformance.TestTransactionMonitoring#testCreateSendAlertOldestActiveTransactionNumbNegativeValue</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m102">TestPage.TestPerformance.TestTransactionMonitoring#testCreateShowOnlyNNOldestActiveTransactionsNumbNegativeValue</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Replica</h2><h3 id="m103">TestPage.TestDashboard.Replica.TestReplica#testCreateMasterAsync_EmptyLogDirectoryField</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@class=&apos;db-item-tab&apos;]//span[text()=&apos;MasterAsync&apos;]&quot;}
+  (Session info: chrome=79.0.3945.130)
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
 System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:52913}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0fc3d964738ac3d6dd1a2f66391250d7
-*** Element info: {Using=xpath, value=//*[@id=&apos;form-section-db-replication_role&apos;]//*[@value=&apos;master&apos;]//ancestor::label[2]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=xpath, value=//*[@class=&apos;db-item-tab&apos;]//span[text()=&apos;MasterAsync&apos;]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -234,85 +375,46 @@ Session ID: 0fc3d964738ac3d6dd1a2f66391250d7
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy14.getWrappedElement(Unknown Source)
-	at org.openqa.selenium.interactions.PointerInput$Origin.asArg(PointerInput.java:204)
-	at org.openqa.selenium.interactions.PointerInput$Move.encode(PointerInput.java:155)
-	at org.openqa.selenium.interactions.Sequence.encode(Sequence.java:75)
-	at org.openqa.selenium.interactions.Sequence.toJson(Sequence.java:84)
-	... 62 more
-... Removed 41 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">TestPage.TestDashboard.Replica.TestReplica#testCreateReplicaAsync_Correct</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=79.0.3945.117)
+	at TestPageLocator.GeneralLocators.NameBDText(GeneralLocators.java:310)
+	at TestPage.TestDashboard.Replica.TestReplica.ClickAndCheckBd(TestReplica.java:336)
+	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterAsync_EmptyLogDirectoryField(TestReplica.java:103)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m104">TestPage.TestDashboard.Replica.TestReplica#testCreateMasterSync_Correct</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#form\-db\-replica_database&quot;}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
 System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:52913}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0fc3d964738ac3d6dd1a2f66391250d7
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=id, value=form-db-replica_database}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
-	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:118)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at com.sun.proxy.$Proxy14.clear(Unknown Source)
-	at Helpers.Helper.setValue(Helper.java:66)
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateReplicaAsync_Correct(TestReplica.java:198)
+	at Helpers.Helper.setValue(Helper.java:68)
+	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterSync_Correct(TestReplica.java:75)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 40 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">TestPage.TestDashboard.Replica.TestReplica#testCreateReplicaAsync_EmptyLogArchiveDirectoryField</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
-Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
-System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:315)
-	at org.openqa.selenium.json.JsonOutput.lambda$new$14(JsonOutput.java:152)
-	at org.openqa.selenium.json.JsonOutput$SafeBiConsumer.accept(JsonOutput.java:407)
-	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:261)
-	at org.openqa.selenium.json.JsonOutput.lambda$null$19(JsonOutput.java:165)
-	at java.base/java.util.LinkedHashMap$LinkedValues.forEach(LinkedHashMap.java:608)
-	at org.openqa.selenium.json.JsonOutput.lambda$new$20(JsonOutput.java:165)
-	at org.openqa.selenium.json.JsonOutput$SafeBiConsumer.accept(JsonOutput.java:407)
-	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:261)
-	at org.openqa.selenium.json.JsonOutput.lambda$null$21(JsonOutput.java:174)
-	at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:65)
-	at org.openqa.selenium.json.JsonOutput.lambda$new$22(JsonOutput.java:173)
-	at org.openqa.selenium.json.JsonOutput$SafeBiConsumer.accept(JsonOutput.java:407)
-	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:261)
-	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:252)
-	at org.openqa.selenium.json.Json.toJson(Json.java:42)
-	at org.openqa.selenium.remote.http.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:227)
-	at org.openqa.selenium.remote.http.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:117)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:152)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:614)
-	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:640)
-	at org.openqa.selenium.interactions.Actions.perform(Actions.java:596)
-	at Helpers.Helper.click(Helper.java:189)
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateReplicaAsync_EmptyLogArchiveDirectoryField(TestReplica.java:181)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-	Suppressed: org.openqa.selenium.json.JsonException: Attempting to close incomplete json stream
-Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
-System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
-Driver info: driver.version: RemoteWebDriver
-		at org.openqa.selenium.json.JsonOutput.close(JsonOutput.java:276)
-		at org.openqa.selenium.json.Json.toJson(Json.java:44)
-		... 42 more
-	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:311)
-	... 57 more
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;form-section-db-replication_role&apos;]//*[@value=&apos;replica&apos;]//ancestor::label[2]&quot;}
-  (Session info: chrome=79.0.3945.117)
+... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m105">TestPage.TestDashboard.Replica.TestReplica#testCreateMasterSync_EmptyReplicaDatabaseField</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@class=&apos;db-item-tab&apos;]//span[text()=&apos;MasterSync&apos;]&quot;}
+  (Session info: chrome=79.0.3945.130)
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
 System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:52913}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0fc3d964738ac3d6dd1a2f66391250d7
-*** Element info: {Using=xpath, value=//*[@id=&apos;form-section-db-replication_role&apos;]//*[@value=&apos;replica&apos;]//ancestor::label[2]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=xpath, value=//*[@class=&apos;db-item-tab&apos;]//span[text()=&apos;MasterSync&apos;]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -323,64 +425,20 @@ Session ID: 0fc3d964738ac3d6dd1a2f66391250d7
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy14.getWrappedElement(Unknown Source)
-	at org.openqa.selenium.interactions.PointerInput$Origin.asArg(PointerInput.java:204)
-	at org.openqa.selenium.interactions.PointerInput$Move.encode(PointerInput.java:155)
-	at org.openqa.selenium.interactions.Sequence.encode(Sequence.java:75)
-	at org.openqa.selenium.interactions.Sequence.toJson(Sequence.java:84)
-	... 62 more
-... Removed 41 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">TestPage.TestDashboard.Replica.TestReplica#testCreateReplicaSync_Correct</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
-Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
-System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:315)
-	at org.openqa.selenium.json.JsonOutput.lambda$new$14(JsonOutput.java:152)
-	at org.openqa.selenium.json.JsonOutput$SafeBiConsumer.accept(JsonOutput.java:407)
-	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:261)
-	at org.openqa.selenium.json.JsonOutput.lambda$null$19(JsonOutput.java:165)
-	at java.base/java.util.LinkedHashMap$LinkedValues.forEach(LinkedHashMap.java:608)
-	at org.openqa.selenium.json.JsonOutput.lambda$new$20(JsonOutput.java:165)
-	at org.openqa.selenium.json.JsonOutput$SafeBiConsumer.accept(JsonOutput.java:407)
-	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:261)
-	at org.openqa.selenium.json.JsonOutput.lambda$null$21(JsonOutput.java:174)
-	at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:65)
-	at org.openqa.selenium.json.JsonOutput.lambda$new$22(JsonOutput.java:173)
-	at org.openqa.selenium.json.JsonOutput$SafeBiConsumer.accept(JsonOutput.java:407)
-	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:261)
-	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:252)
-	at org.openqa.selenium.json.Json.toJson(Json.java:42)
-	at org.openqa.selenium.remote.http.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:227)
-	at org.openqa.selenium.remote.http.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:117)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:152)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:614)
-	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:640)
-	at org.openqa.selenium.interactions.Actions.perform(Actions.java:596)
-	at Helpers.Helper.click(Helper.java:189)
-	at TestPage.TestDashboard.Replica.TestReplica.testCreateReplicaSync_Correct(TestReplica.java:88)
+	at TestPageLocator.GeneralLocators.NameBDText(GeneralLocators.java:310)
+	at TestPage.TestDashboard.Replica.TestReplica.ClickAndCheckBd(TestReplica.java:336)
+	at TestPage.TestDashboard.Replica.TestReplica.testCreateMasterSync_EmptyReplicaDatabaseField(TestReplica.java:57)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-	Suppressed: org.openqa.selenium.json.JsonException: Attempting to close incomplete json stream
-Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
-System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
-Driver info: driver.version: RemoteWebDriver
-		at org.openqa.selenium.json.JsonOutput.close(JsonOutput.java:276)
-		at org.openqa.selenium.json.Json.toJson(Json.java:44)
-		... 42 more
-	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:311)
-	... 57 more
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;form-section-db-replication_role&apos;]//*[@value=&apos;replica&apos;]//ancestor::label[2]&quot;}
-  (Session info: chrome=79.0.3945.117)
+... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m106">TestPage.TestDashboard.Replica.TestReplica#testCreateReplicaSync_Correct</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@class=&apos;db-item-tab&apos;]//span[text()=&apos;ReplicaSync&apos;]&quot;}
+  (Session info: chrome=79.0.3945.130)
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
 System info: host: &apos;MSI&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:52913}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0fc3d964738ac3d6dd1a2f66391250d7
-*** Element info: {Using=xpath, value=//*[@id=&apos;form-section-db-replication_role&apos;]//*[@value=&apos;replica&apos;]//ancestor::label[2]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Proger\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e06d9cc8825f39d2eff65e1f8163cc08
+*** Element info: {Using=xpath, value=//*[@class=&apos;db-item-tab&apos;]//span[text()=&apos;ReplicaSync&apos;]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -391,15 +449,45 @@ Session ID: 0fc3d964738ac3d6dd1a2f66391250d7
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy14.getWrappedElement(Unknown Source)
-	at org.openqa.selenium.interactions.PointerInput$Origin.asArg(PointerInput.java:204)
-	at org.openqa.selenium.interactions.PointerInput$Move.encode(PointerInput.java:155)
-	at org.openqa.selenium.interactions.Sequence.encode(Sequence.java:75)
-	at org.openqa.selenium.interactions.Sequence.toJson(Sequence.java:84)
-	... 62 more
-... Removed 41 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m9">TestPage.TestDashboard.Replica.TestReplica#testCreateMasterAsync_ReinitializeReplicaDatabaseCorrect</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+	at TestPageLocator.GeneralLocators.NameBDText(GeneralLocators.java:310)
+	at TestPage.TestDashboard.Replica.TestReplica.ClickAndCheckBd(TestReplica.java:336)
+	at TestPage.TestDashboard.Replica.TestReplica.testCreateReplicaSync_Correct(TestReplica.java:87)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m107">TestPage.TestDashboard.Replica.TestReplica#testAddCloudBackupCorrect</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method TestReplica.testAddCloudBackupCorrect()[pri:13, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m108">TestPage.TestDashboard.Replica.TestReplica#testAddCloudBackupReceiverCorrect</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method TestReplica.testAddCloudBackupReceiverCorrect()[pri:14, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m109">TestPage.TestDashboard.Replica.TestReplica#testAddFtpCorrect</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method TestReplica.testAddFtpCorrect()[pri:12, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m110">TestPage.TestDashboard.Replica.TestReplica#testCreateMasterAsync_CheckCreateTable</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method TestReplica.testCreateMasterAsync_CheckCreateTable()[pri:8, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m111">TestPage.TestDashboard.Replica.TestReplica#testCreateMasterAsync_Correct</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method TestReplica.testCreateMasterAsync_Correct()[pri:7, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m112">TestPage.TestDashboard.Replica.TestReplica#testCreateMasterAsync_EmptyLogArchiveDirectoryField</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method TestReplica.testCreateMasterAsync_EmptyLogArchiveDirectoryField()[pri:5, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m113">TestPage.TestDashboard.Replica.TestReplica#testCreateMasterAsync_IncorrectLogArchiveTimeoutField</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method TestReplica.testCreateMasterAsync_IncorrectLogArchiveTimeoutField()[pri:6, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m114">TestPage.TestDashboard.Replica.TestReplica#testCreateMasterAsync_ReinitializeReplicaDatabaseCorrect</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method TestReplica.testCreateMasterAsync_ReinitializeReplicaDatabaseCorrect()[pri:9, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m115">TestPage.TestDashboard.Replica.TestReplica#testCreateReplicaAsync_CheckSelectTable</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method TestReplica.testCreateReplicaAsync_CheckSelectTable()[pri:15, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m116">TestPage.TestDashboard.Replica.TestReplica#testCreateReplicaAsync_Correct</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method TestReplica.testCreateReplicaAsync_Correct()[pri:11, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m117">TestPage.TestDashboard.Replica.TestReplica#testCreateReplicaAsync_EmptyLogArchiveDirectoryField</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method TestReplica.testCreateReplicaAsync_EmptyLogArchiveDirectoryField()[pri:10, instance:TestPage.TestDashboard.Replica.TestReplica@6f6962ba] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>PerformanceMonitoring</h2><h3 id="m118">TestPage.TestPerformance.TestPerformanceMonitoring#testCheckFieldOutputFolderEmptyValue</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m119">TestPage.TestPerformance.TestPerformanceMonitoring#testCheckPeriodEmptyField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

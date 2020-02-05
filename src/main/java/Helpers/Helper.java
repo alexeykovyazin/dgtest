@@ -287,7 +287,7 @@ public class Helper {
      */
     public static void waitUpdate(WebDriver driver) {
         try {
-            WebDriverWait wait = new WebDriverWait(driver, 15);
+            WebDriverWait wait = new WebDriverWait(driver, 20);
             wait.until((ExpectedCondition<Boolean>) wdriver -> ((JavascriptExecutor) driver)
                     .executeScript("return((window.jQuery != null) && (jQuery.active === 0))").equals(true));
         } catch (WebDriverException exWebDriverException) {
@@ -462,31 +462,7 @@ public class Helper {
         return query_pairs;
     }
 
-    /**
-     * Intercept function JS ERROR
-     */
-    public static String interceptionJSonPage(WebDriver webDriver) {
-        Set<String> errorStrings = new HashSet<>();
-        errorStrings.add("SyntaxError");
-        errorStrings.add("EvalError");
-        errorStrings.add("ReferenceError");
-        errorStrings.add("RangeError");
-        errorStrings.add("TypeError");
-        errorStrings.add("URIError");
-        //errorStrings.add("404");
 
-        LogEntries logEntries = webDriver.manage().logs().get(LogType.BROWSER);
-        if (logEntries != null) {
-            for (LogEntry logEntry : logEntries) {
-                for (String errorString : errorStrings) {
-                    if (logEntry.getMessage().contains(errorString)) {
-                        Assert.fail(new Date(logEntry.getTimestamp()) + " " + logEntry.getLevel() + " " + logEntry.getMessage());
-                    }
-                }
-            }
-        }
-        return null;
-    }
 
 
     /**

@@ -6,17 +6,12 @@
 <!--        <listener class-name="Listener" />-->
 <!--        <listener class-name="SuiteListener" />-->
 <!--    </listeners>-->
-    <!-- ХРОМ   -->
-    <parameter name="browsername" value="chrome"/>
-    <parameter name="pathdriver" value="src/test/resurces/chromedriver.exe"/>
+    <parameter name="browsername" value="${browsername}"/>
+<!--    <parameter name="browsername" value="firefox"/>-->
+
     <!-- Path to folder  HQBirdData-->
     <parameter name="pathhqbirddata" value="C:\HQBirdData\"/>
-<!--    <parameter name="pathdriver" value="src/test/resurces/chromedriver"/>-->
-
-     <parameter name="url" value="http://admin:strong password@localhost:8082/"/>
-<!--     <parameter name="url" value="http://localhost:8082/"/>-->
-    <parameter name="username" value="admin"/>
-    <parameter name="password" value="strong password"/>
+    <parameter name="url" value="http://admin:strong password@localhost:8082/"/>
 
 
     <test name="Database" group-by-instances="true">
@@ -36,15 +31,78 @@
             <class name = "TestPage.TestDashboard.Backup.TestValidateDb"/>
         </classes>
     </test>
+
     <test name="CloudBackup" group-by-instances="true">
         <classes >
             <class name = "TestPage.TestDashboard.Backup.TestCloudBackup"/>
             <class name = "TestPage.TestDashboard.Backup.TestCloudBackupReceiver"/>
         </classes>
     </test>
+
+    <test name="Transactions" group-by-instances="true">
+        <classes >
+            <class name = "TestPage.TestDashboard.TestTransactions"/>
+        </classes>
+    </test>
+
+    <test name="Lockprint" group-by-instances="true">
+        <classes >
+            <class name = "TestPage.TestDashboard.TestLockprint"/>
+        </classes>
+    </test>
+
+    <test name="SweepSchedule" group-by-instances="true">
+        <classes >
+            <class name = "TestPage.TestDashboard.TestSweepSchedule"/>
+        </classes>
+    </test>
+
+    <test name="Delta" group-by-instances="true">
+        <classes >
+            <class name = "TestPage.TestDashboard.TestDelta"/>
+        </classes>
+    </test>
+
+    <test name="DiskSpace" group-by-instances="true">
+        <classes >
+            <class name = "TestPage.TestDashboard.TestDiskSpace"/>
+        </classes>
+    </test>
+
+    <test name="DbStatus" group-by-instances="true">
+        <classes >
+            <class name = "TestPage.TestDashboard.TestDbStatus"/>
+        </classes>
+    </test>
+
+    <test name="IndexStatistics" group-by-instances="true">
+        <classes >
+            <class name = "TestPage.TestDashboard.TestIndexStatistics"/>
+        </classes>
+    </test>
+
+    <test name="LowLevelMetadata" group-by-instances="true">
+        <classes >
+            <class name = "TestPage.TestDashboard.TestLowLevelMetadata"/>
+        </classes>
+    </test>
+
     <test name="Replica" group-by-instances="true">
         <classes >
             <class name = "TestPage.TestDashboard.Replica.TestReplica"/>
+        </classes>
+    </test>
+
+    <test name="TransactionMonitoring" group-by-instances="true">
+        <classes >
+            <class name = "TestPage.TestPerformance.TestTransactionMonitoring"/>
+        </classes>
+    </test>
+
+
+    <test name="PerformanceMonitoring" group-by-instances="true">
+        <classes >
+            <class name = "TestPage.TestPerformance.TestPerformanceMonitoring"/>
         </classes>
     </test>
  </suite>

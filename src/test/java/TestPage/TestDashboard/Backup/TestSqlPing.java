@@ -2,8 +2,8 @@ package TestPage.TestDashboard.Backup;
 
 import Helpers.Helper;
 import TestPage.EnvContainer;
-import TestPageLocator.DashboardPage.Backup;
 import TestPageLocator.DashboardPage.Database;
+import TestPageLocator.GeneralLocators;
 import io.qameta.allure.Description;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -19,7 +19,7 @@ public class TestSqlPing extends EnvContainer {
 
     public String _url,_standarturl = "http://localhost:8082/static/dashboard.html";
     private Database _pagedatabase;
-    private Backup _page;
+    private GeneralLocators _page;
     private Helper _ctx;
 
     @BeforeClass
@@ -27,12 +27,12 @@ public class TestSqlPing extends EnvContainer {
     {
         _driver = EnvContainer.Driver;
         _ctx = new Helper(_driver);
-        _page = PageFactory.initElements(_driver, Backup.class);
+        _page = PageFactory.initElements(_driver, GeneralLocators.class);
         _pagedatabase = PageFactory.initElements(_driver, Database.class);
         openUrl();
         Helper.waitSetup(_driver, 1000);
         _ctx.current(_page.NameBDText(BackupBD)).click();
-        _ctx.current(_page.SqlPingSettingsBtn(BackupBD)).click();
+        _ctx.current(_page.SqlPingSettingsBtn(BackupBD)).scrollToElement().click();
         _ctx.current(_page.ScheduleField).waitelementToBeClickable();
     }
 //    @AfterMethod
@@ -43,7 +43,7 @@ public class TestSqlPing extends EnvContainer {
     private void openUrl() {
         _url = EnvContainer.URL + _standarturl;
         _driver.navigate().to(_url);
-        Helper.interceptionJSonPage(_driver);
+        interceptionJSonPage(_driver);
         Helper.waitUpdate(_driver);
     }
 
@@ -64,7 +64,7 @@ public class TestSqlPing extends EnvContainer {
     }
 
     @Test( enabled = true, priority = 2)
-    @Description(value = "WHEN we leave the field empty \"Sql Query\" field THEN, the error \"should not be null or empty\"")
+    @Description(value = "WHEN we leave the field  \"Sql Query\" empty THEN, the error \"should not be null or empty\"")
     public void testCheckSqlQueryEmptyField ()  {
 
         //actions

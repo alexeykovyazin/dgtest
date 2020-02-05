@@ -2,8 +2,8 @@ package TestPage.TestDashboard.Backup;
 
 import Helpers.Helper;
 import TestPage.EnvContainer;
-import TestPageLocator.DashboardPage.Backup;
 import TestPageLocator.DashboardPage.Database;
+import TestPageLocator.GeneralLocators;
 import io.qameta.allure.Description;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -19,7 +19,7 @@ public class TestRestoreDb extends EnvContainer {
 
     public String _url,_standarturl = "http://localhost:8082/static/dashboard.html";
     private Database _pagedatabase;
-    private Backup _page;
+    private GeneralLocators _page;
     private Helper _ctx;
 
     @BeforeClass
@@ -27,13 +27,14 @@ public class TestRestoreDb extends EnvContainer {
     {
         _driver = EnvContainer.Driver;
         _ctx = new Helper(_driver);
-        _page = PageFactory.initElements(_driver, Backup.class);
+        _page = PageFactory.initElements(_driver, GeneralLocators.class);
         _pagedatabase = PageFactory.initElements(_driver, Database.class);
         openUrl();
         Helper.waitSetup(_driver, 1000);
         _ctx.current(_page.NameBDText(BackupBD)).click();
-        _ctx.current(_page.RestoreDbSettingsBtn(BackupBD)).click();
-       // _ctx.current(_page.ScheduleField).waitelementToBeClickable();
+        _ctx.current(_page.RestoreDbSettingsBtn(BackupBD)).scrollToElement().click();
+        _ctx.current(_page.ScheduleField).waitelementToBeClickable();
+        Helper.waitSetup(_driver, 2000);
     }
 //    @AfterMethod
 //    public void methodTearDown() {
@@ -43,7 +44,7 @@ public class TestRestoreDb extends EnvContainer {
     private void openUrl() {
         _url = EnvContainer.URL + _standarturl;
         _driver.navigate().to(_url);
-        Helper.interceptionJSonPage(_driver);
+        interceptionJSonPage(_driver);
         Helper.waitUpdate(_driver);
     }
 
@@ -65,7 +66,7 @@ public class TestRestoreDb extends EnvContainer {
     }
 
     @Test( enabled = true, priority = 2)
-    @Description(value = "WHEN we leave the field empty \"Get backup from folder\"  THEN the error \" \"\" should not be null or empty\"")
+    @Description(value = "WHEN we leave the field  \"Get backup from folder\"  empty THEN the error \" \"\" should not be null or empty\"")
     public void testCreateRestoreDbBackupFolderEmptyField ()  {
         // prepare
         InitBackup();
@@ -80,7 +81,7 @@ public class TestRestoreDb extends EnvContainer {
     }
 
     @Test( enabled = true, priority = 3)
-    @Description(value = "WHEN we leave the field empty \"Template for backup file name\"  THEN the error \" \"\" should not be null or empty\"")
+    @Description(value = "WHEN we leave the field  \"Template for backup file name\"  empty THEN the error \" \"\" should not be null or empty\"")
     public void testCreateRestoreDbPathTemplateBackupFolderEmptyField()  {
         // prepare
         InitBackup();
@@ -95,7 +96,7 @@ public class TestRestoreDb extends EnvContainer {
     }
 
     @Test( enabled = true, priority = 4)
-    @Description(value = "WHEN we leave the field empty \"Take backup not older than, hours\"  THEN the error \"The server encountered an unexpected condition which prevented it from fulfilling the request\"")
+    @Description(value = "WHEN we leave the field  \"Take backup not older than, hours\" empty THEN the error \"is not an integer number\"")
     public void testCreateRestoreTimeTakeBackupEmptyField()  {
         // prepare
         InitBackup();
@@ -110,7 +111,7 @@ public class TestRestoreDb extends EnvContainer {
     }
 
     @Test( enabled = true, priority = 5)
-    @Description(value = "WHEN we leave the field empty \"Restore to directory\"  THEN the error \" \"\" should not be null or empty\"")
+    @Description(value = "WHEN we leave the field  \"Restore to directory\"  empty THEN the error \" \"\" should not be null or empty\"")
     public void testCreateRestoreDbPathRestoreFolderEmptyField()  {
         // prepare
         InitBackup();
@@ -125,7 +126,7 @@ public class TestRestoreDb extends EnvContainer {
     }
 
     @Test( enabled = true, priority = 6)
-    @Description(value = "WHEN we leave the field empty \"Restore with file name\"  THEN the error \" \"\" should not be null or empty\"")
+    @Description(value = "WHEN we leave the field  \"Restore with file name\" empty THEN the error \" \"\" should not be null or empty\"")
     public void testCreateRestoreDbRestoreFileNameEmptyField()  {
         // prepare
         InitBackup();
@@ -140,7 +141,7 @@ public class TestRestoreDb extends EnvContainer {
     }
 
     @Test( enabled = true, priority = 7)
-    @Description(value = "WHEN we leave the field empty \"Append suffix to file name\"  THEN the error \" \"\" should not be null or empty\"")
+    @Description(value = "WHEN we leave the field  \"Append suffix to file name\" empty THEN the error \" \"\" should not be null or empty\"")
     public void testCreateRestoreDbSuffixFileNameEmptyField()  {
         // prepare
         InitBackup();
@@ -155,7 +156,7 @@ public class TestRestoreDb extends EnvContainer {
     }
 
     @Test( enabled = true, priority = 8)
-    @Description(value = "WHEN we leave the field empty \"Limit restore process time to (minutes)\"  THEN the error \"The server encountered an unexpected condition which prevented it from fulfilling the request\"")
+    @Description(value = "WHEN we leave the field  \"Limit restore process time to (minutes)\" empty THEN the error \"is not an integer number\"")
     public void testCreateRestoreDbLimitProcessTimeEmptyField()  {
         // prepare
         InitBackup();
@@ -170,7 +171,7 @@ public class TestRestoreDb extends EnvContainer {
     }
 
     @Test( enabled = true, priority = 9)
-    @Description(value = "WHEN we leave the field empty \"Check available space before restore. Minimum value (bytes)\"  THEN the error \" \"\" is not an integer number\"")
+    @Description(value = "WHEN we leave the field  \"Check available space before restore. Minimum value (bytes)\"  empty THEN the error \" \"\" is not an integer number\"")
     public void testCreateRestoreDbMinFreeSpaceEmptyField ()  {
         // prepare
         InitBackup();
