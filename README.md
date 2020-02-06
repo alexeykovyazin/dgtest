@@ -7,6 +7,7 @@
 4. Открываем на редактирование файл C:\dgtest\src\test\resurces\testng.xml Для изменения пути к папке с конфигами, нужно в параметре pathhqbirddata изменить значение на нужное(по умолчанию стоит C:\HQBirdData\)
 5. Изменения других пути и значенияб при необходимости:
  - файл C:\dgtest\src\test\resurces\BatFiles\Runcmd.bat, изменить путь до файла isql( по умолчанию C:\HQbird\Firebird30\isql)
+ - папка C:\dgtest\src\test\resurces\BatFiles\ в bat файлах можно изменить имена служб(по умолчанию FirebirdServerHQBirdInstance и FBDataGuardAgent)
 
 
 ----------Запуск тестов----------
