@@ -115,6 +115,8 @@ public class GeneralLocators {
     public WebElement AppendSuffixFileNameField;
     @FindBy(id = "form-max-duration")
     public WebElement LimitRestoreProcTimeField;
+    @FindBy(id = "form-RestoreTimeLimit_min")
+    public WebElement RestoreTimeLimitField;
     /**
      * REPLICA
      */

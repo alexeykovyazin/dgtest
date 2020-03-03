@@ -119,6 +119,8 @@ public class EnvContainer
      */
 
     private void Registration(){
+        Helper.log("----------------------");
+        Helper.log("Start registration");
         if(_helper.current(registerpage.EnterpriseCheckbox).waitelementToBeClickable()== false){
             _helper.current(generalpage.RegistrationMenuBtn).click();
         }
@@ -127,17 +129,23 @@ public class EnvContainer
                 current(registerpage.EmailField).setValue("autotest@ib-aid.com").
                 current(registerpage.PasswordField).setValue("2019QAZ2019QAZ").
                 current(registerpage.ActiveButton).click();
-        Helper.waitSetup(Driver,2000);
-        Assert.assertFalse(_helper.isdisplayedElement(registerpage.AllertRegistr), "Alert not displayed");
+        Helper.log("Click button registration and wait 5 sec");
+        Helper.waitSetup(Driver,5000);
+        //Assert.assertFalse(_helper.isdisplayedElement(registerpage.AllertRegistr), "Alert not displayed");
     }
 
     private void AddServer(){
+        Helper.log("----------------------");
+        Helper.log("Start add default server");
         _helper.current(generalpage.DashboardMenuBtn).click().
                 current(dashboardpage.AddFirebirdButton).waitelementToBeClickable();
         _helper.current(dashboardpage.AddFirebirdButton).click();
+        Helper.log("Wait 3sec");
         Helper.waitSetup(Driver,3000);
         _helper.current(dashboardpage.SaveButton).waitelementToBeClickable();
         _helper.current(dashboardpage.SaveButton).click();
+        Helper.log("Finish add default server");
+        Helper.log("Wait 5sec");
         Helper.waitSetup(Driver,3000);
     }
 
@@ -146,7 +154,10 @@ public class EnvContainer
     private void InitData() throws IOException, InterruptedException {
 
         // stop service dg and wait 30s
+        Helper.log("----------------------");
+        Helper.log("start stopservice.bat");
         Runtime.getRuntime().exec("powershell.exe  Start-Process "+Batfile_folder_path+"stopservice.bat -Verb runAs");
+        Helper.log("Wait 30 sec");
         Helper.waitSetup(Driver, 30000);
 
         // delete some folders and files in the config
@@ -169,9 +180,12 @@ public class EnvContainer
         DirectoryCopy("C:\\dgtest\\src\\test\\resurces\\config", Pathhqbirddata + "config");
 
         // start service dg and wait 5s
+        Helper.log("start startservice.bat");
         Runtime.getRuntime().exec("powershell.exe  Start-Process "+Batfile_folder_path+"startservice.bat -Verb runAs");
         _helper.implicitlyWaitElement();
+        Helper.log("Wait 5 sec");
         Helper.waitSetup(Driver, 5000);
+
 
     }
     private void AddDatabaseInit(){
@@ -185,13 +199,20 @@ public class EnvContainer
 
     private void StopRefreshPage(){
         openUrl();
-        Helper.waitSetup(Driver, 1000);
+        Helper.log("----------------------");
+        Helper.log("start test StopRefreshPage");
+        Helper.log("Wait 3 sec");
+        Helper.waitSetup(Driver, 3000);
         _helper.current(generalpage.PanelPageRefreshBtn).waitelementToBeClickable();
         _helper.current(generalpage.PanelPageRefreshBtn).click().
                 current(generalpage.StopRefreshBtn).click().waitUpdate();
+        Helper.log("finish test StopRefreshPage");
+        Helper.log("----------------------");
     }
     private void AddDatabase(String dbName, String dbPath){
         //actions
+        Helper.log("----------------------");
+        Helper.log("start test add database - "+dbName+"");
         Helper.waitSetup(Driver, 1000);
         _helper.current(_pagedatabase.DatabaseSettingsBtn).click();
         Helper.waitSetup(Driver, 1000);
@@ -199,7 +220,8 @@ public class EnvContainer
         _helper.current(_pagedatabase.DbNameField).setValue(dbName).
                 current(_pagedatabase.DbPathField).setValue(dbPath).
                 current(_pagedatabase.DbSaveBtn).doubleClick().waitUpdate();
-        Assert.assertTrue(_helper.isdisplayedElement(_pagedatabase.NameBD(dbName)), "database is not successfully add");
+        Assert.assertTrue(_helper.isdisplayedElement(_pagedatabase.NameBD(dbName)), "database "+dbName+" is not successfully add");
+        Helper.log("finish test add database - "+dbName+"");
 
 
     }
@@ -214,7 +236,7 @@ public class EnvContainer
         //checking for a source directory
         if (!srcFolder.exists()) {
 
-            System.err.println("This directory does not exist!");
+            System.err.println("This directory "+srcFolder+" does not exist!");
 
         } else {
 

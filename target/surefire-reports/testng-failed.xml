@@ -6,49 +6,17 @@
   <parameter name="url" value="http://admin:strong password@localhost:8082/"/>
   <test thread-count="5" name="Backup(failed)" verbose="0">
     <classes>
-      <class name="TestPage.TestDashboard.Backup.TestValidateDb">
+      <class name="TestPage.TestDashboard.Backup.TestRestoreDb">
         <methods>
-          <include name="testCheckScheduleIncorrectField"/>
           <include name="classSetUp"/>
           <include name="methodTearDown"/>
           <include name="suiteSetUp"/>
           <include name="suiteTearDown"/>
-          <include name="testCreateValidateBDCorrect"/>
-          <include name="testCheckShutdownTimeoutEmptyField"/>
+          <include name="testCreateRestoreDbCorrect"/>
         </methods>
-      </class> <!-- TestPage.TestDashboard.Backup.TestValidateDb -->
+      </class> <!-- TestPage.TestDashboard.Backup.TestRestoreDb -->
     </classes>
   </test> <!-- Backup(failed) -->
-  <test thread-count="5" name="Transactions(failed)" verbose="0">
-    <classes>
-      <class name="TestPage.TestDashboard.TestTransactions">
-        <methods>
-          <include name="testCheckPeriodEmptyField"/>
-          <include name="methodTearDown"/>
-          <include name="testCheckFiledAlterOSTOITMoreEmptyField"/>
-          <include name="suiteSetUp"/>
-          <include name="suiteTearDown"/>
-          <include name="classSetUp"/>
-          <include name="testCheckFiledMaxTransactionsEmptyField"/>
-          <include name="testCheckFiledAlterNextOATMoreEmptyField"/>
-        </methods>
-      </class> <!-- TestPage.TestDashboard.TestTransactions -->
-    </classes>
-  </test> <!-- Transactions(failed) -->
-  <test thread-count="5" name="Lockprint(failed)" verbose="0">
-    <classes>
-      <class name="TestPage.TestDashboard.TestLockprint">
-        <methods>
-          <include name="testCreateFiledBuffersMaxNumbNegativeValue"/>
-          <include name="classSetUp"/>
-          <include name="methodTearDown"/>
-          <include name="suiteSetUp"/>
-          <include name="suiteTearDown"/>
-          <include name="testCheckFiledBuffersMaxEmptyValue"/>
-        </methods>
-      </class> <!-- TestPage.TestDashboard.TestLockprint -->
-    </classes>
-  </test> <!-- Lockprint(failed) -->
   <test thread-count="5" name="Delta(failed)" verbose="0">
     <classes>
       <class name="TestPage.TestDashboard.TestDelta">
@@ -62,44 +30,4 @@
       </class> <!-- TestPage.TestDashboard.TestDelta -->
     </classes>
   </test> <!-- Delta(failed) -->
-  <test thread-count="5" name="LowLevelMetadata(failed)" verbose="0">
-    <classes>
-      <class name="TestPage.TestDashboard.TestLowLevelMetadata">
-        <methods>
-          <include name="testCheckFieldMaxFormatsEmptyValue"/>
-          <include name="classSetUp"/>
-          <include name="methodTearDown"/>
-          <include name="suiteSetUp"/>
-          <include name="suiteTearDown"/>
-        </methods>
-      </class> <!-- TestPage.TestDashboard.TestLowLevelMetadata -->
-    </classes>
-  </test> <!-- LowLevelMetadata(failed) -->
-  <test thread-count="5" name="Replica(failed)" verbose="0">
-    <classes>
-      <class name="TestPage.TestDashboard.Replica.TestReplica">
-        <methods>
-          <include name="testCreateMasterAsync_IncorrectLogArchiveTimeoutField"/>
-          <include name="testCreateReplicaAsync_CheckSelectTable"/>
-          <include name="testCreateReplicaAsync_Correct"/>
-          <include name="testCreateMasterAsync_EmptyLogArchiveDirectoryField"/>
-          <include name="testCreateMasterAsync_EmptyLogDirectoryField"/>
-          <include name="suiteTearDown"/>
-          <include name="testCreateMasterSync_EmptyReplicaDatabaseField"/>
-          <include name="testCreateReplicaAsync_EmptyLogArchiveDirectoryField"/>
-          <include name="testCreateMasterAsync_Correct"/>
-          <include name="testCreateReplicaSync_Correct"/>
-          <include name="classSetUp"/>
-          <include name="testCreateMasterAsync_CheckCreateTable"/>
-          <include name="testCreateMasterSync_Correct"/>
-          <include name="testAddFtpCorrect"/>
-          <include name="methodTearDown"/>
-          <include name="suiteSetUp"/>
-          <include name="testAddCloudBackupCorrect"/>
-          <include name="testAddCloudBackupReceiverCorrect"/>
-          <include name="testCreateMasterAsync_ReinitializeReplicaDatabaseCorrect"/>
-        </methods>
-      </class> <!-- TestPage.TestDashboard.Replica.TestReplica -->
-    </classes>
-  </test> <!-- Replica(failed) -->
 </suite> <!-- Failed suite [TestOne] -->

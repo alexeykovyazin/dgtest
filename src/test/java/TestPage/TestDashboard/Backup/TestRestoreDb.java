@@ -162,11 +162,11 @@ public class TestRestoreDb extends EnvContainer {
         InitBackup();
 
         //actions
-        _ctx.current(_page.LimitRestoreProcTimeField).setValue("").
+        _ctx.current(_page.RestoreTimeLimitField).setValue("").
                 current(_page.DbSaveBtn).click().waitUpdate();
 
         // verification
-        Assert.assertEquals(_page.BackupAllertDanger.getText(),"\"NaN\" is not an integer number",
+        Assert.assertEquals(_page.BackupAllertDanger.getText(),"\"\" is not an integer number",
                 "");
     }
 
@@ -214,11 +214,11 @@ public class TestRestoreDb extends EnvContainer {
         _ctx.current(_page.ScheduleField).setValue("0 0 23 ? * MON-SUN").
                 current(_page.DirectoryField).setValue("C:\\dgtest\\src\\test\\resurces\\WorkDB\\RestoreDb").
                 current(_page.NamePatternField).setValue("backup_{0,date,yyyyMMdd_HH-mm}").
-                current(_page.MaxFileageTorestoreHField).setValue("720").
+                current(_page.MaxFileageTorestoreHField).setValue("24").
                 current(_page.RestoreDirField).setValue("${backup-directory}").
                 current(_page.RestoreDbNameField).setValue("${db.id}_{0,date,yyyyMMdd_HH-mm}_testrestore.fdb").
                 current(_page.AppendSuffixFileNameField).setValue("{0,date,yyyyMMdd_HH-mm}.old").
-                current(_page.LimitRestoreProcTimeField).setValue("720").
+                current(_page.RestoreTimeLimitField).setValue("480").
                 current(_page.MinFreeSpaceField).setValue("10000000");
 
     }

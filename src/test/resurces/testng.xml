@@ -7,7 +7,7 @@
 <!--        <listener class-name="SuiteListener" />-->
 <!--    </listeners>-->
     <parameter name="browsername" value="${browsername}"/>
-<!--    <parameter name="browsername" value="firefox"/>-->
+<!--    <parameter name="browsername" value="chrome"/>-->
 
     <!-- Path to folder  HQBirdData-->
     <parameter name="pathhqbirddata" value="C:\HQBirdData\"/>
