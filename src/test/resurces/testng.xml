@@ -29,7 +29,7 @@
             <class name = "TestPage.TestDashboard.Backup.TestRestoreDb"/>
             <class name = "TestPage.TestDashboard.Backup.TestSqlPing"/>
             <class name = "TestPage.TestDashboard.Backup.TestValidateDb"/>
-        </classes>
+         </classes>
     </test>
 
     <test name="CloudBackup" group-by-instances="true">

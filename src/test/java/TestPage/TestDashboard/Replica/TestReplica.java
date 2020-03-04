@@ -72,7 +72,7 @@ public class TestReplica extends EnvContainer {
     public void testCreateMasterSync_Correct()  {
 
         //actions
-        _ctx.current(_page.ReplicaDatabaseField).setValue("//sysdba:masterkey@replicaserver:"+Replica_Sync_DB_Path+"").waitUpdate().
+        _ctx.current(_page.ReplicaDatabaseField).setValue("//sysdba:masterkey@localhost:"+Replica_Sync_DB_Path+"").waitUpdate().
                 current(_page.DbSaveBtn).click().waitUpdate();
 
         // verification
