@@ -32,8 +32,9 @@ public class TestDumpBackup extends EnvContainer {
         openUrl();
         Helper.waitSetup(_driver, 1000);
         _ctx.current(_page.NameBDText(TestDB)).click();
-        _ctx.current(_page.DumpBackupSettingsBtn(TestDB)).scrollToElement().click();
+        _ctx.current(_page.DumpBackupSettingsBtn(TestDB)).scrollToElement().doubleClick();
         _ctx.current(_page.ScheduleField).waitelementToBeClickable();
+        _ctx.implicitlyWaitElement(10);
 
     }
 //    @AfterMethod

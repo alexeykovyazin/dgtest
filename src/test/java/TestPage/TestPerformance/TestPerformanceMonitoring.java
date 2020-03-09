@@ -8,6 +8,8 @@ import io.qameta.allure.Description;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -41,6 +43,7 @@ public class TestPerformanceMonitoring extends EnvContainer {
         Helper.waitUpdate(_driver);
     }
 
+
     /**
      * Long running active transactions monitoring
      */
@@ -65,6 +68,7 @@ public class TestPerformanceMonitoring extends EnvContainer {
     @Description(value = "WHEN we leave the field  \"Output folder\" empty THEN, the error \"should not be null or empty\"")
     public void testCheckFieldOutputFolderEmptyValue()  {
         // prepare
+        Helper.waitSetup(_driver,1000);
         InitTest();
 
         //actions

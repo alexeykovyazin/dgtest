@@ -37,15 +37,22 @@ public class GeneralLocators {
     @FindBy(xpath = "//*[@id='dqTimers']//*[@id='0']")
     public WebElement StopRefreshBtn;
 
-
-    @FindBy(xpath = "(//*[@class='control'])[1]")
-    public WebElement AddFirebirdButton;
-
-
     @FindBy(xpath = "(//*[@class='alert alert-danger']//span)[2]")
     public WebElement BackupAllertDanger;
     @FindBy(xpath = "(//*[@class='alert alert-info']//span)[2]")
     public WebElement BackupAllertnfo;
+
+    /**
+     * Add server locators
+     */
+    @FindBy(xpath = "(//*[@class='control'])[1]")
+    public WebElement AddFirebirdButton;
+    @FindBy(id = "form-server-installation")
+    public WebElement ServerInstallFolderButton;
+    @FindBy(id = "form-server-bin")
+    public WebElement ServerBinaryFolderButton;
+    @FindBy(xpath = "(//*[@class='modal-content']//*[contains(@class,'btn-dialog-ok')])[2]")
+    public WebElement SaveServerButton;
 
     /**
      * General locators

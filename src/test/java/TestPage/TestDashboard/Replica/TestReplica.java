@@ -324,7 +324,6 @@ public class TestReplica extends EnvContainer {
         Assert.assertTrue(textFromFile.contains("1"),"log must be \"1\"");
     }
 
-
     private void InitAsyncTest() {
         _ctx.current(_page.LogDirectoryField).setValue("${db.path}.ReplLog").
                 current(_page.LogArchiveDirectoryField).setValue("${db.path}.LogArch").
