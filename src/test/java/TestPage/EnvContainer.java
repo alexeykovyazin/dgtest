@@ -39,7 +39,7 @@ import static Constants.InitData.*;
 
 public class EnvContainer
 {
-    public static String URL, Pathhqbirddata, BrowserType,pathDriver;
+    public static String URL, Pathhqbirddata, BrowserType,pathDriver,serverPath,StandartDBPath,ServerBinaryPath;
     public static WebDriver Driver;
     private Helper _helper;
     public static GeneralLocators generalpage;
@@ -49,22 +49,17 @@ public class EnvContainer
 
 
     @BeforeSuite
-    @Parameters({ "browsername", "url","pathhqbirddata"})
-    public void suiteSetUp(String browserType, String url, String pathhqbirddata) throws IOException, InterruptedException {
+    @Parameters({ "browsername", "url","pathhqbirddata","serverInstallationPath"})
+    public void suiteSetUp(String browserType, String url, String pathhqbirddata, String serverInstallationPath) throws IOException, InterruptedException {
         pathDriver = "null";
         if (System.getProperty("url") != null) {
             url = System.getProperty("url");
         }
         BrowserType = browserType;
         Pathhqbirddata = pathhqbirddata;
-
-        if (BrowserType.equals("chrome")) {
-            pathDriver = "src/test/resurces/Driver/chromedriver.exe";
-        }
-        if(BrowserType.equals("firefox")){
-         pathDriver = "src/test/resurces/Driver/geckodriver.exe";
-        }
-
+        serverPath = serverInstallationPath;
+        BrowserType();
+        ServerPath();
         Driver = getDriverByName(browserType, pathDriver);
         _helper = new Helper(Driver);
         URL = url;
@@ -118,9 +113,30 @@ public class EnvContainer
      * Main Func
      */
 
+    private void BrowserType(){
+        if (BrowserType.equals("chrome")) {
+            pathDriver = "src/test/resurces/Driver/chromedriver.exe";
+        }
+        if(BrowserType.equals("firefox")){
+            pathDriver = "src/test/resurces/Driver/geckodriver.exe";
+        }
+    }
+
+    private void ServerPath(){
+        if (serverPath.contains("irebird25")) {
+            StandartDBPath = "C:\\dgtest\\src\\test\\resurces\\StandartDB\\Firebird25";
+            ServerBinaryPath = serverPath + "bin";
+        }
+        if(serverPath.contains("irebird30")){
+            StandartDBPath = "C:\\dgtest\\src\\test\\resurces\\StandartDB\\Firebird30";
+            ServerBinaryPath = serverPath;
+        }
+    }
     private void Registration(){
         Helper.log("----------------------");
         Helper.log("Start registration");
+        Helper.log("Wait page loading 10 sec");
+        _helper.implicitlyWaitElement(10);
         if(_helper.current(registerpage.EnterpriseCheckbox).waitelementToBeClickable()== false){
             _helper.current(generalpage.RegistrationMenuBtn).click();
         }
@@ -138,12 +154,14 @@ public class EnvContainer
         Helper.log("----------------------");
         Helper.log("Start add default server");
         _helper.current(generalpage.DashboardMenuBtn).click().
-                current(dashboardpage.AddFirebirdButton).waitelementToBeClickable();
-        _helper.current(dashboardpage.AddFirebirdButton).click();
+                current(generalpage.AddFirebirdButton).waitelementToBeClickable();
+        _helper.current(generalpage.AddFirebirdButton).click().
+                current(generalpage.ServerInstallFolderButton).setValue(serverPath).
+                current(generalpage.ServerBinaryFolderButton).setValue(ServerBinaryPath);
         Helper.log("Wait 3sec");
         Helper.waitSetup(Driver,3000);
-        _helper.current(dashboardpage.SaveButton).waitelementToBeClickable();
-        _helper.current(dashboardpage.SaveButton).click();
+        _helper.current(generalpage.SaveServerButton).waitelementToBeClickable();
+        _helper.current(generalpage.SaveServerButton).click();
         Helper.log("Finish add default server");
         Helper.log("Wait 5sec");
         Helper.waitSetup(Driver,3000);
@@ -176,7 +194,7 @@ public class EnvContainer
         _helper.deleteFolderOrFile(new File("C:\\dgtest\\src\\test\\reports\\allure-results"));
         _helper.deleteFolderOrFile(new File("C:\\dgtest\\src\\test\\reports\\allure-reports"));
 
-        DirectoryCopy("C:\\dgtest\\src\\test\\resurces\\StandartDB", "C:\\dgtest\\src\\test\\resurces\\WorkDB");
+        DirectoryCopy(StandartDBPath, "C:\\dgtest\\src\\test\\resurces\\WorkDB");
         DirectoryCopy("C:\\dgtest\\src\\test\\resurces\\config", Pathhqbirddata + "config");
 
         // start service dg and wait 5s
@@ -201,6 +219,8 @@ public class EnvContainer
         openUrl();
         Helper.log("----------------------");
         Helper.log("start test StopRefreshPage");
+        Helper.log("Wait page loading 10 sec");
+        _helper.implicitlyWaitElement(10);
         Helper.log("Wait 3 sec");
         Helper.waitSetup(Driver, 3000);
         _helper.current(generalpage.PanelPageRefreshBtn).waitelementToBeClickable();

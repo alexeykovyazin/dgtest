@@ -72,7 +72,7 @@ public class TestReplica extends EnvContainer {
     public void testCreateMasterSync_Correct()  {
 
         //actions
-        _ctx.current(_page.ReplicaDatabaseField).setValue("//sysdba:masterkey@replicaserver:"+Replica_Sync_DB_Path+"").waitUpdate().
+        _ctx.current(_page.ReplicaDatabaseField).setValue("//sysdba:masterkey@localhost:"+Replica_Sync_DB_Path+"").waitUpdate().
                 current(_page.DbSaveBtn).click().waitUpdate();
 
         // verification
@@ -323,7 +323,6 @@ public class TestReplica extends EnvContainer {
         Assert.assertTrue(textFromFile.contains("COUNT"),"log must be COUNT");
         Assert.assertTrue(textFromFile.contains("1"),"log must be \"1\"");
     }
-
 
     private void InitAsyncTest() {
         _ctx.current(_page.LogDirectoryField).setValue("${db.path}.ReplLog").

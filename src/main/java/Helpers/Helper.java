@@ -345,6 +345,16 @@ public class Helper {
         }
 
     }
+
+    public  boolean implicitlyWaitElement(long time) {
+        try {
+            _driver.manage().timeouts().implicitlyWait(time, TimeUnit.SECONDS);
+            return true;
+        } catch (TimeoutException ex) {
+            return false;
+        }
+
+    }
     /**
      *
      * the method waits for the element to appear
