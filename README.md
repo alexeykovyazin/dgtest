@@ -4,18 +4,24 @@
  - Папка с тестами должа находиться по пути - C:\dgtest. Это обязательное условие, т.к. пока все пути привязаны отностительно этого пути
 3. В папке C:\dgtest есть папка Maven ее нужно подложить в любое место на диске и указать в переменные среды путь до папки bin(например C:\Maven\bin)
  - таким образом мы можем выполнять команды mvn в cmd без указания полного пути
-4. Открываем на редактирование файл C:\dgtest\src\test\resurces\testng.xml Для изменения пути к папке с конфигами, нужно в параметре pathhqbirddata изменить значение на нужное(по умолчанию стоит C:\HQBirdData\)
+4. Заходим в папку C:\dgtest\src\test\resurces\BatFiles и редактируем файл config.txt
 5. Изменения других пути и значенияб при необходимости:
- - файл C:\dgtest\src\test\resurces\BatFiles\Runcmd.bat, изменить путь до файла isql( по умолчанию C:\HQbird\Firebird30\isql)
  - папка C:\dgtest\src\test\resurces\BatFiles\ в bat файлах можно изменить имена служб(по умолчанию FirebirdServerHQBirdInstance и FBDataGuardAgent)
 
 
 ----------Запуск тестов----------
-1. Заходим в папку C:\dgtest и вызываем из нее cmd
-2. В cmd вводим mvn clean test -Dbrowsername=chrome (либо firefox)
+1. Заходим в папку C:\dgtest\src\test\resurces\BatFiles и редактируем файл config.txt
+- javaPath - путь до папки bin с java 
+- brosername - типа браузера (chrome, firefox)
+- pathhqbirddata - путь до папки с HQBirdData
+- serverInstallationPath - путь до папки с сервером (C:\HQbird\Firebird25\ или C:\HQbird\Firebird30\)
+- serverBinaryPath - путь до папки с бинарными файлами(C:\HQbird\Firebird25\bin\ или C:\HQbird\Firebird30\)
+ОБЯЗАТЕЛЬНО! при указании путей, ставить в конце "\"
+2. Открываем cmd и выполняем cmd /k C:\dgtest\src\test\resurces\BatFiles\Init.bat
 3. По завершению прогона тестов можно сформировать(mvn allure:report) или запустить отчет(mvn allure:serve) allure(подробная инструкция ниже)
 
 ----------Получение отчета----------
+
 После выполнения тестов для получения отчета необходимо:
 Вариант 1:
  - Вызвать cmd из C:\dgtest
@@ -56,3 +62,27 @@ Allure генерирует не только html но и js скрипты, д
 4. Останавливаем обновление страницы
 5. Далее происходит добавление БД BackupBD, CloudTestDB, TestDB, MasterAsyncBD, MasterSyncBD, ReplicaSyncBD. БД используются в тестах, в перспективе возможен перенос создания баз в классы с запускаемыми тестами. Пока сделано так для стабильности прогона.
 6. После успешного прохождения всех этапов, запускаются тестовые наборы.
+
+----------Алгоритм выполнения тестового набора Реплики----------
+
+----------Асинхронная реплика----------
+1. БД мастера и реплики уже созданы при запуске всего набора тестов в EnvContainer/
+2. Нажимаем на кнопку реплики у БД мастера, выбираем Мастер-Асинхронный и проверяем поля на ошибки
+3. Сохраняем с дефотными параметрами, проверяем что у БД отобразилась Icon replicationslave
+4. 
+ - Рестарт сервиса - FirebirdServerHQBirdInstance
+ - Ожидание 5 сек
+ - Рестарт сервиса - FBDataGuardAgent
+ - Ожидание 70 сек
+ - Запуск createTable.bat, который запускает скрипт createTable.sql на создание таблицы TEST1
+ - Ожидание 5 сек
+ - Проверка, что в логе src/test/resurces/Logs/createTable.log нет ошибок
+5. Нажимаем на кнопку реплики у БД мастера, нажимаем Reinitialize Replica Database и проверяем, что нет ошибок и отобразился путь.
+6. Создаем БД реплики на основе файла .4replica полученным от мастера. Проверяем наличие иконки replicationslave
+7. Добавляем FTP сервер для Мастера и выполняем Cloud Backup.
+8. Для БД реплики выполняем Cloud Backup Receiver на основе файла полученного из п.7.
+9. Запуск selectTable.bat, который запускает скрипт selectTable.sql для проверки SELECT COUNT(*) FROM TEST1;
+
+----------Синхронная реплика----------
+1. Проверка всех полей на ошибки
+2. Создание реплики "//sysdba:masterkey@localhost:" и проверка иконки replicationactive
