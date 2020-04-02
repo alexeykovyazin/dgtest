@@ -28,11 +28,11 @@ public class TestVerifiedBackup extends EnvContainer {
         _page = PageFactory.initElements(_driver, GeneralLocators.class);
         _pagedatabase = PageFactory.initElements(_driver, Database.class);
         openUrl();
-        _ctx.waitSetup(_driver,1000);
-
         _ctx.current(_page.NameBDText(BackupBD)).click();
         _ctx.current(_page.VerifiedBackupSettingsBtn(BackupBD)).scrollToElement().click();
-        _ctx.current(_page.ScheduleField).waitelementToBeClickable();
+        //_ctx.current(_page.ScheduleField).waitelementToBeClickable();
+        //Assert.assertTrue(_ctx.tryFindWebElement(_page.ScheduleField),"Element Schedule Field not found");
+        Assert.assertTrue(_ctx.tryFindBy(_page.DialogForm()),"Element Dialog Form not found");
         //InitVerifiedBackup();
 
 
@@ -44,10 +44,10 @@ public class TestVerifiedBackup extends EnvContainer {
 //
 //    }
     private void openUrl() {
-        _url = EnvContainer.URL + _standarturl;
-        _driver.navigate().to(_url);
+        _driver.navigate().to(_standarturl);
         interceptionJSonPage(_driver);
         Helper.waitUpdate(_driver);
+        Helper.waitSetup(_driver, 1000);
     }
 
 

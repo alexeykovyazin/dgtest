@@ -30,7 +30,6 @@ public class TestTransactions extends EnvContainer {
         _page = PageFactory.initElements(_driver, GeneralLocators.class);
         _pagedatabase = PageFactory.initElements(_driver, Database.class);
         openUrl();
-        Helper.waitSetup(_driver, 1000);
         _ctx.current(_page.NameBDText(TestDB)).click();
         Helper.waitSetup(_driver, 1000);
         if (BrowserType.equals("chrome")) {
@@ -39,15 +38,15 @@ public class TestTransactions extends EnvContainer {
         if(BrowserType.equals("firefox")){
             _ctx.current(_page.TransactionsSettingsBtn(TestDB)).scrollToElement().click();
         }
-        _ctx.current(_page.CheckPeriodField).waitelementToBeClickable();
-        Helper.waitSetup(_driver,1000);
+        Assert.assertTrue(_ctx.tryFindBy(_page.DialogForm()),"Element Dialog Form not found");
+        //Helper.waitSetup(_driver,1000);
     }
 
     private void openUrl() {
-        _url = EnvContainer.URL + _standarturl;
-        _driver.navigate().to(_url);
+        _driver.navigate().to(_standarturl);
         interceptionJSonPage(_driver);
         Helper.waitUpdate(_driver);
+        Helper.waitSetup(_driver, 1000);
     }
 
     @Test( enabled = true, priority = 1)

@@ -29,16 +29,15 @@ public class TestTransactionMonitoring extends EnvContainer {
         _page = PageFactory.initElements(_driver, GeneralLocators.class);
         _pagedatabase = PageFactory.initElements(_driver, Database.class);
         openUrl();
-        Helper.waitSetup(_driver, 1000);
         _ctx.current(generalpage.PerformanceMenuBtn).click();
         _ctx.current(_page.PerformancePageCheck).waitelementToBeClickable();
     }
 
     private void openUrl() {
-        _url = EnvContainer.URL + _standarturl;
-        _driver.navigate().to(_url);
+        _driver.navigate().to(_standarturl);
         interceptionJSonPage(_driver);
         Helper.waitUpdate(_driver);
+        Helper.waitSetup(_driver, 1000);
     }
 
     /**

@@ -12,14 +12,10 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxDriverLogLevel;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.logging.LogEntries;
 import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.logging.LogType;
-import org.openqa.selenium.logging.LoggingPreferences;
-import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -155,9 +151,12 @@ public class EnvContainer
         Helper.log("Start add default server");
         _helper.current(generalpage.DashboardMenuBtn).click().
                 current(generalpage.AddFirebirdButton).waitelementToBeClickable();
-        _helper.current(generalpage.AddFirebirdButton).click().
-                current(generalpage.ServerInstallFolderButton).setValue(serverPath).
-                current(generalpage.ServerBinaryFolderButton).setValue(ServerBinaryPath);
+        _helper.current(generalpage.AddFirebirdButton).click();
+        _helper.isdisplayedElement(generalpage.ServerInstallFolderButton);
+        Helper.log("Wait 3sec");
+        Helper.waitSetup(Driver,3000);
+        _helper.current(generalpage.ServerInstallFolderButton).setValue(serverPath).
+               current(generalpage.ServerBinaryFolderButton).setValue(ServerBinaryPath);
         Helper.log("Wait 3sec");
         Helper.waitSetup(Driver,3000);
         _helper.current(generalpage.SaveServerButton).waitelementToBeClickable();
@@ -240,7 +239,7 @@ public class EnvContainer
         _helper.current(_pagedatabase.DbNameField).setValue(dbName).
                 current(_pagedatabase.DbPathField).setValue(dbPath).
                 current(_pagedatabase.DbSaveBtn).doubleClick().waitUpdate();
-        Assert.assertTrue(_helper.isdisplayedElement(_pagedatabase.NameBD(dbName)), "database "+dbName+" is not successfully add");
+        Assert.assertTrue(_helper.tryFindBy(_pagedatabase.NameBD(dbName)), "database "+dbName+" is not successfully add");
         Helper.log("finish test add database - "+dbName+"");
 
 

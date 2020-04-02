@@ -2,5 +2,5 @@
 javaPath=c:\Program Files\Java\jdk1.8.0_201\bin\
 brosername=chrome
 pathhqbirddata=C:\HQBirdData\
-serverInstallationPath=C:\HQbird\Firebird25\
-serverBinaryPath=C:\HQbird\Firebird25\bin\
+serverInstallationPath=C:\HQbird\Firebird30\
+serverBinaryPath=C:\HQbird\Firebird30\

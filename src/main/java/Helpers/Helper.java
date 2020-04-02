@@ -50,6 +50,39 @@ public class Helper {
         return this;
     }
 
+    public Helper current(By by) {
+
+        _current = _driver.findElement(by);
+        return this;
+    }
+
+    public WebElement current(){
+        return _current;
+    }
+    public boolean tryFindWebElement (WebElement element){
+        try {
+            _driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+            element.isDisplayed();
+            _current = element;
+            return true;
+        } catch (NoSuchElementException ex) {
+            return false;
+        }
+
+    }
+
+    public boolean tryFindBy (By by){
+        try {
+            _driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+            _driver.findElement(by).isDisplayed();
+            _current = _driver.findElement(by);
+            return true;
+        } catch (NoSuchElementException ex) {
+            return false;
+        }
+
+    }
+
     public Helper clear() {
         clear(_current, _driver);
         return this;
@@ -65,6 +98,9 @@ public class Helper {
 
     public Helper setValue(String value) {
         //clear();
+        //waitSetup(_driver,4000);
+
+        _current.click();
         _current.clear();
         _current.sendKeys(value);
         return this;
@@ -99,6 +135,7 @@ public class Helper {
     public Helper scrollToElement(){
         //final Actions builder = new Actions(_driver);
         ((JavascriptExecutor)_driver).executeScript("arguments[0].scrollIntoView(true);", _current);
+        waitSetup(_driver,1000);
         return  this;
     }
     public Helper pushStateUrl(String url){
@@ -317,6 +354,7 @@ public class Helper {
 
     public boolean displayedElement() {
         try {
+            _driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
             _current.isDisplayed();
             return true;
         } catch (NoSuchElementException ex) {

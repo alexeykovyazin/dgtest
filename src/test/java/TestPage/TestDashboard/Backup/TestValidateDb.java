@@ -29,12 +29,11 @@ public class TestValidateDb extends EnvContainer {
         _page = PageFactory.initElements(_driver, GeneralLocators.class);
         _pagedatabase = PageFactory.initElements(_driver, Database.class);
         openUrl();
-        Helper.waitSetup(_driver, 1000);
         _ctx.current(_page.NameBDText(CloudTestDB)).click();
         Helper.waitSetup(_driver, 1000);
         _ctx.current(_page.ValidateDbSettingsBtn(CloudTestDB)).scrollToElement().click();
-        _ctx.current(_page.ScheduleField).waitelementToBeClickable();
-        Helper.waitSetup(_driver, 2000);
+        //Assert.assertTrue(_ctx.tryFindWebElement(_page.ScheduleField),"Element Schedule Field not found");
+        Assert.assertTrue(_ctx.tryFindBy(_page.DialogForm()),"Element Dialog Form not found");
     }
 //    @AfterMethod
 //    public void methodTearDown() {
@@ -42,10 +41,10 @@ public class TestValidateDb extends EnvContainer {
 //        Helper.interceptionJSonPage(_driver);
 //    }
     private void openUrl() {
-        _url = EnvContainer.URL + _standarturl;
-        _driver.navigate().to(_url);
+        _driver.navigate().to(_standarturl);
         interceptionJSonPage(_driver);
         Helper.waitUpdate(_driver);
+        Helper.waitSetup(_driver, 1000);
     }
 
     @Test( enabled = true, priority = 1)

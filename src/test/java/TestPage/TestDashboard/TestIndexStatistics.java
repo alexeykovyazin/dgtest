@@ -29,17 +29,17 @@ public class TestIndexStatistics extends EnvContainer {
         _page = PageFactory.initElements(_driver, GeneralLocators.class);
         _pagedatabase = PageFactory.initElements(_driver, Database.class);
         openUrl();
-        Helper.waitSetup(_driver, 1000);
         _ctx.current(_page.NameBDText(TestDB)).click();
         _ctx.current(_page.IndexStatisticsSettingsBtn(TestDB)).scrollToElement().click();
-        _ctx.current(_page.ScheduleField).waitelementToBeClickable();
+       // Assert.assertTrue(_ctx.tryFindWebElement(_page.ScheduleField),"Element Schedule Field not found");
+        Assert.assertTrue(_ctx.tryFindBy(_page.DialogForm()),"Element Dialog Form not found");
     }
 
     private void openUrl() {
-        _url = EnvContainer.URL + _standarturl;
-        _driver.navigate().to(_url);
+        _driver.navigate().to(_standarturl);
         interceptionJSonPage(_driver);
         Helper.waitUpdate(_driver);
+        Helper.waitSetup(_driver, 1000);
     }
 
     @Test( enabled = true, priority = 1)

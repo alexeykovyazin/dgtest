@@ -27,7 +27,7 @@ public class TestDatabase extends EnvContainer {
         _ctx = new Helper(_driver);
         _page = PageFactory.initElements(_driver, Database.class);
         openUrl();
-
+        Helper.waitSetup(_driver, 1000);
         _ctx.hoverAndClick(_page.DatabaseSettingsBtn);
         _ctx.current(_page.DbNameField).waitelementToBeClickable();
     }
@@ -119,7 +119,7 @@ public class TestDatabase extends EnvContainer {
         _ctx.implicitlyWaitElement();
 
         // verification
-        Assert.assertTrue(_ctx.isdisplayedElement(_page.NameBD(NameBDA)),"database is not successfully add");
+        Assert.assertTrue(_ctx.tryFindBy(_page.NameBD(NameBDA)),"database is not successfully add");
     }
 
     @Test( enabled = true, priority = 6)

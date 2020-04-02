@@ -19,6 +19,7 @@ public class GeneralLocators {
         this._driver = driver;
         ctx = new Helper(_driver);
     }
+    public By DialogForm() {return By.xpath("//*[@id='dqDialogForm']"); }
 
     @FindBy(id = "servers")
     public WebElement DashboardMenuBtn;
@@ -128,6 +129,7 @@ public class GeneralLocators {
      * REPLICA
      */
     public WebElement ReplicaBtn(String nameDB) {return _driver.findElement(By.xpath("//*[@class='db-item-tab']//span[text()='"+nameDB+"']//ancestor::div[1]//img[@class='status-icon icon-replication']")); }
+
     @FindBy(xpath = "//*[@id='form-section-db-replication_role']//*[@value='master']//ancestor::label[2]")
     public WebElement MasterBtn;
     @FindBy(xpath = "//*[@id='form-section-db-replication_role']//*[@value='replica']//ancestor::label[2]")
@@ -277,7 +279,7 @@ public class GeneralLocators {
     @FindBy(id = "form-top_first")
     public WebElement ShowOnlyNNOldestActiveTransactionsField;
     @FindBy(id = "form-time_threshold_ms")
-    public WebElement LogSQLsWithExecutionеimeField;
+    public WebElement LogSQLWithExecutionеimeField;
     @FindBy(id = "form-cron-expression-end")
     public WebElement StopTraceSessionField;
 
@@ -316,7 +318,7 @@ public class GeneralLocators {
     public WebElement VerifiedBackupPanelTotal(String text) {return _driver.findElement(By.xpath("//*[@class='head-name panel-heading']//*[text()='"+text+"']" +
             "//ancestor::div[2]//*[contains(@class,'panel panel-default tooltip-verified-backup')]//tr[3]/td")); }
 
-    public WebElement NameBDText(String text) {return _driver.findElement(By.xpath("//*[@class='db-item-tab']//span[text()='"+text+"']")); }
+    public By NameBDText(String text) {return By.xpath("//*[@class='db-item-tab']//span[text()='"+text+"']"); }
 
     /**
      * dump-backup panel

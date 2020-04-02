@@ -33,9 +33,6 @@ public class TestReplica extends EnvContainer {
         _page = PageFactory.initElements(_driver, GeneralLocators.class);
         _pagedatabase = PageFactory.initElements(_driver, Database.class);
         openUrl();
-        Helper.waitSetup(_driver, 1000);
-
-
     }
 
     //    @AfterMethod
@@ -44,10 +41,10 @@ public class TestReplica extends EnvContainer {
 //        Helper.interceptionJSonPage(_driver);
 //    }
     private void openUrl() {
-        _url = EnvContainer.URL + _standarturl;
-        _driver.navigate().to(_url);
+        _driver.navigate().to(_standarturl);
         interceptionJSonPage(_driver);
         Helper.waitUpdate(_driver);
+        Helper.waitSetup(_driver, 1000);
 
     }
 
@@ -332,9 +329,11 @@ public class TestReplica extends EnvContainer {
     }
 
     private void ClickAndCheckBd(String dbname) {
+        Assert.assertTrue(_ctx.tryFindBy(_page.NameBDText(dbname)),"Element Name DB Text not found");
         _ctx.current(_page.NameBDText(dbname)).click();
         _ctx.current(_page.ReplicaBtn(dbname)).click();
         _ctx.current(_page.MasterBtn).waitelementToBeClickable();
+
         Helper.waitSetup(_driver, 1000);
 
     }
@@ -347,7 +346,7 @@ public class TestReplica extends EnvContainer {
         _ctx.current(_pagedatabase.DbNameField).setValue(dbName).
                 current(_pagedatabase.DbPathField).setValue(dbPath).
                 current(_pagedatabase.DbSaveBtn).click().waitUpdate();
-        Assert.assertTrue(_ctx.isdisplayedElement(_pagedatabase.NameBD(dbName)), "database is not successfully add");
+        Assert.assertTrue(_ctx.tryFindBy(_pagedatabase.NameBD(dbName)), "database is not successfully add");
 
     }
 }

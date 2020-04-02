@@ -10,6 +10,12 @@ public class Listener extends TestListenerAdapter
     private int m_count = 0;
 
     @Override
+    public void onStart(ITestContext context) {
+      log("===================\n");
+      log("Start tests - " + context.getName()+"\n");
+    }
+
+    @Override
     public void onTestSuccess(ITestResult iTestResult) {
         log(iTestResult.getName()+" - Success\n");
     }

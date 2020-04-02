@@ -2,16 +2,16 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="TestOne"  parallel="false">
-<!--	<listeners>-->
-<!--        <listener class-name="Listener" />-->
-<!--        <listener class-name="SuiteListener" />-->
-<!--    </listeners>-->
+	<listeners>
+        <listener class-name="Listener" />
+        <listener class-name="SuiteListener" />
+    </listeners>
     <parameter name="browsername" value="${browsername}"/>
     <parameter name="pathhqbirddata" value="${pathhqbirddata}"/>
     <parameter name="serverInstallationPath" value="${serverInstallationPath}"/>
     <parameter name="url" value="http://admin:strong password@localhost:8082/"/>
 
-<!--    <parameter name="browsername" value="chrome"/>-->
+<!--    <parameter name="browsername" value="firefox"/>-->
 <!--    <parameter name="pathhqbirddata" value="C:\HQBirdData\"/>-->
 <!--    <parameter name="serverInstallationPath" value="C:\HQbird\Firebird30\"/>-->
 
@@ -22,15 +22,40 @@
         </classes>
     </test>
 
-    <test name="Backup" group-by-instances="true">
+    <test name="VerifiedBackup" group-by-instances="true">
         <classes >
             <class name = "TestPage.TestDashboard.Backup.TestVerifiedBackup"/>
-            <class name = "TestPage.TestDashboard.Backup.TestIncrementalBackup"/>
-            <class name = "TestPage.TestDashboard.Backup.TestDumpBackup"/>
-            <class name = "TestPage.TestDashboard.Backup.TestRestoreDb"/>
-            <class name = "TestPage.TestDashboard.Backup.TestSqlPing"/>
-            <class name = "TestPage.TestDashboard.Backup.TestValidateDb"/>
          </classes>
+    </test>
+
+    <test name="IncrementalBackup" group-by-instances="true">
+    <classes>
+        <class name = "TestPage.TestDashboard.Backup.TestIncrementalBackup"/>
+    </classes>
+    </test>
+
+    <test name="DumpBackup" group-by-instances="true">
+        <classes >
+            <class name = "TestPage.TestDashboard.Backup.TestDumpBackup"/>
+        </classes>
+    </test>
+
+    <test name="RestoreDb" group-by-instances="true">
+        <classes >
+            <class name = "TestPage.TestDashboard.Backup.TestRestoreDb"/>
+        </classes>
+    </test>
+
+    <test name="SqlPing" group-by-instances="true">
+        <classes >
+            <class name = "TestPage.TestDashboard.Backup.TestSqlPing"/>
+        </classes>
+    </test>
+
+    <test name="ValidateDb" group-by-instances="true">
+        <classes >
+            <class name = "TestPage.TestDashboard.Backup.TestValidateDb"/>
+        </classes>
     </test>
 
     <test name="CloudBackup" group-by-instances="true">

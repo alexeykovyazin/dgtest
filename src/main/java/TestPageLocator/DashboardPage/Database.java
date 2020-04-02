@@ -50,7 +50,7 @@ public class Database {
     /**
      * Databases active
      */
-    public WebElement NameBD(String text) {return _driver.findElement(By.xpath("//*[@class='db-item-tab']//*[text()='"+text+"']")); }
+    public By NameBD(String text) {return By.xpath("//*[@class='db-item-tab']//*[text()='"+text+"']"); }
 
 
 }

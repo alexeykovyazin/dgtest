@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 120, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 760.128 s <<< FAILURE! - in TestSuite
+TestPage.TestDashboard.Backup.TestSqlPing.testCreateSqlPingCorrect  Time elapsed: 45.154 s  <<< FAILURE!
+java.lang.AssertionError: Status sql ping not OK expected [OK] but found [IMPORTANT]
+	at TestPage.TestDashboard.Backup.TestSqlPing.testCreateSqlPingCorrect(TestSqlPing.java:101)
+

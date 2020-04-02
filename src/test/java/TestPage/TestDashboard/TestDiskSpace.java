@@ -33,14 +33,14 @@ public class TestDiskSpace extends EnvContainer {
         _ctx.current(_page.NameBDText(TestDB)).click();
         Helper.waitSetup(_driver, 2000);
         _ctx.current(_page.DiskSpaceSettingsBtn(TestDB)).scrollToElement().click();
-        _ctx.current(_page.CheckPeriodField).waitelementToBeClickable();
+        Assert.assertTrue(_ctx.tryFindBy(_page.DialogForm()),"Element Dialog Form not found");
     }
 
     private void openUrl() {
-        _url = EnvContainer.URL + _standarturl;
-        _driver.navigate().to(_url);
+        _driver.navigate().to(_standarturl);
         interceptionJSonPage(_driver);
         Helper.waitUpdate(_driver);
+        Helper.waitSetup(_driver, 1000);
     }
 
     @Test( enabled = true, priority = 1)

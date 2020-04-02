@@ -30,10 +30,10 @@ public class TestSqlPing extends EnvContainer {
         _page = PageFactory.initElements(_driver, GeneralLocators.class);
         _pagedatabase = PageFactory.initElements(_driver, Database.class);
         openUrl();
-        Helper.waitSetup(_driver, 1000);
         _ctx.current(_page.NameBDText(BackupBD)).click();
         _ctx.current(_page.SqlPingSettingsBtn(BackupBD)).scrollToElement().click();
-        _ctx.current(_page.ScheduleField).waitelementToBeClickable();
+        //Assert.assertTrue(_ctx.tryFindWebElement(_page.ScheduleField),"Element Schedule Field not found");
+        Assert.assertTrue(_ctx.tryFindBy(_page.DialogForm()),"Element Dialog Form not found");
     }
 //    @AfterMethod
 //    public void methodTearDown() {
@@ -41,10 +41,10 @@ public class TestSqlPing extends EnvContainer {
 //        Helper.interceptionJSonPage(_driver);
 //    }
     private void openUrl() {
-        _url = EnvContainer.URL + _standarturl;
-        _driver.navigate().to(_url);
+        _driver.navigate().to(_standarturl);
         interceptionJSonPage(_driver);
         Helper.waitUpdate(_driver);
+        Helper.waitSetup(_driver, 1000);
     }
 
     @Test( enabled = true, priority = 1)
@@ -91,7 +91,7 @@ public class TestSqlPing extends EnvContainer {
         _ctx.current(_page.EnabledCheckbox).click().
                 current(_page.ScheduleField).setValue(cron).
                 current(_page.DbSaveBtn).click().waitUpdate();
-        Helper.waitSetup(_driver,30000);
+        Helper.waitSetup(_driver,40000);
         openUrl();
         _ctx.implicitlyWaitElement();
         _ctx.current(_page.NameBDText(BackupBD)).click();

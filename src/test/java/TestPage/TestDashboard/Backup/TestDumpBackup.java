@@ -30,11 +30,13 @@ public class TestDumpBackup extends EnvContainer {
         _page = PageFactory.initElements(_driver, GeneralLocators.class);
         _pagedatabase = PageFactory.initElements(_driver, Database.class);
         openUrl();
-        Helper.waitSetup(_driver, 1000);
         _ctx.current(_page.NameBDText(TestDB)).click();
         _ctx.current(_page.DumpBackupSettingsBtn(TestDB)).scrollToElement().doubleClick();
-        _ctx.current(_page.ScheduleField).waitelementToBeClickable();
+
+        Assert.assertTrue(_ctx.tryFindBy(_page.DialogForm()),"Element Dialog Form not found");
+       // Assert.assertTrue(_ctx.tryFindWebElement(_page.ScheduleField),"Element Schedule Field not found");
         _ctx.implicitlyWaitElement(10);
+        Helper.waitSetup(_driver, 2000);
 
     }
 //    @AfterMethod
@@ -43,10 +45,10 @@ public class TestDumpBackup extends EnvContainer {
 //        Helper.interceptionJSonPage(_driver);
 //    }
     private void openUrl() {
-        _url = EnvContainer.URL + _standarturl;
-        _driver.navigate().to(_url);
+        _driver.navigate().to(_standarturl);
         interceptionJSonPage(_driver);
         Helper.waitUpdate(_driver);
+        Helper.waitSetup(_driver, 1000);
     }
 
     @Test( enabled = true, priority = 1)
